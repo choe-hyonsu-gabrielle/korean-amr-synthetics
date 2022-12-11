@@ -65,7 +65,7 @@ class AnnotationPivotIndexer:
             self.annotations[key].complete = True if set(layers) == set(processed_layers) else False
             counts['-'.join(layers)] += 1
 
-        print(f'- {len(self.annotations)} annotations so far: {counts}')
+        print(f'- {len(self.annotations)} annotations so far: {dict(counts)}')
 
 
 if __name__ == '__main__':
