@@ -12,13 +12,16 @@ class AnnotationPivot:
         self.complete = None
 
     def __len__(self):
-        return len(self.texts)
+        return len(self.layers)
 
     def __repr__(self):
         return f'<{self.__class__.__name__} → text="{self.texts}" | layers={self.layers}>'
 
     def get_layers(self):
         return sorted(list(self.layers))
+
+    def get_related_dirs(self):
+        return set(self.layers.values())
 
     def append(self, layer: str, locator: str, text: str):
         self.layers[layer] = locator
@@ -29,16 +32,13 @@ class AnnotationPivotIndexer:
     def __init__(self, layer_dirs: dict[str, str], file_extension='json'):
         self.layer_dirs = layer_dirs
         self.layer_files = {k: glob.glob(v + f'\\*.{file_extension}') for k, v in layer_dirs.items()}
-        self.doc_index = defaultdict(list)
         self.annotations = dict()
+        self.complete_items = None
+        self.complete_dirs = set()
 
     def __repr__(self):
         layers = tuple(self.layer_dirs.keys())
         return f'<{self.__class__.__name__} → {len(layers)} layers: {layers}>'
-
-    @property
-    def complete_item_keys(self):
-        return list({k for k, v in self.annotations.items() if v.complete})
 
     def index(self):
         counts = defaultdict(int)
@@ -64,17 +64,22 @@ class AnnotationPivotIndexer:
             self.annotations[key].complete = True if set(layers) == layers_set else False
             counts['-'.join(layers)] += 1
 
+        self.complete_items = {k: v for k, v in self.annotations.items() if v.complete}
+
+        for k, v in tqdm(self.complete_items.items(), desc=f'- aggregating file paths of `complete` files'):
+            self.complete_dirs.update(v.get_related_dirs())
+
         print(f'- {len(self.annotations)} annotations so far: {dict(counts)}')
 
 
 if __name__ == '__main__':
-    search_space = 'D:\\Corpora & Language Resources\\modu-corenlp\\layers\\*'
+    search_space = 'D:\\Corpora & Language Resources\\modu-corenlp\\layers-complete\\*'
     dirs = {layer.split('\\')[-1]: layer for layer in glob.glob(search_space)}
 
     indexer = AnnotationPivotIndexer(layer_dirs=dirs)
 
     indexer.index()
 
-    completes = indexer.complete_item_keys
+    print(len(indexer.complete_dirs), indexer.complete_dirs)
+    print(indexer.layer_files)
 
-    print(completes)
