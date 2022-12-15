@@ -1,4 +1,6 @@
 import json
+import pickle
+from typing import Any
 
 
 def load_json(filepath: str, encoding: str = 'utf-8'):
@@ -14,3 +16,13 @@ def load_json(filepath: str, encoding: str = 'utf-8'):
     except json.decoder.JSONDecodeError:
         with open(filepath, encoding='utf-8-sig') as fp:
             return json.load(fp)
+
+
+def save_pickle(filename: str, instance: Any):
+    with open(filename, 'wb') as fp:
+        pickle.dump(instance, fp, pickle.HIGHEST_PROTOCOL)
+
+
+def load_pickle(filename: str):
+    with open(filename, 'rb') as fp:
+        return pickle.load(fp)

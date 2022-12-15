@@ -1,8 +1,9 @@
 import glob
+import time
 from typing import Any, Optional
 from collections import defaultdict
 from tqdm import tqdm
-from synthetics.utils import load_json
+from synthetics.utils import load_json, save_pickle, load_pickle
 
 
 COMMON_ATTRIBUTES = {'id', 'form', 'word'}
@@ -17,6 +18,109 @@ class Layer:
         self.data = data
 
 
+class POSItem:
+    def __init__(self, **kwargs):
+        self.id: int = kwargs['id']
+        self.form: str = kwargs['form']
+        self.label: str = kwargs['label']
+        self.word_id: int = kwargs['word_id']
+        self.position: int = kwargs['position']
+
+
+class POSLayer(Layer):
+    def __init__(self, layer: str, data: Any, super_instance=None):
+        super().__init__(layer=layer, data=[POSItem(**d) for d in data], super_instance=super_instance)
+
+
+class NERItem:
+    def __init__(self, **kwargs):
+        self.id: int = kwargs['id']
+        self.form: str = kwargs['form']
+        self.label: str = kwargs['label']
+        self.begin: int = kwargs['begin']
+        self.end: int = kwargs['end']
+
+
+class NERLayer(Layer):
+    def __init__(self, layer: str, data: Any, super_instance=None):
+        super().__init__(layer=layer, data=[NERItem(**d) for d in data], super_instance=super_instance)
+
+
+class ELItem:
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.id: int = kwargs['id']
+        self.form: str = kwargs['form']
+        self.label: str = kwargs['label']
+        self.begin: int = kwargs['begin']
+        self.end: int = kwargs['end']
+        self.k_id: str = kwargs['kid']
+        self.wiki_id: str = kwargs['wikiid']
+        self.url: str = kwargs['URL']
+
+
+class ELLayer(Layer):
+    def __init__(self, layer: str, data: Any, super_instance=None):
+        super().__init__(layer=layer, data=[ELItem(**d) for d in data], super_instance=super_instance)
+
+
+class WSDItem:
+    def __init__(self, **kwargs):
+        self.word: str = kwargs['word']
+        self.sense_id: int = kwargs['sense_id']
+        self.pos: str = kwargs['pos']
+        self.begin: int = kwargs['begin']
+        self.end: int = kwargs['end']
+        self.word_id: int = kwargs['word_id']
+
+
+class WSDLayer(Layer):
+    def __init__(self, layer: str, data: Any, super_instance=None):
+        super().__init__(layer=layer, data=[WSDItem(**d) for d in data], super_instance=super_instance)
+
+
+class DEPItem:
+    def __init__(self, **kwargs):
+        self.word_id: int = kwargs['word_id']
+        self.word_form: str = kwargs['word_form']
+        self.head: int = kwargs['head']
+        self.label: str = kwargs['label']
+        self.dependent: list[int] = kwargs['dependent']
+
+
+class DEPLayer(Layer):
+    def __init__(self, layer: str, data: Any, super_instance=None):
+        super().__init__(layer=layer, data=[DEPItem(**d) for d in data], super_instance=super_instance)
+
+
+class SRLPredicate:
+    def __init__(self, **kwargs):
+        self.form: str = kwargs['form']
+        self.begin: int = kwargs['begin']
+        self.end: int = kwargs['end']
+        self.lemma: str = kwargs['lemma']
+
+
+class SRLArgument:
+    def __init__(self, **kwargs):
+        self.form: str = kwargs['form']
+        self.label: str = kwargs['label']
+        self.begin: int = kwargs['begin']
+        self.end: int = kwargs['end']
+        self.word_id: int = kwargs['word_id']
+
+
+class SRLItem:
+    def __init__(self, **kwargs):
+        self.predicate: SRLPredicate = SRLPredicate(**kwargs['predicate'])
+        self.argument: list[SRLArgument] = [SRLArgument(**arg) for arg in kwargs['argument']]
+
+
+class SRLLayer(Layer):
+    def __init__(self, layer: str, data: Any, super_instance=None):
+        super().__init__(layer=layer, data=[SRLItem(**d) for d in data], super_instance=super_instance)
+
+
 class Sentence:
     def __init__(self, snt_id: str, super_instance=None):
         self.snt_id = snt_id
@@ -25,8 +129,10 @@ class Sentence:
         self.super: Optional[Document] = super_instance
         self.annotations = defaultdict(Layer)
 
-    @property
-    def text(self):
+    # @property
+    def get_canonical_form(self):
+        if len(self.forms) == 1:
+            return list(self.forms)[0]
         return sorted([(text, length) for text, length in self.forms.items()], key=lambda x: x[1])[-1]
 
     def get_form(self, layer: str):
@@ -134,8 +240,15 @@ class Corpus:
 if __name__ == '__main__':
     search_space = 'D:\\Corpora & Language Resources\\modu-corenlp\\layers-complete\\*\\*.json'
     targets = {layer.split('\\')[-2]: layer for layer in glob.glob(search_space)}
-    for l, f in targets.items():
-        print(f'{l}: {f}')
+    for n, f in targets.items():
+        print(f'- {n}: {f}')
 
     corpus = Corpus(dirs=targets).load_files()
+
+    save_pickle('corpus.pkl', corpus)
+
     print(len(corpus.index))
+
+    start = time.time()
+    corpus = load_pickle()
+    print(time.time() - start)
