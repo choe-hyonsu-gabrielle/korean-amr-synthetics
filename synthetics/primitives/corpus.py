@@ -1,5 +1,6 @@
 import glob
 import time
+import datetime
 from typing import Any, Optional
 from collections import defaultdict
 from tqdm import tqdm
@@ -240,12 +241,13 @@ class Corpus:
         self.layers = set()
         self.documents = defaultdict(Document)
         self.index = defaultdict(str)
+        self.update = None
 
     def __len__(self):
         return sum([len(doc) for doc in self.documents.values()])
 
     def __repr__(self):
-        return f'<{self.__class__.__name__} @{id(self)} → layers={tuple(self.layers)}>'
+        return f'<{self.__class__.__name__} → id: {id(self)}, update: {self.update}, layers: {tuple(self.layers)}>'
 
     def get_document(self, doc_id: str):
         return self.documents[doc_id]
@@ -294,9 +296,13 @@ class Corpus:
                     document.add_annotation(layer=layer, data=data)
                 else:
                     raise ValueError('Unsupported annotation type.')
+        # timestamp
+        self.update = datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
         return self
 
     def to_pickle(self, filename):
+        # timestamp
+        self.update = datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
         save_pickle(filename=filename, instance=self)
 
     @staticmethod
