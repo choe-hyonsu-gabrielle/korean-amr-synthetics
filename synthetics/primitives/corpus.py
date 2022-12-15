@@ -261,9 +261,9 @@ class Corpus:
     def add_sentence(self, snt_id: str, instance: Sentence, doc_id: str):
         self.documents[doc_id].add_sentence(snt_id, instance)
 
-    def import_files(self, dirs: dict):
-        self.dirs.update(dirs)
-        self.layers.update(dirs.keys())
+    def from_files(self, files: dict):
+        self.dirs.update(files)
+        self.layers.update(files.keys())
         for layer, filepath in tqdm(self.dirs.items(), desc=f'{self}: loading {len(self.dirs)} files'):
             _corpus = load_json(filepath)
             for _doc in _corpus['document']:
@@ -317,7 +317,7 @@ if __name__ == '__main__':
     for n, f in targets.items():
         print(f'- {n}: {f}')
 
-    corpus = Corpus().import_files(dirs=targets)
+    corpus = Corpus().from_files(files=targets)
     corpus.to_pickle('corpus.pkl')
     del corpus
 
