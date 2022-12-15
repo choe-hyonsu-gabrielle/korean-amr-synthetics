@@ -48,7 +48,6 @@ class NERLayer(Layer):
 
 class ELItem:
     def __init__(self, **kwargs):
-        super().__init__(**kwargs)
         self.id: int = kwargs['id']
         self.form: str = kwargs['form']
         self.label: str = kwargs['label']
@@ -121,6 +120,65 @@ class SRLLayer(Layer):
         super().__init__(layer=layer, data=[SRLItem(**d) for d in data], super_instance=super_instance)
 
 
+class CRMention:
+    def __init__(self, **kwargs):
+        self.sentence_id: str = kwargs['sentence_id']
+        self.form: str = kwargs['form']
+        self.begin: int = kwargs['begin']
+        self.end: int = kwargs['end']
+        self.ne_id: int = kwargs['NE_id']
+
+
+class CRItem:
+    def __init__(self, **kwargs):
+        self.mention: list[CRMention] = [CRMention(**arg) for arg in kwargs['mention']]
+
+
+class CRLayer(Layer):
+    def __init__(self, layer: str, data: Any, super_instance=None):
+        super().__init__(layer=layer, data=[CRItem(**d) for d in data], super_instance=super_instance)
+
+
+class ZAPredicate:
+    def __init__(self, **kwargs):
+        self.form: str = kwargs['form']
+        self.sentence_id: str = kwargs['sentence_id']
+        self.begin: int = kwargs['begin']
+        self.end: int = kwargs['end']
+
+
+class ZAAntecedent:
+    def __init__(self, **kwargs):
+        self.form: str = kwargs['form']
+        self.type: str = kwargs['type']
+        self.sentence_id: str = kwargs['sentence_id']
+        self.begin: int = kwargs['begin']
+        self.end: int = kwargs['end']
+
+
+class ZAItem:
+    def __init__(self, **kwargs):
+        self.predicate: ZAPredicate = ZAPredicate(**kwargs['predicate'])
+        self.antecedent: list[ZAAntecedent] = [ZAAntecedent(**arg) for arg in kwargs['antecedent']]
+
+
+class ZALayer(Layer):
+    def __init__(self, layer: str, data: Any, super_instance=None):
+        super().__init__(layer=layer, data=[ZAItem(**d) for d in data], super_instance=super_instance)
+
+
+DATATYPES_BY_LAYER = {
+    'pos': POSLayer,
+    'wsd': WSDLayer,
+    'ner': NERLayer,
+    'el': ELLayer,
+    'dep': DEPLayer,
+    'srl': SRLLayer,
+    'za': ZALayer,
+    'cr': CRLayer
+}
+
+
 class Sentence:
     def __init__(self, snt_id: str, super_instance=None):
         self.snt_id = snt_id
@@ -135,7 +193,7 @@ class Sentence:
             return list(self.forms)[0]
         return sorted([(text, length) for text, length in self.forms.items()], key=lambda x: x[1])[-1]
 
-    def get_form(self, layer: str):
+    def get_form(self, layer: str) -> Optional[str]:
         for form, layers in self.forms.items():
             if layer in layers:
                 return form
@@ -145,11 +203,11 @@ class Sentence:
         self.forms[form].add(layer)
         self.layers.add(layer)
 
-    def get_annotation(self, layer: str):
-        pass
+    def get_annotation(self, layer: str) -> Layer:
+        return self.annotations[layer]
 
     def add_annotation(self, layer: str, data: Any):
-        self.annotations[layer] = Layer(layer=layer, data=data, super_instance=self)
+        self.annotations[layer] = DATATYPES_BY_LAYER[layer](layer=layer, data=data, super_instance=self)
 
 
 class Document:
@@ -169,17 +227,17 @@ class Document:
     def add_sentence(self, snt_id: str, instance: Sentence):
         self.sentences[snt_id] = instance
 
-    def get_annotation(self, layer: str):
+    def get_annotation(self, layer: str) -> Layer:
         return self.annotations[layer]
 
     def add_annotation(self, layer: str, data: Any):
-        self.annotations[layer] = Layer(layer=layer, data=data, super_instance=self)
+        self.annotations[layer] = DATATYPES_BY_LAYER[layer](layer=layer, data=data, super_instance=self)
 
 
 class Corpus:
-    def __init__(self, dirs: dict):
-        self.dirs = dirs
-        self.layers = set(dirs.keys())
+    def __init__(self):
+        self.dirs = dict()
+        self.layers = set()
         self.documents = defaultdict(Document)
         self.index = defaultdict(str)
 
@@ -187,7 +245,7 @@ class Corpus:
         return sum([len(doc) for doc in self.documents.values()])
 
     def __repr__(self):
-        return f'<{self.__class__.__name__} → layers={self.layers}>'
+        return f'<{self.__class__.__name__} @{id(self)} → layers={tuple(self.layers)}>'
 
     def get_document(self, doc_id: str):
         return self.documents[doc_id]
@@ -201,7 +259,9 @@ class Corpus:
     def add_sentence(self, snt_id: str, instance: Sentence, doc_id: str):
         self.documents[doc_id].add_sentence(snt_id, instance)
 
-    def load_files(self):
+    def import_files(self, dirs: dict):
+        self.dirs.update(dirs)
+        self.layers.update(dirs.keys())
         for layer, filepath in tqdm(self.dirs.items(), desc=f'{self}: loading {len(self.dirs)} files'):
             _corpus = load_json(filepath)
             for _doc in _corpus['document']:
@@ -236,6 +296,14 @@ class Corpus:
                     raise ValueError('Unsupported annotation type.')
         return self
 
+    def to_pickle(self, filename):
+        save_pickle(filename=filename, instance=self)
+
+    @staticmethod
+    def from_pickle(filename):
+        loaded_corpus: Corpus = load_pickle(filename)
+        return loaded_corpus
+
 
 if __name__ == '__main__':
     search_space = 'D:\\Corpora & Language Resources\\modu-corenlp\\layers-complete\\*\\*.json'
@@ -243,12 +311,16 @@ if __name__ == '__main__':
     for n, f in targets.items():
         print(f'- {n}: {f}')
 
-    corpus = Corpus(dirs=targets).load_files()
-
-    save_pickle('corpus.pkl', corpus)
-
-    print(len(corpus.index))
+    corpus = Corpus().import_files(dirs=targets)
+    corpus.to_pickle('corpus.pkl')
+    del corpus
 
     start = time.time()
-    corpus = load_pickle()
+    corpus = Corpus.from_pickle('corpus.pkl')
     print(time.time() - start)
+
+    print(corpus)
+    print(len(corpus.index))
+    print(corpus.dirs)
+
+
