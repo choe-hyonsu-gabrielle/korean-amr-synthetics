@@ -1,19 +1,18 @@
 import glob
 import time
 import datetime
-from typing import Any, Optional
+from typing import Any, Optional, Union
 from collections import defaultdict
 from tqdm import tqdm
 from synthetics.utils import load_json, save_pickle, load_pickle
 
 
-COMMON_ATTRIBUTES = {'id', 'form', 'word'}
 SENTENCE_LEVEL_LAYERS = {'pos': 'morpheme', 'wsd': 'WSD', 'ner': 'NE', 'el': 'NE', 'dep': 'DP', 'srl': 'SRL'}
 DOCUMENT_LEVEL_LAYERS = {'za': 'ZA', 'cr': 'CR'}
 
 
 class Layer:
-    def __init__(self, layer: str, data: Any, super_instance=None):
+    def __init__(self, layer: str, data: list, super_instance=None):
         self.super: Optional[Sentence, Document] = super_instance
         self.layer = layer
         self.data = data
@@ -29,7 +28,7 @@ class POSItem:
 
 
 class POSLayer(Layer):
-    def __init__(self, layer: str, data: Any, super_instance=None):
+    def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[POSItem(**d) for d in data], super_instance=super_instance)
 
 
@@ -43,7 +42,7 @@ class NERItem:
 
 
 class NERLayer(Layer):
-    def __init__(self, layer: str, data: Any, super_instance=None):
+    def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[NERItem(**d) for d in data], super_instance=super_instance)
 
 
@@ -60,7 +59,7 @@ class ELItem:
 
 
 class ELLayer(Layer):
-    def __init__(self, layer: str, data: Any, super_instance=None):
+    def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[ELItem(**d) for d in data], super_instance=super_instance)
 
 
@@ -75,7 +74,7 @@ class WSDItem:
 
 
 class WSDLayer(Layer):
-    def __init__(self, layer: str, data: Any, super_instance=None):
+    def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[WSDItem(**d) for d in data], super_instance=super_instance)
 
 
@@ -89,7 +88,7 @@ class DEPItem:
 
 
 class DEPLayer(Layer):
-    def __init__(self, layer: str, data: Any, super_instance=None):
+    def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[DEPItem(**d) for d in data], super_instance=super_instance)
 
 
@@ -117,7 +116,7 @@ class SRLItem:
 
 
 class SRLLayer(Layer):
-    def __init__(self, layer: str, data: Any, super_instance=None):
+    def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[SRLItem(**d) for d in data], super_instance=super_instance)
 
 
@@ -136,7 +135,7 @@ class CRItem:
 
 
 class CRLayer(Layer):
-    def __init__(self, layer: str, data: Any, super_instance=None):
+    def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[CRItem(**d) for d in data], super_instance=super_instance)
 
 
@@ -164,7 +163,7 @@ class ZAItem:
 
 
 class ZALayer(Layer):
-    def __init__(self, layer: str, data: Any, super_instance=None):
+    def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[ZAItem(**d) for d in data], super_instance=super_instance)
 
 
@@ -181,33 +180,63 @@ DATATYPES_BY_LAYER = {
 
 
 class Sentence:
-    def __init__(self, snt_id: str, super_instance=None):
+    def __init__(self, snt_id: str, super_instance: Any = None):
         self.snt_id = snt_id
         self.layers = set()
         self.forms = defaultdict(set)
         self.super: Optional[Document] = super_instance
         self.annotations = defaultdict(Layer)
 
-    # @property
-    def get_canonical_form(self):
+    def pos(self) -> list[POSItem]:
+        return self.get_annotation('pos').data
+
+    def ner(self) -> list[NERItem]:
+        return self.get_annotation('ner').data
+
+    def el(self) -> list[ELItem]:
+        return self.get_annotation('el').data
+
+    def wsd(self) -> list[WSDItem]:
+        return self.get_annotation('wsd').data
+
+    def dep(self) -> list[DEPItem]:
+        return self.get_annotation('dep').data
+
+    def srl(self) -> list[SRLItem]:
+        return self.get_annotation('srl').data
+
+    def za(self) -> list[ZAItem]:
+        return self.get_annotation('za').data
+
+    def cr(self) -> list[CRItem]:
+        return self.get_annotation('cr').data
+
+    def canonical_form(self) -> str:
         if len(self.forms) == 1:
             return list(self.forms)[0]
-        return sorted([(text, length) for text, length in self.forms.items()], key=lambda x: x[1])[-1]
+        return sorted([(text, len(layers)) for text, layers in self.forms.items()], key=lambda x: x[1])[-1][0]
 
-    def get_form(self, layer: str) -> Optional[str]:
+    def get_form(self, layer: str) -> str:
+        assert layer in self.layers
         for form, layers in self.forms.items():
             if layer in layers:
                 return form
-        return None
 
     def add_form(self, form: str, layer: str):
         self.forms[form].add(layer)
         self.layers.add(layer)
 
     def get_annotation(self, layer: str) -> Layer:
-        return self.annotations[layer]
+        if layer in SENTENCE_LEVEL_LAYERS:
+            return self.annotations[layer]
+        elif layer in DOCUMENT_LEVEL_LAYERS:
+            # should return only relevant items
+            return self.super.annotations[layer]
+        else:
+            raise KeyError
 
     def add_annotation(self, layer: str, data: Any):
+        self.layers.add(layer)
         self.annotations[layer] = DATATYPES_BY_LAYER[layer](layer=layer, data=data, super_instance=self)
 
 
@@ -222,7 +251,7 @@ class Document:
     def __len__(self):
         return len(self.sentences)
 
-    def get_sentence(self, snt_id: str):
+    def get_sentence(self, snt_id: str) -> Sentence:
         return self.sentences[snt_id]
 
     def add_sentence(self, snt_id: str, instance: Sentence):
@@ -232,16 +261,20 @@ class Document:
         return self.annotations[layer]
 
     def add_annotation(self, layer: str, data: Any):
+        self.layers.add(layer)
         self.annotations[layer] = DATATYPES_BY_LAYER[layer](layer=layer, data=data, super_instance=self)
 
 
 class Corpus:
-    def __init__(self):
+    def __init__(self, files: dict = None):
         self.dirs = dict()
         self.layers = set()
         self.documents = defaultdict(Document)
         self.index = defaultdict(str)
         self.update = None
+
+        if files:
+            self.from_files(files=files)
 
     def __len__(self):
         return sum([len(doc) for doc in self.documents.values()])
@@ -261,9 +294,15 @@ class Corpus:
     def add_sentence(self, snt_id: str, instance: Sentence, doc_id: str):
         self.documents[doc_id].add_sentence(snt_id, instance)
 
+    def iter_documents(self):
+        return (document for document in self.documents)
+
+    def iter_sentences(self):
+        return (self.get_sentence(snt_id) for snt_id in self.index)
+
     def from_files(self, files: dict):
         self.dirs.update(files)
-        self.layers.update(files.keys())
+        self.layers.update(files)
         for layer, filepath in tqdm(self.dirs.items(), desc=f'{self}: loading {len(self.dirs)} files'):
             _corpus = load_json(filepath)
             for _doc in _corpus['document']:
@@ -271,7 +310,6 @@ class Corpus:
                 if doc_id not in self.documents:
                     self.documents[doc_id] = Document(doc_id=doc_id, super_instance=self)
                 document = self.get_document(doc_id=doc_id)
-                document.layers.add(layer)
                 if layer in SENTENCE_LEVEL_LAYERS:
                     for _snt in _doc['sentence']:
                         snt_id = _snt['id']
@@ -312,16 +350,13 @@ class Corpus:
 
 
 if __name__ == '__main__':
-    # search_space = 'D:\\Corpora & Language Resources\\modu-corenlp\\layers-complete\\*\\*.json'
-    search_space = '/Users/choe.hyonsu.gabrielle/modu-corenlp-essential/layers-complete/*/*.json'
+    search_space = 'D:\\Corpora & Language Resources\\modu-corenlp\\layers-complete\\*\\*.json'
+    # search_space = '/Users/choe.hyonsu.gabrielle/modu-corenlp-essential/layers-complete/*/*.json'
 
-    # targets = {layer.split('\\')[-2]: layer for layer in glob.glob(search_space)}
-    targets = {layer.split('/')[-2]: layer for layer in glob.glob(search_space)}
+    targets = {layer.split('\\')[-2]: layer for layer in glob.glob(search_space)}
+    # targets = {layer.split('/')[-2]: layer for layer in glob.glob(search_space)}
 
-    for n, f in targets.items():
-        print(f'- {n}: {f}')
-
-    corpus = Corpus().from_files(files=targets)
+    corpus = Corpus(files=targets)
     corpus.to_pickle('corpus.pkl')
     del corpus
 
@@ -332,5 +367,17 @@ if __name__ == '__main__':
     print(corpus)
     print(len(corpus.index))
     print(corpus.dirs)
+
+    for i, snt in enumerate(corpus.iter_sentences()):
+        print(snt.canonical_form())
+        print(snt.pos())
+        print(snt.ner())
+        print(snt.el())
+        print(snt.wsd())
+        print(snt.dep())
+        print(snt.srl())
+        print(snt.za())
+        print(snt.cr())
+        break
 
 
