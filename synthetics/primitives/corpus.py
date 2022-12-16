@@ -1,7 +1,7 @@
 import glob
 import time
 import datetime
-from typing import Any, Optional, Union
+from typing import Any, Optional
 from collections import defaultdict
 from tqdm import tqdm
 from synthetics.utils import load_json, save_pickle, load_pickle
