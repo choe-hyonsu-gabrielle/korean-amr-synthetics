@@ -1,5 +1,6 @@
 import json
 import pickle
+import datetime
 from typing import Any, Iterable
 
 
@@ -26,6 +27,10 @@ def save_pickle(filename: str, instance: Any):
 def load_pickle(filename: str):
     with open(filename, 'rb') as fp:
         return pickle.load(fp)
+
+
+def timestamp():
+    return datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 
 
 def partitions_attr(items: Iterable, by: [int, str], starts_from: [int, str] = 0, scope: list = None):
