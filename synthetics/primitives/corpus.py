@@ -318,7 +318,7 @@ class Sentence:
         return CRLayer(layer='cr', data=[dict(mention=cluster) for cluster in valid_clusters], super_instance=self)
 
     @property
-    def all(self) -> Annotations:
+    def labels(self) -> Annotations:
         """ returns packed instance of all annotations: it is accessible by field names (ex. z.pos, z.ner, z.dep, ...)
         :return: a `Annotations` instance
         """
@@ -456,17 +456,6 @@ class Corpus:
         sample_ids = random.sample(population=list(self.index), k=k)
         return [self.get_sentence(snt_id) for snt_id in sample_ids]
 
-    def filter_sentences_by(self, len_of_text_range: tuple[int, int] = None, num_of_forms_under: int = None):
-        assert len_of_text_range or num_of_forms_under
-        filtered = []
-        for snt_id in list(self.index):
-            sentence = self.get_sentence(snt_id)
-            if len(sentence.forms) > num_of_forms_under:
-                continue
-            if len_of_text_range[0] <= len(sentence) < len_of_text_range[1]:
-                filtered.append(sentence)
-        return filtered
-
     def from_files(self, files: dict):
         self.dirs.update(files)
         self.layers.update(files)
@@ -525,12 +514,12 @@ if __name__ == '__main__':
     # targets = {layer.split('\\')[-2]: layer for layer in glob.glob(search_space)}
     targets = {layer.split('/')[-2]: layer for layer in glob.glob(search_space)}
 
-    # corpus = Corpus(files=targets)
-    # corpus.to_pickle('corpus.pkl')
-    # del corpus
+    corpus = Corpus(files=targets)
+    corpus.to_pickle('corpus.pkl')
+    del corpus
 
     corpus = Corpus.from_pickle('corpus.pkl')
 
-    for i, snt in enumerate(corpus.sample_sentences(k=30, random_state=803)):
+    for i, snt in enumerate(corpus.sample_sentences(k=10)):
         print('\n\n')
-        print(snt.all)
+        print(snt.labels)
