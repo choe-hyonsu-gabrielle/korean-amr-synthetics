@@ -1,14 +1,11 @@
 import glob
 import time
 import random
-from typing import Any, Optional, NamedTuple
+import pprint
+from typing import Any, Optional, Union
 from collections import defaultdict
 from tqdm import tqdm
 from synthetics.utils import load_json, save_pickle, load_pickle, timestamp
-
-
-SENTENCE_LEVEL_LAYERS = {'pos': 'morpheme', 'wsd': 'WSD', 'ner': 'NE', 'el': 'NE', 'dep': 'DP', 'srl': 'SRL'}
-DOCUMENT_LEVEL_LAYERS = {'za': 'ZA', 'cr': 'CR'}
 
 
 class Item:
@@ -31,7 +28,12 @@ class Layer:
     def __repr__(self):
         name_of_class = self.__class__.__name__
         name_of_super = self.super.__class__.__name__
-        return f'<{name_of_class} → id: "{self.super.ref_id}" ({name_of_super}, data: {self.data})>'
+        header = f'<{name_of_class} → id: "{self.super.ref_id}" ({name_of_super}), items: {len(self.data)}>'
+        pformat = pprint.pformat(self.as_list(), indent=2)
+        return '\n'.join([header, pformat])
+
+    def as_list(self):
+        return self.data
 
 
 class POSItem(Item):
@@ -47,6 +49,9 @@ class POSLayer(Layer):
     def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[POSItem(**d) for d in data], super_instance=super_instance)
 
+    def as_list(self) -> list[POSItem]:
+        return self.data
+
 
 class NERItem(Item):
     def __init__(self, **kwargs):
@@ -61,6 +66,9 @@ class NERLayer(Layer):
     def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[NERItem(**d) for d in data], super_instance=super_instance)
 
+    def as_list(self) -> list[NERItem]:
+        return self.data
+
 
 class ELItem(Item):
     def __init__(self, **kwargs):
@@ -69,14 +77,17 @@ class ELItem(Item):
         self.label: str = kwargs['label']
         self.begin: int = kwargs['begin']
         self.end: int = kwargs['end']
-        self.k_id: str = kwargs['kid']
-        self.wiki_id: str = kwargs['wikiid']
-        self.url: str = kwargs['URL']
+        self.k_id: str = kwargs['kid'] if 'kid' in kwargs else kwargs['k_id']
+        self.wiki_id: str = kwargs['wikiid'] if 'wikiid' in kwargs else kwargs['wiki_id']
+        self.url: str = kwargs['URL'] if 'URL' in kwargs else kwargs['url']
 
 
 class ELLayer(Layer):
     def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[ELItem(**d) for d in data], super_instance=super_instance)
+
+    def as_list(self) -> list[ELItem]:
+        return self.data
 
 
 class WSDItem(Item):
@@ -93,6 +104,9 @@ class WSDLayer(Layer):
     def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[WSDItem(**d) for d in data], super_instance=super_instance)
 
+    def as_list(self) -> list[WSDItem]:
+        return self.data
+
 
 class DEPItem(Item):
     def __init__(self, **kwargs):
@@ -106,6 +120,9 @@ class DEPItem(Item):
 class DEPLayer(Layer):
     def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[DEPItem(**d) for d in data], super_instance=super_instance)
+
+    def as_list(self) -> list[DEPItem]:
+        return self.data
 
 
 class SRLPredicate(Item):
@@ -130,10 +147,16 @@ class SRLItem(Item):
         self.predicate: SRLPredicate = SRLPredicate(**kwargs['predicate'])
         self.argument: list[SRLArgument] = [SRLArgument(**arg) for arg in kwargs['argument']]
 
+    def __repr__(self):
+        return f'<{self.__class__.__name__}→\n{pprint.pformat(self.__dict__, indent=2)}>'
+
 
 class SRLLayer(Layer):
     def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[SRLItem(**d) for d in data], super_instance=super_instance)
+
+    def as_list(self) -> list[SRLItem]:
+        return self.data
 
 
 class CRMention(Item):
@@ -142,7 +165,7 @@ class CRMention(Item):
         self.form: str = kwargs['form']
         self.begin: int = kwargs['begin']
         self.end: int = kwargs['end']
-        self.ne_id: int = kwargs['NE_id']
+        self.ne_id: int = kwargs['NE_id'] if 'NE_id' in kwargs else kwargs['ne_id']
 
 
 class CRItem(Item):
@@ -153,6 +176,9 @@ class CRItem(Item):
 class CRLayer(Layer):
     def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[CRItem(**d) for d in data], super_instance=super_instance)
+
+    def as_list(self) -> list[list[CRMention]]:
+        return [item.mention for item in self.data]
 
 
 class ZAPredicate(Item):
@@ -177,12 +203,20 @@ class ZAItem(Item):
         self.predicate: ZAPredicate = ZAPredicate(**kwargs['predicate'])
         self.antecedent: list[ZAAntecedent] = [ZAAntecedent(**a_kwargs) for a_kwargs in kwargs['antecedent']]
 
+    def __repr__(self):
+        return f'<{self.__class__.__name__}→\n{pprint.pformat(self.__dict__, indent=2)}>'
+
 
 class ZALayer(Layer):
     def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[ZAItem(**d) for d in data], super_instance=super_instance)
 
+    def as_list(self) -> list[ZAItem]:
+        return self.data
 
+
+SENTENCE_LEVEL_LAYERS = {'pos': 'morpheme', 'wsd': 'WSD', 'ner': 'NE', 'el': 'NE', 'dep': 'DP', 'srl': 'SRL'}
+DOCUMENT_LEVEL_LAYERS = {'za': 'ZA', 'cr': 'CR'}
 DATATYPES_BY_LAYER = {
     'pos': POSLayer,
     'wsd': WSDLayer,
@@ -195,16 +229,30 @@ DATATYPES_BY_LAYER = {
 }
 
 
-class AnnotatedLayers(NamedTuple):
-    """ namedtuple for a return of Sentence.all() """
-    pos: list[POSItem] = None
-    ner: list[NERItem] = None
-    el: list[ELItem] = None
-    wsd: list[WSDItem] = None
-    dep: list[DEPItem] = None
-    srl: list[SRLItem] = None
-    za: list[ZAItem] = None
-    cr: list[list[CRMention]] = None
+class Annotations:
+    def __init__(self, **kwargs):
+        self.super: Optional[Sentence] = None
+        self.pos: Optional[POSLayer] = None
+        self.ner: Optional[NERLayer] = None
+        self.el: Optional[ELLayer] = None
+        self.wsd: Optional[WSDLayer] = None
+        self.dep: Optional[DEPLayer] = None
+        self.srl: Optional[SRLLayer] = None
+        self.za: Optional[ZALayer] = None
+        self.cr: Optional[CRLayer] = None
+        for kw in kwargs:
+            setattr(self, kw, kwargs[kw])
+
+    def __repr__(self):
+        return '\n\n'.join([f'`{_var}`: {_repr}' for _var, _repr in self.__dict__.items()])
+
+    @property
+    def ref_id(self):
+        return self.super.ref_id
+
+    @property
+    def form(self):
+        return self.super.canonical_form
 
 
 class Sentence:
@@ -216,27 +264,37 @@ class Sentence:
         self.index = dict()  # mapping of {word_id: (begin, end)}
 
     def __repr__(self):
-        return f'<{self.__class__.__name__} → id: {self.ref_id}, form ({len(self.forms)}): "{self.canonical_form()}">'
+        return f'<{self.__class__.__name__} → id: {self.ref_id}, form ({len(self.forms)}): "{self.canonical_form}">'
 
-    def pos(self) -> list[POSItem]:
-        return self.get_annotation('pos').data
+    def __len__(self):
+        return len(self.canonical_form)
 
-    def ner(self) -> list[NERItem]:
-        return self.get_annotation('ner').data
+    @property
+    def pos(self) -> POSLayer:
+        return self.get_annotation('pos')
 
-    def el(self) -> list[ELItem]:
-        return self.get_annotation('el').data
+    @property
+    def ner(self) -> NERLayer:
+        return self.get_annotation('ner')
 
-    def wsd(self) -> list[WSDItem]:
-        return self.get_annotation('wsd').data
+    @property
+    def el(self) -> ELLayer:
+        return self.get_annotation('el')
 
-    def dep(self) -> list[DEPItem]:
-        return self.get_annotation('dep').data
+    @property
+    def wsd(self) -> WSDLayer:
+        return self.get_annotation('wsd')
 
-    def srl(self) -> list[SRLItem]:
-        return self.get_annotation('srl').data
+    @property
+    def dep(self) -> DEPLayer:
+        return self.get_annotation('dep')
 
-    def za(self) -> list[ZAItem]:
+    @property
+    def srl(self) -> SRLLayer:
+        return self.get_annotation('srl')
+
+    @property
+    def za(self) -> ZALayer:
         """ only returns items relevant to the sentence
         :return: list of zero-anaphora items
         """
@@ -245,25 +303,30 @@ class Sentence:
         za_dict = [dict(predicate=z.predicate.__dict__, antecedent=[a.__dict__ for a in z.antecedent]) for z in za_list]
         for za_item in za_dict:
             za_item['antecedent'] = [a for a in za_item['antecedent'] if a['sentence_id'] in ('-1', self.ref_id)]
-        return [ZAItem(**za_item) for za_item in za_dict if za_item['antecedent']]
+        return ZALayer(layer='za', data=[za_item for za_item in za_dict if za_item['antecedent']], super_instance=self)
 
-    def cr(self) -> list[list[CRMention]]:
+    @property
+    def cr(self) -> CRLayer:
         """ only returns clusters of mentions relevant to the sentence
         :return: list of clustered mentions
         """
         valid_clusters = []
         for cr_item in self.get_annotation('cr').data:
-            intra_sentence_coreference = [m for m in cr_item.mention if m.sentence_id == self.ref_id]
+            intra_sentence_coreference = [m.__dict__ for m in cr_item.mention if m.sentence_id == self.ref_id]
             if len(intra_sentence_coreference) > 1:
                 valid_clusters.append(intra_sentence_coreference)
-        return valid_clusters
+        return CRLayer(layer='cr', data=[dict(mention=cluster) for cluster in valid_clusters], super_instance=self)
 
-    def all(self) -> AnnotatedLayers:
-        """ returns namedtuple of all annotations: it is accessible by field names (ex. z.pos, z.ner, z.dep, ...)
-        :return: a namedtuple
+    @property
+    def all(self) -> Annotations:
+        """ returns packed instance of all annotations: it is accessible by field names (ex. z.pos, z.ner, z.dep, ...)
+        :return: a `Annotations` instance
         """
-        return AnnotatedLayers(**{k: getattr(self, k)() for k in self.get_layers()})
+        kwargs = dict(super=self)
+        kwargs.update({k: getattr(self, k) for k in self.get_layers()})
+        return Annotations(**kwargs)
 
+    @property
     def canonical_form(self) -> str:
         if len(self.forms) == 1:
             return list(self.forms)[0]
@@ -293,7 +356,9 @@ class Sentence:
                 return word_id
         return None
 
-    def get_annotation(self, layer: str) -> Layer:
+    def get_annotation(self, layer: str) -> Union[
+        None, POSLayer, NERLayer, ELLayer, WSDLayer, DEPLayer, SRLLayer, CRLayer, ZALayer
+    ]:
         if layer in SENTENCE_LEVEL_LAYERS:
             return self.annotations.get(layer, None)
         elif layer in DOCUMENT_LEVEL_LAYERS:
@@ -333,9 +398,11 @@ class Document:
         assert layer in DOCUMENT_LEVEL_LAYERS
         self.annotations[layer] = DATATYPES_BY_LAYER[layer](layer=layer, data=data, super_instance=self)
 
+    @property
     def doc_cr(self) -> list[DEPItem]:
         return self.get_annotation('cr').data
 
+    @property
     def doc_za(self) -> list[SRLItem]:
         return self.get_annotation('za').data
 
@@ -378,14 +445,27 @@ class Corpus:
     def iter_sentences(self):
         return (self.get_sentence(snt_id) for snt_id in self.index)
 
-    def sample_documents(self, k: int):
+    def sample_documents(self, k: int, random_state: int = None):
         assert k <= len(self.documents)
+        random.seed(random_state)
         return [document for document in random.sample(population=list(self.documents), k=k)]
 
-    def sample_sentences(self, k: int):
+    def sample_sentences(self, k: int, random_state: int = None):
         assert k <= len(self.index)
+        random.seed(random_state)
         sample_ids = random.sample(population=list(self.index), k=k)
         return [self.get_sentence(snt_id) for snt_id in sample_ids]
+
+    def filter_sentences_by(self, len_of_text_range: tuple[int, int] = None, num_of_forms_under: int = None):
+        assert len_of_text_range or num_of_forms_under
+        filtered = []
+        for snt_id in list(self.index):
+            sentence = self.get_sentence(snt_id)
+            if len(sentence.forms) > num_of_forms_under:
+                continue
+            if len_of_text_range[0] <= len(sentence) < len_of_text_range[1]:
+                filtered.append(sentence)
+        return filtered
 
     def from_files(self, files: dict):
         self.dirs.update(files)
@@ -433,7 +513,7 @@ class Corpus:
         start = time.time()
         loaded_corpus: Corpus = load_pickle(filename)
         lapse = time.time() - start
-        print(f'- loaded Corpus instance from `{filename}`, {lapse} sec lapsed for {len(loaded_corpus)} Sentences')
+        print(f'- loaded Corpus from `{filename}`, {lapse:.2f} sec lapsed, {len(loaded_corpus)} Sentences:', end=' ')
         print(loaded_corpus)
         return loaded_corpus
 
@@ -451,9 +531,6 @@ if __name__ == '__main__':
 
     corpus = Corpus.from_pickle('corpus.pkl')
 
-    import pprint
-    for i, snt in enumerate(corpus.sample_sentences(k=20)):
-        print('\n')
-        print(snt)
-        for t in snt.all():
-            pprint.pprint(t)
+    for i, snt in enumerate(corpus.sample_sentences(k=30, random_state=803)):
+        print('\n\n')
+        print(snt.all)
