@@ -230,8 +230,8 @@ DATATYPES_BY_LAYER = {
 
 
 class Annotations:
-    def __init__(self, **kwargs):
-        self.super: Optional[Sentence] = None
+    def __init__(self, super_instance=None):
+        self.super: Optional[Sentence] = super_instance
         self.pos: Optional[POSLayer] = None
         self.ner: Optional[NERLayer] = None
         self.el: Optional[ELLayer] = None
@@ -240,11 +240,17 @@ class Annotations:
         self.srl: Optional[SRLLayer] = None
         self.za: Optional[ZALayer] = None
         self.cr: Optional[CRLayer] = None
-        for kw in kwargs:
-            setattr(self, kw, kwargs[kw])
 
     def __repr__(self):
         return '\n\n'.join([f'`{_var}`: {_repr}' for _var, _repr in self.__dict__.items()])
+
+    def get(self, layer: str, default: Any = None):
+        assert layer != 'super'
+        return getattr(self, layer, default)
+
+    def add(self, layer: str, instance: Union[None, POSLayer, NERLayer, ELLayer, WSDLayer, DEPLayer, SRLLayer, ZALayer, CRLayer]):
+        assert layer in self.__dict__ and layer != 'super'
+        setattr(self, layer, instance)
 
     @property
     def ref_id(self):
@@ -260,7 +266,7 @@ class Sentence:
         self.ref_id = snt_id
         self.forms = defaultdict(set)
         self.super: Optional[Document] = super_instance
-        self.annotations = defaultdict(Layer)
+        self.annotations = Annotations(self)
         self.index = dict()  # mapping of {word_id: (begin, end)}
 
     def __repr__(self):
@@ -271,35 +277,37 @@ class Sentence:
 
     @property
     def pos(self) -> POSLayer:
-        return self.get_annotation('pos')
+        return self.annotations.get('pos')
 
     @property
     def ner(self) -> NERLayer:
-        return self.get_annotation('ner')
+        return self.annotations.get('ner')
 
     @property
     def el(self) -> ELLayer:
-        return self.get_annotation('el')
+        return self.annotations.get('el')
 
     @property
     def wsd(self) -> WSDLayer:
-        return self.get_annotation('wsd')
+        return self.annotations.get('wsd')
 
     @property
     def dep(self) -> DEPLayer:
-        return self.get_annotation('dep')
+        return self.annotations.get('dep')
 
     @property
     def srl(self) -> SRLLayer:
-        return self.get_annotation('srl')
+        return self.annotations.get('srl')
 
     @property
     def za(self) -> ZALayer:
         """ only returns items relevant to the sentence
         :return: list of zero-anaphora items
         """
+        if self.annotations.za is not None:
+            return self.annotations.get('za')
         # filter by sentence_id in predicate to get rid of irrelevant items to current Sentence
-        za_list = [za for za in self.get_annotation('za').data if za.predicate.sentence_id == self.ref_id]
+        za_list = [za for za in self.super.doc_za if za.predicate.sentence_id == self.ref_id]
         za_dict = [dict(predicate=z.predicate.__dict__, antecedent=[a.__dict__ for a in z.antecedent]) for z in za_list]
         for za_item in za_dict:
             za_item['antecedent'] = [a for a in za_item['antecedent'] if a['sentence_id'] in ('-1', self.ref_id)]
@@ -310,21 +318,14 @@ class Sentence:
         """ only returns clusters of mentions relevant to the sentence
         :return: list of clustered mentions
         """
+        if self.annotations.cr is not None:
+            return self.annotations.get('cr')
         valid_clusters = []
-        for cr_item in self.get_annotation('cr').data:
+        for cr_item in self.super.doc_cr:
             intra_sentence_coreference = [m.__dict__ for m in cr_item.mention if m.sentence_id == self.ref_id]
             if len(intra_sentence_coreference) > 1:
                 valid_clusters.append(intra_sentence_coreference)
         return CRLayer(layer='cr', data=[dict(mention=cluster) for cluster in valid_clusters], super_instance=self)
-
-    @property
-    def labels(self) -> Annotations:
-        """ returns packed instance of all annotations: it is accessible by field names (ex. z.pos, z.ner, z.dep, ...)
-        :return: a `Annotations` instance
-        """
-        kwargs = dict(super=self)
-        kwargs.update({k: getattr(self, k) for k in self.get_layers()})
-        return Annotations(**kwargs)
 
     @property
     def canonical_form(self) -> str:
@@ -356,22 +357,18 @@ class Sentence:
                 return word_id
         return None
 
-    def get_annotation(self, layer: str) -> Union[
-        None, POSLayer, NERLayer, ELLayer, WSDLayer, DEPLayer, SRLLayer, CRLayer, ZALayer
-    ]:
-        if layer in SENTENCE_LEVEL_LAYERS:
-            return self.annotations.get(layer, None)
-        elif layer in DOCUMENT_LEVEL_LAYERS:
-            return self.super.annotations.get(layer, None)
-        else:
-            raise KeyError
+    def doc_to_snt_annotation(self):
+        if 'za' in self.super.annotations:
+            self.annotations.add('za', self.za)
+        if 'cr' in self.super.annotations:
+            self.annotations.add('cr', self.cr)
+
+    def get_annotation(self, layer: str) -> Union[None, POSLayer, NERLayer, ELLayer, WSDLayer, DEPLayer, SRLLayer, CRLayer, ZALayer]:
+        return self.annotations.get(layer, None)
 
     def add_annotation(self, layer: str, data: Any):
         assert layer in SENTENCE_LEVEL_LAYERS
-        self.annotations[layer] = DATATYPES_BY_LAYER[layer](layer=layer, data=data, super_instance=self)
-
-    def get_layers(self) -> list[str]:
-        return list(set(list(self.annotations) + list(self.super.annotations)))
+        self.annotations.add(layer, DATATYPES_BY_LAYER[layer](layer=layer, data=data, super_instance=self))
 
 
 class Document:
@@ -399,11 +396,11 @@ class Document:
         self.annotations[layer] = DATATYPES_BY_LAYER[layer](layer=layer, data=data, super_instance=self)
 
     @property
-    def doc_cr(self) -> list[DEPItem]:
+    def doc_cr(self) -> list[CRItem]:
         return self.get_annotation('cr').data
 
     @property
-    def doc_za(self) -> list[SRLItem]:
+    def doc_za(self) -> list[ZAItem]:
         return self.get_annotation('za').data
 
 
@@ -475,17 +472,18 @@ class Corpus:
                         sentence.add_annotation(layer=layer, data=data)
                         self.index[snt_id] = doc_id
                 elif layer in DOCUMENT_LEVEL_LAYERS:
+                    data = _doc[DOCUMENT_LEVEL_LAYERS[layer]]
+                    document.add_annotation(layer=layer, data=data)
                     for _snt in _doc['sentence']:
                         snt_id, form = _snt['id'], _snt['form']
                         if snt_id not in document.sentences:
                             document.sentences[snt_id] = Sentence(snt_id=snt_id, super_instance=document)
                         sentence = document.get_sentence(snt_id=snt_id)
+                        sentence.add_form(form=form, layer=layer)
                         if 'word' in _snt:
                             sentence.add_index(_snt['word'])
-                        sentence.add_form(form=form, layer=layer)
                         self.index[snt_id] = doc_id
-                    data = _doc[DOCUMENT_LEVEL_LAYERS[layer]]
-                    document.add_annotation(layer=layer, data=data)
+                        sentence.doc_to_snt_annotation()
                 else:
                     raise ValueError(f'`{layer}` is unsupported annotation type: {list(DATATYPES_BY_LAYER)}')
         # timestamp
@@ -514,12 +512,12 @@ if __name__ == '__main__':
     # targets = {layer.split('\\')[-2]: layer for layer in glob.glob(search_space)}
     targets = {layer.split('/')[-2]: layer for layer in glob.glob(search_space)}
 
-    corpus = Corpus(files=targets)
-    corpus.to_pickle('corpus.pkl')
-    del corpus
+    # corpus = Corpus(files=targets)
+    # corpus.to_pickle('corpus.pkl')
+    # del corpus
 
     corpus = Corpus.from_pickle('corpus.pkl')
 
     for i, snt in enumerate(corpus.sample_sentences(k=10)):
         print('\n\n')
-        print(snt.labels)
+        print(snt.annotations)
