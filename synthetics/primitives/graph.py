@@ -9,15 +9,14 @@ class AMRCore:
         self.instances: dict = dict()   # {'node_idx': 'concept'}
         self.relations: dict = dict()   # {(idx1, idx2): ':relation'}
         self.attributes: dict = dict()  # {'node_idx': (':relation', 'value')}
-
-    def __repr__(self):
-        return self.render()
+        self.graph = None
 
     def render(self):
         nodes = [(node_idx, ':instance', concept) for node_idx, concept in self.instances.items()]
         edges = [(head, relation, tail) for (head, tail), relation in self.relations.items()]
         attrs = [(idx, relation, value) for idx, (relation, value) in self.attributes.items()]
         graph = penman.Graph(triples=nodes + edges + attrs, top=self.top, metadata=self.metadata)
+        self.graph = graph
         return penman.encode(graph)
 
     def add_instance(self, concept: str, node_idx: Any = None):
@@ -41,31 +40,29 @@ class AMRGraph:
         self.text: Optional[str] = annotations.form
         self.timestamp: Optional[str] = timestamp()
         self.annotations: Optional[Annotations] = annotations
-        self.amr: AMRCore = AMRCore(metadata=dict(id=self.id, snt=self.text, timestamp=self.timestamp))
+        self.core: AMRCore = AMRCore(metadata=dict(id=self.id, snt=self.text, timestamp=self.timestamp))
 
         # initializing pipeline
         self.dependency_to_penman()
 
-    def __repr__(self):
-        return self.amr
+    def encode(self):
+        return self.core.render()
 
     def dependency_to_penman(self):
         # initial instances
         for word in self.annotations.dep.as_list():
-            w_id = word.word_id
+            node_idx = word.word_id
             concept = word.word_form
-            self.amr.add_instance(concept, w_id)
-
+            self.core.add_instance(concept, node_idx)
         # initial relations
         for word in self.annotations.dep.as_list():
             head_idx = word.head
-            relation = f':{word.label}'
+            relation = f':{word.label}.dep'
             tail_idx = word.word_id
             if word.head == -1:
-                self.amr.top = tail_idx
-                self.amr.add_attribute(tail_idx, ':phrase', word.label)
+                self.core.top = tail_idx
             else:
-                self.amr.add_relation(head_idx, relation, tail_idx)
+                self.core.add_relation(head_idx, relation, tail_idx)
 
 
 if __name__ == '__main__':
@@ -73,8 +70,9 @@ if __name__ == '__main__':
 
     for i, snt in enumerate(corpus.sample_sentences(k=10, random_state=42)):
         print('\n\n')
+        print(snt.annotations.ner)
         print(snt.annotations.dep)
+        print(snt.annotations.srl)
         amr = AMRGraph(snt.annotations)
-        amr.dependency_to_penman()
-        print(amr)
+        print(amr.encode())
 
