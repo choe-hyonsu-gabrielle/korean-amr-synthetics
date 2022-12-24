@@ -347,12 +347,10 @@ class Sentence:
         self.forms[form].add(layer)
 
     def add_word_index(self, words: dict):
-        if self.word:
-            assert len(self.word) == len(words)
-            assert self.index == {w['id']: (w['begin'], w['end']) for w in words}
-        else:
-            self.word = {w['id']: w['form'] for w in words}
-            self.index = {w['id']: (w['begin'], w['end']) for w in words}
+        # it is supposed to be called once only if processing on `dep`
+        assert not self.word and not self.index
+        self.word = {w['id']: w['form'] for w in words}
+        self.index = {w['id']: (w['begin'], w['end']) for w in words}
 
     def word_id_to_span_ids(self, word_id: int) -> Optional[int]:
         return self.index.get(word_id, None)
@@ -478,7 +476,7 @@ class Corpus:
                         sentence.add_form(form=form, layer=layer)
                         data = _snt[SENTENCE_LEVEL_LAYERS[layer]]
                         sentence.add_annotation(layer=layer, data=data)
-                        if 'word' in _snt:
+                        if layer == 'dep' and 'word' in _snt:
                             sentence.add_word_index(_snt['word'])
                         self.index[snt_id] = doc_id
                 elif layer in DOCUMENT_LEVEL_LAYERS:
@@ -491,7 +489,7 @@ class Corpus:
                             document.sentences[snt_id] = Sentence(snt_id=snt_id, super_instance=document)
                         sentence = document.get_sentence(snt_id=snt_id)
                         sentence.add_form(form=form, layer=layer)
-                        if 'word' in _snt:
+                        if layer == 'dep' and 'word' in _snt:
                             sentence.add_word_index(_snt['word'])
                         self.index[snt_id] = doc_id
                         sentence.doc_to_snt_annotation()
