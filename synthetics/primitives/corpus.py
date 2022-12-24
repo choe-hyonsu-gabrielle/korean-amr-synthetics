@@ -260,6 +260,9 @@ class Annotations:
     def form(self):
         return self.super.canonical_form
 
+    def word(self, word_id: int):
+        return self.super.word.get(word_id, None)
+
 
 class Sentence:
     def __init__(self, snt_id: str, super_instance: Any = None):
@@ -268,6 +271,7 @@ class Sentence:
         self.super: Optional[Document] = super_instance
         self.annotations = Annotations(self)
         self.index = dict()  # mapping of {word_id: (begin, end)}
+        self.word = dict()   # mapping of {word_id: "word_form"}
 
     def __repr__(self):
         return f'<{self.__class__.__name__} → id: {self.ref_id}, form ({len(self.forms)}): "{self.canonical_form}">'
@@ -342,10 +346,12 @@ class Sentence:
     def add_form(self, form: str, layer: str):
         self.forms[form].add(layer)
 
-    def add_index(self, words: dict):
-        if self.index:
+    def add_word_index(self, words: dict):
+        if self.word:
+            assert len(self.word) == len(words)
             assert self.index == {w['id']: (w['begin'], w['end']) for w in words}
         else:
+            self.word = {w['id']: w['form'] for w in words}
             self.index = {w['id']: (w['begin'], w['end']) for w in words}
 
     def word_id_to_span_ids(self, word_id: int) -> Optional[int]:
@@ -464,24 +470,29 @@ class Corpus:
                 document = self.get_document(doc_id=doc_id)
                 if layer in SENTENCE_LEVEL_LAYERS:
                     for _snt in _doc['sentence']:
-                        snt_id, form, data = _snt['id'], _snt['form'], _snt[SENTENCE_LEVEL_LAYERS[layer]]
+                        snt_id = _snt['id']
+                        form = _snt['form']
                         if snt_id not in document.sentences:
                             document.sentences[snt_id] = Sentence(snt_id=snt_id, super_instance=document)
                         sentence = document.get_sentence(snt_id=snt_id)
                         sentence.add_form(form=form, layer=layer)
+                        data = _snt[SENTENCE_LEVEL_LAYERS[layer]]
                         sentence.add_annotation(layer=layer, data=data)
+                        if 'word' in _snt:
+                            sentence.add_word_index(_snt['word'])
                         self.index[snt_id] = doc_id
                 elif layer in DOCUMENT_LEVEL_LAYERS:
                     data = _doc[DOCUMENT_LEVEL_LAYERS[layer]]
                     document.add_annotation(layer=layer, data=data)
                     for _snt in _doc['sentence']:
-                        snt_id, form = _snt['id'], _snt['form']
+                        snt_id = _snt['id']
+                        form = _snt['form']
                         if snt_id not in document.sentences:
                             document.sentences[snt_id] = Sentence(snt_id=snt_id, super_instance=document)
                         sentence = document.get_sentence(snt_id=snt_id)
                         sentence.add_form(form=form, layer=layer)
                         if 'word' in _snt:
-                            sentence.add_index(_snt['word'])
+                            sentence.add_word_index(_snt['word'])
                         self.index[snt_id] = doc_id
                         sentence.doc_to_snt_annotation()
                 else:
@@ -512,9 +523,9 @@ if __name__ == '__main__':
     # targets = {layer.split('\\')[-2]: layer for layer in glob.glob(search_space)}
     targets = {layer.split('/')[-2]: layer for layer in glob.glob(search_space)}
 
-    # corpus = Corpus(files=targets)
-    # corpus.to_pickle('corpus.pkl')
-    # del corpus
+    corpus = Corpus(files=targets)
+    corpus.to_pickle('corpus.pkl')
+    del corpus
 
     corpus = Corpus.from_pickle('corpus.pkl')
 
