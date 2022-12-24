@@ -489,8 +489,6 @@ class Corpus:
                             document.sentences[snt_id] = Sentence(snt_id=snt_id, super_instance=document)
                         sentence = document.get_sentence(snt_id=snt_id)
                         sentence.add_form(form=form, layer=layer)
-                        if layer == 'dep' and 'word' in _snt:
-                            sentence.add_word_index(_snt['word'])
                         self.index[snt_id] = doc_id
                         sentence.doc_to_snt_annotation()
                 else:
