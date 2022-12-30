@@ -7,15 +7,15 @@ class AMRAnnotation:
     def __init__(self, annotations: Annotations):
         self.id: Optional[str] = annotations.ref_id
         self.text: Optional[str] = annotations.form
-        self.metadata: Dict[str, str] = dict(id=self.id, snt=self.text)
+        self.metadata: dict[str, str] = dict(id=self.id, snt=self.text)
         self.annotations: Optional[Annotations] = annotations
         self.sentence: Sentence = self.annotations.super
         self.graph: AMRGraph = AMRGraph(super_instance=self)
 
         # initializing pipeline
-        self.parse_to_penman()
-        self.update_from_srl()
+        self.update_from_dep()
         self.update_from_ner()
+        self.update_from_srl()
 
     def get_metadata(self):
         self.metadata.update({'update': timestamp()})
@@ -24,34 +24,37 @@ class AMRAnnotation:
     def encode(self, additional_metadata: dict = None):
         return self.graph.render()
 
-    def parse_to_penman(self):
+    def update_from_dep(self):
         # instances
         for word in self.annotations.dep.tolist():
-            node_idx = word.word_id
-            concept = word.word_form
-            self.graph.add_instance(concept, node_idx)
+            self.graph.add_instance(concept=word.word_form, node_idx=word.word_id)
         # relations
         for word in self.annotations.dep.tolist():
-            head_idx = word.head
-            relation = f':{word.label}.dep'
-            tail_idx = word.word_id
+            head_idx: int = word.head
+            relation: str = f':{word.label}.dep'
+            tail_idx: int = word.word_id
             if word.head == -1:
                 self.graph.top = tail_idx
             else:
-                self.graph.add_relation(head_idx, relation, tail_idx)
+                self.graph.add_relation(head_idx=head_idx, relation=relation, tail_idx=tail_idx)
 
     def update_from_srl(self):
         for srl in self.annotations.srl.tolist():
-            _, predicate_word_idx = self.sentence.span_ids_to_word_id(begin=srl.predicate.begin, end=srl.predicate.end)
+            _, pred_word_idx = self.sentence.span_ids_to_word_id(begin=srl.predicate.begin, end=srl.predicate.end)
+            head_idx = self.graph.redirect_node(pred_word_idx)
             for arg in srl.argument:
-                self.graph.relations[(predicate_word_idx, arg.word_id)] = f':{arg.label}.srl'
+                tail_idx = self.graph.redirect_node(arg.word_id)
+                self.graph.add_relation(head_idx=head_idx, relation=f':{arg.label}.srl', tail_idx=tail_idx)
+                inverted = self.graph.get_relation(tail_idx, head_idx)
+                if inverted and inverted.endswith('.dep'):
+                    self.graph.del_relation(head_idx=tail_idx, tail_idx=head_idx)
 
     def update_from_ner(self):
         for ner in self.annotations.ner.tolist():
             word_begin, word_end = self.sentence.span_ids_to_word_id(begin=ner.begin, end=ner.end)
             if word_begin < word_end:
-                span = list(range(word_begin, word_end + 1))
-                self.graph.amalgamate(nodes=span)
+                nodes = list(range(word_begin, word_end + 1))
+                self.graph.amalgamate(nodes=nodes)
 
 
 class AMRGraph:
@@ -94,21 +97,32 @@ class AMRGraph:
         assert relation.startswith(':')
         self.relations[(head_idx, tail_idx)] = relation
 
-    def get_relation(self, head_idx: Any, tail_idx: Any):
+    def get_relation(self, head_idx: Any, tail_idx: Any, include_inverted: bool = False):
         if (head_idx, tail_idx) in self.relations:
             return self.relations[(head_idx, tail_idx)]
-        elif (tail_idx, head_idx) in self.relations:
+        elif include_inverted and (tail_idx, head_idx) in self.relations:
             relation = self.relations[(tail_idx, head_idx)]
             return relation[:-3] if relation.endswith('-of') else relation + '-of'
         return None
+
+    def del_relation(self, head_idx: Any, tail_idx: Any, include_inverted: bool = False):
+        if include_inverted:
+            try:
+                del self.relations[(head_idx, tail_idx)]
+            except KeyError:
+                del self.relations[(tail_idx, head_idx)]
+        else:
+            del self.relations[(head_idx, tail_idx)]
 
     def add_attribute(self, node_idx: Any, relation: str, value: Any):
         assert node_idx in self.instances
         assert relation.startswith(':')
         self.attributes[node_idx] = (relation, value)
 
-    def amalgamate(self, nodes: list[Any]):
+    def amalgamate(self, nodes: list[Any], redirect_true_node: bool = False):
         assert len(nodes) >= 2
+        if redirect_true_node:
+            nodes = [self.redirect_node(node_idx=n) for n in nodes]
         if len(nodes) == 2:
             return self.pairwise_merge(*nodes)
         amalgamated_node_idx = nodes.pop(0)
@@ -117,6 +131,22 @@ class AMRGraph:
             amalgamated_node_idx = self.pairwise_merge(amalgamated_node_idx, node_to_merge)
             node_to_merge = nodes.pop(0) if nodes else None
         return amalgamated_node_idx
+
+    def redirect_node(self, node_idx: Any):
+        if isinstance(node_idx, (tuple, list, set)):
+            for true_idx in self.instances:
+                if isinstance(true_idx, (tuple, list, set)) and set(node_idx).issubset(set(true_idx)):
+                    return true_idx
+            return node_idx
+        elif isinstance(node_idx, (int, str)):
+            for true_idx in self.instances:
+                if isinstance(true_idx, (tuple, list, set)) and {node_idx}.issubset(set(true_idx)):
+                    return true_idx
+                elif isinstance(true_idx, (int, str)) and node_idx == true_idx:
+                    return true_idx
+            return node_idx
+        else:
+            raise NotImplementedError
 
     def pairwise_merge(self, node_a: Any, node_b: Any):
         # get index of node_a and node_b
@@ -178,12 +208,13 @@ if __name__ == '__main__':
 
     for i, snt in enumerate(corpus.sample_sentences(k=20, random_state=803)):
         print('\n\n')
-        # print(snt.annotations.ner)
         # print(snt.annotations.dep)
-        # print(snt.annotations.srl)
+        print(snt.annotations.srl)
+        print(snt.annotations.ner)
         amr = AMRAnnotation(snt.annotations)
         print(amr.encode())
 
+    """
     errors = 0
     counts = 0
     with tqdm(corpus.iter_sentences()) as progress_bar:
@@ -199,3 +230,4 @@ if __name__ == '__main__':
                 errors += 1
             counts += 1
     print(counts, errors)
+    """

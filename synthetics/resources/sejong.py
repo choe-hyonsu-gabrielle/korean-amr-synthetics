@@ -1,10 +1,12 @@
 import re
 import time
 import glob
+from collections import defaultdict
 from xml.etree.ElementTree import ElementTree
 from typing import Optional, Union
 from tqdm import tqdm
 from synthetics.utils import save_pickle, load_pickle, timestamp
+from synthetics.resources.stopitems import PRAGMATIC_IDIOMS
 
 
 class Entry:
@@ -41,7 +43,9 @@ class Lexicon:
 
 
 def parse_theta_role(desc: str):
-    return [tuple(tht_rol.split('=')) for tht_rol in desc.strip().split()]
+    if desc:
+        return [tuple(tht_rol.split('=')) for tht_rol in desc.strip().split()]
+    return [None]
 
 
 def parse_selective_restriction(desc: str):
@@ -58,9 +62,9 @@ class IdiomaticVerbFrames(Lexicon):
 
     def from_files(self, files: Union[str, list[str], set[str], tuple[str]]):
 
-        all_temp = set()
-        all_sel_rst = set()
-        all_tht_rol = set()
+        all_temp = defaultdict(set)
+        all_sel_rst = defaultdict(set)
+        all_tht_rol = defaultdict(set)
 
         target_files = []
         if isinstance(files, str):
@@ -68,10 +72,14 @@ class IdiomaticVerbFrames(Lexicon):
         elif isinstance(files, (list, set, tuple)):
             for item in files:
                 target_files.extend(glob.glob(item))
+        target_files = [f for f in target_files if f.split('\\')[-1] not in PRAGMATIC_IDIOMS]
+
         for target in tqdm(target_files, desc=f'{self} - loading {len(target_files)} files'):
             xml = ElementTree(file=target)
             root = xml.getroot()
-            orth = root.find('orth').text.strip()
+            orth = re.sub(r'\s+', ' ', root.find('orth').text.strip())
+            edef = None  # trans
+            morph_grp = root.find('entry').find()
             for sense in list(root.find('entry').findall('sense')):
                 frame_name = '-'.join(orth.split() + [sense.attrib.get('n').zfill(2)])
                 entry = VerbFrame(form=orth, frame=frame_name)
@@ -83,18 +91,30 @@ class IdiomaticVerbFrames(Lexicon):
                         entry.examples[template].update(examples)
                         theta = syn_sem.find('tht_rol').text
                         selective = syn_sem.find('sel_rst').text
-                        if theta:
-                            print(frame_name, template, theta, selective, parse_theta_role(theta))
-                            all_temp.add(template)
-                            all_tht_rol.update(parse_theta_role(theta))
-                            all_sel_rst.add(selective)
-                            self.add_entry(entry)
-                        else:
+
+                        all_temp[template].add(orth)
+                        for tup in parse_theta_role(theta):
+                            all_tht_rol[tup].add(orth)
+                        all_sel_rst[selective].add(orth)
+
+                        self.add_entry(entry)
+
+                        if not theta:
                             print(frame_name, template, theta, selective)
-        print(all_temp)
-        print(all_sel_rst)
-        print(all_tht_rol)
-        pass
+
+        with open('templetes.tsv', encoding='utf-8', mode='w') as fp:
+            for k, v in all_temp.items():
+                print(f'{k}', file=fp)
+
+        with open('selectives.tsv', encoding='utf-8', mode='w') as fp:
+            for k, v in all_sel_rst.items():
+                print(f'{k}', file=fp)
+
+        with open('theta-roles.tsv', encoding='utf-8', mode='w') as fp:
+            for k, v in all_tht_rol.items():
+                print(f'{k}\t{v}', file=fp)
+
+        print(len(self.entries))
 
     @staticmethod
     def from_pickle(filename):
@@ -105,8 +125,10 @@ class IdiomaticVerbFrames(Lexicon):
         print(lexicon)
         return lexicon
 
+
 if __name__ == '__main__':
-    idioms = "/Users/choe.hyonsu.gabrielle/modu-corenlp-essential/sejong/01_전자사전/XML파일/상세전자사전/15. 관용표현_상세/1/*.xml"
+    # idioms = "/Users/choe.hyonsu.gabrielle/modu-corenlp-essential/sejong/01_전자사전/XML파일/상세전자사전/15. 관용표현_상세/1/*.xml"
+    idioms = 'D:/Corpora & Language Resources/modu-corenlp/sejong/XML파일/상세전자사전/15. 관용표현_상세/1/*.xml'
 
     frameset = IdiomaticVerbFrames()
     frameset.from_files(files=idioms)

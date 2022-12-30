@@ -314,15 +314,15 @@ class Corpus:
 
 
 if __name__ == '__main__':
-    # search_space = 'D:\\Corpora & Language Resources\\modu-corenlp\\layers-complete\\*\\*.json'
-    search_space = '/Users/choe.hyonsu.gabrielle/modu-corenlp-essential/layers-complete/*/*.json'
+    search_space = 'D:\\Corpora & Language Resources\\modu-corenlp\\layers-complete\\*\\*.json'
+    # search_space = '/Users/choe.hyonsu.gabrielle/modu-corenlp-essential/layers-complete/*/*.json'
 
-    # targets = {layer.split('\\')[-2]: layer for layer in glob.glob(search_space)}
-    targets = {layer.split('/')[-2]: layer for layer in glob.glob(search_space)}
+    targets = {layer.split('\\')[-2]: layer for layer in glob.glob(search_space)}
+    # targets = {layer.split('/')[-2]: layer for layer in glob.glob(search_space)}
 
-    corpus = Corpus(files=targets)
-    corpus.to_pickle('corpus.pkl')
-    del corpus
+    # corpus = Corpus(files=targets)
+    # corpus.to_pickle('corpus.pkl')
+    # del corpus
 
     corpus = Corpus.from_pickle('corpus.pkl')
 
