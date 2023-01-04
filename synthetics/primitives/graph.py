@@ -14,18 +14,18 @@ class AMRHeadlessConcept:
     def __repr__(self):
         return f'<{self.__class__.__name__}: "{self.concept_type}" {self.mapping}>'
 
-    def instance(self, global_idx: Any):
+    def instance_triple(self, global_idx: Any):
         return global_idx, ':instance', self.concept_type
 
     def alignment(self, global_idx: Any):
-        return self.instance(global_idx), [surface.Alignment(tuple(sorted(self.mapping)), prefix='w.')]
+        return self.instance_triple(global_idx), [surface.Alignment(tuple(sorted(self.mapping)), prefix='w.')]
 
     def add_attribute(self, relation: str, value: Any):
         assert relation.startswith(":")
         self.attributes[relation] = value
 
     def product(self, global_idx: Any) -> list:
-        instance = [self.instance(global_idx=global_idx)]
+        instance = [self.instance_triple(global_idx=global_idx)]
         attributes = [(global_idx, relation, value) for relation, value in self.attributes.items()]
         return instance + attributes
 
