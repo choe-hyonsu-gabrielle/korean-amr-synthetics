@@ -79,7 +79,7 @@ class IdiomaticVerbFrames(Lexicon):
             root = xml.getroot()
             orth = re.sub(r'\s+', ' ', root.find('orth').text.strip())
             edef = None  # trans
-            morph_grp = root.find('entry').find()
+            # morph_grp = root.find('entry').find()
             for sense in list(root.find('entry').findall('sense')):
                 frame_name = '-'.join(orth.split() + [sense.attrib.get('n').zfill(2)])
                 entry = VerbFrame(form=orth, frame=frame_name)
