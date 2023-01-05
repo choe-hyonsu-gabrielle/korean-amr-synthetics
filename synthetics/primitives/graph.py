@@ -5,7 +5,7 @@ from penman import surface
 from synthetics.primitives.corpus import *
 
 
-class AMRHeadlessConcept:
+class AMRIndexFreeConcept:
     def __init__(self, concept_type: str, mapping: Optional[set[int]] = None):
         self.concept_type: str = concept_type
         self.attributes: dict[str, Any] = dict()  # {":relation": value}
@@ -14,38 +14,38 @@ class AMRHeadlessConcept:
     def __repr__(self):
         return f'<{self.__class__.__name__}: "{self.concept_type}" {self.mapping}>'
 
-    def instance_triple(self, global_idx: Any):
+    def head_triple(self, global_idx: Any):
         return global_idx, ':instance', self.concept_type
 
     def alignment(self, global_idx: Any):
-        return self.instance_triple(global_idx), [surface.Alignment(tuple(sorted(self.mapping)), prefix='w.')]
+        return self.head_triple(global_idx), [surface.Alignment(tuple(sorted(self.mapping)), prefix='w.')]
 
     def add_attribute(self, relation: str, value: Any):
         assert relation.startswith(":")
         self.attributes[relation] = value
 
     def product(self, global_idx: Any) -> list:
-        instance = [self.instance_triple(global_idx=global_idx)]
+        instance = [self.head_triple(global_idx=global_idx)]
         attributes = [(global_idx, relation, value) for relation, value in self.attributes.items()]
         return instance + attributes
 
 
-class AMRNamedEntityConcept(AMRHeadlessConcept):
-    def __init__(self, concept_type: str, local_idx: int, name_str: str, wiki: Optional[str] = None, mapping: Optional[set[int]] = None):
+class AMRNamedEntityConcept(AMRIndexFreeConcept):
+    def __init__(self, concept_type: str, name_idx: Any, name_str: str, wiki: Optional[str] = None,
+                 mapping: Optional[set[int]] = None):
         super().__init__(concept_type=concept_type, mapping=mapping)
-        self.local_idx: int = local_idx
-        self.wiki = wiki if wiki and wiki != 'NA' else '-'
+        self.name_idx: str = f'n{name_idx}'
         self.name_str: str = re.sub(r'\s+', ' ', name_str.strip())
+        self.wiki = wiki if wiki and wiki != 'NA' else '-'
 
     def __repr__(self):
         return f'<{self.__class__.__name__}: {self.concept_type} → "{self.name_str}" {self.mapping}>'
 
     def product(self, global_idx: Any) -> list:
-        instance = [(global_idx, ':instance', self.concept_type)]
-        local_idx = f'n{self.local_idx}'
-        name_heads = [(local_idx, ':instance', 'name'), (global_idx, ':name', local_idx)]
-        name_spans = [(local_idx, f':op{op_n + 1}', f'"{n_str}"') for op_n, n_str in enumerate(self.name_str.split())]
-        wiki = [(global_idx, ':wiki', f'"{decode_url(self.wiki)}"')]
+        instance = [self.head_triple(global_idx=global_idx)]
+        name_heads = [(self.name_idx, ':instance', 'name'), (global_idx, ':name', self.name_idx)]
+        name_spans = [(self.name_idx, f':op{x + 1}', f'"{n_str}"') for x, n_str in enumerate(self.name_str.split())]
+        wiki = [(global_idx, ':wiki', f'"{decode_url(self.wiki)}"' if self.wiki != '-' else '-')]
         attributes = [(global_idx, relation, value) for relation, value in self.attributes.items()]
         return instance + name_heads + name_spans + wiki + attributes
 
@@ -109,7 +109,7 @@ class AMRAnnotation:
                 raise ValueError
             self.graph.instances[new_node_idx] = AMRNamedEntityConcept(
                 concept_type=ner.label,
-                local_idx=ner.id,
+                name_idx=ner.id,
                 name_str=ner.form,
                 wiki=ner.url if wikification else None,
                 mapping=self.graph.instances[new_node_idx].mapping
@@ -121,7 +121,7 @@ class AMRGraph:
         self.super = super_instance
         self.annotations = self.super.annotations
         self.top: Optional[str] = None
-        self.instances: dict[Any, AMRHeadlessConcept] = dict()   # {node_idx: AMRHeadlessConcept}
+        self.instances: dict[Any, AMRIndexFreeConcept] = dict()   # {node_idx: AMRHeadlessConcept}
         self.relations: dict = dict()   # {(idx1, idx2): ':relation'}
 
     def render(self, surface_alignment=True):
@@ -145,7 +145,7 @@ class AMRGraph:
 
     def add_instance(self, concept_type: str, node_idx: Any = None, mapping: Optional[set[int]] = None):
         mapping = set(sorted(mapping))
-        self.instances[node_idx if node_idx else f'x{len(self.instances)}'] = AMRHeadlessConcept(
+        self.instances[node_idx if node_idx else f'x{len(self.instances)}'] = AMRIndexFreeConcept(
             concept_type=concept_type,
             mapping=mapping
         )
@@ -178,19 +178,6 @@ class AMRGraph:
         assert relation.startswith(':')
         self.instances[node_idx].add_attribute(relation=relation, value=value)
 
-    def amalgamate(self, nodes: list[Any], redirect_true_node: bool = False):
-        assert len(nodes) >= 2
-        if redirect_true_node:
-            nodes = [self.redirect_node(node_idx=n) for n in nodes]
-        if len(nodes) == 2:
-            return self.pairwise_merge(*nodes)
-        new_node_idx = nodes.pop(0)
-        node_to_merge = nodes.pop(0)
-        while node_to_merge:
-            new_node_idx = self.pairwise_merge(new_node_idx, node_to_merge)
-            node_to_merge = nodes.pop(0) if nodes else None
-        return new_node_idx
-
     def redirect_node(self, node_idx: Any):
         if isinstance(node_idx, (tuple, list, set)):
             for true_idx in self.instances:
@@ -206,6 +193,22 @@ class AMRGraph:
             return node_idx
         else:
             raise NotImplementedError
+
+    def separate(self, node_idx: Any):
+        pass
+
+    def amalgamate(self, nodes: list[Any], redirect_true_node: bool = False):
+        assert len(nodes) >= 2
+        if redirect_true_node:
+            nodes = [self.redirect_node(node_idx=n) for n in nodes]
+        if len(nodes) == 2:
+            return self.pairwise_merge(*nodes)
+        new_node_idx = nodes.pop(0)
+        node_to_merge = nodes.pop(0)
+        while node_to_merge:
+            new_node_idx = self.pairwise_merge(new_node_idx, node_to_merge)
+            node_to_merge = nodes.pop(0) if nodes else None
+        return new_node_idx
 
     def pairwise_merge(self, node_a: Any, node_b: Any):
         # backup mapping & attributes from node_a and node_b
