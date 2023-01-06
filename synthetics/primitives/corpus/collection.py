@@ -4,7 +4,7 @@ import random
 from typing import Any, Union, Optional
 from collections import defaultdict
 from tqdm import tqdm
-from synthetics.primitives.layer import *
+from synthetics.primitives.corpus.layer import *
 from synthetics.utils import load_json, save_pickle, load_pickle, timestamp
 
 
@@ -311,21 +311,3 @@ class Corpus:
         print(f'- unpickling `{filename}`, {lapse:.2f} sec lapsed, {len(loaded_corpus)} Sentences:', end=' ')
         print(loaded_corpus)
         return loaded_corpus
-
-
-if __name__ == '__main__':
-    search_space = 'D:\\Corpora & Language Resources\\modu-corenlp\\layers-complete\\*\\*.json'
-    # search_space = '/Users/choe.hyonsu.gabrielle/modu-corenlp-essential/layers-complete/*/*.json'
-
-    targets = {layer.split('\\')[-2]: layer for layer in glob.glob(search_space)}
-    # targets = {layer.split('/')[-2]: layer for layer in glob.glob(search_space)}
-
-    # corpus = Corpus(files=targets)
-    # corpus.to_pickle('corpus.pkl')
-    # del corpus
-
-    corpus = Corpus.from_pickle('corpus.pkl')
-
-    for i, snt in enumerate(corpus.sample_sentences(k=10)):
-        print('\n\n')
-        print(snt.annotations)
