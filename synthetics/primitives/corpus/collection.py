@@ -247,6 +247,19 @@ class Corpus:
     def iter_sentences(self):
         return (self.get_sentence(snt_id) for snt_id in self.index)
 
+    def filter_by(self, len_range: Optional[tuple[int, int]] = None, exclude: str = None, random_state: int = None):
+        pool = list(self.index)
+        if random_state:
+            random.seed(random_state)
+            random.shuffle(pool)
+        for snt_id in pool:
+            sentence = self.get_sentence(snt_id).canonical_form
+            valid = True
+            valid = len_range[0] <= len(sentence) <= len_range[-1] and valid if len_range else valid
+            valid = not any([c in sentence for c in list(exclude)]) and valid if exclude else valid
+            if valid:
+                yield self.get_sentence(snt_id)
+
     def sample_documents(self, k: int, random_state: int = None):
         assert k <= len(self.documents)
         random.seed(random_state)

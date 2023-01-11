@@ -21,13 +21,16 @@ if __name__ == '__main__':
     search_space = 'D:/Corpora & Language Resources/modu-corenlp/layers-complete/*/*.json'
     corpus = load_corpus(data_files=search_space)
 
-    for i, snt in enumerate(corpus.sample_sentences(k=20, random_state=940803)):
+    for i, snt in enumerate(corpus.filter_by(len_range=(20, 50), exclude='\"\',“”‘’…;[]()<>', random_state=803)):
         print('\n\n')
-        # print(snt.annotations.dep)
+        print(snt.annotations.dep)
         print(snt.annotations.srl)
         print(snt.annotations.ner)
         print(snt.annotations.el)
         amr = AbstractMeaningRepresentation(annotations=snt.annotations)
         print(amr.encode())
+        print()
         print(amr.graph.instances)
         print(amr.graph.relations)
+        if i > 30:
+            break
