@@ -1,4 +1,5 @@
 import pprint
+from synthetics.utils import subgroups
 
 
 class Item:
@@ -41,6 +42,12 @@ class POSItem(Item):
 class POSLayer(Layer):
     def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[POSItem(**d) for d in data], super_instance=super_instance)
+
+    def __str__(self):
+        words = []
+        for word in subgroups(items=self.data, by='word_id', starts_from=1):
+            words.append('+'.join(['/'.join([token.form, token.label]) for token in word]))
+        return ' '.join(words)
 
     def tolist(self) -> list[POSItem]:
         return self.data

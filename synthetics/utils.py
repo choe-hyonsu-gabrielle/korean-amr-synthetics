@@ -36,7 +36,7 @@ def timestamp():
     return datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 
 
-def partitions_attr(items: Iterable, by: [int, str], starts_from: [int, str] = 0, scope: list = None):
+def subgroups(items: Iterable, by: [int, str], starts_from: [int, str] = 0, scope: list = None):
     """
     split single list to partitioned list by attribute of elements
     :param items: a single iterable object

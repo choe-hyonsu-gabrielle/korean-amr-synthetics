@@ -1,5 +1,5 @@
 from synthetics.main import load_corpus
-from synthetics.finders.bigram import BigramPeriphrasticFinder
+from synthetics.finders.bigram import BigramPatternFinder
 
 
 if __name__ == '__main__':
@@ -8,4 +8,4 @@ if __name__ == '__main__':
     search_space = 'D:/Corpora & Language Resources/modu-corenlp/layers-complete/*/*.json'
     corpus = load_corpus(data_files=search_space)
 
-    finder = BigramPeriphrasticFinder(corpus)
+    finder = BigramPatternFinder(corpus)
