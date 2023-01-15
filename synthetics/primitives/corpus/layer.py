@@ -47,7 +47,7 @@ class POSLayer(Layer):
         words = []
         for word in subgroups(items=self.data, by='word_id', starts_from=1):
             words.append('+'.join(['/'.join([token.form, token.label]) for token in word]))
-        return ' '.join(words)
+        return ' '.join(words).strip()
 
     def tolist(self) -> list[POSItem]:
         return self.data

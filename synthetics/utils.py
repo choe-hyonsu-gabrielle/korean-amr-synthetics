@@ -1,3 +1,4 @@
+import os
 import json
 import glob
 import pickle
@@ -22,6 +23,18 @@ def load_json(filepath: str, encoding: str = 'utf-8'):
             return json.load(fp)
 
 
+def get_absolute_root_path(root_name='synthetics', suffix='\\'):
+    """ get absolute root path
+    :param root_name: dir name for project root.
+    :param suffix: path delimiter
+    :return: If the call location is "C:/Users/.../Projects/synthetics/dir1/demo",
+             then return will be "C:/Users/.../Projects/synthetics"
+    """
+    current_location = os.getcwd()
+    cut = current_location.rfind(root_name)
+    return ''.join([current_location[:cut], root_name]) + suffix
+
+
 def save_pickle(filename: str, instance: Any):
     with open(filename, 'wb') as fp:
         pickle.dump(instance, fp, pickle.HIGHEST_PROTOCOL)
@@ -34,6 +47,17 @@ def load_pickle(filename: str):
 
 def timestamp():
     return datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
+
+
+def ngrams(items: list, n: int):
+    assert 0 < n, 'incorrect `n` value.'
+    results = []
+    for start in range(len(items) - n + 1):
+        end = start + n
+        n_gram = items[start:end]
+        if n_gram:
+            results.append(n_gram)
+    return results
 
 
 def subgroups(items: Iterable, by: [int, str], starts_from: [int, str] = 0, scope: list = None):

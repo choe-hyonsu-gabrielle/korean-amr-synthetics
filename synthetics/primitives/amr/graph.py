@@ -13,9 +13,14 @@ class AbstractMeaningRepresentation:
         self.graph: AMRGraph = AMRGraph(super_instance=self)
 
         # initializing pipeline
-        self.update_from_dep()
-        self.update_from_ner()
-        self.update_from_srl()
+        self.pipeline = [
+            self.update_from_dep,
+            self.update_from_mwe,
+            self.update_from_ner,
+            self.update_from_srl
+        ]
+        for process in self.pipeline:
+            process()
 
     def get_metadata(self):
         self.metadata.update({'update': timestamp()})
@@ -37,6 +42,9 @@ class AbstractMeaningRepresentation:
                 self.graph.top = tail_idx
             else:
                 self.graph.add_relation(head_idx=head_idx, relation=relation, tail_idx=tail_idx)
+
+    def update_from_mwe(self):
+        pass
 
     def update_from_srl(self):
         for srl in self.annotations.srl.tolist():
@@ -107,7 +115,8 @@ class AMRGraph:
         assert head_idx in self.instances
         assert tail_idx in self.instances
         assert relation.startswith(':')
-        self.relations[(head_idx, tail_idx)] = relation
+        if self.redirect_node(head_idx) != self.redirect_node(tail_idx):
+            self.relations[(head_idx, tail_idx)] = relation
 
     def get_relation(self, head_idx: Any, tail_idx: Any, include_inverted: bool = False):
         if (head_idx, tail_idx) in self.relations:
