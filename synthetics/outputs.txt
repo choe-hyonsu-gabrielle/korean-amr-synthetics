@@ -1,0 +1,2428 @@
+<DEPLayer → id: "NWRW1800000046.365.6.5" (Sentence), items: 6>
+[ <DEPItem→{'word_id': 1, 'word_form': '가장', 'head': 2, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '큰', 'head': 3, 'label': 'VP_MOD', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '충격을', 'head': 4, 'label': 'NP_OBJ', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '받는', 'head': 5, 'label': 'VP_MOD', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '곳은', 'head': 6, 'label': 'NP_SBJ', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '관광업계다.', 'head': -1, 'label': 'VNP', 'dependent': [5]}>]
+<SRLLayer → id: "NWRW1800000046.365.6.5" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '가장', 'label': 'ARGM-EXT', 'begin': 0, 'end': 2, 'word_id': 1}>,
+                <SRLArgument→{'form': '충격', 'label': 'ARG1', 'begin': 5, 'end': 7, 'word_id': 3}>],
+  'predicate': <SRLPredicate→{'form': '큰', 'begin': 3, 'end': 4, 'lemma': '크다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '충격을 받는 곳', 'label': 'ARG0', 'begin': 5, 'end': 13, 'word_id': 5}>],
+  'predicate': <SRLPredicate→{'form': '받는', 'begin': 9, 'end': 11, 'lemma': '받다'}>}>]
+<ELLayer → id: "NWRW1800000046.365.6.5" (Sentence), items: 0>
+[]
+<CRLayer → id: "NWRW1800000046.365.6.5" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000046.365.6.5', 'form': '가장 큰 충격을 받는 곳', 'begin': 0, 'end': 13, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000046.365.6.5', 'form': '관광업계', 'begin': 15, 'end': 19, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000046.365.6.5" (Sentence), items: 2>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '충격', 'type': 'subject', 'sentence_id': 'NWRW1800000046.365.6.5', 'begin': 5, 'end': 7}>],
+  'predicate': <ZAPredicate→{'form': '큰', 'sentence_id': 'NWRW1800000046.365.6.5', 'begin': 3, 'end': 4}>}>,
+  <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '관광업계', 'type': 'subject', 'sentence_id': 'NWRW1800000046.365.6.5', 'begin': 15, 'end': 19}>],
+  'predicate': <ZAPredicate→{'form': '받는', 'sentence_id': 'NWRW1800000046.365.6.5', 'begin': 9, 'end': 11}>}>]
+# ::id NWRW1800000046.365.6.5
+# ::snt 가장 큰 충격을 받는 곳은 관광업계다.
+# ::pos 가장/MAG 크/VA+ㄴ/ETM 충격/NNG+을/JKO 받/VV+는/ETM 곳/NNG+은/JX 관광업/NNG+계/XSN+이/VCP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(6 / 관광업계다.~w.6
+   :dep.NP_SBJ (5 / 곳은~w.5
+                  :srl.ARG0-of (4 / 받는~w.4
+                                  :dep.NP_OBJ (3 / 충격을~w.3
+                                                 :srl.ARG1-of (2 / 큰~w.2
+                                                                 :srl.ARGM-EXT (1 / 가장~w.1))))))
+
+
+
+<DEPLayer → id: "NWRW1800000030.346.4.3" (Sentence), items: 12>
+[ <DEPItem→{'word_id': 1, 'word_form': '손', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '대표', 'head': 3, 'label': 'NP', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '주변에서는', 'head': 12, 'label': 'NP_AJT', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '통상국가로', 'head': 5, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '가야', 'head': 6, 'label': 'VP', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '한다는', 'head': 9, 'label': 'VP_MOD', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '그의', 'head': 9, 'label': 'NP_MOD', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '기본', 'head': 9, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '소신은', 'head': 10, 'label': 'NP_SBJ', 'dependent': [6, 7, 8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '여전하다는', 'head': 11, 'label': 'VP_MOD', 'dependent': [9]}>,
+  <DEPItem→{'word_id': 11, 'word_form': '얘기가', 'head': 12, 'label': 'NP_SBJ', 'dependent': [10]}>,
+  <DEPItem→{'word_id': 12, 'word_form': '나온다.', 'head': -1, 'label': 'VP', 'dependent': [3, 11]}>]
+<SRLLayer → id: "NWRW1800000030.346.4.3" (Sentence), items: 3>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '통상국가', 'label': 'ARG3', 'begin': 11, 'end': 15, 'word_id': 4}>,
+                <SRLArgument→{'form': '가야 한다는', 'label': 'ARGM-AUX', 'begin': 17, 'end': 23, 'word_id': 6}>],
+  'predicate': <SRLPredicate→{'form': '가야', 'begin': 17, 'end': 19, 'lemma': '가다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '그의 기본 소신', 'label': 'ARG1', 'begin': 24, 'end': 32, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '여전하다는', 'begin': 34, 'end': 39, 'lemma': '여전하다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '손 대표 주변', 'label': 'ARGM-LOC', 'begin': 0, 'end': 7, 'word_id': 3}>,
+                <SRLArgument→{'form': '얘기', 'label': 'ARG0', 'begin': 40, 'end': 42, 'word_id': 11}>],
+  'predicate': <SRLPredicate→{'form': '나온다.', 'begin': 44, 'end': 48, 'lemma': '나오다'}>}>]
+<ELLayer → id: "NWRW1800000030.346.4.3" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '손', 'label': 'PS_NAME', 'begin': 0, 'end': 1, 'k_id': '00000000028058', 'wiki_id': '77296', 'url': 'https://ko.wikipedia.org/wiki/%EC%86%90%ED%95%99%EA%B7%9C'}>,
+  <ELItem→{'id': 2, 'form': '대표', 'label': 'CV_POSITION', 'begin': 2, 'end': 4, 'k_id': '06150000001383', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000030.346.4.3" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000030.346.4.3', 'form': '손', 'begin': 0, 'end': 1, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000030.346.4.3', 'form': '손 대표', 'begin': 0, 'end': 4, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000030.346.4.3', 'form': '그', 'begin': 24, 'end': 25, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000030.346.4.3" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '무언가', 'type': 'subject', 'sentence_id': '-1', 'begin': -1, 'end': -1}>],
+  'predicate': <ZAPredicate→{'form': '가야', 'sentence_id': 'NWRW1800000030.346.4.3', 'begin': 17, 'end': 19}>}>]
+# ::id NWRW1800000030.346.4.3
+# ::snt 손 대표 주변에서는 통상국가로 가야 한다는 그의 기본 소신은 여전하다는 얘기가 나온다.
+# ::pos 손/NNP 대표/NNG 주변/NNG+에서/JKB+는/JX 통상/NNG+국가/NNG+로/JKB 가/VV+아야/EC 하/VX+ㄴ다는/ETM 그/NP+의/JKG 기본/NNG 소신/NNG+은/JX 여전하/VA+다는/ETM 얘기/NNG+가/JKS 나오/VV+ㄴ다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(12 / 나온다.~w.12
+    :srl.ARGM-LOC (3 / 주변에서는~w.3
+                     :dep.NP (2 / CV_POSITION~w.2
+                                :name (n2 / name
+                                          :op1 "대표")
+                                :wiki -
+                                :dep.NP (1 / PS_NAME~w.1
+                                           :name (n1 / name
+                                                     :op1 "손")
+                                           :wiki "https://ko.wikipedia.org/wiki/손학규")))
+    :srl.ARG0 (11 / 얘기가~w.11
+                  :dep.VP_MOD (10 / 여전하다는~w.10
+                                  :srl.ARG1 (9 / 소신은~w.9
+                                               :dep.VP_MOD ((5, 6) / 가야_한다는~w.5,6
+                                                                   :srl.ARG3 (4 / 통상국가로~w.4))
+                                               :dep.NP_MOD (7 / 그의~w.7)
+                                               :dep.NP (8 / 기본~w.8)))))
+
+
+
+<DEPLayer → id: "NWRW1800000030.187.12.1" (Sentence), items: 5>
+[ <DEPItem→{'word_id': 1, 'word_form': '◇CCTV', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '부족한', 'head': 3, 'label': 'VP_MOD', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '전세단지', 'head': 4, 'label': 'NP', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '좀도둑', 'head': 5, 'label': 'NP', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '만연', 'head': -1, 'label': 'NP', 'dependent': [4]}>]
+<SRLLayer → id: "NWRW1800000030.187.12.1" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '◇CCTV', 'label': 'ARG1', 'begin': 0, 'end': 5, 'word_id': 1}>],
+  'predicate': <SRLPredicate→{'form': '부족한', 'begin': 6, 'end': 9, 'lemma': '부족하다'}>}>]
+<ELLayer → id: "NWRW1800000030.187.12.1" (Sentence), items: 1>
+[ <ELItem→{'id': 1, 'form': 'CCTV', 'label': 'TMI_HW', 'begin': 1, 'end': 5, 'k_id': '14070000000085', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000030.187.12.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000030.187.12.1" (Sentence), items: 0>
+[]
+# ::id NWRW1800000030.187.12.1
+# ::snt ◇CCTV 부족한 전세단지 좀도둑 만연
+# ::pos ◇/SW+CCTV/SL 부족/NNG+하/XSA+ㄴ/ETM 전세/NNG+단지/NNG 좀도둑/NNG 만연/NNG
+# ::update 2023-01-17T00:23:22
+(5 / 만연~w.5
+   :dep.NP (4 / 좀도둑~w.4
+              :dep.NP (3 / 전세단지~w.3
+                         :dep.VP_MOD (2 / 부족한~w.2
+                                        :srl.ARG1 (1 / TMI_HW~w.1
+                                                     :name (n1 / name
+                                                               :op1 "CCTV")
+                                                     :wiki -)))))
+
+
+
+<DEPLayer → id: "NWRW1800000028.197.4.3" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '엄마', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '할리자는', 'head': 8, 'label': 'NP_SBJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '올해', 'head': 5, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '일자리가', 'head': 5, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '없어', 'head': 8, 'label': 'VP', 'dependent': [3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '아무', 'head': 7, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '일도', 'head': 8, 'label': 'NP_OBJ', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '하지', 'head': 9, 'label': 'VP', 'dependent': [2, 5, 7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '못했다.', 'head': -1, 'label': 'VP', 'dependent': [8]}>]
+<SRLLayer → id: "NWRW1800000028.197.4.3" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '올해', 'label': 'ARGM-TMP', 'begin': 8, 'end': 10, 'word_id': 3}>,
+                <SRLArgument→{'form': '일자리', 'label': 'ARG1', 'begin': 11, 'end': 14, 'word_id': 4}>,
+                <SRLArgument→{'form': '못했다', 'label': 'ARGM-AUX', 'begin': 28, 'end': 31, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '없어', 'begin': 16, 'end': 18, 'lemma': '없다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '엄마 할리자', 'label': 'ARG0', 'begin': 0, 'end': 6, 'word_id': 2}>,
+                <SRLArgument→{'form': '아무 일', 'label': 'ARG1', 'begin': 19, 'end': 23, 'word_id': 7}>,
+                <SRLArgument→{'form': '못했다', 'label': 'ARGM-NEG', 'begin': 28, 'end': 31, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '하지', 'begin': 25, 'end': 27, 'lemma': '하다'}>}>]
+<ELLayer → id: "NWRW1800000028.197.4.3" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '엄마', 'label': 'CV_RELATION', 'begin': 0, 'end': 2, 'k_id': '06130000000537', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '할리자', 'label': 'PS_NAME', 'begin': 3, 'end': 6, 'k_id': '00000000054222', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '올해', 'label': 'DT_YEAR', 'begin': 8, 'end': 10, 'k_id': '07040000001278', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000028.197.4.3" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000028.197.4.3', 'form': '엄마 할리자', 'begin': 0, 'end': 6, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000028.197.4.3', 'form': '할리자', 'begin': 3, 'end': 6, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000028.197.4.3" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '할리자', 'type': 'subject', 'sentence_id': 'NWRW1800000028.197.4.3', 'begin': 3, 'end': 6}>],
+  'predicate': <ZAPredicate→{'form': '하지', 'sentence_id': 'NWRW1800000028.197.4.3', 'begin': 25, 'end': 27}>}>]
+# ::id NWRW1800000028.197.4.3
+# ::snt 엄마 할리자는 올해 일자리가 없어 아무 일도 하지 못했다.
+# ::pos 엄마/NNG 할리자/NNP+는/JX 올해/NNG 일자리/NNG+가/JKS 없/VA+어/EC 아무/MMD 일/NNG+도/JX 하/VV+지/EC 못하/VX+았/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((8, 9) / 하지_못했다.~w.8,9
+        :srl.ARG0 (2 / PS_NAME~w.2
+                     :name (n2 / name
+                               :op1 "할리자")
+                     :wiki -
+                     :dep.NP (1 / CV_RELATION~w.1
+                                :name (n1 / name
+                                          :op1 "엄마")
+                                :wiki -))
+        :srl.ARG1 (7 / 일도~w.7
+                     :dep.DP (6 / 아무~w.6))
+        :srl.ARGM-AUX-of (5 / 없어~w.5
+                            :srl.ARGM-TMP (3 / DT_YEAR~w.3
+                                             :name (n3 / name
+                                                       :op1 "올해")
+                                             :wiki -)
+                            :srl.ARG1 (4 / 일자리가~w.4)))
+
+
+
+<DEPLayer → id: "NWRW1800000028.363.2.3" (Sentence), items: 7>
+[ <DEPItem→{'word_id': 1, 'word_form': '1달러당', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '25프랑', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '이하로', 'head': 6, 'label': 'NP_AJT', 'dependent': [1, 2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '프랑의', 'head': 5, 'label': 'NP_MOD', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '가치를', 'head': 6, 'label': 'NP_OBJ', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '떨어뜨리기', 'head': 7, 'label': 'VP_OBJ', 'dependent': [3, 5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '위해서다.', 'head': -1, 'label': 'VNP', 'dependent': [6]}>]
+<SRLLayer → id: "NWRW1800000028.363.2.3" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '프랑의 가치', 'label': 'ARG0', 'begin': 14, 'end': 20, 'word_id': 5}>],
+  'predicate': <SRLPredicate→{'form': '떨어뜨리기', 'begin': 22, 'end': 27, 'lemma': '떨어지다'}>}>]
+<ELLayer → id: "NWRW1800000028.363.2.3" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '1달러당', 'label': 'QT_PRICE', 'begin': 0, 'end': 4, 'k_id': '09110000002234', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '25프랑 이하', 'label': 'QT_PRICE', 'begin': 5, 'end': 12, 'k_id': '09110000003544', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '프랑', 'label': 'CV_CURRENCY', 'begin': 14, 'end': 16, 'k_id': '06050000000059', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000028.363.2.3" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000028.363.2.3" (Sentence), items: 0>
+[]
+# ::id NWRW1800000028.363.2.3
+# ::snt 1달러당 25프랑 이하로 프랑의 가치를 떨어뜨리기 위해서다.
+# ::pos 1/SN+달러/NNB+당/XSN 25/SN+프랑/NNB 이하/NNG+로/JKB 프랑/NNG+의/JKG 가치/NNG+를/JKO 떨어뜨리/VV+기/ETN 위하/VV+아서/EC+이/VCP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((6, 7) / 떨어뜨리기_위해서다.~w.6,7
+        :srl.ARG0 (5 / 가치를~w.5
+                     :dep.NP_MOD (4 / CV_CURRENCY~w.4
+                                    :name (n3 / name
+                                              :op1 "프랑")
+                                    :wiki -))
+        :dep.NP_AJT ((2, 3) / QT_PRICE~w.2,3
+                            :name (n2 / name
+                                      :op1 "25프랑"
+                                      :op2 "이하")
+                            :wiki -
+                            :dep.NP (1 / QT_PRICE~w.1
+                                       :name (n1 / name
+                                                 :op1 "1달러당")
+                                       :wiki -)))
+
+
+
+<DEPLayer → id: "NWRW1800000021.376.6.4" (Sentence), items: 10>
+[ <DEPItem→{'word_id': 1, 'word_form': '대신', 'head': 9, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '이들은', 'head': 9, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '중소형주들의', 'head': 6, 'label': 'NP_MOD', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '수익', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '개선', 'head': 6, 'label': 'NP', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '현상이', 'head': 7, 'label': 'NP_SBJ', 'dependent': [3, 5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '나타나는', 'head': 8, 'label': 'VP_MOD', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '것을', 'head': 9, 'label': 'NP_OBJ', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '기다리라고', 'head': 10, 'label': 'VP_CMP', 'dependent': [1, 2, 8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '조언한다.', 'head': -1, 'label': 'VP', 'dependent': [9]}>]
+<SRLLayer → id: "NWRW1800000021.376.6.4" (Sentence), items: 3>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '중소형주들의 수익 개선 현상', 'label': 'ARG1', 'begin': 7, 'end': 22, 'word_id': 6}>],
+  'predicate': <SRLPredicate→{'form': '나타나는', 'begin': 24, 'end': 28, 'lemma': '나타나다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '중소형주들의 수익 개선 현상이 나타나는 것', 'label': 'ARG1', 'begin': 7, 'end': 30, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '기다리라고', 'begin': 32, 'end': 37, 'lemma': '기다리다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '이들', 'label': 'ARG0', 'begin': 3, 'end': 5, 'word_id': 2}>,
+                <SRLArgument→{'form': '중소형주들의 수익 개선 현상이 나타나는 것을 기다리라고', 'label': 'ARG1', 'begin': 7, 'end': 37, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '조언한다.', 'begin': 38, 'end': 43, 'lemma': '조언하다'}>}>]
+<ELLayer → id: "NWRW1800000021.376.6.4" (Sentence), items: 0>
+[]
+<CRLayer → id: "NWRW1800000021.376.6.4" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000021.376.6.4" (Sentence), items: 0>
+[]
+# ::id NWRW1800000021.376.6.4
+# ::snt 대신 이들은 중소형주들의 수익 개선 현상이 나타나는 것을 기다리라고 조언한다.
+# ::pos 대신/NNG 이/NP+들/XSN+은/JX 중소형주/NNG+들/XSN+의/JKG 수익/NNG 개선/NNG 현상/NNG+이/JKS 나타나/VV+는/ETM 것/NNB+을/JKO 기다리/VV+라고/EC 조언/NNG+하/XSV+ㄴ다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(10 / 조언한다.~w.10
+    :srl.ARG1 (9 / 기다리라고~w.9
+                 :srl.ARG1 ((7, 8) / 나타나는_것을~w.7,8
+                                   :srl.ARG1 (6 / 현상이~w.6
+                                                :dep.NP_MOD (3 / 중소형주들의~w.3)
+                                                :dep.NP (5 / 개선~w.5
+                                                           :dep.NP (4 / 수익~w.4))))
+                 :dep.NP_AJT (1 / 대신~w.1)
+                 :dep.NP_SBJ 2)
+    :srl.ARG0 (2 / 이들은~w.2))
+
+
+
+<DEPLayer → id: "NWRW1800000041.228.5.1" (Sentence), items: 8>
+[ <DEPItem→{'word_id': 1, 'word_form': '오르는', 'head': 2, 'label': 'VP_MOD', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '범칙금은', 'head': 8, 'label': 'NP_SBJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '현행', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '어린이', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '보호구역의', 'head': 7, 'label': 'NP_MOD', 'dependent': [3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '처벌', 'head': 7, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '규정과', 'head': 8, 'label': 'NP_AJT', 'dependent': [5, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '동일하다.', 'head': -1, 'label': 'VP', 'dependent': [2, 7]}>]
+<SRLLayer → id: "NWRW1800000041.228.5.1" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '오르는 범칙금', 'label': 'ARG1', 'begin': 0, 'end': 7, 'word_id': 2}>],
+  'predicate': <SRLPredicate→{'form': '오르는', 'begin': 0, 'end': 3, 'lemma': '오르다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '오르는 범칙금', 'label': 'ARG1', 'begin': 0, 'end': 7, 'word_id': 2}>,
+                <SRLArgument→{'form': '현행 어린이 보호구역의 처벌 규정', 'label': 'ARG2', 'begin': 9, 'end': 27, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '동일하다.', 'begin': 29, 'end': 34, 'lemma': '동일하다'}>}>]
+<ELLayer → id: "NWRW1800000041.228.5.1" (Sentence), items: 0>
+[]
+<CRLayer → id: "NWRW1800000041.228.5.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000041.228.5.1" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '범칙금', 'type': 'subject', 'sentence_id': 'NWRW1800000041.228.5.1', 'begin': 4, 'end': 7}>],
+  'predicate': <ZAPredicate→{'form': '오르는', 'sentence_id': 'NWRW1800000041.228.5.1', 'begin': 0, 'end': 3}>}>]
+# ::id NWRW1800000041.228.5.1
+# ::snt 오르는 범칙금은 현행 어린이 보호구역의 처벌 규정과 동일하다.
+# ::pos 오르/VV+는/ETM 범칙금/NNG+은/JX 현행/NNG 어린이/NNG 보호/NNG+구역/NNG+의/JKG 처벌/NNG 규정/NNG+과/JKB 동일/NNG+하/XSA+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(8 / 동일하다.~w.8
+   :srl.ARG1 (2 / 범칙금은~w.2
+                :srl.ARG1-of (1 / 오르는~w.1))
+   :srl.ARG2 (7 / 규정과~w.7
+                :dep.NP_MOD (5 / 보호구역의~w.5
+                               :dep.NP (3 / 현행~w.3)
+                               :dep.NP (4 / 어린이~w.4))
+                :dep.NP (6 / 처벌~w.6)))
+
+
+
+<DEPLayer → id: "NWRW1800000025.39.2.3" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '특히', 'head': 7, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '샐러드처럼', 'head': 5, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '채소를', 'head': 5, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '날것으로', 'head': 5, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '먹는', 'head': 6, 'label': 'VP_MOD', 'dependent': [2, 3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '게', 'head': 7, 'label': 'NP_SBJ', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '어렵다는', 'head': 8, 'label': 'VP_MOD', 'dependent': [1, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '사람들도', 'head': 9, 'label': 'NP_SBJ', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '있다.', 'head': -1, 'label': 'VP', 'dependent': [8]}>]
+<SRLLayer → id: "NWRW1800000025.39.2.3" (Sentence), items: 3>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '특히', 'label': 'ARGM-ADV', 'begin': 0, 'end': 2, 'word_id': 1}>,
+                <SRLArgument→{'form': '채소', 'label': 'ARG1', 'begin': 9, 'end': 11, 'word_id': 3}>,
+                <SRLArgument→{'form': '날것', 'label': 'ARGM-MNR', 'begin': 13, 'end': 15, 'word_id': 4}>],
+  'predicate': <SRLPredicate→{'form': '먹는', 'begin': 18, 'end': 20, 'lemma': '먹다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '특히', 'label': 'ARGM-ADV', 'begin': 0, 'end': 2, 'word_id': 1}>,
+                <SRLArgument→{'form': '샐러드처럼 채소를 날것으로 먹는 게', 'label': 'ARG1', 'begin': 3, 'end': 22, 'word_id': 6}>],
+  'predicate': <SRLPredicate→{'form': '어렵다는', 'begin': 23, 'end': 27, 'lemma': '어렵다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '샐러드처럼 채소를 날것으로 먹는 게 어렵다는 사람들', 'label': 'ARG1', 'begin': 3, 'end': 31, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '있다.', 'begin': 33, 'end': 36, 'lemma': '있다'}>}>]
+<ELLayer → id: "NWRW1800000025.39.2.3" (Sentence), items: 1>
+[ <ELItem→{'id': 1, 'form': '샐러드', 'label': 'CV_FOOD', 'begin': 3, 'end': 6, 'k_id': '06160000012034', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000025.39.2.3" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000025.39.2.3" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '누군가', 'type': 'subject', 'sentence_id': '-1', 'begin': -1, 'end': -1}>],
+  'predicate': <ZAPredicate→{'form': '먹는', 'sentence_id': 'NWRW1800000025.39.2.3', 'begin': 18, 'end': 20}>}>]
+# ::id NWRW1800000025.39.2.3
+# ::snt 특히 샐러드처럼 채소를 날것으로 먹는 게 어렵다는 사람들도 있다.
+# ::pos 특히/MAG 샐러드/NNG+처럼/JKB 채소/NNG+를/JKO 날/XPN+것/NNB+으로/JKB 먹/VV+는/ETM 거/NNB+이/JKS 어렵/VA+다는/ETM 사람/NNG+들/XSN+도/JX 있/VA+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(9 / 있다.~w.9
+   :srl.ARG1 (8 / 사람들도~w.8
+                :dep.VP_MOD (7 / 어렵다는~w.7
+                               :srl.ARGM-ADV (1 / 특히~w.1
+                                                :srl.ARGM-ADV-of (5 / 먹는~w.5
+                                                                    :dep.NP_AJT (2 / CV_FOOD~w.2
+                                                                                   :name (n1 / name
+                                                                                             :op1 "샐러드")
+                                                                                   :wiki -)
+                                                                    :srl.ARG1 (3 / 채소를~w.3)
+                                                                    :srl.ARGM-MNR (4 / 날것으로~w.4)
+                                                                    :dep.VP_MOD-of 6))
+                               :srl.ARG1 (6 / 게~w.6))))
+
+
+
+<DEPLayer → id: "NWRW1800000056.75.12.3" (Sentence), items: 12>
+[ <DEPItem→{'word_id': 1, 'word_form': '뮬러', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '특별검사가', 'head': 11, 'label': 'NP_SBJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '트럼프', 'head': 4, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '대통령의', 'head': 5, 'label': 'NP_MOD', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '사법방해에', 'head': 6, 'label': 'NP_AJT', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '대해서도', 'head': 7, 'label': 'VP', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '수사할', 'head': 8, 'label': 'VP_MOD', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '수', 'head': 9, 'label': 'NP_SBJ', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '있는', 'head': 10, 'label': 'VP_MOD', 'dependent': [8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '권한을', 'head': 11, 'label': 'NP_OBJ', 'dependent': [9]}>,
+  <DEPItem→{'word_id': 11, 'word_form': '부여한', 'head': 12, 'label': 'VP_MOD', 'dependent': [2, 10]}>,
+  <DEPItem→{'word_id': 12, 'word_form': '것이다.', 'head': -1, 'label': 'VNP', 'dependent': [11]}>]
+<SRLLayer → id: "NWRW1800000056.75.12.3" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '트럼프 대통령의 사법방해', 'label': 'ARG1', 'begin': 9, 'end': 22, 'word_id': 5}>],
+  'predicate': <SRLPredicate→{'form': '수사할', 'begin': 29, 'end': 32, 'lemma': '수사하다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '뮬러 특별검사', 'label': 'ARG0', 'begin': 0, 'end': 7, 'word_id': 2}>,
+                <SRLArgument→{'form': '트럼프 대통령의 사법방해에 대해서도 수사할 수 있는 권한', 'label': 'ARG1', 'begin': 9, 'end': 40, 'word_id': 10}>],
+  'predicate': <SRLPredicate→{'form': '부여한', 'begin': 42, 'end': 45, 'lemma': '부여하다'}>}>]
+<ELLayer → id: "NWRW1800000056.75.12.3" (Sentence), items: 4>
+[ <ELItem→{'id': 1, 'form': '뮬러', 'label': 'PS_NAME', 'begin': 0, 'end': 2, 'k_id': '00000000020995', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '특별검사', 'label': 'CV_OCCUPATION', 'begin': 3, 'end': 7, 'k_id': '06140000002492', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '트럼프', 'label': 'PS_NAME', 'begin': 9, 'end': 12, 'k_id': '00000000051781', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 4, 'form': '대통령', 'label': 'CV_POSITION', 'begin': 13, 'end': 16, 'k_id': '06150000001350', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000056.75.12.3" (Sentence), items: 2>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000056.75.12.3', 'form': '트럼프', 'begin': 9, 'end': 12, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000056.75.12.3', 'form': '트럼프 대통령', 'begin': 9, 'end': 16, 'ne_id': -1}>],
+  [ <CRMention→{'sentence_id': 'NWRW1800000056.75.12.3', 'form': '뮬러', 'begin': 0, 'end': 2, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000056.75.12.3', 'form': '뮬러 특별검사', 'begin': 0, 'end': 7, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000056.75.12.3" (Sentence), items: 0>
+[]
+# ::id NWRW1800000056.75.12.3
+# ::snt 뮬러 특별검사가 트럼프 대통령의 사법방해에 대해서도 수사할 수 있는 권한을 부여한 것이다.
+# ::pos 뮬러/NNP 특별/NNG+검사/NNG+가/JKS 트럼프/NNP 대통령/NNG+의/JKG 사법/NNG+방해/NNG+에/JKB 대하/VV+아서/EC+도/JX 수사/NNG+하/XSV+ㄹ/ETM 수/NNB 있/VA+는/ETM 권한/NNG+을/JKO 부여/NNG+하/XSV+ㄴ/ETM 것/NNB+이/VCP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((11, 12) / 부여한_것이다.~w.11,12
+          :srl.ARG0 (2 / CV_OCCUPATION~w.2
+                       :name (n2 / name
+                                 :op1 "특별검사")
+                       :wiki -
+                       :dep.NP (1 / PS_NAME~w.1
+                                  :name (n1 / name
+                                            :op1 "뮬러")
+                                  :wiki -))
+          :srl.ARG1 (10 / 권한을~w.10
+                        :dep.VP_MOD ((7, 8, 9) / 수사할_수_있는~w.7,8,9
+                                               :srl.ARG1 ((5, 6) / 사법방해에_대해서도~w.5,6
+                                                                 :dep.NP_MOD (4 / CV_POSITION~w.4
+                                                                                :name (n4 / name
+                                                                                          :op1 "대통령")
+                                                                                :wiki -
+                                                                                :dep.NP (3 / PS_NAME~w.3
+                                                                                           :name (n3 / name
+                                                                                                     :op1 "트럼프")
+                                                                                           :wiki -))))))
+
+
+
+<DEPLayer → id: "NWRW1800000032.79.9.1" (Sentence), items: 6>
+[ <DEPItem→{'word_id': 1, 'word_form': '대형마트와', 'head': 2, 'label': 'NP_CNJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '백화점에서도', 'head': 5, 'label': 'NP_AJT', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '내복', 'head': 4, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '판매가', 'head': 5, 'label': 'NP_SBJ', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '늘고', 'head': 6, 'label': 'VP', 'dependent': [2, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '있다.', 'head': -1, 'label': 'VP', 'dependent': [5]}>]
+<SRLLayer → id: "NWRW1800000032.79.9.1" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '내복 판매', 'label': 'ARG1', 'begin': 13, 'end': 18, 'word_id': 4}>],
+  'predicate': <SRLPredicate→{'form': '늘고', 'begin': 20, 'end': 22, 'lemma': '늘다'}>}>]
+<ELLayer → id: "NWRW1800000032.79.9.1" (Sentence), items: 0>
+[]
+<CRLayer → id: "NWRW1800000032.79.9.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000032.79.9.1" (Sentence), items: 0>
+[]
+# ::id NWRW1800000032.79.9.1
+# ::snt 대형마트와 백화점에서도 내복 판매가 늘고 있다.
+# ::pos 대형/NNG+마트/NNG+와/JC 백화점/NNG+에서/JKB+도/JX 내복/NNG 판매/NNG+가/JKS 늘/VV+고/EC 있/VX+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((5, 6) / 늘고_있다.~w.5,6
+        :dep.NP_AJT (2 / 백화점에서도~w.2
+                       :dep.NP_CNJ (1 / 대형마트와~w.1))
+        :srl.ARG1 (4 / 판매가~w.4
+                     :dep.NP (3 / 내복~w.3)))
+
+
+
+<DEPLayer → id: "NWRW1800000053.105.10.1" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '맨씨어터는', 'head': 9, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '연출가가', 'head': 3, 'label': 'NP_CMP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '아닌', 'head': 4, 'label': 'VP_MOD', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '배우가', 'head': 5, 'label': 'NP_SBJ', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '만든', 'head': 6, 'label': 'VP_MOD', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '극단이기에', 'head': 9, 'label': 'VNP_AJT', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '배우', 'head': 8, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '중심으로', 'head': 9, 'label': 'NP_AJT', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '운영된다.', 'head': -1, 'label': 'VP', 'dependent': [1, 6, 8]}>]
+<SRLLayer → id: "NWRW1800000053.105.10.1" (Sentence), items: 3>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '연출가', 'label': 'ARG2', 'begin': 6, 'end': 9, 'word_id': 2}>],
+  'predicate': <SRLPredicate→{'form': '아닌', 'begin': 11, 'end': 13, 'lemma': '아닌'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '배우', 'label': 'ARG0', 'begin': 14, 'end': 16, 'word_id': 4}>],
+  'predicate': <SRLPredicate→{'form': '만든', 'begin': 18, 'end': 20, 'lemma': '만들다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '맨씨어터', 'label': 'ARG1', 'begin': 0, 'end': 4, 'word_id': 1}>,
+                <SRLArgument→{'form': '배우 중심', 'label': 'ARG0', 'begin': 27, 'end': 32, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '운영된다.', 'begin': 35, 'end': 40, 'lemma': '운영되다'}>}>]
+<ELLayer → id: "NWRW1800000053.105.10.1" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '연출가', 'label': 'CV_OCCUPATION', 'begin': 6, 'end': 9, 'k_id': '06140000001705', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '배우', 'label': 'CV_OCCUPATION', 'begin': 14, 'end': 16, 'k_id': '06140000000933', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '배우', 'label': 'CV_OCCUPATION', 'begin': 27, 'end': 29, 'k_id': '06140000000933', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000053.105.10.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000053.105.10.1" (Sentence), items: 0>
+[]
+# ::id NWRW1800000053.105.10.1
+# ::snt 맨씨어터는 연출가가 아닌 배우가 만든 극단이기에 배우 중심으로 운영된다.
+# ::pos 맨씨어터/NNP+는/JX 연출가/NNG+가/JKC 아니/VCN+ㄴ/ETM 배우/NNG+가/JKS 만들/VV+ㄴ/ETM 극단/NNG+이/VCP+기에/EC 배우/NNG 중심/NNG+으로/JKB 운영/NNG+되/XSV+ㄴ다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(9 / 운영된다.~w.9
+   :srl.ARG1 (1 / 맨씨어터는~w.1)
+   :dep.VNP_AJT (6 / 극단이기에~w.6
+                   :dep.VP_MOD (5 / 만든~w.5
+                                  :srl.ARG0 (4 / CV_OCCUPATION~w.4
+                                               :name (n2 / name
+                                                         :op1 "배우")
+                                               :wiki -
+                                               :dep.VP_MOD (3 / 아닌~w.3
+                                                              :srl.ARG2 (2 / CV_OCCUPATION~w.2
+                                                                           :name (n1 / name
+                                                                                     :op1 "연출가")
+                                                                           :wiki -)))))
+   :srl.ARG0 (8 / 중심으로~w.8
+                :dep.NP (7 / CV_OCCUPATION~w.7
+                           :name (n3 / name
+                                     :op1 "배우")
+                           :wiki -)))
+
+
+
+<DEPLayer → id: "NWRW1800000038.261.6.1" (Sentence), items: 8>
+[ <DEPItem→{'word_id': 1, 'word_form': '매팅리', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '감독은', 'head': 8, 'label': 'NP_SBJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '홈에서', 'head': 4, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '열리는', 'head': 5, 'label': 'VP_MOD', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '3차전에서', 'head': 7, 'label': 'NP_AJT', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '분위기를', 'head': 7, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '바꾸겠다는', 'head': 8, 'label': 'VP_MOD', 'dependent': [5, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '각오다.', 'head': -1, 'label': 'VNP', 'dependent': [2, 7]}>]
+<SRLLayer → id: "NWRW1800000038.261.6.1" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '홈', 'label': 'ARGM-LOC', 'begin': 8, 'end': 9, 'word_id': 3}>,
+                <SRLArgument→{'form': '3차전', 'label': 'ARG1', 'begin': 16, 'end': 19, 'word_id': 5}>],
+  'predicate': <SRLPredicate→{'form': '열리는', 'begin': 12, 'end': 15, 'lemma': '열리다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '3차전', 'label': 'ARG2', 'begin': 16, 'end': 19, 'word_id': 5}>,
+                <SRLArgument→{'form': '분위기', 'label': 'ARG1', 'begin': 22, 'end': 25, 'word_id': 6}>],
+  'predicate': <SRLPredicate→{'form': '바꾸겠다는', 'begin': 27, 'end': 32, 'lemma': '바꾸다'}>}>]
+<ELLayer → id: "NWRW1800000038.261.6.1" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '매팅리', 'label': 'PS_NAME', 'begin': 0, 'end': 3, 'k_id': '00000000019719', 'wiki_id': '603513', 'url': 'https://ko.wikipedia.org/wiki/%EB%8F%88_%EB%A7%A4%ED%8C%85%EB%A6%AC'}>,
+  <ELItem→{'id': 2, 'form': '감독', 'label': 'CV_POSITION', 'begin': 4, 'end': 6, 'k_id': '06150000000205', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '3차전', 'label': 'EV_SPORTS', 'begin': 16, 'end': 19, 'k_id': '10020000000076', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000038.261.6.1" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000038.261.6.1', 'form': '매팅리', 'begin': 0, 'end': 3, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000038.261.6.1', 'form': '매팅리 감독', 'begin': 0, 'end': 6, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000038.261.6.1" (Sentence), items: 2>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '3차전', 'type': 'subject', 'sentence_id': 'NWRW1800000038.261.6.1', 'begin': 16, 'end': 19}>],
+  'predicate': <ZAPredicate→{'form': '열리는', 'sentence_id': 'NWRW1800000038.261.6.1', 'begin': 12, 'end': 15}>}>,
+  <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '감독', 'type': 'subject', 'sentence_id': 'NWRW1800000038.261.6.1', 'begin': 4, 'end': 6}>],
+  'predicate': <ZAPredicate→{'form': '바꾸겠다는', 'sentence_id': 'NWRW1800000038.261.6.1', 'begin': 27, 'end': 32}>}>]
+# ::id NWRW1800000038.261.6.1
+# ::snt 매팅리 감독은 홈에서 열리는 3차전에서 분위기를 바꾸겠다는 각오다.
+# ::pos 매팅리/NNP 감독/NNG+은/JX 홈/NNG+에서/JKB 열리/VV+는/ETM 3/SN+차전/NNB+에서/JKB 분위기/NNG+를/JKO 바꾸/VV+겠/EP+다는/ETM 각오/NNG+이/VCP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(8 / 각오다.~w.8
+   :dep.NP_SBJ (2 / CV_POSITION~w.2
+                  :name (n2 / name
+                            :op1 "감독")
+                  :wiki -
+                  :dep.NP (1 / PS_NAME~w.1
+                             :name (n1 / name
+                                       :op1 "매팅리")
+                             :wiki "https://ko.wikipedia.org/wiki/돈_매팅리"))
+   :dep.VP_MOD (7 / 바꾸겠다는~w.7
+                  :srl.ARG2 (5 / EV_SPORTS~w.5
+                               :srl.ARG1-of (4 / 열리는~w.4
+                                               :srl.ARGM-LOC (3 / 홈에서~w.3))
+                               :name (n3 / name
+                                         :op1 "3차전")
+                               :wiki -)
+                  :srl.ARG1 (6 / 분위기를~w.6)))
+
+
+
+<DEPLayer → id: "NWRW1800000046.239.6.8" (Sentence), items: 6>
+[ <DEPItem→{'word_id': 1, 'word_form': '하지만', 'head': 5, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '하준영은', 'head': 5, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '청룡기에선', 'head': 5, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '실패를', 'head': 5, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '되풀이하지', 'head': 6, 'label': 'VP', 'dependent': [1, 2, 3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '않았다.', 'head': -1, 'label': 'VP', 'dependent': [5]}>]
+<SRLLayer → id: "NWRW1800000046.239.6.8" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '하준영', 'label': 'ARG0', 'begin': 4, 'end': 7, 'word_id': 2}>,
+                <SRLArgument→{'form': '실패', 'label': 'ARG1', 'begin': 15, 'end': 17, 'word_id': 4}>],
+  'predicate': <SRLPredicate→{'form': '되풀이하지', 'begin': 19, 'end': 24, 'lemma': '되풀이하다'}>}>]
+<ELLayer → id: "NWRW1800000046.239.6.8" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '하준영', 'label': 'PS_NAME', 'begin': 4, 'end': 7, 'k_id': '00000000053700', 'wiki_id': '1935744', 'url': 'https://ko.wikipedia.org/wiki/%ED%95%98%EC%A4%80%EC%98%81'}>,
+  <ELItem→{'id': 2, 'form': '청룡기', 'label': 'EV_SPORTS', 'begin': 9, 'end': 12, 'k_id': '10020000001511', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000046.239.6.8" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000046.239.6.8" (Sentence), items: 0>
+[]
+# ::id NWRW1800000046.239.6.8
+# ::snt 하지만 하준영은 청룡기에선 실패를 되풀이하지 않았다.
+# ::pos 하지만/MAJ 하준영/NNP+은/JX 청룡기/NNG+에서/JKB+ㄴ/JX 실패/NNG+를/JKO 되풀이/NNG+하/XSV+지/EC 않/VX+았/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((5, 6) / 되풀이하지_않았다.~w.5,6
+        :dep.AP (1 / 하지만~w.1)
+        :srl.ARG0 (2 / PS_NAME~w.2
+                     :name (n1 / name
+                               :op1 "하준영")
+                     :wiki "https://ko.wikipedia.org/wiki/하준영")
+        :dep.NP_AJT (3 / EV_SPORTS~w.3
+                       :name (n2 / name
+                                 :op1 "청룡기")
+                       :wiki -)
+        :srl.ARG1 (4 / 실패를~w.4))
+
+
+
+<DEPLayer → id: "NWRW1800000038.84.8.2" (Sentence), items: 7>
+[ <DEPItem→{'word_id': 1, 'word_form': '출판', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '시장뿐', 'head': 3, 'label': 'NP_CMP', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '아니라', 'head': 6, 'label': 'VP', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '트위터에서도', 'head': 6, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '인기를', 'head': 6, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 6, 'word_form': '입증한', 'head': 7, 'label': 'VP_MOD', 'dependent': [3, 4, 5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '셈이다.', 'head': -1, 'label': 'VNP', 'dependent': [6]}>]
+<SRLLayer → id: "NWRW1800000038.84.8.2" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '출판 시장', 'label': 'ARG0', 'begin': 0, 'end': 5, 'word_id': 2}>],
+  'predicate': <SRLPredicate→{'form': '아니라', 'begin': 7, 'end': 10, 'lemma': '아니다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '트위터', 'label': 'ARG2', 'begin': 11, 'end': 14, 'word_id': 4}>,
+                <SRLArgument→{'form': '인기', 'label': 'ARG1', 'begin': 18, 'end': 20, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '입증한', 'begin': 22, 'end': 25, 'lemma': '입증하다'}>}>]
+<ELLayer → id: "NWRW1800000038.84.8.2" (Sentence), items: 1>
+[ <ELItem→{'id': 1, 'form': '트위터', 'label': 'TMI_SERVICE', 'begin': 11, 'end': 14, 'k_id': '14120000002984', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000038.84.8.2" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000038.84.8.2" (Sentence), items: 0>
+[]
+# ::id NWRW1800000038.84.8.2
+# ::snt 출판 시장뿐 아니라 트위터에서도 인기를 입증한 셈이다.
+# ::pos 출판/NNG 시장/NNG+뿐/JX 아니/VCN+라/EC 트위터/NNP+에서/JKB+도/JX 인기/NNG+를/JKO 입증/NNG+하/XSV+ㄴ/ETM 셈/NNB+이/VCP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((6, 7) / 입증한_셈이다.~w.6,7
+        :dep.VP (3 / 아니라~w.3
+                   :srl.ARG0 (2 / 시장뿐~w.2
+                                :dep.NP (1 / 출판~w.1)))
+        :srl.ARG2 (4 / TMI_SERVICE~w.4
+                     :name (n1 / name
+                               :op1 "트위터")
+                     :wiki -)
+        :dep.NP_OBJ (5 / 인기를~w.5))
+
+
+
+<DEPLayer → id: "NWRW1800000038.171.6.3" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '엔듀로', 'head': 2, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '경주는', 'head': 9, 'label': 'NP_SBJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '새만금', 'head': 4, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '늪과', 'head': 6, 'label': 'NP_CNJ', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '옆', 'head': 6, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 6, 'word_form': '산까지', 'head': 9, 'label': 'NP_AJT', 'dependent': [4, 5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '20㎞', 'head': 8, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '험로에서', 'head': 9, 'label': 'NP_AJT', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '펼쳐진다.', 'head': -1, 'label': 'VP', 'dependent': [2, 6, 8]}>]
+<SRLLayer → id: "NWRW1800000038.171.6.3" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '경주', 'label': 'ARG1', 'begin': 4, 'end': 6, 'word_id': 2}>,
+                <SRLArgument→{'form': '새만금 늪과 옆 산', 'label': 'ARGM-LOC', 'begin': 8, 'end': 18, 'word_id': 6}>,
+                <SRLArgument→{'form': '20㎞ 험로', 'label': 'ARGM-LOC', 'begin': 21, 'end': 27, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '펼쳐진다.', 'begin': 30, 'end': 35, 'lemma': '펼치다'}>}>]
+<ELLayer → id: "NWRW1800000038.171.6.3" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '엔듀로', 'label': 'CV_SPORTS', 'begin': 0, 'end': 3, 'k_id': '06090000000291', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '새만금', 'label': 'LC_OTHERS', 'begin': 8, 'end': 11, 'k_id': '05120000004701', 'wiki_id': '1668524', 'url': 'https://ko.wikipedia.org/wiki/%EC%83%88%EB%A7%8C%EA%B8%88_%EB%B0%A9%EC%A1%B0%EC%A0%9C'}>,
+  <ELItem→{'id': 3, 'form': '20㎞', 'label': 'QT_LENGTH', 'begin': 21, 'end': 24, 'k_id': '09020000000959', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000038.171.6.3" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000038.171.6.3" (Sentence), items: 0>
+[]
+# ::id NWRW1800000038.171.6.3
+# ::snt 엔듀로 경주는 새만금 늪과 옆 산까지 20㎞ 험로에서 펼쳐진다.
+# ::pos 엔듀로/NNG 경주/NNG+는/JX 새만금/NNP 늪/NNG+과/JC 옆/NNG 산/NNG+까지/JX 20/SN+㎞/SW 험로/NNG+에서/JKB 펼쳐지/VV+ㄴ다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(9 / 펼쳐진다.~w.9
+   :srl.ARG1 (2 / 경주는~w.2
+                :dep.NP_AJT (1 / CV_SPORTS~w.1
+                               :name (n1 / name
+                                         :op1 "엔듀로")
+                               :wiki -))
+   :srl.ARGM-LOC (6 / 산까지~w.6
+                    :dep.NP_CNJ (4 / 늪과~w.4
+                                   :dep.NP (3 / LC_OTHERS~w.3
+                                              :name (n2 / name
+                                                        :op1 "새만금")
+                                              :wiki "https://ko.wikipedia.org/wiki/새만금_방조제"))
+                    :dep.NP (5 / 옆~w.5))
+   :srl.ARGM-LOC (8 / 험로에서~w.8
+                    :dep.NP (7 / QT_LENGTH~w.7
+                               :name (n3 / name
+                                         :op1 "20㎞")
+                               :wiki -)))
+
+
+
+<DEPLayer → id: "NWRW1800000045.134.8.3" (Sentence), items: 5>
+[ <DEPItem→{'word_id': 1, 'word_form': '올해로', 'head': 2, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '마흔다섯인', 'head': 3, 'label': 'VNP_MOD', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '그에게', 'head': 5, 'label': 'NP_AJT', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '50대를', 'head': 5, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '물었다.', 'head': -1, 'label': 'VP', 'dependent': [3, 4]}>]
+<SRLLayer → id: "NWRW1800000045.134.8.3" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '올해로 마흔다섯인 그', 'label': 'ARG2', 'begin': 0, 'end': 11, 'word_id': 3}>,
+                <SRLArgument→{'form': '50대', 'label': 'ARG1', 'begin': 14, 'end': 17, 'word_id': 4}>],
+  'predicate': <SRLPredicate→{'form': '물었다.', 'begin': 19, 'end': 23, 'lemma': '묻다'}>}>]
+<ELLayer → id: "NWRW1800000045.134.8.3" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '올해', 'label': 'DT_YEAR', 'begin': 0, 'end': 2, 'k_id': '07040000001278', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '마흔다섯', 'label': 'QT_AGE', 'begin': 4, 'end': 8, 'k_id': '09000000001586', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '50대', 'label': 'QT_AGE', 'begin': 14, 'end': 17, 'k_id': '09000000001021', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000045.134.8.3" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000045.134.8.3" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '누군가', 'type': 'subject', 'sentence_id': '-1', 'begin': -1, 'end': -1}>],
+  'predicate': <ZAPredicate→{'form': '물었다', 'sentence_id': 'NWRW1800000045.134.8.3', 'begin': 19, 'end': 22}>}>]
+# ::id NWRW1800000045.134.8.3
+# ::snt 올해로 마흔다섯인 그에게 50대를 물었다.
+# ::pos 올해/NNG+로/JKB 마흔다섯/NR+이/VCP+ㄴ/ETM 그/NP+에게/JKB 50/SN+대/NNB+를/JKO 묻/VV+었/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(5 / 물었다.~w.5
+   :srl.ARG2 (3 / 그에게~w.3
+                :dep.VNP_MOD (2 / QT_AGE~w.2
+                                :name (n2 / name
+                                          :op1 "마흔다섯")
+                                :wiki -
+                                :dep.NP_AJT (1 / DT_YEAR~w.1
+                                               :name (n1 / name
+                                                         :op1 "올해")
+                                               :wiki -)))
+   :srl.ARG1 (4 / QT_AGE~w.4
+                :name (n3 / name
+                          :op1 "50대")
+                :wiki -))
+
+
+
+<DEPLayer → id: "NWRW1800000030.193.8.2" (Sentence), items: 8>
+[ <DEPItem→{'word_id': 1, 'word_form': '리앤', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '역을', 'head': 3, 'label': 'NP_OBJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '맡은', 'head': 5, 'label': 'VP_MOD', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '샌드라', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '불럭이', 'head': 8, 'label': 'NP_SBJ', 'dependent': [3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '아카데미', 'head': 7, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '여우주연상을', 'head': 8, 'label': 'NP_OBJ', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '받았다.', 'head': -1, 'label': 'VP', 'dependent': [5, 7]}>]
+<SRLLayer → id: "NWRW1800000030.193.8.2" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '리앤 역', 'label': 'ARG1', 'begin': 0, 'end': 4, 'word_id': 2}>,
+                <SRLArgument→{'form': '샌드라 불럭', 'label': 'ARG0', 'begin': 9, 'end': 15, 'word_id': 5}>],
+  'predicate': <SRLPredicate→{'form': '맡은', 'begin': 6, 'end': 8, 'lemma': '맡다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '리앤 역을 맡은 샌드라 불럭', 'label': 'ARG0', 'begin': 0, 'end': 15, 'word_id': 5}>,
+                <SRLArgument→{'form': '아카데미 여우주연상', 'label': 'ARG1', 'begin': 17, 'end': 27, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '받았다.', 'begin': 29, 'end': 33, 'lemma': '받다'}>}>]
+<ELLayer → id: "NWRW1800000030.193.8.2" (Sentence), items: 4>
+[ <ELItem→{'id': 1, 'form': '리앤', 'label': 'PS_CHARACTER', 'begin': 0, 'end': 2, 'k_id': '00010000001644', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '샌드라 불럭', 'label': 'PS_NAME', 'begin': 9, 'end': 15, 'k_id': '00000000026377', 'wiki_id': '296854', 'url': 'https://ko.wikipedia.org/wiki/%EC%82%B0%EB%93%9C%EB%9D%BC_%EB%B8%94%EB%A1%9D'}>,
+  <ELItem→{'id': 3, 'form': '아카데미', 'label': 'EV_FESTIVAL', 'begin': 17, 'end': 21, 'k_id': '10030000002193', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 4, 'form': '여우주연상', 'label': 'CV_PRIZE', 'begin': 22, 'end': 27, 'k_id': '06120000000421', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000030.193.8.2" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000030.193.8.2', 'form': '리앤 역', 'begin': 0, 'end': 4, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000030.193.8.2', 'form': '리앤 역을 맡은 샌드라 불럭', 'begin': 0, 'end': 15, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000030.193.8.2" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '불럭', 'type': 'subject', 'sentence_id': 'NWRW1800000030.193.8.2', 'begin': 13, 'end': 15}>],
+  'predicate': <ZAPredicate→{'form': '맡은', 'sentence_id': 'NWRW1800000030.193.8.2', 'begin': 6, 'end': 8}>}>]
+# ::id NWRW1800000030.193.8.2
+# ::snt 리앤 역을 맡은 샌드라 불럭이 아카데미 여우주연상을 받았다.
+# ::pos 리앤/NNP 역/NNG+을/JKO 맡/VV+은/ETM 샌드라/NNP 불럭/NNP+이/JKS 아카데미/NNG 여우/NNG+주연상/NNG+을/JKO 받/VV+았/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(8 / 받았다.~w.8
+   :srl.ARG1 (7 / CV_PRIZE~w.7
+                :name (n4 / name
+                          :op1 "여우주연상")
+                :wiki -
+                :dep.NP (6 / EV_FESTIVAL~w.6
+                           :name (n3 / name
+                                     :op1 "아카데미")
+                           :wiki -))
+   :srl.ARG0 ((4, 5) / PS_NAME~w.4,5
+                     :srl.ARG0-of (3 / 맡은~w.3
+                                     :srl.ARG1 (2 / 역을~w.2
+                                                  :dep.NP (1 / PS_CHARACTER~w.1
+                                                             :name (n1 / name
+                                                                       :op1 "리앤")
+                                                             :wiki -)))
+                     :name (n2 / name
+                               :op1 "샌드라"
+                               :op2 "불럭")
+                     :wiki "https://ko.wikipedia.org/wiki/산드라_블록"))
+
+
+
+<DEPLayer → id: "NWRW1800000053.81.10.2" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '현재', 'head': 8, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '인천공항', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '내', 'head': 6, 'label': 'NP', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '모든', 'head': 6, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '항공사', 'head': 6, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 6, 'word_form': '라운지에는', 'head': 8, 'label': 'NP_AJT', 'dependent': [3, 4, 5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '신라면이', 'head': 8, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '비치돼', 'head': 9, 'label': 'VP', 'dependent': [1, 6, 7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '있다.', 'head': -1, 'label': 'VP', 'dependent': [8]}>]
+<SRLLayer → id: "NWRW1800000053.81.10.2" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '현재', 'label': 'ARGM-TMP', 'begin': 0, 'end': 2, 'word_id': 1}>,
+                <SRLArgument→{'form': '인천공항 내 모든 항공사 라운지', 'label': 'ARG2', 'begin': 3, 'end': 20, 'word_id': 6}>,
+                <SRLArgument→{'form': '신라면', 'label': 'ARG1', 'begin': 23, 'end': 26, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '비치돼', 'begin': 28, 'end': 31, 'lemma': '비치하다'}>}>]
+<ELLayer → id: "NWRW1800000053.81.10.2" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '인천공항', 'label': 'LC_OTHERS', 'begin': 3, 'end': 7, 'k_id': '05120000007271', 'wiki_id': '29727', 'url': 'https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD'}>,
+  <ELItem→{'id': 2, 'form': '신라면', 'label': 'CV_FOOD', 'begin': 23, 'end': 26, 'k_id': '06160000014022', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000053.81.10.2" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000053.81.10.2" (Sentence), items: 0>
+[]
+# ::id NWRW1800000053.81.10.2
+# ::snt 현재 인천공항 내 모든 항공사 라운지에는 신라면이 비치돼 있다.
+# ::pos 현재/MAG 인천공항/NNP 내/NNB 모든/MMN 항공사/NNG 라운지/NNG+에/JKB+는/JX 신라면/NNP+이/JKS 비치/NNG+되/XSV+어/EC 있/VX+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((8, 9) / 비치돼_있다.~w.8,9
+        :srl.ARGM-TMP (1 / 현재~w.1)
+        :srl.ARG2 (6 / 라운지에는~w.6
+                     :dep.NP (3 / 내~w.3
+                                :dep.NP (2 / LC_OTHERS~w.2
+                                           :name (n1 / name
+                                                     :op1 "인천공항")
+                                           :wiki "https://ko.wikipedia.org/wiki/인천국제공항"))
+                     :dep.DP (4 / 모든~w.4)
+                     :dep.NP (5 / 항공사~w.5))
+        :srl.ARG1 (7 / CV_FOOD~w.7
+                     :name (n2 / name
+                               :op1 "신라면")
+                     :wiki -))
+
+
+
+<DEPLayer → id: "NWRW1800000021.20.13.2" (Sentence), items: 12>
+[ <DEPItem→{'word_id': 1, 'word_form': '노텔은', 'head': 9, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '지난해', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '9월', 'head': 4, 'label': 'NP', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '말', 'head': 5, 'label': 'NP', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '기준으로', 'head': 9, 'label': 'NP_AJT', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '63억', 'head': 7, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '달러의', 'head': 8, 'label': 'NP_MOD', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '부채를', 'head': 9, 'label': 'NP_OBJ', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '안고', 'head': 10, 'label': 'VP', 'dependent': [1, 5, 8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '있는', 'head': 11, 'label': 'VP_MOD', 'dependent': [9]}>,
+  <DEPItem→{'word_id': 11, 'word_form': '것으로', 'head': 12, 'label': 'NP_AJT', 'dependent': [10]}>,
+  <DEPItem→{'word_id': 12, 'word_form': '알려졌다.', 'head': -1, 'label': 'VP', 'dependent': [11]}>]
+<SRLLayer → id: "NWRW1800000021.20.13.2" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '노텔', 'label': 'ARG0', 'begin': 0, 'end': 2, 'word_id': 1}>,
+                <SRLArgument→{'form': '63억 달러의 부채', 'label': 'ARG1', 'begin': 18, 'end': 28, 'word_id': 8}>,
+                <SRLArgument→{'form': '있는', 'label': 'ARGM-AUX', 'begin': 33, 'end': 35, 'word_id': 10}>],
+  'predicate': <SRLPredicate→{'form': '안고', 'begin': 30, 'end': 32, 'lemma': '안다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '노텔은 지난해 9월 말 기준으로 63억 달러의 부채를 안고 있는 것', 'label': 'ARG1', 'begin': 0, 'end': 37, 'word_id': 11}>],
+  'predicate': <SRLPredicate→{'form': '알려졌다.', 'begin': 40, 'end': 45, 'lemma': '알려지다'}>}>]
+<ELLayer → id: "NWRW1800000021.20.13.2" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '노텔', 'label': 'OGG_ECONOMY', 'begin': 0, 'end': 2, 'k_id': '04000000004184', 'wiki_id': '2381030', 'url': 'https://ko.wikipedia.org/wiki/%EB%85%B8%ED%85%94'}>,
+  <ELItem→{'id': 2, 'form': '지난해 9월 말', 'label': 'DT_OTHERS', 'begin': 4, 'end': 12, 'k_id': '07080000011257', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '63억 달러', 'label': 'QT_PRICE', 'begin': 18, 'end': 24, 'k_id': '09110000007013', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000021.20.13.2" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000021.20.13.2" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '노텔', 'type': 'subject', 'sentence_id': 'NWRW1800000021.20.13.2', 'begin': 0, 'end': 2}>],
+  'predicate': <ZAPredicate→{'form': '안고', 'sentence_id': 'NWRW1800000021.20.13.2', 'begin': 30, 'end': 32}>}>]
+# ::id NWRW1800000021.20.13.2
+# ::snt 노텔은 지난해 9월 말 기준으로 63억 달러의 부채를 안고 있는 것으로 알려졌다.
+# ::pos 노텔/NNP+은/JX 지난해/NNG 9/SN+월/NNB 말/NNB 기준/NNG+으로/JKB 63/SN+억/NR 달러/NNB+의/JKG 부채/NNG+를/JKO 안/VV+고/EC 있/VX+는/ETM 것/NNB+으로/JKB 알려지/VV+었/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(12 / 알려졌다.~w.12
+    :srl.ARG1 ((9, 10, 11) / 안고_있는_것으로~w.9,10,11
+                           :dep.NP_AJT ((2, 3, 4, 5) / DT_OTHERS~w.2,3,4,5
+                                                     :name (n2 / name
+                                                               :op1 "지난해"
+                                                               :op2 "9월"
+                                                               :op3 "말")
+                                                     :wiki -)
+                           :srl.ARG0 (1 / OGG_ECONOMY~w.1
+                                        :name (n1 / name
+                                                  :op1 "노텔")
+                                        :wiki "https://ko.wikipedia.org/wiki/노텔")
+                           :srl.ARG1 (8 / 부채를~w.8
+                                        :dep.NP_MOD ((6, 7) / QT_PRICE~w.6,7
+                                                            :name (n3 / name
+                                                                      :op1 "63억"
+                                                                      :op2 "달러")
+                                                            :wiki -))))
+
+
+
+<DEPLayer → id: "NWRW1800000046.239.4.4" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '대구', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '상원고는', 'head': 5, 'label': 'NP_SBJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '부산고를', 'head': 5, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '10대0으로', 'head': 5, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '완파하고', 'head': 9, 'label': 'VP', 'dependent': [2, 3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '통산', 'head': 7, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '6번째', 'head': 8, 'label': 'NP', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '우승에', 'head': 9, 'label': 'NP_AJT', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '도전한다.', 'head': -1, 'label': 'VP', 'dependent': [5, 8]}>]
+<SRLLayer → id: "NWRW1800000046.239.4.4" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '대구 상원고', 'label': 'ARG0', 'begin': 0, 'end': 6, 'word_id': 2}>,
+                <SRLArgument→{'form': '부산고', 'label': 'ARG1', 'begin': 8, 'end': 11, 'word_id': 3}>],
+  'predicate': <SRLPredicate→{'form': '완파하고', 'begin': 20, 'end': 24, 'lemma': '완파하다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '대구 상원고', 'label': 'ARG0', 'begin': 0, 'end': 6, 'word_id': 2}>],
+  'predicate': <SRLPredicate→{'form': '도전한다.', 'begin': 36, 'end': 41, 'lemma': '도전하다'}>}>]
+<ELLayer → id: "NWRW1800000046.239.4.4" (Sentence), items: 4>
+[ <ELItem→{'id': 1, 'form': '대구 상원고', 'label': 'OGG_SPORTS', 'begin': 0, 'end': 6, 'k_id': '04040000000525', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '부산고', 'label': 'OGG_SPORTS', 'begin': 8, 'end': 11, 'k_id': '04040000000827', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '10대0', 'label': 'QT_SPORTS', 'begin': 13, 'end': 17, 'k_id': '09130000000198', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 4, 'form': '6번째', 'label': 'QT_ORDER', 'begin': 28, 'end': 31, 'k_id': '09100000003306', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000046.239.4.4" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000046.239.4.4" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '상원고', 'type': 'subject', 'sentence_id': 'NWRW1800000046.239.4.4', 'begin': 3, 'end': 6}>],
+  'predicate': <ZAPredicate→{'form': '도전한다', 'sentence_id': 'NWRW1800000046.239.4.4', 'begin': 36, 'end': 40}>}>]
+None
+
+
+
+<DEPLayer → id: "NWRW1800000053.293.4.1" (Sentence), items: 11>
+[ <DEPItem→{'word_id': 1, 'word_form': '문', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '전', 'head': 3, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '대표는', 'head': 11, 'label': 'NP_SBJ', 'dependent': [1, 2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '1일', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '새해', 'head': 7, 'label': 'NP', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '첫', 'head': 7, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '행보로', 'head': 11, 'label': 'NP_AJT', 'dependent': [5, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '광주', 'head': 9, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '무등산국립공원', 'head': 10, 'label': 'NP', 'dependent': [8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '산행을', 'head': 11, 'label': 'NP_OBJ', 'dependent': [9]}>,
+  <DEPItem→{'word_id': 11, 'word_form': '택했다.', 'head': -1, 'label': 'VP', 'dependent': [3, 7, 10]}>]
+<SRLLayer → id: "NWRW1800000053.293.4.1" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '문 전 대표', 'label': 'ARG0', 'begin': 0, 'end': 6, 'word_id': 3}>,
+                <SRLArgument→{'form': '광주 무등산국립공원 산행', 'label': 'ARG1', 'begin': 20, 'end': 33, 'word_id': 10}>],
+  'predicate': <SRLPredicate→{'form': '택했다.', 'begin': 35, 'end': 39, 'lemma': '택하다'}>}>]
+<ELLayer → id: "NWRW1800000053.293.4.1" (Sentence), items: 5>
+[ <ELItem→{'id': 1, 'form': '문', 'label': 'PS_NAME', 'begin': 0, 'end': 1, 'k_id': '00000000020657', 'wiki_id': '336697', 'url': 'https://ko.wikipedia.org/wiki/%EB%AC%B8%EC%9E%AC%EC%9D%B8'}>,
+  <ELItem→{'id': 2, 'form': '대표', 'label': 'CV_POSITION', 'begin': 4, 'end': 6, 'k_id': '06150000001383', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '1일', 'label': 'DT_DAY', 'begin': 8, 'end': 10, 'k_id': '07010000000071', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 4, 'form': '광주', 'label': 'LCP_CITY', 'begin': 20, 'end': 22, 'k_id': '05030000000472', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 5, 'form': '무등산국립공원', 'label': 'LC_OTHERS', 'begin': 23, 'end': 30, 'k_id': '05120000003568', 'wiki_id': '8916', 'url': 'https://ko.wikipedia.org/wiki/%EB%AC%B4%EB%93%B1%EC%82%B0'}>]
+<CRLayer → id: "NWRW1800000053.293.4.1" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000053.293.4.1', 'form': '문', 'begin': 0, 'end': 1, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000053.293.4.1', 'form': '문 전 대표', 'begin': 0, 'end': 6, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000053.293.4.1" (Sentence), items: 0>
+[]
+# ::id NWRW1800000053.293.4.1
+# ::snt 문 전 대표는 1일 새해 첫 행보로 광주 무등산국립공원 산행을 택했다.
+# ::pos 문/NNP 전/MMD 대표/NNG+는/JX 1/SN+일/NNB 새해/NNG 첫/MMN 행보/NNG+로/JKB 광주/NNP 무등산국립공원/NNP 산행/NNG+을/JKO 택하/VV+았/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(11 / 택했다.~w.11
+    :srl.ARG0 (3 / CV_POSITION~w.3
+                 :name (n2 / name
+                           :op1 "대표")
+                 :wiki -
+                 :dep.NP (1 / PS_NAME~w.1
+                            :name (n1 / name
+                                      :op1 "문")
+                            :wiki "https://ko.wikipedia.org/wiki/문재인")
+                 :dep.DP (2 / 전~w.2))
+    :dep.NP_AJT (7 / 행보로~w.7
+                   :dep.NP (5 / 새해~w.5
+                              :dep.NP (4 / DT_DAY~w.4
+                                         :name (n3 / name
+                                                   :op1 "1일")
+                                         :wiki -))
+                   :dep.DP (6 / 첫~w.6))
+    :srl.ARG1 (10 / 산행을~w.10
+                  :dep.NP (9 / LC_OTHERS~w.9
+                             :name (n5 / name
+                                       :op1 "무등산국립공원")
+                             :wiki "https://ko.wikipedia.org/wiki/무등산"
+                             :dep.NP (8 / LCP_CITY~w.8
+                                        :name (n4 / name
+                                                  :op1 "광주")
+                                        :wiki -))))
+
+
+
+<DEPLayer → id: "NWRW1800000049.14.9.1" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '엔화', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '환율은', 'head': 9, 'label': 'NP_SBJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '최근', 'head': 4, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '달러당', 'head': 5, 'label': 'NP', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '106엔', 'head': 6, 'label': 'NP_AJT', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '안팎으로', 'head': 9, 'label': 'NP_AJT', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '연초보다', 'head': 9, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '14엔가량', 'head': 9, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '떨어졌다.', 'head': -1, 'label': 'VP', 'dependent': [2, 6, 7, 8]}>]
+<SRLLayer → id: "NWRW1800000049.14.9.1" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '엔화 환율', 'label': 'ARG0', 'begin': 0, 'end': 5, 'word_id': 2}>],
+  'predicate': <SRLPredicate→{'form': '떨어졌다.', 'begin': 35, 'end': 40, 'lemma': '떨어지다'}>}>]
+<ELLayer → id: "NWRW1800000049.14.9.1" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '엔화', 'label': 'CV_CURRENCY', 'begin': 0, 'end': 2, 'k_id': '06050000000040', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '106엔 안팎', 'label': 'QT_PRICE', 'begin': 14, 'end': 21, 'k_id': '09110000000464', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '14엔가량', 'label': 'QT_PRICE', 'begin': 29, 'end': 34, 'k_id': '09110000001399', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000049.14.9.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000049.14.9.1" (Sentence), items: 0>
+[]
+# ::id NWRW1800000049.14.9.1
+# ::snt 엔화 환율은 최근 달러당 106엔 안팎으로 연초보다 14엔가량 떨어졌다.
+# ::pos 엔화/NNG 환율/NNG+은/JX 최근/NNG 달러/NNG+당/XSN 106/SN+엔/NNB 안팎/NNG+으로/JKB 연초/NNG+보다/JKB 14/SN+엔/NNB+가량/XSN 떨어지/VV+었/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(9 / 떨어졌다.~w.9
+   :srl.ARG0 (2 / 환율은~w.2
+                :dep.NP (1 / CV_CURRENCY~w.1
+                           :name (n1 / name
+                                     :op1 "엔화")
+                           :wiki -))
+   :dep.NP_AJT (7 / 연초보다~w.7)
+   :dep.NP_AJT (8 / QT_PRICE~w.8
+                  :name (n3 / name
+                            :op1 "14엔가량")
+                  :wiki -)
+   :dep.NP_AJT ((5, 6) / QT_PRICE~w.5,6
+                       :name (n2 / name
+                                 :op1 "106엔"
+                                 :op2 "안팎")
+                       :wiki -
+                       :dep.NP (4 / 달러당~w.4
+                                  :dep.NP (3 / 최근~w.3))))
+
+
+
+<DEPLayer → id: "NWRW1800000037.188.3.2" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '돈을', 'head': 2, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '받고', 'head': 3, 'label': 'VP', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '하는', 'head': 4, 'label': 'VP_MOD', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '일이라면', 'head': 9, 'label': 'VNP', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '하루', 'head': 6, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 6, 'word_form': '이틀', 'head': 7, 'label': 'NP_OBJ', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '빠질', 'head': 8, 'label': 'VP_MOD', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '법도', 'head': 9, 'label': 'NP', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '하다.', 'head': -1, 'label': 'VP', 'dependent': [4, 8]}>]
+<SRLLayer → id: "NWRW1800000037.188.3.2" (Sentence), items: 3>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '돈', 'label': 'ARG1', 'begin': 0, 'end': 1, 'word_id': 1}>],
+  'predicate': <SRLPredicate→{'form': '받고', 'begin': 3, 'end': 5, 'lemma': '받다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '받고', 'label': 'ARGM-MNR', 'begin': 3, 'end': 5, 'word_id': 2}>,
+                <SRLArgument→{'form': '일이라면', 'label': 'ARG1', 'begin': 9, 'end': 13, 'word_id': 4}>,
+                <SRLArgument→{'form': '하다', 'label': 'ARGM-AUX', 'begin': 26, 'end': 28, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '하는', 'begin': 6, 'end': 8, 'lemma': '하다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '하루 이틀', 'label': 'ARG1', 'begin': 14, 'end': 19, 'word_id': 6}>,
+                <SRLArgument→{'form': '하다', 'label': 'ARGM-AUX', 'begin': 26, 'end': 28, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '빠질', 'begin': 20, 'end': 22, 'lemma': '빠지다'}>}>]
+<ELLayer → id: "NWRW1800000037.188.3.2" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '하루', 'label': 'DT_DURATION', 'begin': 14, 'end': 16, 'k_id': '07000000007339', 'wiki_id': '39834', 'url': 'https://ko.wikipedia.org/wiki/%EB%82%A0'}>,
+  <ELItem→{'id': 2, 'form': '이틀', 'label': 'DT_DURATION', 'begin': 17, 'end': 19, 'k_id': '07000000006448', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000037.188.3.2" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000037.188.3.2" (Sentence), items: 2>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '일', 'type': 'object', 'sentence_id': 'NWRW1800000037.188.3.2', 'begin': 9, 'end': 10}>],
+  'predicate': <ZAPredicate→{'form': '하는', 'sentence_id': 'NWRW1800000037.188.3.2', 'begin': 6, 'end': 8}>}>,
+  <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '일', 'type': 'object', 'sentence_id': 'NWRW1800000037.188.3.2', 'begin': 9, 'end': 10}>],
+  'predicate': <ZAPredicate→{'form': '빠질', 'sentence_id': 'NWRW1800000037.188.3.2', 'begin': 20, 'end': 22}>}>]
+None
+
+
+
+<DEPLayer → id: "NWRW1800000030.164.15.3" (Sentence), items: 10>
+[ <DEPItem→{'word_id': 1, 'word_form': '그', 'head': 2, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '사이', 'head': 9, 'label': 'NP_AJT', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '새끼', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '두', 'head': 5, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '마리를', 'head': 6, 'label': 'NP_OBJ', 'dependent': [3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '태운', 'head': 7, 'label': 'VP_MOD', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '차는', 'head': 9, 'label': 'NP_SBJ', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '지리산을', 'head': 9, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '향해', 'head': 10, 'label': 'VP', 'dependent': [2, 7, 8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '떠났다.', 'head': -1, 'label': 'VP', 'dependent': [9]}>]
+<SRLLayer → id: "NWRW1800000030.164.15.3" (Sentence), items: 3>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '새끼 두 마리', 'label': 'ARG0', 'begin': 5, 'end': 12, 'word_id': 5}>],
+  'predicate': <SRLPredicate→{'form': '태운', 'begin': 14, 'end': 16, 'lemma': '타다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '지리산', 'label': 'ARG2', 'begin': 20, 'end': 23, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '향해', 'begin': 25, 'end': 27, 'lemma': '향하다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '새끼 두 마리를 태운 차', 'label': 'ARG1', 'begin': 5, 'end': 18, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '떠났다.', 'begin': 28, 'end': 32, 'lemma': '떠나다'}>}>]
+<ELLayer → id: "NWRW1800000030.164.15.3" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '두 마리', 'label': 'QT_COUNT', 'begin': 8, 'end': 12, 'k_id': '09030000009668', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '차', 'label': 'AF_TRANSPORT', 'begin': 17, 'end': 18, 'k_id': '03030000001806', 'wiki_id': '67467', 'url': 'https://ko.wikipedia.org/wiki/%EC%9E%90%EB%8F%99%EC%B0%A8'}>,
+  <ELItem→{'id': 3, 'form': '지리산', 'label': 'LCG_MOUNTAIN', 'begin': 20, 'end': 23, 'k_id': '05080000000608', 'wiki_id': '3332', 'url': 'https://ko.wikipedia.org/wiki/%EC%A7%80%EB%A6%AC%EC%82%B0'}>]
+<CRLayer → id: "NWRW1800000030.164.15.3" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000030.164.15.3" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '차', 'type': 'subject', 'sentence_id': 'NWRW1800000030.164.15.3', 'begin': 17, 'end': 18}>],
+  'predicate': <ZAPredicate→{'form': '태운', 'sentence_id': 'NWRW1800000030.164.15.3', 'begin': 14, 'end': 16}>}>]
+# ::id NWRW1800000030.164.15.3
+# ::snt 그 사이 새끼 두 마리를 태운 차는 지리산을 향해 떠났다.
+# ::pos 그/MMD 사이/NNG 새끼/NNG 두/MMN 마리/NNB+를/JKO 태우/VV+ㄴ/ETM 차/NNG+는/JX 지리산/NNP+을/JKO 향하/VV+아/EC 떠나/VV+았/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(10 / 떠났다.~w.10
+    :dep.VP ((8, 9) / LCG_MOUNTAIN~w.8,9
+                    :name (n3 / name
+                              :op1 "지리산")
+                    :wiki "https://ko.wikipedia.org/wiki/지리산"
+                    :dep.NP_AJT (2 / 사이~w.2
+                                   :dep.DP (1 / 그~w.1))
+                    :dep.NP_SBJ 7)
+    :srl.ARG1 (7 / AF_TRANSPORT~w.7
+                 :name (n2 / name
+                           :op1 "차")
+                 :wiki "https://ko.wikipedia.org/wiki/자동차"
+                 :dep.VP_MOD (6 / 태운~w.6
+                                :srl.ARG0 ((4, 5) / QT_COUNT~w.4,5
+                                                  :name (n1 / name
+                                                            :op1 "두"
+                                                            :op2 "마리")
+                                                  :wiki -
+                                                  :dep.NP (3 / 새끼~w.3)))))
+
+
+
+<DEPLayer → id: "NWRW1800000053.260.4.5" (Sentence), items: 8>
+[ <DEPItem→{'word_id': 1, 'word_form': '그러지', 'head': 2, 'label': 'VP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '않으면', 'head': 7, 'label': 'VP', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '우리', 'head': 4, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '마누라가', 'head': 7, 'label': 'NP_SBJ', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '너를', 'head': 7, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 6, 'word_form': '확', 'head': 7, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '베어', 'head': 8, 'label': 'VP', 'dependent': [2, 4, 5, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '버린단다.', 'head': -1, 'label': 'VP', 'dependent': [7]}>]
+<SRLLayer → id: "NWRW1800000053.260.4.5" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '우리 마누라', 'label': 'ARG0', 'begin': 8, 'end': 14, 'word_id': 4}>,
+                <SRLArgument→{'form': '너', 'label': 'ARG1', 'begin': 16, 'end': 17, 'word_id': 5}>,
+                <SRLArgument→{'form': '확', 'label': 'ARGM-EXT', 'begin': 19, 'end': 20, 'word_id': 6}>],
+  'predicate': <SRLPredicate→{'form': '베어', 'begin': 21, 'end': 23, 'lemma': '베다'}>}>]
+<ELLayer → id: "NWRW1800000053.260.4.5" (Sentence), items: 1>
+[ <ELItem→{'id': 1, 'form': '마누라', 'label': 'CV_RELATION', 'begin': 11, 'end': 14, 'k_id': '06130000000170', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000053.260.4.5" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000053.260.4.5" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '너', 'type': 'subject', 'sentence_id': 'NWRW1800000053.260.4.5', 'begin': 16, 'end': 17}>],
+  'predicate': <ZAPredicate→{'form': '그러지', 'sentence_id': 'NWRW1800000053.260.4.5', 'begin': 0, 'end': 3}>}>]
+# ::id NWRW1800000053.260.4.5
+# ::snt 그러지 않으면 우리 마누라가 너를 확 베어 버린단다.
+# ::pos 그러/VV+지/EC 않/VX+으면/EC 우리/NP 마누라/NNG+가/JKS 너/NP+를/JKO 확/MAG 베/VV+어/EC 버리/VX+ㄴ단다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((7, 8) / 베어_버린단다.~w.7,8
+        :srl.ARG0 (4 / CV_RELATION~w.4
+                     :name (n1 / name
+                               :op1 "마누라")
+                     :wiki -
+                     :dep.NP (3 / 우리~w.3))
+        :srl.ARG1 (5 / 너를~w.5)
+        :srl.ARGM-EXT (6 / 확~w.6)
+        :dep.VP ((1, 2) / 그러지_않으면~w.1,2))
+
+
+
+<DEPLayer → id: "NWRW1800000054.30.4.7" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '관광', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '수입보다', 'head': 8, 'label': 'NP_AJT', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '집값과', 'head': 5, 'label': 'NP_CNJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '생활', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '물가가', 'head': 8, 'label': 'NP_SBJ', 'dependent': [3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '더', 'head': 7, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '빠르게', 'head': 8, 'label': 'VP_AJT', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '뛴', 'head': 9, 'label': 'VP_MOD', 'dependent': [2, 5, 7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '것이다.', 'head': -1, 'label': 'VNP', 'dependent': [8]}>]
+<SRLLayer → id: "NWRW1800000054.30.4.7" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '관광 수입', 'label': 'ARGM-CND', 'begin': 0, 'end': 5, 'word_id': 2}>,
+                <SRLArgument→{'form': '집값과 생활 물가', 'label': 'ARG1', 'begin': 8, 'end': 17, 'word_id': 5}>,
+                <SRLArgument→{'form': '더', 'label': 'ARGM-ADV', 'begin': 19, 'end': 20, 'word_id': 6}>],
+  'predicate': <SRLPredicate→{'form': '뛴', 'begin': 25, 'end': 26, 'lemma': '뛰다'}>}>]
+<ELLayer → id: "NWRW1800000054.30.4.7" (Sentence), items: 0>
+[]
+<CRLayer → id: "NWRW1800000054.30.4.7" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000054.30.4.7" (Sentence), items: 0>
+[]
+# ::id NWRW1800000054.30.4.7
+# ::snt 관광 수입보다 집값과 생활 물가가 더 빠르게 뛴 것이다.
+# ::pos 관광/NNG 수입/NNG+보다/JKB 집값/NNG+과/JC 생활/NNG 물가/NNG+가/JKS 더/MAG 빠르/VA+게/EC 뛰/VV+ㄴ/ETM 것/NNB+이/VCP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((8, 9) / 뛴_것이다.~w.8,9
+        :srl.ARGM-CND (2 / 수입보다~w.2
+                         :dep.NP (1 / 관광~w.1))
+        :srl.ARG1 (5 / 물가가~w.5
+                     :dep.NP_CNJ (3 / 집값과~w.3)
+                     :dep.NP (4 / 생활~w.4))
+        :dep.VP_AJT (7 / 빠르게~w.7
+                       :dep.AP 6)
+        :srl.ARGM-ADV (6 / 더~w.6))
+
+
+
+<DEPLayer → id: "NWRW1800000024.58.10.3" (Sentence), items: 11>
+[ <DEPItem→{'word_id': 1, 'word_form': '따라서', 'head': 11, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '한은법', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '개정이', 'head': 4, 'label': 'NP_SBJ', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '성사되기까지는', 'head': 9, 'label': 'NP_AJT', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '정부', 'head': 6, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 6, 'word_form': '쪽과', 'head': 9, 'label': 'NP_AJT', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '팽팽한', 'head': 8, 'label': 'VP_MOD', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '줄다리기가', 'head': 9, 'label': 'NP_SBJ', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '벌어질', 'head': 10, 'label': 'VP_MOD', 'dependent': [4, 6, 8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '것으로', 'head': 11, 'label': 'NP_AJT', 'dependent': [9]}>,
+  <DEPItem→{'word_id': 11, 'word_form': '보인다.', 'head': -1, 'label': 'VP', 'dependent': [1, 10]}>]
+<SRLLayer → id: "NWRW1800000024.58.10.3" (Sentence), items: 4>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '한은법 개정', 'label': 'ARG1', 'begin': 4, 'end': 10, 'word_id': 3}>],
+  'predicate': <SRLPredicate→{'form': '성사되기까지는', 'begin': 12, 'end': 19, 'lemma': '성사되다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '팽팽한 줄다리기', 'label': 'ARG1', 'begin': 26, 'end': 34, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '팽팽한', 'begin': 26, 'end': 29, 'lemma': '팽팽하다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '성사되기', 'label': 'ARGM-TMP', 'begin': 12, 'end': 16, 'word_id': 4}>,
+                <SRLArgument→{'form': '팽팽한 줄다리기', 'label': 'ARG1', 'begin': 26, 'end': 34, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '벌어질', 'begin': 36, 'end': 39, 'lemma': '벌리다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '따라서', 'label': 'ARGM-DIS', 'begin': 0, 'end': 3, 'word_id': 1}>,
+                <SRLArgument→{'form': '한은법 개정이 성사되기까지는 정부 쪽과 팽팽한 줄다리기가 벌어질 것', 'label': 'ARG3', 'begin': 4, 'end': 41, 'word_id': 10}>],
+  'predicate': <SRLPredicate→{'form': '보인다.', 'begin': 44, 'end': 48, 'lemma': '보이다'}>}>]
+<ELLayer → id: "NWRW1800000024.58.10.3" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '한은법', 'label': 'CV_LAW', 'begin': 4, 'end': 7, 'k_id': '06040000001509', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '정부', 'label': 'OGG_POLITICS', 'begin': 20, 'end': 22, 'k_id': '04110000002724', 'wiki_id': '5210', 'url': 'https://ko.wikipedia.org/wiki/%EC%A0%95%EB%B6%80'}>]
+<CRLayer → id: "NWRW1800000024.58.10.3" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000024.58.10.3" (Sentence), items: 2>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '줄다리기', 'type': 'subject', 'sentence_id': 'NWRW1800000024.58.10.3', 'begin': 30, 'end': 34}>],
+  'predicate': <ZAPredicate→{'form': '팽팽한', 'sentence_id': 'NWRW1800000024.58.10.3', 'begin': 26, 'end': 29}>}>,
+  <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '무언가', 'type': 'subject', 'sentence_id': '-1', 'begin': -1, 'end': -1}>],
+  'predicate': <ZAPredicate→{'form': '보인다', 'sentence_id': 'NWRW1800000024.58.10.3', 'begin': 44, 'end': 47}>}>]
+# ::id NWRW1800000024.58.10.3
+# ::snt 따라서 한은법 개정이 성사되기까지는 정부 쪽과 팽팽한 줄다리기가 벌어질 것으로 보인다.
+# ::pos 따라서/MAJ 한은법/NNG 개정/NNG+이/JKS 성사/NNG+되/XSV+기/ETN+까지/JX+는/JX 정부/NNG 쪽/NNB+과/JKB 팽팽하/VA+ㄴ/ETM 줄다리기/NNG+가/JKS 벌어지/VV+ㄹ/ETM 것/NNB+으로/JKB 보이/VV+ㄴ다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(11 / 보인다.~w.11
+    :srl.ARGM-DIS (1 / 따라서~w.1)
+    :srl.ARG3 ((9, 10) / 벌어질_것으로~w.9,10
+                       :srl.ARGM-TMP (4 / 성사되기까지는~w.4
+                                        :srl.ARG1 (3 / 개정이~w.3
+                                                     :dep.NP (2 / CV_LAW~w.2
+                                                                :name (n1 / name
+                                                                          :op1 "한은법")
+                                                                :wiki -)))
+                       :dep.NP_AJT (6 / 쪽과~w.6
+                                      :dep.NP (5 / OGG_POLITICS~w.5
+                                                 :name (n2 / name
+                                                           :op1 "정부")
+                                                 :wiki "https://ko.wikipedia.org/wiki/정부"))
+                       :srl.ARG1 (8 / 줄다리기가~w.8
+                                    :srl.ARG1-of (7 / 팽팽한~w.7))))
+
+
+
+<DEPLayer → id: "NWRW1800000026.368.5.1" (Sentence), items: 11>
+[ <DEPItem→{'word_id': 1, 'word_form': '▶군사정권은', 'head': 11, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '국제적', 'head': 3, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '압력에', 'head': 4, 'label': 'NP_AJT', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '버티다', 'head': 5, 'label': 'VP', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '못해', 'head': 6, 'label': 'VP', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '지난', 'head': 7, 'label': 'VP_MOD', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '7일', 'head': 11, 'label': 'NP_AJT', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '20년', 'head': 9, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '만에', 'head': 11, 'label': 'NP_AJT', 'dependent': [8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '총선을', 'head': 11, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 11, 'word_form': '치렀다.', 'head': -1, 'label': 'VP', 'dependent': [1, 7, 9, 10]}>]
+<SRLLayer → id: "NWRW1800000026.368.5.1" (Sentence), items: 3>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '국제적 압력', 'label': 'ARG1', 'begin': 7, 'end': 13, 'word_id': 3}>,
+                <SRLArgument→{'form': '못해', 'label': 'ARGM-AUX', 'begin': 19, 'end': 21, 'word_id': 5}>],
+  'predicate': <SRLPredicate→{'form': '버티다', 'begin': 15, 'end': 18, 'lemma': '버티다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '못해', 'label': 'ARGM-AUX', 'begin': 19, 'end': 21, 'word_id': 5}>,
+                <SRLArgument→{'form': '7일', 'label': 'ARG0', 'begin': 25, 'end': 27, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '지난', 'begin': 22, 'end': 24, 'lemma': '지나다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '▶군사정권', 'label': 'ARG0', 'begin': 0, 'end': 5, 'word_id': 1}>,
+                <SRLArgument→{'form': '버티다 못해 지난 7일', 'label': 'ARGM-TMP', 'begin': 15, 'end': 27, 'word_id': 7}>,
+                <SRLArgument→{'form': '20년 만', 'label': 'ARGM-TMP', 'begin': 28, 'end': 33, 'word_id': 9}>,
+                <SRLArgument→{'form': '총선', 'label': 'ARG1', 'begin': 35, 'end': 37, 'word_id': 10}>],
+  'predicate': <SRLPredicate→{'form': '치렀다.', 'begin': 39, 'end': 43, 'lemma': '치르다'}>}>]
+<ELLayer → id: "NWRW1800000026.368.5.1" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '지난 7일', 'label': 'DT_DAY', 'begin': 22, 'end': 27, 'k_id': '07010000000900', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '20년 만', 'label': 'DT_DURATION', 'begin': 28, 'end': 33, 'k_id': '07000000002440', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '총선', 'label': 'EV_OTHERS', 'begin': 35, 'end': 37, 'k_id': '10040000004315', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000026.368.5.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000026.368.5.1" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '군사정권', 'type': 'subject', 'sentence_id': 'NWRW1800000026.368.5.1', 'begin': 1, 'end': 5}>],
+  'predicate': <ZAPredicate→{'form': '치렀다', 'sentence_id': 'NWRW1800000026.368.5.1', 'begin': 39, 'end': 42}>}>]
+# ::id NWRW1800000026.368.5.1
+# ::snt ▶군사정권은 국제적 압력에 버티다 못해 지난 7일 20년 만에 총선을 치렀다.
+# ::pos ▶/SW+군사/NNG+정권/NNG+은/JX 국제/NNG+적/XSN 압력/NNG+에/JKB 버티/VV+다/EC 못하/VX+아/EC 지나/VV+ㄴ/ETM 7/SN+일/NNB 20/SN+년/NNB 만/NNB+에/JKB 총선/NNG+을/JKO 치르/VV+었/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(11 / 치렀다.~w.11
+    :srl.ARG0 (1 / ▶군사정권은~w.1)
+    :srl.ARG1 (10 / EV_OTHERS~w.10
+                  :name (n3 / name
+                            :op1 "총선")
+                  :wiki -)
+    :srl.ARGM-TMP ((6, 7) / DT_DAY~w.6,7
+                          :srl.ARGM-AUX ((4, 5) / 버티다_못해~w.4,5
+                                                :srl.ARG1 (3 / 압력에~w.3
+                                                             :dep.DP (2 / 국제적~w.2)))
+                          :name (n1 / name
+                                    :op1 "지난"
+                                    :op2 "7일")
+                          :wiki -)
+    :srl.ARGM-TMP ((8, 9) / DT_DURATION~w.8,9
+                          :name (n2 / name
+                                    :op1 "20년"
+                                    :op2 "만")
+                          :wiki -))
+
+
+
+<DEPLayer → id: "NWRW1800000049.211.4.2" (Sentence), items: 12>
+[ <DEPItem→{'word_id': 1, 'word_form': '강원랜드', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '카지노는', 'head': 10, 'label': 'NP_SBJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '도박', 'head': 4, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '중독', 'head': 5, 'label': 'NP', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '여부와', 'head': 6, 'label': 'NP_AJT', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '관계없이', 'head': 10, 'label': 'AP', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '한', 'head': 8, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '달에', 'head': 9, 'label': 'NP_AJT', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '15일까지', 'head': 10, 'label': 'NP_AJT', 'dependent': [8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '이용할', 'head': 11, 'label': 'VP_MOD', 'dependent': [2, 6, 9]}>,
+  <DEPItem→{'word_id': 11, 'word_form': '수', 'head': 12, 'label': 'NP_SBJ', 'dependent': [10]}>,
+  <DEPItem→{'word_id': 12, 'word_form': '있다.', 'head': -1, 'label': 'VP', 'dependent': [11]}>]
+<SRLLayer → id: "NWRW1800000049.211.4.2" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '강원랜드 카지노', 'label': 'ARG0', 'begin': 0, 'end': 8, 'word_id': 2}>,
+                <SRLArgument→{'form': '관계없이', 'label': 'ARGM-CND', 'begin': 20, 'end': 24, 'word_id': 6}>,
+                <SRLArgument→{'form': '한 달', 'label': 'ARGM-TMP', 'begin': 25, 'end': 28, 'word_id': 8}>,
+                <SRLArgument→{'form': '15일', 'label': 'ARGM-TMP', 'begin': 30, 'end': 33, 'word_id': 9}>,
+                <SRLArgument→{'form': '있다', 'label': 'ARGM-AUX', 'begin': 42, 'end': 44, 'word_id': 12}>],
+  'predicate': <SRLPredicate→{'form': '이용할', 'begin': 36, 'end': 39, 'lemma': '이용하다'}>}>]
+<ELLayer → id: "NWRW1800000049.211.4.2" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '강원랜드', 'label': 'OGG_ECONOMY', 'begin': 0, 'end': 4, 'k_id': '04000000003266', 'wiki_id': '632015', 'url': 'https://ko.wikipedia.org/wiki/%EA%B0%95%EC%9B%90%EB%9E%9C%EB%93%9C'}>,
+  <ELItem→{'id': 2, 'form': '한 달', 'label': 'DT_DURATION', 'begin': 25, 'end': 28, 'k_id': '07000000007448', 'wiki_id': '152940', 'url': 'https://ko.wikipedia.org/wiki/%EB%8B%AC_(%EC%8B%9C%EA%B0%84)'}>,
+  <ELItem→{'id': 3, 'form': '15일까지', 'label': 'DT_OTHERS', 'begin': 30, 'end': 35, 'k_id': '07080000000805', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000049.211.4.2" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000049.211.4.2" (Sentence), items: 0>
+[]
+None
+
+
+
+<DEPLayer → id: "NWRW1800000033.190.3.3" (Sentence), items: 14>
+[ <DEPItem→{'word_id': 1, 'word_form': '밤새도록', 'head': 4, 'label': 'VP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '잠을', 'head': 4, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '못', 'head': 4, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '자고', 'head': 5, 'label': 'VP', 'dependent': [1, 2, 3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '뒤척인', 'head': 7, 'label': 'VP_MOD', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '조', 'head': 7, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '씨는', 'head': 12, 'label': 'NP_SBJ', 'dependent': [5, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '다음', 'head': 9, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '날', 'head': 12, 'label': 'NP_AJT', 'dependent': [8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '어지럼증과', 'head': 11, 'label': 'NP_CNJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 11, 'word_form': '배탈에', 'head': 12, 'label': 'NP_AJT', 'dependent': [10]}>,
+  <DEPItem→{'word_id': 12, 'word_form': '시달리고', 'head': 14, 'label': 'VP', 'dependent': [7, 9, 11]}>,
+  <DEPItem→{'word_id': 13, 'word_form': '식은땀도', 'head': 14, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 14, 'word_form': '났다.', 'head': -1, 'label': 'VP', 'dependent': [12, 13]}>]
+<SRLLayer → id: "NWRW1800000033.190.3.3" (Sentence), items: 4>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '밤새도록', 'label': 'ARGM-TMP', 'begin': 0, 'end': 4, 'word_id': 1}>,
+                <SRLArgument→{'form': '잠', 'label': 'ARG1', 'begin': 5, 'end': 6, 'word_id': 2}>,
+                <SRLArgument→{'form': '조 씨', 'label': 'ARG0', 'begin': 17, 'end': 20, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '자고', 'begin': 10, 'end': 12, 'lemma': '자다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '조 씨', 'label': 'ARG0', 'begin': 17, 'end': 20, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '뒤척인', 'begin': 13, 'end': 16, 'lemma': '뒤척이다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '조 씨', 'label': 'ARG1', 'begin': 17, 'end': 20, 'word_id': 7}>,
+                <SRLArgument→{'form': '다음 날', 'label': 'ARGM-TMP', 'begin': 22, 'end': 26, 'word_id': 9}>,
+                <SRLArgument→{'form': '어지럼증과 배탈', 'label': 'ARG0', 'begin': 27, 'end': 35, 'word_id': 11}>],
+  'predicate': <SRLPredicate→{'form': '시달리고', 'begin': 37, 'end': 41, 'lemma': '시달리다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '식은땀', 'label': 'ARG1', 'begin': 42, 'end': 45, 'word_id': 13}>],
+  'predicate': <SRLPredicate→{'form': '났다.', 'begin': 47, 'end': 50, 'lemma': '나다'}>}>]
+<ELLayer → id: "NWRW1800000033.190.3.3" (Sentence), items: 4>
+[ <ELItem→{'id': 1, 'form': '조', 'label': 'PS_NAME', 'begin': 17, 'end': 18, 'k_id': '00000000044736', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '다음 날', 'label': 'DT_DAY', 'begin': 22, 'end': 26, 'k_id': '07010000000354', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '어지럼증', 'label': 'TMM_DISEASE', 'begin': 27, 'end': 31, 'k_id': '14050000001548', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 4, 'form': '배탈', 'label': 'TMM_DISEASE', 'begin': 33, 'end': 35, 'k_id': '14050000000996', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000033.190.3.3" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000033.190.3.3', 'form': '어지럼증과 배탈', 'begin': 27, 'end': 35, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000033.190.3.3', 'form': '식은땀', 'begin': 42, 'end': 45, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000033.190.3.3" (Sentence), items: 2>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '씨', 'type': 'subject', 'sentence_id': 'NWRW1800000033.190.3.3', 'begin': 19, 'end': 20}>],
+  'predicate': <ZAPredicate→{'form': '자고', 'sentence_id': 'NWRW1800000033.190.3.3', 'begin': 10, 'end': 12}>}>,
+  <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '씨', 'type': 'subject', 'sentence_id': 'NWRW1800000033.190.3.3', 'begin': 19, 'end': 20}>,
+                  <ZAAntecedent→{'form': '무엇을', 'type': 'object', 'sentence_id': '-1', 'begin': -1, 'end': -1}>],
+  'predicate': <ZAPredicate→{'form': '뒤척인', 'sentence_id': 'NWRW1800000033.190.3.3', 'begin': 13, 'end': 16}>}>]
+# ::id NWRW1800000033.190.3.3
+# ::snt 밤새도록 잠을 못 자고 뒤척인 조 씨는 다음 날 어지럼증과 배탈에 시달리고 식은땀도 났다.
+# ::pos 밤새/VV+도록/EC 잠/NNG+을/JKO 못/MAG 자/VV+고/EC 뒤척이/VV+ㄴ/ETM 조/NNP 씨/NNB+는/JX 다음/NNG 날/NNG 어지럼증/NNG+과/JC 배탈/NNG+에/JKB 시달리/VV+고/EC 식은땀/NNG+도/JX 나/VV+았/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(14 / 났다.~w.14
+    :dep.VP (12 / 시달리고~w.12
+                :srl.ARGM-TMP ((8, 9) / DT_DAY~w.8,9
+                                      :name (n2 / name
+                                                :op1 "다음"
+                                                :op2 "날")
+                                      :wiki -)
+                :srl.ARG1 (7 / 씨는~w.7
+                             :srl.ARG0-of (4 / 자고~w.4
+                                             :srl.ARGM-TMP (1 / 밤새도록~w.1)
+                                             :srl.ARG1 (2 / 잠을~w.2)
+                                             :dep.AP (3 / 못~w.3)
+                                             :dep.VP-of 5)
+                             :srl.ARG0-of (5 / 뒤척인~w.5)
+                             :dep.NP (6 / PS_NAME~w.6
+                                        :name (n1 / name
+                                                  :op1 "조")
+                                        :wiki -))
+                :srl.ARG0 (11 / TMM_DISEASE~w.11
+                              :name (n4 / name
+                                        :op1 "배탈")
+                              :wiki -
+                              :dep.NP_CNJ (10 / TMM_DISEASE~w.10
+                                              :name (n3 / name
+                                                        :op1 "어지럼증")
+                                              :wiki -)))
+    :srl.ARG1 (13 / 식은땀도~w.13))
+
+
+
+<DEPLayer → id: "NWRW1800000054.317.2.4" (Sentence), items: 8>
+[ <DEPItem→{'word_id': 1, 'word_form': '발전소', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '전체', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '용량이', 'head': 4, 'label': 'NP_SBJ', 'dependent': [1, 2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '111GW인데', 'head': 8, 'label': 'VNP', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '6월', 'head': 8, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 6, 'word_form': '전기', 'head': 7, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '소비량은', 'head': 8, 'label': 'NP_SBJ', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '54~68GW.', 'head': -1, 'label': 'NP', 'dependent': [4, 5, 7]}>]
+<SRLLayer → id: "NWRW1800000054.317.2.4" (Sentence), items: 0>
+[]
+<ELLayer → id: "NWRW1800000054.317.2.4" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '111GW', 'label': 'QT_OTHERS', 'begin': 11, 'end': 16, 'k_id': '09170000000590', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '6월', 'label': 'DT_MONTH', 'begin': 19, 'end': 21, 'k_id': '07030000000149', 'wiki_id': '477', 'url': 'https://ko.wikipedia.org/wiki/6%EC%9B%94'}>,
+  <ELItem→{'id': 3, 'form': '54~68GW', 'label': 'QT_OTHERS', 'begin': 30, 'end': 37, 'k_id': '09170000002789', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000054.317.2.4" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000054.317.2.4" (Sentence), items: 0>
+[]
+# ::id NWRW1800000054.317.2.4
+# ::snt 발전소 전체 용량이 111GW인데 6월 전기 소비량은 54~68GW.
+# ::pos 발전소/NNG 전체/NNG 용량/NNG+이/JKS 111/SN+GW/SW+이/VCP+ㄴ데/EC 6/SN+월/NNB 전기/NNG 소비량/NNG+은/JX 54/SN+~/SO+68/SN+GW/SW+./SF
+# ::update 2023-01-17T00:23:22
+(8 / QT_OTHERS~w.8
+   :name (n3 / name
+             :op1 "54~68GW")
+   :wiki -
+   :dep.VNP (4 / QT_OTHERS~w.4
+               :name (n1 / name
+                         :op1 "111GW")
+               :wiki -
+               :dep.NP_SBJ (3 / 용량이~w.3
+                              :dep.NP (1 / 발전소~w.1)
+                              :dep.NP (2 / 전체~w.2)))
+   :dep.NP (5 / DT_MONTH~w.5
+              :name (n2 / name
+                        :op1 "6월")
+              :wiki "https://ko.wikipedia.org/wiki/6월")
+   :dep.NP_SBJ (7 / 소비량은~w.7
+                  :dep.NP (6 / 전기~w.6)))
+
+
+
+<DEPLayer → id: "NWRW1800000028.394.4.1" (Sentence), items: 8>
+[ <DEPItem→{'word_id': 1, 'word_form': '대우일렉은', 'head': 8, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '매각작업이', 'head': 5, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '과거', 'head': 4, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '세차례나', 'head': 5, 'label': 'NP_SBJ', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '무산되는', 'head': 6, 'label': 'VP_MOD', 'dependent': [2, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '등', 'head': 8, 'label': 'NP_AJT', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '우여곡절이', 'head': 8, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '많았다.', 'head': -1, 'label': 'VP', 'dependent': [1, 6, 7]}>]
+<SRLLayer → id: "NWRW1800000028.394.4.1" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '매각작업', 'label': 'ARG1', 'begin': 6, 'end': 10, 'word_id': 2}>,
+                <SRLArgument→{'form': '세차례', 'label': 'ARGM-EXT', 'begin': 15, 'end': 18, 'word_id': 4}>],
+  'predicate': <SRLPredicate→{'form': '무산되는', 'begin': 20, 'end': 24, 'lemma': '무산되다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '등', 'label': 'ARGM-CND', 'begin': 25, 'end': 26, 'word_id': 6}>,
+                <SRLArgument→{'form': '우여곡절', 'label': 'ARG1', 'begin': 27, 'end': 31, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '많았다.', 'begin': 33, 'end': 37, 'lemma': '많다'}>}>]
+<ELLayer → id: "NWRW1800000028.394.4.1" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '대우일렉', 'label': 'OGG_ECONOMY', 'begin': 0, 'end': 4, 'k_id': '04000000004580', 'wiki_id': '1923842', 'url': 'https://ko.wikipedia.org/wiki/%EB%8C%80%EC%9A%B0%EC%A0%84%EC%9E%90%EB%B6%80%ED%92%88'}>,
+  <ELItem→{'id': 2, 'form': '세차례', 'label': 'QT_COUNT', 'begin': 15, 'end': 18, 'k_id': '09030000011128', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000028.394.4.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000028.394.4.1" (Sentence), items: 0>
+[]
+# ::id NWRW1800000028.394.4.1
+# ::snt 대우일렉은 매각작업이 과거 세차례나 무산되는 등 우여곡절이 많았다.
+# ::pos 대우일렉/NNP+은/JX 매각/NNG+작업/NNG+이/JKS 과거/NNG 세/MMN+차례/NNG+나/JX 무산/NNG+되/XSV+는/ETM 등/NNB 우여곡절/NNG+이/JKS 많/VA+았/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(8 / 많았다.~w.8
+   :dep.NP_SBJ (1 / OGG_ECONOMY~w.1
+                  :name (n1 / name
+                            :op1 "대우일렉")
+                  :wiki "https://ko.wikipedia.org/wiki/대우전자부품")
+   :srl.ARG1 (7 / 우여곡절이~w.7)
+   :srl.ARGM-CND ((5, 6) / 무산되는_등~w.5,6
+                         :srl.ARG1 (2 / 매각작업이~w.2)
+                         :srl.ARGM-EXT (4 / QT_COUNT~w.4
+                                          :name (n2 / name
+                                                    :op1 "세차례")
+                                          :wiki -
+                                          :dep.NP (3 / 과거~w.3))))
+
+
+
+<DEPLayer → id: "NWRW1800000038.102.8.1" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '그는', 'head': 8, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '자신의', 'head': 4, 'label': 'NP_MOD', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '조정', 'head': 4, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '사례', 'head': 5, 'label': 'NP', 'dependent': [2, 3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '중', 'head': 7, 'label': 'NP', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '기억나는', 'head': 7, 'label': 'VP_MOD', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '사건을', 'head': 8, 'label': 'NP_OBJ', 'dependent': [5, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '소개하기도', 'head': 9, 'label': 'VP', 'dependent': [1, 7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '했다.', 'head': -1, 'label': 'VP', 'dependent': [8]}>]
+<SRLLayer → id: "NWRW1800000038.102.8.1" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '사건', 'label': 'ARG1', 'begin': 20, 'end': 22, 'word_id': 7}>,
+                <SRLArgument→{'form': '했다', 'label': 'ARGM-AUX', 'begin': 30, 'end': 32, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '기억나는', 'begin': 15, 'end': 19, 'lemma': '기억나다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '그', 'label': 'ARG0', 'begin': 0, 'end': 1, 'word_id': 1}>,
+                <SRLArgument→{'form': '사건', 'label': 'ARG1', 'begin': 20, 'end': 22, 'word_id': 7}>,
+                <SRLArgument→{'form': '했다', 'label': 'ARGM-AUX', 'begin': 30, 'end': 32, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '소개하기도', 'begin': 24, 'end': 29, 'lemma': '소개하다'}>}>]
+<ELLayer → id: "NWRW1800000038.102.8.1" (Sentence), items: 0>
+[]
+<CRLayer → id: "NWRW1800000038.102.8.1" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000038.102.8.1', 'form': '그', 'begin': 0, 'end': 1, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000038.102.8.1', 'form': '자신', 'begin': 3, 'end': 5, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000038.102.8.1" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '그', 'type': 'subject', 'sentence_id': 'NWRW1800000038.102.8.1', 'begin': 0, 'end': 1}>],
+  'predicate': <ZAPredicate→{'form': '기억나는', 'sentence_id': 'NWRW1800000038.102.8.1', 'begin': 15, 'end': 19}>}>]
+None
+
+
+
+<DEPLayer → id: "NWRW1800000029.124.7.2" (Sentence), items: 6>
+[ <DEPItem→{'word_id': 1, 'word_form': 'PERA는', 'head': 6, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '이보다', 'head': 5, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '한', 'head': 4, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '단계', 'head': 5, 'label': 'NP', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '진전된', 'head': 6, 'label': 'VP_MOD', 'dependent': [2, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '시술이다.', 'head': -1, 'label': 'VNP', 'dependent': [1, 5]}>]
+<SRLLayer → id: "NWRW1800000029.124.7.2" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': 'PERA', 'label': 'ARG1', 'begin': 0, 'end': 4, 'word_id': 1}>,
+                <SRLArgument→{'form': '이', 'label': 'ARGM-EXT', 'begin': 6, 'end': 7, 'word_id': 2}>],
+  'predicate': <SRLPredicate→{'form': '진전된', 'begin': 15, 'end': 18, 'lemma': '진전되다'}>}>]
+<ELLayer → id: "NWRW1800000029.124.7.2" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': 'PERA', 'label': 'TR_MEDICINE', 'begin': 0, 'end': 4, 'k_id': '02020000000079', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '한 단계', 'label': 'QT_COUNT', 'begin': 10, 'end': 14, 'k_id': '09030000013404', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000029.124.7.2" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000029.124.7.2', 'form': 'PERA', 'begin': 0, 'end': 4, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000029.124.7.2', 'form': '이보다 한 단계 진전된 시술', 'begin': 6, 'end': 21, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000029.124.7.2" (Sentence), items: 0>
+[]
+# ::id NWRW1800000029.124.7.2
+# ::snt PERA는 이보다 한 단계 진전된 시술이다.
+# ::pos PERA/SL+는/JX 이/NP+보다/JKB 한/MMN 단계/NNG 진전/NNG+되/XSV+ㄴ/ETM 시술/NNG+이/VCP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(6 / 시술이다.~w.6
+   :dep.NP_SBJ (1 / TR_MEDICINE~w.1
+                  :name (n1 / name
+                            :op1 "PERA")
+                  :wiki -)
+   :dep.VP_MOD (5 / 진전된~w.5
+                  :dep.NP ((3, 4) / QT_COUNT~w.3,4
+                                  :name (n2 / name
+                                            :op1 "한"
+                                            :op2 "단계")
+                                  :wiki -)
+                  :srl.ARG1 1
+                  :srl.ARGM-EXT (2 / 이보다~w.2)))
+
+
+
+<DEPLayer → id: "NWRW1800000040.411.7.4" (Sentence), items: 10>
+[ <DEPItem→{'word_id': 1, 'word_form': '이', 'head': 3, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '두', 'head': 3, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '체계를', 'head': 4, 'label': 'NP_OBJ', 'dependent': [1, 2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '갖추는', 'head': 5, 'label': 'VP_MOD', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '데', 'head': 10, 'label': 'NP_AJT', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '앞으로', 'head': 10, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '5년', 'head': 8, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '동안', 'head': 9, 'label': 'NP', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '9조6천억원이', 'head': 10, 'label': 'NP_SBJ', 'dependent': [8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '든다.', 'head': -1, 'label': 'VP', 'dependent': [5, 6, 9]}>]
+<SRLLayer → id: "NWRW1800000040.411.7.4" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '이 두 체계', 'label': 'ARG1', 'begin': 0, 'end': 6, 'word_id': 3}>],
+  'predicate': <SRLPredicate→{'form': '갖추는', 'begin': 8, 'end': 11, 'lemma': '갖추다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '앞', 'label': 'ARGM-TMP', 'begin': 14, 'end': 15, 'word_id': 6}>,
+                <SRLArgument→{'form': '5년 동안 9조6천억원', 'label': 'ARG1', 'begin': 18, 'end': 30, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '든다.', 'begin': 32, 'end': 35, 'lemma': '들다'}>}>]
+<ELLayer → id: "NWRW1800000040.411.7.4" (Sentence), items: 3>
+[ <ELItem→{'id': 1, 'form': '두 체계', 'label': 'QT_COUNT', 'begin': 2, 'end': 6, 'k_id': '09030000010091', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '5년 동안', 'label': 'DT_DURATION', 'begin': 18, 'end': 23, 'k_id': '07000000003830', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '9조6천억원', 'label': 'QT_PRICE', 'begin': 24, 'end': 30, 'k_id': '09110000008580', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000040.411.7.4" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000040.411.7.4" (Sentence), items: 0>
+[]
+# ::id NWRW1800000040.411.7.4
+# ::snt 이 두 체계를 갖추는 데 앞으로 5년 동안 9조6천억원이 든다.
+# ::pos 이/MMD 두/MMN 체계/NNG+를/JKO 갖추/VV+는/ETM 데/NNB 앞/NNG+으로/JKB 5/SN+년/NNB 동안/NNG 9/SN+조/NR+6/SN+천억/NR+원/NNB+이/JKS 들/VV+ㄴ다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(10 / 든다.~w.10
+    :srl.ARGM-TMP (6 / 앞으로~w.6)
+    :srl.ARG1 (9 / QT_PRICE~w.9
+                 :dep.NP ((7, 8) / DT_DURATION~w.7,8
+                                 :name (n2 / name
+                                           :op1 "5년"
+                                           :op2 "동안")
+                                 :wiki -)
+                 :name (n3 / name
+                           :op1 "9조6천억원")
+                 :wiki -)
+    :dep.NP_AJT ((4, 5) / 갖추는_데~w.4,5
+                        :srl.ARG1 ((2, 3) / QT_COUNT~w.2,3
+                                          :name (n1 / name
+                                                    :op1 "두"
+                                                    :op2 "체계")
+                                          :wiki -
+                                          :dep.DP (1 / 이~w.1))))
+
+
+
+<DEPLayer → id: "NWRW1800000021.63.6.1" (Sentence), items: 11>
+[ <DEPItem→{'word_id': 1, 'word_form': '영화에서는', 'head': 11, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '환자의', 'head': 3, 'label': 'NP_MOD', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '병상', 'head': 4, 'label': 'NP', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '주위와', 'head': 5, 'label': 'NP_CNJ', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '천장에', 'head': 11, 'label': 'NP_AJT', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '지퍼로', 'head': 7, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '여닫는', 'head': 8, 'label': 'VP_MOD', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '문이', 'head': 9, 'label': 'NP_SBJ', 'dependent': [7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '달린', 'head': 10, 'label': 'VP_MOD', 'dependent': [8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '비닐막을', 'head': 11, 'label': 'NP_OBJ', 'dependent': [9]}>,
+  <DEPItem→{'word_id': 11, 'word_form': '둘렀다.', 'head': -1, 'label': 'VP', 'dependent': [1, 5, 10]}>]
+<SRLLayer → id: "NWRW1800000021.63.6.1" (Sentence), items: 3>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '지퍼', 'label': 'ARGM-INS', 'begin': 21, 'end': 23, 'word_id': 6}>,
+                <SRLArgument→{'form': '문', 'label': 'ARG1', 'begin': 29, 'end': 30, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '여닫는', 'begin': 25, 'end': 28, 'lemma': '여닫다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '환자의 병상 주위와 천장', 'label': 'ARG3', 'begin': 6, 'end': 19, 'word_id': 5}>,
+                <SRLArgument→{'form': '지퍼로 여닫는 문', 'label': 'ARG1', 'begin': 21, 'end': 30, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '달린', 'begin': 32, 'end': 34, 'lemma': '달다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '영화', 'label': 'ARGM-LOC', 'begin': 0, 'end': 2, 'word_id': 1}>,
+                <SRLArgument→{'form': '환자의 병상 주위와 천장', 'label': 'ARG3', 'begin': 6, 'end': 19, 'word_id': 5}>,
+                <SRLArgument→{'form': '달린', 'label': 'ARGM-ADV', 'begin': 32, 'end': 34, 'word_id': 9}>,
+                <SRLArgument→{'form': '지퍼로 여닫는 문이 달린 비닐막', 'label': 'ARG1', 'begin': 21, 'end': 38, 'word_id': 10}>],
+  'predicate': <SRLPredicate→{'form': '둘렀다.', 'begin': 40, 'end': 44, 'lemma': '두르다'}>}>]
+<ELLayer → id: "NWRW1800000021.63.6.1" (Sentence), items: 0>
+[]
+<CRLayer → id: "NWRW1800000021.63.6.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000021.63.6.1" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '문', 'type': 'object', 'sentence_id': 'NWRW1800000021.63.6.1', 'begin': 29, 'end': 30}>],
+  'predicate': <ZAPredicate→{'form': '여닫는', 'sentence_id': 'NWRW1800000021.63.6.1', 'begin': 25, 'end': 28}>}>]
+# ::id NWRW1800000021.63.6.1
+# ::snt 영화에서는 환자의 병상 주위와 천장에 지퍼로 여닫는 문이 달린 비닐막을 둘렀다.
+# ::pos 영화/NNG+에서/JKB+는/JX 환자/NNG+의/JKG 병상/NNG 주위/NNG+와/JC 천장/NNG+에/JKB 지퍼/NNG+로/JKB 여닫/VV+는/ETM 문/NNG+이/JKS 달리/VV+ㄴ/ETM 비닐/NNG+막/NNG+을/JKO 두르/VV+었/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(11 / 둘렀다.~w.11
+    :srl.ARGM-LOC (1 / 영화에서는~w.1)
+    :srl.ARG3 (5 / 천장에~w.5
+                 :srl.ARG3-of (9 / 달린~w.9
+                                 :srl.ARG1 (8 / 문이~w.8
+                                              :srl.ARG1-of (7 / 여닫는~w.7
+                                                              :srl.ARGM-INS (6 / 지퍼로~w.6)))
+                                 :dep.VP_MOD-of 10)
+                 :dep.NP_CNJ (4 / 주위와~w.4
+                                :dep.NP (3 / 병상~w.3
+                                           :dep.NP_MOD (2 / 환자의~w.2))))
+    :srl.ARG1 (10 / 비닐막을~w.10)
+    :srl.ARGM-ADV 9)
+
+
+
+<DEPLayer → id: "NWRW1800000045.291.5.1" (Sentence), items: 7>
+[ <DEPItem→{'word_id': 1, 'word_form': '그러나', 'head': 7, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '간과하기', 'head': 3, 'label': 'VP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '쉬운', 'head': 6, 'label': 'VP_MOD', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '더', 'head': 5, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '근본적인', 'head': 6, 'label': 'VNP_MOD', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '차이점이', 'head': 7, 'label': 'NP_SBJ', 'dependent': [3, 5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '있다.', 'head': -1, 'label': 'VP', 'dependent': [1, 6]}>]
+<SRLLayer → id: "NWRW1800000045.291.5.1" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '간과하기', 'label': 'ARG1', 'begin': 4, 'end': 8, 'word_id': 2}>],
+  'predicate': <SRLPredicate→{'form': '쉬운', 'begin': 9, 'end': 11, 'lemma': '쉽다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '그러나', 'label': 'ARGM-DIS', 'begin': 0, 'end': 3, 'word_id': 1}>,
+                <SRLArgument→{'form': '더', 'label': 'ARGM-ADV', 'begin': 12, 'end': 13, 'word_id': 4}>,
+                <SRLArgument→{'form': '차이점', 'label': 'ARG1', 'begin': 19, 'end': 22, 'word_id': 6}>],
+  'predicate': <SRLPredicate→{'form': '있다.', 'begin': 24, 'end': 27, 'lemma': '있다'}>}>]
+<ELLayer → id: "NWRW1800000045.291.5.1" (Sentence), items: 0>
+[]
+<CRLayer → id: "NWRW1800000045.291.5.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000045.291.5.1" (Sentence), items: 2>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '차이점', 'type': 'subject', 'sentence_id': 'NWRW1800000045.291.5.1', 'begin': 19, 'end': 22}>],
+  'predicate': <ZAPredicate→{'form': '쉬운', 'sentence_id': 'NWRW1800000045.291.5.1', 'begin': 9, 'end': 11}>}>,
+  <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '차이점', 'type': 'object', 'sentence_id': 'NWRW1800000045.291.5.1', 'begin': 19, 'end': 22}>],
+  'predicate': <ZAPredicate→{'form': '간과하기', 'sentence_id': 'NWRW1800000045.291.5.1', 'begin': 4, 'end': 8}>}>]
+# ::id NWRW1800000045.291.5.1
+# ::snt 그러나 간과하기 쉬운 더 근본적인 차이점이 있다.
+# ::pos 그러나/MAJ 간과/NNG+하/XSV+기/ETN 쉽/VA+ㄴ/ETM 더/MAG 근본/NNG+적/XSN+이/VCP+ㄴ/ETM 차이점/NNG+이/JKS 있/VA+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(7 / 있다.~w.7
+   :srl.ARGM-DIS (1 / 그러나~w.1)
+   :srl.ARG1 (6 / 차이점이~w.6
+                :dep.VP_MOD ((2, 3) / 간과하기_쉬운~w.2,3)
+                :dep.VNP_MOD 5)
+   :srl.ARGM-ADV (4 / 더~w.4
+                    :dep.AP-of (5 / 근본적인~w.5)))
+
+
+
+<DEPLayer → id: "NWRW1800000044.112.11.1" (Sentence), items: 10>
+[ <DEPItem→{'word_id': 1, 'word_form': '일본의', 'head': 3, 'label': 'NP_MOD', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '스타', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '배우', 'head': 5, 'label': 'NP', 'dependent': [1, 2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '후지와라', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '타츠야와', 'head': 7, 'label': 'NP_CNJ', 'dependent': [3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '미조바타', 'head': 7, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '준페이가', 'head': 10, 'label': 'NP_SBJ', 'dependent': [5, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '두', 'head': 9, 'label': 'DP', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '무사로', 'head': 10, 'label': 'NP_AJT', 'dependent': [8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '출연한다.', 'head': -1, 'label': 'VP', 'dependent': [7, 9]}>]
+<SRLLayer → id: "NWRW1800000044.112.11.1" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '일본의 스타 배우 후지와라 타츠야와 미조바타 준페이', 'label': 'ARG0', 'begin': 0, 'end': 28, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '출연한다.', 'begin': 36, 'end': 41, 'lemma': '출연하다'}>}>]
+<ELLayer → id: "NWRW1800000044.112.11.1" (Sentence), items: 5>
+[ <ELItem→{'id': 1, 'form': '일본', 'label': 'LCP_COUNTRY', 'begin': 0, 'end': 2, 'k_id': '05000000000644', 'wiki_id': '241789', 'url': 'https://ko.wikipedia.org/wiki/%EC%9D%BC%EB%B3%B8'}>,
+  <ELItem→{'id': 2, 'form': '배우', 'label': 'CV_OCCUPATION', 'begin': 7, 'end': 9, 'k_id': '06140000000933', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '후지와라 타츠야', 'label': 'PS_NAME', 'begin': 10, 'end': 18, 'k_id': '00000000056569', 'wiki_id': '389636', 'url': 'https://ko.wikipedia.org/wiki/%ED%9B%84%EC%A7%80%EC%99%80%EB%9D%BC_%ED%83%80%EC%B8%A0%EC%95%BC'}>,
+  <ELItem→{'id': 4, 'form': '미조바타 준페이', 'label': 'PS_NAME', 'begin': 20, 'end': 28, 'k_id': '00000000021276', 'wiki_id': '370322', 'url': 'https://ko.wikipedia.org/wiki/%EB%AF%B8%EC%A1%B0%EB%B0%94%ED%83%80_%EC%A4%80%ED%8E%98%EC%9D%B4'}>,
+  <ELItem→{'id': 5, 'form': '두 무사', 'label': 'QT_MAN_COUNT', 'begin': 30, 'end': 34, 'k_id': '09040000003716', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000044.112.11.1" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000044.112.11.1', 'form': '일본의 스타 배우', 'begin': 0, 'end': 9, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000044.112.11.1', 'form': '후지와라 타츠야와 미조바타 준페이', 'begin': 10, 'end': 28, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000044.112.11.1" (Sentence), items: 0>
+[]
+# ::id NWRW1800000044.112.11.1
+# ::snt 일본의 스타 배우 후지와라 타츠야와 미조바타 준페이가 두 무사로 출연한다.
+# ::pos 일본/NNP+의/JKG 스타/NNG 배우/NNG 후지와라/NNP 타츠야/NNP+와/JC 미조바타/NNP 준페이/NNP+가/JKS 두/MMN 무사/NNG+로/JKB 출연/NNG+하/XSV+ㄴ다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(10 / 출연한다.~w.10
+    :srl.ARG0 ((6, 7) / PS_NAME~w.6,7
+                      :dep.NP_CNJ ((4, 5) / PS_NAME~w.4,5
+                                          :name (n3 / name
+                                                    :op1 "후지와라"
+                                                    :op2 "타츠야")
+                                          :wiki "https://ko.wikipedia.org/wiki/후지와라_타츠야"
+                                          :dep.NP (3 / CV_OCCUPATION~w.3
+                                                     :name (n2 / name
+                                                               :op1 "배우")
+                                                     :wiki -
+                                                     :dep.NP_MOD (1 / LCP_COUNTRY~w.1
+                                                                    :name (n1 / name
+                                                                              :op1 "일본")
+                                                                    :wiki "https://ko.wikipedia.org/wiki/일본")
+                                                     :dep.NP (2 / 스타~w.2)))
+                      :name (n4 / name
+                                :op1 "미조바타"
+                                :op2 "준페이")
+                      :wiki "https://ko.wikipedia.org/wiki/미조바타_준페이")
+    :dep.NP_AJT ((8, 9) / QT_MAN_COUNT~w.8,9
+                        :name (n5 / name
+                                  :op1 "두"
+                                  :op2 "무사")
+                        :wiki -))
+
+
+
+<DEPLayer → id: "NWRW1800000048.191.4.1" (Sentence), items: 7>
+[ <DEPItem→{'word_id': 1, 'word_form': '재즈', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '팬들을', 'head': 3, 'label': 'NP_OBJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '위한', 'head': 5, 'label': 'VP_MOD', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '합동', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '공연이', 'head': 6, 'label': 'NP_SBJ', 'dependent': [3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '잇달아', 'head': 7, 'label': 'VP', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '열린다.', 'head': -1, 'label': 'VP', 'dependent': [6]}>]
+<SRLLayer → id: "NWRW1800000048.191.4.1" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '재즈 팬들을 위한 합동 공연', 'label': 'ARG1', 'begin': 0, 'end': 15, 'word_id': 5}>],
+  'predicate': <SRLPredicate→{'form': '열린다.', 'begin': 21, 'end': 25, 'lemma': '열다'}>}>]
+<ELLayer → id: "NWRW1800000048.191.4.1" (Sentence), items: 1>
+[ <ELItem→{'id': 1, 'form': '재즈', 'label': 'CV_ART', 'begin': 0, 'end': 2, 'k_id': '06080000001074', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000048.191.4.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000048.191.4.1" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '공연', 'type': 'subject', 'sentence_id': 'NWRW1800000048.191.4.1', 'begin': 13, 'end': 15}>],
+  'predicate': <ZAPredicate→{'form': '열린다', 'sentence_id': 'NWRW1800000048.191.4.1', 'begin': 21, 'end': 24}>}>]
+# ::id NWRW1800000048.191.4.1
+# ::snt 재즈 팬들을 위한 합동 공연이 잇달아 열린다.
+# ::pos 재즈/NNG 팬/NNG+들/XSN+을/JKO 위하/VV+ㄴ/ETM 합동/NNG 공연/NNG+이/JKS 잇달/VV+아/EC 열리/VV+ㄴ다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(7 / 열린다.~w.7
+   :dep.VP (6 / 잇달아~w.6)
+   :srl.ARG1 (5 / 공연이~w.5
+                :dep.NP (4 / 합동~w.4)
+                :dep.NP_SBJ-of 6
+                :dep.VP_MOD ((2, 3) / 팬들을_위한~w.2,3
+                                    :dep.NP (1 / CV_ART~w.1
+                                               :name (n1 / name
+                                                         :op1 "재즈")
+                                               :wiki -))))
+
+
+
+<DEPLayer → id: "NWRW1800000056.291.4.1" (Sentence), items: 6>
+[ <DEPItem→{'word_id': 1, 'word_form': '이재용', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '부회장의', 'head': 3, 'label': 'NP_MOD', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '구속영장이', 'head': 6, 'label': 'NP_SBJ', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '19일', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '새벽', 'head': 6, 'label': 'NP_AJT', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '기각됐다.', 'head': -1, 'label': 'VP', 'dependent': [3, 5]}>]
+<SRLLayer → id: "NWRW1800000056.291.4.1" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '이재용 부회장의 구속영장', 'label': 'ARG1', 'begin': 0, 'end': 13, 'word_id': 3}>,
+                <SRLArgument→{'form': '19일 새벽', 'label': 'ARGM-TMP', 'begin': 15, 'end': 21, 'word_id': 5}>],
+  'predicate': <SRLPredicate→{'form': '기각됐다.', 'begin': 22, 'end': 27, 'lemma': '기각되다'}>}>]
+<ELLayer → id: "NWRW1800000056.291.4.1" (Sentence), items: 4>
+[ <ELItem→{'id': 1, 'form': '이재용', 'label': 'PS_NAME', 'begin': 0, 'end': 3, 'k_id': '00000000040298', 'wiki_id': '148946', 'url': 'https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%9E%AC%EC%9A%A9'}>,
+  <ELItem→{'id': 2, 'form': '부회장', 'label': 'CV_POSITION', 'begin': 4, 'end': 7, 'k_id': '06150000002043', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 3, 'form': '19일', 'label': 'DT_DAY', 'begin': 15, 'end': 18, 'k_id': '07010000000067', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 4, 'form': '새벽', 'label': 'TI_DURATION', 'begin': 19, 'end': 21, 'k_id': '08000000002554', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000056.291.4.1" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000056.291.4.1', 'form': '이재용', 'begin': 0, 'end': 3, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000056.291.4.1', 'form': '이재용 부회장', 'begin': 0, 'end': 7, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000056.291.4.1" (Sentence), items: 0>
+[]
+# ::id NWRW1800000056.291.4.1
+# ::snt 이재용 부회장의 구속영장이 19일 새벽 기각됐다.
+# ::pos 이재용/NNP 부회장/NNG+의/JKG 구속/NNG+영장/NNG+이/JKS 19/SN+일/NNB 새벽/NNG 기각/NNG+되/XSV+었/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(6 / 기각됐다.~w.6
+   :srl.ARG1 (3 / 구속영장이~w.3
+                :dep.NP_MOD (2 / CV_POSITION~w.2
+                               :name (n2 / name
+                                         :op1 "부회장")
+                               :wiki -
+                               :dep.NP (1 / PS_NAME~w.1
+                                          :name (n1 / name
+                                                    :op1 "이재용")
+                                          :wiki "https://ko.wikipedia.org/wiki/이재용")))
+   :srl.ARGM-TMP (5 / TI_DURATION~w.5
+                    :name (n4 / name
+                              :op1 "새벽")
+                    :wiki -
+                    :dep.NP (4 / DT_DAY~w.4
+                               :name (n3 / name
+                                         :op1 "19일")
+                               :wiki -)))
+
+
+
+<DEPLayer → id: "NWRW1800000029.347.11.2" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '하지만', 'head': 9, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '정작', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '지역에선', 'head': 9, 'label': 'NP_AJT', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '후보', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '단일화에', 'head': 6, 'label': 'NP_AJT', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '대한', 'head': 7, 'label': 'VP_MOD', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '거부감이', 'head': 9, 'label': 'NP_SBJ', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '별로', 'head': 9, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '없었다.', 'head': -1, 'label': 'VP', 'dependent': [1, 3, 7, 8]}>]
+<SRLLayer → id: "NWRW1800000029.347.11.2" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '하지만', 'label': 'ARGM-DIS', 'begin': 0, 'end': 3, 'word_id': 1}>,
+                <SRLArgument→{'form': '정작 지역', 'label': 'ARGM-LOC', 'begin': 4, 'end': 9, 'word_id': 3}>,
+                <SRLArgument→{'form': '거부감', 'label': 'ARG1', 'begin': 23, 'end': 26, 'word_id': 7}>,
+                <SRLArgument→{'form': '별로', 'label': 'ARGM-EXT', 'begin': 28, 'end': 30, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '없었다.', 'begin': 31, 'end': 35, 'lemma': '없다'}>}>]
+<ELLayer → id: "NWRW1800000029.347.11.2" (Sentence), items: 0>
+[]
+<CRLayer → id: "NWRW1800000029.347.11.2" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000029.347.11.2" (Sentence), items: 0>
+[]
+# ::id NWRW1800000029.347.11.2
+# ::snt 하지만 정작 지역에선 후보 단일화에 대한 거부감이 별로 없었다.
+# ::pos 하지만/MAJ 정작/MAG 지역/NNG+에서/JKB+ㄴ/JX 후보/NNG 단일/NNG+화/XSN+에/JKB 대하/VV+ㄴ/ETM 거부감/NNG+이/JKS 별로/MAG 없/VA+었/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(9 / 없었다.~w.9
+   :srl.ARGM-DIS (1 / 하지만~w.1)
+   :srl.ARGM-LOC (3 / 지역에선~w.3
+                    :dep.NP (2 / 정작~w.2))
+   :srl.ARG1 (7 / 거부감이~w.7
+                :dep.VP_MOD ((5, 6) / 단일화에_대한~w.5,6
+                                    :dep.NP (4 / 후보~w.4)))
+   :srl.ARGM-EXT (8 / 별로~w.8))
+
+
+
+<DEPLayer → id: "NWRW1800000025.215.2.2" (Sentence), items: 11>
+[ <DEPItem→{'word_id': 1, 'word_form': '불확실성이', 'head': 3, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '여전히', 'head': 3, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '큰', 'head': 4, 'label': 'VP_MOD', 'dependent': [1, 2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '상황에서', 'head': 8, 'label': 'NP_AJT', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '투자자들은', 'head': 8, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 6, 'word_form': '재테크를', 'head': 8, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '어떻게', 'head': 8, 'label': 'VP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '해야', 'head': 9, 'label': 'VP', 'dependent': [4, 5, 6, 7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '할지', 'head': 10, 'label': 'VP', 'dependent': [8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '막막하기만', 'head': 11, 'label': 'VP', 'dependent': [9]}>,
+  <DEPItem→{'word_id': 11, 'word_form': '하다.', 'head': -1, 'label': 'VP', 'dependent': [10]}>]
+<SRLLayer → id: "NWRW1800000025.215.2.2" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '불확실성', 'label': 'ARG1', 'begin': 0, 'end': 4, 'word_id': 1}>,
+                <SRLArgument→{'form': '할지', 'label': 'ARGM-AUX', 'begin': 35, 'end': 37, 'word_id': 9}>,
+                <SRLArgument→{'form': '하다', 'label': 'ARGM-AUX', 'begin': 44, 'end': 46, 'word_id': 11}>],
+  'predicate': <SRLPredicate→{'form': '큰', 'begin': 10, 'end': 11, 'lemma': '크다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '투자자들', 'label': 'ARG1', 'begin': 17, 'end': 21, 'word_id': 5}>,
+                <SRLArgument→{'form': '하다', 'label': 'ARGM-AUX', 'begin': 44, 'end': 46, 'word_id': 11}>],
+  'predicate': <SRLPredicate→{'form': '막막하기만', 'begin': 38, 'end': 43, 'lemma': '막막하다'}>}>]
+<ELLayer → id: "NWRW1800000025.215.2.2" (Sentence), items: 0>
+[]
+<CRLayer → id: "NWRW1800000025.215.2.2" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000025.215.2.2" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '투자자들', 'type': 'subject', 'sentence_id': 'NWRW1800000025.215.2.2', 'begin': 17, 'end': 21}>],
+  'predicate': <ZAPredicate→{'form': '막막하기만', 'sentence_id': 'NWRW1800000025.215.2.2', 'begin': 38, 'end': 43}>}>]
+None
+
+
+
+<DEPLayer → id: "NWRW1800000032.297.2.5" (Sentence), items: 5>
+[ <DEPItem→{'word_id': 1, 'word_form': '데뷔', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '이후', 'head': 5, 'label': 'NP_AJT', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '두번째', 'head': 4, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '3점슛도', 'head': 5, 'label': 'NP_SBJ', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '터뜨렸다.', 'head': -1, 'label': 'VP', 'dependent': [2, 4]}>]
+<SRLLayer → id: "NWRW1800000032.297.2.5" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '데뷔 이후', 'label': 'ARGM-TMP', 'begin': 0, 'end': 5, 'word_id': 2}>,
+                <SRLArgument→{'form': '두번째 3점슛', 'label': 'ARG0', 'begin': 6, 'end': 13, 'word_id': 4}>],
+  'predicate': <SRLPredicate→{'form': '터뜨렸다.', 'begin': 15, 'end': 20, 'lemma': '터뜨리다'}>}>]
+<ELLayer → id: "NWRW1800000032.297.2.5" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '두번째', 'label': 'QT_ORDER', 'begin': 6, 'end': 9, 'k_id': '09100000004532', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '3점슛', 'label': 'TM_SPORTS', 'begin': 10, 'end': 13, 'k_id': '14150000000056', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000032.297.2.5" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000032.297.2.5" (Sentence), items: 0>
+[]
+# ::id NWRW1800000032.297.2.5
+# ::snt 데뷔 이후 두번째 3점슛도 터뜨렸다.
+# ::pos 데뷔/NNG 이후/NNG 두/MMN+번/NNB+째/XSN 3/SN+점/NNB+슛/NNG+도/JX 터뜨리/VV+었/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(5 / 터뜨렸다.~w.5
+   :srl.ARG0 (4 / TM_SPORTS~w.4
+                :name (n2 / name
+                          :op1 "3점슛")
+                :wiki -
+                :dep.NP (3 / QT_ORDER~w.3
+                           :name (n1 / name
+                                     :op1 "두번째")
+                           :wiki -))
+   :srl.ARGM-TMP ((1, 2) / 데뷔_이후~w.1,2))
+
+
+
+<DEPLayer → id: "NWRW1800000030.196.7.1" (Sentence), items: 8>
+[ <DEPItem→{'word_id': 1, 'word_form': '여자', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '복식과', 'head': 3, 'label': 'NP_CNJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '혼합복식은', 'head': 8, 'label': 'NP_SBJ', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '베이징올림픽', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '금메달리스트', 'head': 6, 'label': 'NP', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '이효정의', 'head': 7, 'label': 'NP_MOD', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '공백이', 'head': 8, 'label': 'NP_SBJ', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '크다.', 'head': -1, 'label': 'VP', 'dependent': [3, 7]}>]
+<SRLLayer → id: "NWRW1800000030.196.7.1" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '여자 복식과 혼합복식', 'label': 'ARG0', 'begin': 0, 'end': 11, 'word_id': 3}>,
+                <SRLArgument→{'form': '베이징올림픽 금메달리스트 이효정의 공백', 'label': 'ARG1', 'begin': 13, 'end': 34, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '크다.', 'begin': 36, 'end': 39, 'lemma': '크다'}>}>]
+<ELLayer → id: "NWRW1800000030.196.7.1" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '베이징올림픽', 'label': 'EV_SPORTS', 'begin': 13, 'end': 19, 'k_id': '10020000000862', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '이효정', 'label': 'PS_NAME', 'begin': 27, 'end': 30, 'k_id': '00000000041093', 'wiki_id': '237418', 'url': 'https://ko.wikipedia.org/wiki/%EC%9D%B4%ED%9A%A8%EC%A0%95_(%EB%B0%B0%EB%93%9C%EB%AF%BC%ED%84%B4_%EC%84%A0%EC%88%98)'}>]
+<CRLayer → id: "NWRW1800000030.196.7.1" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000030.196.7.1', 'form': '베이징올림픽 금메달리스트', 'begin': 13, 'end': 26, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000030.196.7.1', 'form': '베이징올림픽 금메달리스트 이효정', 'begin': 13, 'end': 30, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000030.196.7.1" (Sentence), items: 0>
+[]
+# ::id NWRW1800000030.196.7.1
+# ::snt 여자 복식과 혼합복식은 베이징올림픽 금메달리스트 이효정의 공백이 크다.
+# ::pos 여자/NNG 복식/NNG+과/JC 혼합/NNG+복식/NNG+은/JX 베이징/NNP+올림픽/NNG 금메달리스트/NNG 이효정/NNP+의/JKG 공백/NNG+이/JKS 크/VA+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(8 / 크다.~w.8
+   :srl.ARG0 (3 / 혼합복식은~w.3
+                :dep.NP_CNJ (2 / 복식과~w.2
+                               :dep.NP (1 / 여자~w.1)))
+   :srl.ARG1 (7 / 공백이~w.7
+                :dep.NP_MOD (6 / PS_NAME~w.6
+                               :name (n2 / name
+                                         :op1 "이효정")
+                               :wiki "https://ko.wikipedia.org/wiki/이효정_(배드민턴_선수)"
+                               :dep.NP (5 / 금메달리스트~w.5
+                                          :dep.NP (4 / EV_SPORTS~w.4
+                                                     :name (n1 / name
+                                                               :op1 "베이징올림픽")
+                                                     :wiki -)))))
+
+
+
+<DEPLayer → id: "NWRW1800000054.204.5.1" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '외교부는', 'head': 8, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '지난해', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '초부터', 'head': 8, 'label': 'NP_AJT', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '크고', 'head': 5, 'label': 'VP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '작은', 'head': 7, 'label': 'VP_MOD', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '해킹', 'head': 7, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '시도에', 'head': 8, 'label': 'NP_AJT', 'dependent': [5, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '시달려', 'head': 9, 'label': 'VP', 'dependent': [1, 3, 7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '왔다.', 'head': -1, 'label': 'VP', 'dependent': [8]}>]
+<SRLLayer → id: "NWRW1800000054.204.5.1" (Sentence), items: 3>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '해킹 시도', 'label': 'ARG1', 'begin': 19, 'end': 24, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '크고', 'begin': 13, 'end': 15, 'lemma': '크다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '해킹 시도', 'label': 'ARG1', 'begin': 19, 'end': 24, 'word_id': 7}>,
+                <SRLArgument→{'form': '왔다', 'label': 'ARGM-AUX', 'begin': 30, 'end': 32, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '작은', 'begin': 16, 'end': 18, 'lemma': '작다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '외교부', 'label': 'ARG1', 'begin': 0, 'end': 3, 'word_id': 1}>,
+                <SRLArgument→{'form': '해킹 시도', 'label': 'ARG0', 'begin': 19, 'end': 24, 'word_id': 7}>,
+                <SRLArgument→{'form': '왔다', 'label': 'ARGM-AUX', 'begin': 30, 'end': 32, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '시달려', 'begin': 26, 'end': 29, 'lemma': '시달리다'}>}>]
+<ELLayer → id: "NWRW1800000054.204.5.1" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '외교부', 'label': 'OGG_POLITICS', 'begin': 0, 'end': 3, 'k_id': '04110000002347', 'wiki_id': '106858', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '지난해 초부터', 'label': 'DT_OTHERS', 'begin': 5, 'end': 12, 'k_id': '07080000011295', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000054.204.5.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000054.204.5.1" (Sentence), items: 2>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '시도', 'type': 'subject', 'sentence_id': 'NWRW1800000054.204.5.1', 'begin': 22, 'end': 24}>],
+  'predicate': <ZAPredicate→{'form': '크고', 'sentence_id': 'NWRW1800000054.204.5.1', 'begin': 13, 'end': 15}>}>,
+  <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '시도', 'type': 'subject', 'sentence_id': 'NWRW1800000054.204.5.1', 'begin': 22, 'end': 24}>],
+  'predicate': <ZAPredicate→{'form': '작은', 'sentence_id': 'NWRW1800000054.204.5.1', 'begin': 16, 'end': 18}>}>]
+None
+
+
+
+<DEPLayer → id: "NWRW1800000038.80.19.2" (Sentence), items: 11>
+[ <DEPItem→{'word_id': 1, 'word_form': '스트레스가', 'head': 2, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '심할', 'head': 3, 'label': 'VP_MOD', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '때', 'head': 7, 'label': 'NP_AJT', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '머리가', 'head': 5, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '조이는', 'head': 6, 'label': 'VP_MOD', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '것처럼', 'head': 7, 'label': 'NP_AJT', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '아프면', 'head': 10, 'label': 'VP', 'dependent': [3, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '긴장형', 'head': 9, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '두통이', 'head': 10, 'label': 'NP_SBJ', 'dependent': [8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '생긴', 'head': 11, 'label': 'VP_MOD', 'dependent': [7, 9]}>,
+  <DEPItem→{'word_id': 11, 'word_form': '것이다.', 'head': -1, 'label': 'VNP', 'dependent': [10]}>]
+<SRLLayer → id: "NWRW1800000038.80.19.2" (Sentence), items: 4>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '스트레스', 'label': 'ARG1', 'begin': 0, 'end': 4, 'word_id': 1}>],
+  'predicate': <SRLPredicate→{'form': '심할', 'begin': 6, 'end': 8, 'lemma': '심하다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '때', 'label': 'ARGM-TMP', 'begin': 9, 'end': 10, 'word_id': 3}>,
+                <SRLArgument→{'form': '머리', 'label': 'ARG1', 'begin': 11, 'end': 13, 'word_id': 4}>],
+  'predicate': <SRLPredicate→{'form': '조이는', 'begin': 15, 'end': 18, 'lemma': '조이다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '때', 'label': 'ARGM-TMP', 'begin': 9, 'end': 10, 'word_id': 3}>,
+                <SRLArgument→{'form': '머리', 'label': 'ARG1', 'begin': 11, 'end': 13, 'word_id': 4}>],
+  'predicate': <SRLPredicate→{'form': '아프면', 'begin': 23, 'end': 26, 'lemma': '아프다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '긴장형 두통', 'label': 'ARG1', 'begin': 27, 'end': 33, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '생긴', 'begin': 35, 'end': 37, 'lemma': '생기다'}>}>]
+<ELLayer → id: "NWRW1800000038.80.19.2" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '머리', 'label': 'AM_PART', 'begin': 11, 'end': 13, 'k_id': '11070000000364', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '긴장형 두통', 'label': 'TMM_DISEASE', 'begin': 27, 'end': 33, 'k_id': '14050000000512', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000038.80.19.2" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000038.80.19.2" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '머리', 'type': 'subject', 'sentence_id': 'NWRW1800000038.80.19.2', 'begin': 11, 'end': 13}>],
+  'predicate': <ZAPredicate→{'form': '아프면', 'sentence_id': 'NWRW1800000038.80.19.2', 'begin': 23, 'end': 26}>}>]
+# ::id NWRW1800000038.80.19.2
+# ::snt 스트레스가 심할 때 머리가 조이는 것처럼 아프면 긴장형 두통이 생긴 것이다.
+# ::pos 스트레스/NNG+가/JKS 심하/VA+ㄹ/ETM 때/NNG 머리/NNG+가/JKS 조이/VV+는/ETM 것/NNB+처럼/JKB 아프/VA+면/EC 긴장/NNG+형/XSN 두통/NNG+이/JKS 생기/VV+ㄴ/ETM 것/NNB+이/VCP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((10, 11) / 생긴_것이다.~w.10,11
+          :dep.VP (7 / 아프면~w.7
+                     :srl.ARGM-TMP ((2, 3) / 심할_때~w.2,3
+                                           :srl.ARGM-TMP-of ((5, 6) / 조이는_것처럼~w.5,6
+                                                                    :srl.ARG1 4
+                                                                    :dep.NP_AJT-of 7)
+                                           :srl.ARG1 (1 / 스트레스가~w.1))
+                     :srl.ARG1 (4 / AM_PART~w.4
+                                  :name (n1 / name
+                                            :op1 "머리")
+                                  :wiki -))
+          :srl.ARG1 ((8, 9) / TMM_DISEASE~w.8,9
+                            :name (n2 / name
+                                      :op1 "긴장형"
+                                      :op2 "두통")
+                            :wiki -))
+
+
+
+<DEPLayer → id: "NWRW1800000045.144.8.3" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '1941년', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '10월', 'head': 8, 'label': 'NP_AJT', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '독일', 'head': 4, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '경찰국', 'head': 6, 'label': 'NP', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '발터', 'head': 6, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 6, 'word_form': '마트너가', 'head': 8, 'label': 'NP_SBJ', 'dependent': [4, 5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '아내에게', 'head': 8, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '쓴', 'head': 9, 'label': 'VP_MOD', 'dependent': [2, 6, 7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '편지다.', 'head': -1, 'label': 'VNP', 'dependent': [8]}>]
+<SRLLayer → id: "NWRW1800000045.144.8.3" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '1941년 10월', 'label': 'ARGM-TMP', 'begin': 0, 'end': 9, 'word_id': 2}>,
+                <SRLArgument→{'form': '독일 경찰국 발터 마트너', 'label': 'ARG0', 'begin': 10, 'end': 23, 'word_id': 6}>,
+                <SRLArgument→{'form': '편지다', 'label': 'ARG1', 'begin': 32, 'end': 35, 'word_id': 9}>],
+  'predicate': <SRLPredicate→{'form': '쓴', 'begin': 30, 'end': 31, 'lemma': '쓰다'}>}>]
+<ELLayer → id: "NWRW1800000045.144.8.3" (Sentence), items: 5>
+[ <ELItem→{'id': 1, 'form': '1941년 10월', 'label': 'DT_OTHERS', 'begin': 0, 'end': 9, 'k_id': '07080000001642', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '독일', 'label': 'LCP_COUNTRY', 'begin': 10, 'end': 12, 'k_id': '05000000000277', 'wiki_id': '56412', 'url': 'https://ko.wikipedia.org/wiki/%EB%8F%85%EC%9D%BC'}>,
+  <ELItem→{'id': 3, 'form': '경찰국', 'label': 'OGG_POLITICS', 'begin': 13, 'end': 16, 'k_id': '04110000000400', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 4, 'form': '발터 마트너', 'label': 'PS_NAME', 'begin': 17, 'end': 23, 'k_id': '00000000023342', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 5, 'form': '아내', 'label': 'CV_RELATION', 'begin': 25, 'end': 27, 'k_id': '06130000000404', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000045.144.8.3" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000045.144.8.3', 'form': '독일 경찰국 발터 마트너', 'begin': 10, 'end': 23, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000045.144.8.3', 'form': '발터 마트너', 'begin': 17, 'end': 23, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000045.144.8.3" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '편지', 'type': 'object', 'sentence_id': 'NWRW1800000045.144.8.3', 'begin': 32, 'end': 34}>],
+  'predicate': <ZAPredicate→{'form': '쓴', 'sentence_id': 'NWRW1800000045.144.8.3', 'begin': 30, 'end': 31}>}>]
+# ::id NWRW1800000045.144.8.3
+# ::snt 1941년 10월 독일 경찰국 발터 마트너가 아내에게 쓴 편지다.
+# ::pos 1941/SN+년/NNB 10/SN+월/NNB 독일/NNP 경찰국/NNG 발터/NNP 마트너/NNP+가/JKS 아내/NNG+에게/JKB 쓰/VV+ㄴ/ETM 편지/NNG+이/VCP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+(9 / 편지다.~w.9
+   :srl.ARG1-of (8 / 쓴~w.8
+                   :dep.NP_AJT (7 / CV_RELATION~w.7
+                                  :name (n5 / name
+                                            :op1 "아내")
+                                  :wiki -)
+                   :srl.ARGM-TMP ((1, 2) / DT_OTHERS~w.1,2
+                                         :name (n1 / name
+                                                   :op1 "1941년"
+                                                   :op2 "10월")
+                                         :wiki -)
+                   :srl.ARG0 ((5, 6) / PS_NAME~w.5,6
+                                     :name (n4 / name
+                                               :op1 "발터"
+                                               :op2 "마트너")
+                                     :wiki -
+                                     :dep.NP (4 / OGG_POLITICS~w.4
+                                                :name (n3 / name
+                                                          :op1 "경찰국")
+                                                :wiki -
+                                                :dep.NP (3 / LCP_COUNTRY~w.3
+                                                           :name (n2 / name
+                                                                     :op1 "독일")
+                                                           :wiki "https://ko.wikipedia.org/wiki/독일")))))
+
+
+
+<DEPLayer → id: "NWRW1800000053.289.6.3" (Sentence), items: 9>
+[ <DEPItem→{'word_id': 1, 'word_form': '미래에', 'head': 2, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '대한', 'head': 3, 'label': 'VP_MOD', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '불안감과', 'head': 5, 'label': 'NP_CNJ', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '만성', 'head': 5, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '소비부진도', 'head': 8, 'label': 'NP_SBJ', 'dependent': [3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '이들의', 'head': 7, 'label': 'NP_MOD', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '어깨를', 'head': 8, 'label': 'NP_OBJ', 'dependent': [6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '짓누르고', 'head': 9, 'label': 'VP', 'dependent': [5, 7]}>,
+  <DEPItem→{'word_id': 9, 'word_form': '있다.', 'head': -1, 'label': 'VP', 'dependent': [8]}>]
+<SRLLayer → id: "NWRW1800000053.289.6.3" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '미래', 'label': 'ARG2', 'begin': 0, 'end': 2, 'word_id': 1}>,
+                <SRLArgument→{'form': '불안감과 만성 소비부진', 'label': 'ARG1', 'begin': 7, 'end': 19, 'word_id': 5}>],
+  'predicate': <SRLPredicate→{'form': '대한', 'begin': 4, 'end': 6, 'lemma': '대하다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '불안감과 만성 소비부진', 'label': 'ARG0', 'begin': 7, 'end': 19, 'word_id': 5}>,
+                <SRLArgument→{'form': '이들의 어깨', 'label': 'ARG1', 'begin': 21, 'end': 27, 'word_id': 7}>],
+  'predicate': <SRLPredicate→{'form': '짓누르고', 'begin': 29, 'end': 33, 'lemma': '짓누르다'}>}>]
+<ELLayer → id: "NWRW1800000053.289.6.3" (Sentence), items: 1>
+[ <ELItem→{'id': 1, 'form': '어깨', 'label': 'AM_PART', 'begin': 25, 'end': 27, 'k_id': '11070000000744', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000053.289.6.3" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000053.289.6.3" (Sentence), items: 0>
+[]
+None
+
+
+
+<DEPLayer → id: "NWRW1800000026.57.2.1" (Sentence), items: 8>
+[ <DEPItem→{'word_id': 1, 'word_form': '세종시', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '당론', 'head': 3, 'label': 'NP', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '변경', 'head': 4, 'label': 'NP', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '문제는', 'head': 7, 'label': 'NP_SBJ', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '속전속결로', 'head': 7, 'label': 'NP_AJT', 'dependent': []}>,
+  <DEPItem→{'word_id': 6, 'word_form': '마무리', 'head': 7, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 7, 'word_form': '지어야', 'head': 8, 'label': 'VP', 'dependent': [4, 5, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '한다.', 'head': -1, 'label': 'VP', 'dependent': [7]}>]
+<SRLLayer → id: "NWRW1800000026.57.2.1" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '세종시 당론 변경 문제', 'label': 'ARG0', 'begin': 0, 'end': 12, 'word_id': 4}>,
+                <SRLArgument→{'form': '마무리', 'label': 'ARGM-EXT', 'begin': 20, 'end': 23, 'word_id': 6}>,
+                <SRLArgument→{'form': '한다', 'label': 'ARGM-AUX', 'begin': 28, 'end': 30, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '지어야', 'begin': 24, 'end': 27, 'lemma': '짓다'}>}>]
+<ELLayer → id: "NWRW1800000026.57.2.1" (Sentence), items: 1>
+[ <ELItem→{'id': 1, 'form': '세종시', 'label': 'OGG_POLITICS', 'begin': 0, 'end': 3, 'k_id': '04110000001952', 'wiki_id': '127699', 'url': 'https://ko.wikipedia.org/wiki/%EC%84%B8%EC%A2%85%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EC%8B%9C'}>]
+<CRLayer → id: "NWRW1800000026.57.2.1" (Sentence), items: 0>
+[]
+<ZALayer → id: "NWRW1800000026.57.2.1" (Sentence), items: 0>
+[]
+# ::id NWRW1800000026.57.2.1
+# ::snt 세종시 당론 변경 문제는 속전속결로 마무리 지어야 한다.
+# ::pos 세종시/NNP 당론/NNG 변경/NNG 문제/NNG+는/JX 속전속결/NNG+로/JKB 마무리/NNG 짓/VV+어야/EC 하/VX+ㄴ다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((7, 8) / 지어야_한다.~w.7,8
+        :srl.ARG0 (4 / 문제는~w.4
+                     :dep.NP (3 / 변경~w.3
+                                :dep.NP (2 / 당론~w.2
+                                           :dep.NP (1 / OGG_POLITICS~w.1
+                                                      :name (n1 / name
+                                                                :op1 "세종시")
+                                                      :wiki "https://ko.wikipedia.org/wiki/세종특별자치시"))))
+        :dep.NP_AJT (5 / 속전속결로~w.5)
+        :srl.ARGM-EXT (6 / 마무리~w.6))
+
+
+
+<DEPLayer → id: "NWRW1800000029.60.7.1" (Sentence), items: 10>
+[ <DEPItem→{'word_id': 1, 'word_form': '3개', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '레이스', 'head': 3, 'label': 'NP', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '가운데', 'head': 5, 'label': 'NP_AJT', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '가장', 'head': 5, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 5, 'word_form': '주목받는', 'head': 6, 'label': 'VP_MOD', 'dependent': [3, 4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '것은', 'head': 10, 'label': 'NP_SBJ', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '단연', 'head': 10, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 8, 'word_form': '제네시스', 'head': 9, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '쿠페', 'head': 10, 'label': 'NP', 'dependent': [8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '레이스다.', 'head': -1, 'label': 'VNP', 'dependent': [6, 7, 9]}>]
+<SRLLayer → id: "NWRW1800000029.60.7.1" (Sentence), items: 1>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '가장', 'label': 'ARGM-EXT', 'begin': 11, 'end': 13, 'word_id': 4}>,
+                <SRLArgument→{'form': '것', 'label': 'ARG1', 'begin': 19, 'end': 20, 'word_id': 6}>],
+  'predicate': <SRLPredicate→{'form': '주목받는', 'begin': 14, 'end': 18, 'lemma': '받다'}>}>]
+<ELLayer → id: "NWRW1800000029.60.7.1" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '3개', 'label': 'QT_COUNT', 'begin': 0, 'end': 2, 'k_id': '09030000005240', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '제네시스 쿠페 레이스', 'label': 'EV_SPORTS', 'begin': 25, 'end': 36, 'k_id': '10020000001443', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000029.60.7.1" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000029.60.7.1', 'form': '3개 레이스 가운데 가장 주목받는 것', 'begin': 0, 'end': 20, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000029.60.7.1', 'form': '제네시스 쿠페 레이스', 'begin': 25, 'end': 36, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000029.60.7.1" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '것', 'type': 'subject', 'sentence_id': 'NWRW1800000029.60.7.1', 'begin': 19, 'end': 20}>],
+  'predicate': <ZAPredicate→{'form': '주목받는', 'sentence_id': 'NWRW1800000029.60.7.1', 'begin': 14, 'end': 18}>}>]
+# ::id NWRW1800000029.60.7.1
+# ::snt 3개 레이스 가운데 가장 주목받는 것은 단연 제네시스 쿠페 레이스다.
+# ::pos 3/SN+개/NNB 레이스/NNG 가운데/NNG 가장/MAG 주목/NNG+받/XSV+는/ETM 것/NNB+은/JX 단연/MAG 제네시스/NNP 쿠페/NNG 레이스/NNG+이/VCP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((8, 9, 10) / EV_SPORTS~w.8,9,10
+            :name (n2 / name
+                      :op1 "제네시스"
+                      :op2 "쿠페"
+                      :op3 "레이스")
+            :wiki -
+            :dep.AP (7 / 단연~w.7)
+            :dep.NP_SBJ ((5, 6) / 주목받는_것은~w.5,6
+                                :dep.NP_AJT (3 / 가운데~w.3
+                                               :dep.NP (2 / 레이스~w.2
+                                                          :dep.NP (1 / QT_COUNT~w.1
+                                                                     :name (n1 / name
+                                                                               :op1 "3개")
+                                                                     :wiki -)))
+                                :srl.ARGM-EXT (4 / 가장~w.4)))
+
+
+
+<DEPLayer → id: "NWRW1800000036.405.9.2" (Sentence), items: 10>
+[ <DEPItem→{'word_id': 1, 'word_form': '문', 'head': 2, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '후보는', 'head': 7, 'label': 'NP_SBJ', 'dependent': [1]}>,
+  <DEPItem→{'word_id': 3, 'word_form': '대화', 'head': 4, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 4, 'word_form': '과정에서', 'head': 7, 'label': 'NP_AJT', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '3~4차례', 'head': 6, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 6, 'word_form': '안경을', 'head': 7, 'label': 'NP_OBJ', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '벗고', 'head': 9, 'label': 'VP', 'dependent': [2, 4, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '눈물을', 'head': 9, 'label': 'NP_OBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '훔치기도', 'head': 10, 'label': 'VP', 'dependent': [7, 8]}>,
+  <DEPItem→{'word_id': 10, 'word_form': '했다.', 'head': -1, 'label': 'VP', 'dependent': [9]}>]
+<SRLLayer → id: "NWRW1800000036.405.9.2" (Sentence), items: 2>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '문 후보', 'label': 'ARG0', 'begin': 0, 'end': 4, 'word_id': 2}>,
+                <SRLArgument→{'form': '3~4차례 안경', 'label': 'ARG1', 'begin': 14, 'end': 22, 'word_id': 6}>,
+                <SRLArgument→{'form': '했다', 'label': 'ARGM-AUX', 'begin': 36, 'end': 38, 'word_id': 10}>],
+  'predicate': <SRLPredicate→{'form': '벗고', 'begin': 24, 'end': 26, 'lemma': '벗다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '문 후보', 'label': 'ARG0', 'begin': 0, 'end': 4, 'word_id': 2}>,
+                <SRLArgument→{'form': '눈물', 'label': 'ARG1', 'begin': 27, 'end': 29, 'word_id': 8}>,
+                <SRLArgument→{'form': '했다', 'label': 'ARGM-AUX', 'begin': 36, 'end': 38, 'word_id': 10}>],
+  'predicate': <SRLPredicate→{'form': '훔치기도', 'begin': 31, 'end': 35, 'lemma': '훔치다'}>}>]
+<ELLayer → id: "NWRW1800000036.405.9.2" (Sentence), items: 2>
+[ <ELItem→{'id': 1, 'form': '문', 'label': 'PS_NAME', 'begin': 0, 'end': 1, 'k_id': '00000000020657', 'wiki_id': 'NA', 'url': 'NA'}>,
+  <ELItem→{'id': 2, 'form': '3~4차례', 'label': 'QT_COUNT', 'begin': 14, 'end': 19, 'k_id': '09030000005195', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000036.405.9.2" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000036.405.9.2', 'form': '문', 'begin': 0, 'end': 1, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000036.405.9.2', 'form': '문 후보', 'begin': 0, 'end': 4, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000036.405.9.2" (Sentence), items: 2>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '후보', 'type': 'subject', 'sentence_id': 'NWRW1800000036.405.9.2', 'begin': 2, 'end': 4}>],
+  'predicate': <ZAPredicate→{'form': '훔치기도', 'sentence_id': 'NWRW1800000036.405.9.2', 'begin': 31, 'end': 35}>}>,
+  <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '후보', 'type': 'subject', 'sentence_id': 'NWRW1800000036.405.9.2', 'begin': 2, 'end': 4}>],
+  'predicate': <ZAPredicate→{'form': '했다', 'sentence_id': 'NWRW1800000036.405.9.2', 'begin': 36, 'end': 38}>}>]
+# ::id NWRW1800000036.405.9.2
+# ::snt 문 후보는 대화 과정에서 3~4차례 안경을 벗고 눈물을 훔치기도 했다.
+# ::pos 문/NNP 후보/NNG+는/JX 대화/NNG 과정/NNG+에서/JKB 3/SN+~/SO+4/SN+차례/NNG 안경/NNG+을/JKO 벗/VV+고/EC 눈물/NNG+을/JKO 훔치/VV+기/ETN+도/JX 하/VX+았/EP+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((9, 10) / 훔치기도_했다.~w.9,10
+         :srl.ARG1 (8 / 눈물을~w.8)
+         :srl.ARGM-AUX-of (7 / 벗고~w.7
+                             :dep.NP_AJT (4 / 과정에서~w.4
+                                            :dep.NP (3 / 대화~w.3))
+                             :srl.ARG1 (6 / 안경을~w.6
+                                          :dep.NP (5 / QT_COUNT~w.5
+                                                     :name (n2 / name
+                                                               :op1 "3~4차례")
+                                                     :wiki -)))
+         :srl.ARG0 (2 / 후보는~w.2
+                      :dep.NP (1 / PS_NAME~w.1
+                                 :name (n1 / name
+                                           :op1 "문")
+                                 :wiki -)
+                      :srl.ARG0-of 7))
+
+
+
+<DEPLayer → id: "NWRW1800000038.385.8.2" (Sentence), items: 11>
+[ <DEPItem→{'word_id': 1, 'word_form': '육류는', 'head': 7, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 2, 'word_form': '심장병', 'head': 3, 'label': 'NP', 'dependent': []}>,
+  <DEPItem→{'word_id': 3, 'word_form': '발병', 'head': 4, 'label': 'NP', 'dependent': [2]}>,
+  <DEPItem→{'word_id': 4, 'word_form': '위험을', 'head': 5, 'label': 'NP_OBJ', 'dependent': [3]}>,
+  <DEPItem→{'word_id': 5, 'word_form': '높이는', 'head': 6, 'label': 'VP_MOD', 'dependent': [4]}>,
+  <DEPItem→{'word_id': 6, 'word_form': '것으로', 'head': 7, 'label': 'NP_AJT', 'dependent': [5]}>,
+  <DEPItem→{'word_id': 7, 'word_form': '알려지면서', 'head': 11, 'label': 'VP', 'dependent': [1, 6]}>,
+  <DEPItem→{'word_id': 8, 'word_form': '소비가', 'head': 10, 'label': 'NP_SBJ', 'dependent': []}>,
+  <DEPItem→{'word_id': 9, 'word_form': '계속', 'head': 10, 'label': 'AP', 'dependent': []}>,
+  <DEPItem→{'word_id': 10, 'word_form': '줄고', 'head': 11, 'label': 'VP', 'dependent': [8, 9]}>,
+  <DEPItem→{'word_id': 11, 'word_form': '있다.', 'head': -1, 'label': 'VP', 'dependent': [7, 10]}>]
+<SRLLayer → id: "NWRW1800000038.385.8.2" (Sentence), items: 3>
+[ <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '육류', 'label': 'ARG0', 'begin': 0, 'end': 2, 'word_id': 1}>,
+                <SRLArgument→{'form': '심장병 발병 위험', 'label': 'ARG1', 'begin': 4, 'end': 13, 'word_id': 4}>],
+  'predicate': <SRLPredicate→{'form': '높이는', 'begin': 15, 'end': 18, 'lemma': '높다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '심장병 발병 위험을 높이는 것', 'label': 'ARG1', 'begin': 4, 'end': 20, 'word_id': 6}>],
+  'predicate': <SRLPredicate→{'form': '알려지면서', 'begin': 23, 'end': 28, 'lemma': '알다'}>}>,
+  <SRLItem→
+{ 'argument': [ <SRLArgument→{'form': '알려지면서', 'label': 'ARGM-CAU', 'begin': 23, 'end': 28, 'word_id': 7}>,
+                <SRLArgument→{'form': '소비', 'label': 'ARG1', 'begin': 29, 'end': 31, 'word_id': 8}>],
+  'predicate': <SRLPredicate→{'form': '줄고', 'begin': 36, 'end': 38, 'lemma': '줄다'}>}>]
+<ELLayer → id: "NWRW1800000038.385.8.2" (Sentence), items: 1>
+[ <ELItem→{'id': 1, 'form': '심장병', 'label': 'TMM_DISEASE', 'begin': 4, 'end': 7, 'k_id': '14050000001415', 'wiki_id': 'NA', 'url': 'NA'}>]
+<CRLayer → id: "NWRW1800000038.385.8.2" (Sentence), items: 1>
+[ [ <CRMention→{'sentence_id': 'NWRW1800000038.385.8.2', 'form': '육류', 'begin': 0, 'end': 2, 'ne_id': -1}>,
+    <CRMention→{'sentence_id': 'NWRW1800000038.385.8.2', 'form': '심장병 발병 위험을 높이는 것', 'begin': 4, 'end': 20, 'ne_id': -1}>]]
+<ZALayer → id: "NWRW1800000038.385.8.2" (Sentence), items: 1>
+[ <ZAItem→
+{ 'antecedent': [ <ZAAntecedent→{'form': '무언가', 'type': 'subject', 'sentence_id': '-1', 'begin': -1, 'end': -1}>],
+  'predicate': <ZAPredicate→{'form': '알려지면서', 'sentence_id': 'NWRW1800000038.385.8.2', 'begin': 23, 'end': 28}>}>]
+# ::id NWRW1800000038.385.8.2
+# ::snt 육류는 심장병 발병 위험을 높이는 것으로 알려지면서 소비가 계속 줄고 있다.
+# ::pos 육류/NNG+는/JX 심장병/NNG 발병/NNG 위험/NNG+을/JKO 높이/VV+는/ETM 것/NNB+으로/JKB 알려지/VV+면서/EC 소비/NNG+가/JKS 계속/MAG 줄/VV+고/EC 있/VX+다/EF+./SF
+# ::update 2023-01-17T00:23:22
+((10, 11) / 줄고_있다.~w.10,11
+          :srl.ARGM-CAU (7 / 알려지면서~w.7
+                           :dep.NP_SBJ (1 / 육류는~w.1)
+                           :srl.ARG1 ((5, 6) / 높이는_것으로~w.5,6
+                                             :srl.ARG0 1
+                                             :srl.ARG1 (4 / 위험을~w.4
+                                                          :dep.NP (3 / 발병~w.3
+                                                                     :dep.NP (2 / TMM_DISEASE~w.2
+                                                                                :name (n1 / name
+                                                                                          :op1 "심장병")
+                                                                                :wiki -)))))
+          :srl.ARG1 (8 / 소비가~w.8)
+          :dep.AP (9 / 계속~w.9))
+
+
+
