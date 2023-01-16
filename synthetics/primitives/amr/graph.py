@@ -1,6 +1,9 @@
+import re
 import penman
 from synthetics.primitives.corpus import *
 from synthetics.primitives.amr.concept import AMRIndexFreeConcept, AMRNamedEntityConcept
+from synthetics.rules.singletons import PeriphrasticConstructions
+from synthetics.utils import ngrams
 
 
 class AbstractMeaningRepresentation:
@@ -26,8 +29,8 @@ class AbstractMeaningRepresentation:
         self.metadata.update({'update': timestamp()})
         return self.metadata
 
-    def encode(self):
-        return self.graph.render()
+    def encode(self, surface_alignment: bool = True):
+        return self.graph.render(surface_alignment=surface_alignment)
 
     def update_from_dep(self):
         # instances
@@ -44,7 +47,14 @@ class AbstractMeaningRepresentation:
                 self.graph.add_relation(head_idx=head_idx, relation=relation, tail_idx=tail_idx)
 
     def update_from_mwe(self):
-        pass
+        numbered_words = self.annotations.pos.numbered_items()
+        for pattern in PeriphrasticConstructions(sort='simple-to-complex').get_patterns():
+            queries = pattern.split()
+            for numbered_ngram in ngrams(items=numbered_words, n=len(queries)):
+                window = [w for _, w in numbered_ngram]
+                if all([re.search(pattern=q, string=w) for q, w in zip(queries, window)]):
+                    nodes = [idx for idx, _ in numbered_ngram]
+                    self.graph.amalgamate(nodes, redirect_true_node=True)
 
     def update_from_srl(self):
         for srl in self.annotations.srl.tolist():
@@ -63,9 +73,9 @@ class AbstractMeaningRepresentation:
             word_begin, word_end = self.sentence.span_ids_to_word_id(begin=ner.begin, end=ner.end)
             if word_begin < word_end:
                 nodes = list(range(word_begin, word_end + 1))
-                new_node_idx = self.graph.amalgamate(nodes=nodes)
+                new_node_idx = self.graph.amalgamate(nodes=nodes, redirect_true_node=True)
             elif word_begin == word_end:
-                new_node_idx = word_end
+                new_node_idx = self.graph.redirect_node(word_end)
             else:
                 raise ValueError
             self.graph.instances[new_node_idx] = AMRNamedEntityConcept(
@@ -170,9 +180,16 @@ class AMRGraph:
         while node_to_merge:
             new_node_idx = self.pairwise_merge(new_node_idx, node_to_merge)
             node_to_merge = nodes.pop(0) if nodes else None
+        if redirect_true_node:
+            return self.redirect_node(new_node_idx)
         return new_node_idx
 
     def pairwise_merge(self, node_a: Any, node_b: Any):
+        assert node_a in self.instances
+        assert node_b in self.instances
+        if node_a == node_b:
+            return node_a
+
         # backup mapping & attributes from node_a and node_b
         mapping = self.instances[node_a].mapping.union(self.instances[node_b].mapping)
         attributes = list(self.instances[node_a].attributes.items()) + list(self.instances[node_b].attributes.items())

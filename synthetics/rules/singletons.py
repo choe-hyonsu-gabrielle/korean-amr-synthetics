@@ -1,5 +1,6 @@
 from typing import Literal
 from collections import defaultdict
+from functools import cache
 from synthetics.rules.periphrastic import PERIPHRASTIC_CONSTRUCTIONS
 
 
@@ -34,6 +35,10 @@ class PeriphrasticConstructions(object):
             self.sort = sort
             self.priority = prioritize(self.ruleset, sort=sort)
             PeriphrasticConstructions.intact = False
+
+    @cache
+    def get_patterns(self):
+        return [self.ruleset[key] for key in self.priority]
 
 
 if __name__ == '__main__':

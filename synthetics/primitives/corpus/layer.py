@@ -43,14 +43,30 @@ class POSLayer(Layer):
     def __init__(self, layer: str, data: list, super_instance=None):
         super().__init__(layer=layer, data=[POSItem(**d) for d in data], super_instance=super_instance)
 
-    def __str__(self):
+    def tostring(self):
+        """
+        returns serialized POS tagged sequence
+        ex) "가장/MAG 크/VA+ㄴ/ETM 충격/NNG+을/JKO 받/VV+는/ETM 곳/NNG+은/JX 관광업/NNG+계/XSN+이/VCP+다/EF+./SF"
+        :return: str
+        """
         words = []
         for word in subgroups(items=self.data, by='word_id', starts_from=1):
             words.append('+'.join(['/'.join([token.form, token.label]) for token in word]))
         return ' '.join(words).strip()
 
     def tolist(self) -> list[POSItem]:
+        """
+        :return: list of POSItem
+        """
         return self.data
+
+    def numbered_items(self) -> list[tuple[int, str]]:
+        """
+        returns numbered tuples starts with 1
+        ex) [(1, '가장/MAG'), (2, '크/VA+ㄴ/ETM'), (3, '충격/NNG+을/JKO'), (4, '받/VV+는/ETM'), ...]
+        :return: list of tuples (int, str)
+        """
+        return [(n+1, w) for n, w in enumerate(self.tostring().split())]
 
 
 class NERItem(Item):
