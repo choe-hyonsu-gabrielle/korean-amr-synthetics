@@ -5,12 +5,12 @@ reference: 국립국어원 <2021년 개체명 분석 및 개체 연결 말뭉치
     - `class`, `type` 또는 `species`의 이름이 아닌 `instance`의 이름 또는 이명
     ex) 아인슈타인(Person), 러시아(GPE), 지구(Planet), 6.25(Event), 언어학(Field of studies), 신라면(Food-product)
 
-# ge: name of class or species, generic nouns
+# ge: name of class or species, generic name
     - `instantiatable`의 이름 또는 이명. 즉, `class`, `type` 또는 `species`의 이름
     - 개별 instance의 이름을 짓지 않는 관습이 지배적이거나, 특정 subclass를 구분짓기 위한 목적의 이름
     ex) 사과(Subclass of Fruit), PHEV(Subclass of Vehicle), 한국인(Subtype of ethnic groups), 반달가슴곰(Species of Animal)
 
-# gc: general terms for abstract concept, terminologies
+# gc: general terms for (abstract) concept? terminologies?
     -
 """
 
