@@ -13,7 +13,6 @@ reference: 국립국어원 <2021년 개체명 분석 및 개체 연결 말뭉치
 # gc: general terms for (abstract) concept? terminologies?
     -
 """
-
 from synthetics.primitives.amr.concept import AMRNamedEntityConcept
 
 

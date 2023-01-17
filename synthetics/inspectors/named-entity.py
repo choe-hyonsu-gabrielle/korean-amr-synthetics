@@ -2,7 +2,7 @@ import json
 from collections import defaultdict, Counter
 from synthetics.utils import load_pickle
 from synthetics.primitives.corpus import Corpus, NERItem
-from synthetics.rules.named_entity import NAMED_ENTITIES
+from synthetics.rules.named_entities import NAMED_ENTITIES
 
 if __name__ == '__main__':
     corpus: Corpus = load_pickle('../corpus.pkl')

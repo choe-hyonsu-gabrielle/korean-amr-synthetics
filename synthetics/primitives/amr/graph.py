@@ -2,7 +2,7 @@ import re
 import penman
 from synthetics.primitives.corpus import *
 from synthetics.primitives.amr.concept import AMRIndexFreeConcept, AMRNamedEntityConcept
-from synthetics.rules.singletons import PeriphrasticConstructions
+from synthetics.rules.periphrastic_constructions import PeriphrasticConstructions
 from synthetics.utils import ngrams
 
 
