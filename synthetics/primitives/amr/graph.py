@@ -178,6 +178,9 @@ class AMRGraph:
         new_node_idx = nodes.pop(0)
         node_to_merge = nodes.pop(0)
         while node_to_merge:
+            if redirect_true_node:
+                new_node_idx = self.redirect_node(new_node_idx)
+                node_to_merge = self.redirect_node(node_to_merge)
             new_node_idx = self.pairwise_merge(new_node_idx, node_to_merge)
             node_to_merge = nodes.pop(0) if nodes else None
         if redirect_true_node:
@@ -187,6 +190,7 @@ class AMRGraph:
     def pairwise_merge(self, node_a: Any, node_b: Any):
         assert node_a in self.instances
         assert node_b in self.instances
+
         if node_a == node_b:
             return node_a
 

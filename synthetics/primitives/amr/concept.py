@@ -41,9 +41,8 @@ class AMRNamedEntityConcept(AMRIndexFreeConcept):
         return f'<{self.__class__.__name__}: {self.concept_type} → "{self.name_str}" {self.mapping}>'
 
     def product(self, global_idx: Any) -> list:
-        instance = [self.head_triple(global_idx=global_idx)]
-        name_heads = [(self.name_idx, ':instance', 'name'), (global_idx, ':name', self.name_idx)]
-        name_spans = [(self.name_idx, f':op{x + 1}', f'"{n_str}"') for x, n_str in enumerate(self.name_str.split())]
-        wiki = [(global_idx, ':wiki', f'"{decode_url(self.wiki)}"' if self.wiki != '-' else '-')]
-        attributes = [(global_idx, relation, value) for relation, value in self.attributes.items()]
-        return instance + name_heads + name_spans + wiki + attributes
+        name_triples = [(self.name_idx, ':instance', 'name'), (global_idx, ':name', self.name_idx)]
+        name_attributes = [(self.name_idx, f':op{x+1}', f'"{n_str}"') for x, n_str in enumerate(self.name_str.split())]
+        wikification = [(global_idx, ':wiki', f'"{decode_url(self.wiki)}"' if self.wiki != '-' else '-')]
+        return super().product(global_idx=global_idx) + name_triples + name_attributes + wikification
+
