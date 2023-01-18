@@ -79,7 +79,7 @@ class AbstractMeaningRepresentation:
             else:
                 raise ValueError
             self.graph.instances[new_node_idx] = AMRNamedEntityConcept(
-                concept_type=ner.label,
+                concept_type=ner.label.lower(),
                 name_idx=ner.id,
                 name_str=ner.form,
                 wiki=ner.url if wikification else None,

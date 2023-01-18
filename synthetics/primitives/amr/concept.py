@@ -5,7 +5,11 @@ from penman import surface
 
 
 class AMRIndexFreeConcept:
-    def __init__(self, concept_type: str, mapping: Optional[set[int]] = None):
+    def __init__(
+            self,
+            concept_type: str,
+            mapping: Optional[set[int]] = None
+    ):
         self.concept_type: str = concept_type
         self.attributes: dict[str, Any] = dict()  # {":relation": value}
         self.mapping: set[int] = set(sorted(mapping)) if mapping else set()
@@ -30,8 +34,14 @@ class AMRIndexFreeConcept:
 
 
 class AMRNamedEntityConcept(AMRIndexFreeConcept):
-    def __init__(self, concept_type: str, name_idx: Any, name_str: str, wiki: Optional[str] = None,
-                 mapping: Optional[set[int]] = None):
+    def __init__(
+            self,
+            concept_type: str,
+            name_idx: Any,
+            name_str: str,
+            wiki: Optional[str] = None,
+            mapping: Optional[set[int]] = None
+    ):
         super().__init__(concept_type=concept_type, mapping=mapping)
         self.name_idx: str = f'n{name_idx}'
         self.name_str: str = re.sub(r'\s+', ' ', name_str.strip())
@@ -42,7 +52,59 @@ class AMRNamedEntityConcept(AMRIndexFreeConcept):
 
     def product(self, global_idx: Any) -> list:
         name_triples = [(self.name_idx, ':instance', 'name'), (global_idx, ':name', self.name_idx)]
-        name_attributes = [(self.name_idx, f':op{x+1}', f'"{n_str}"') for x, n_str in enumerate(self.name_str.split())]
+        name_attributes = [(self.name_idx, f':op{x + 1}', f'"{n_str}"') for x, n_str in
+                           enumerate(self.name_str.split())]
         wikification = [(global_idx, ':wiki', f'"{decode_url(self.wiki)}"' if self.wiki != '-' else '-')]
         return super().product(global_idx=global_idx) + name_triples + name_attributes + wikification
 
+
+class AMRGenericNameConcept(AMRIndexFreeConcept):
+    def __init__(
+            self,
+            concept_type: str,
+            generic_idx: Any,
+            generic_str: str,
+            wiki: Optional[str] = None,
+            mapping: Optional[set[int]] = None
+    ):
+        super().__init__(concept_type=concept_type, mapping=mapping)
+        self.generic_idx: str = f'n{generic_idx}'
+        self.generic_str: str = re.sub(r'\s+', ' ', generic_str.strip())
+        self.wiki = wiki if wiki and wiki != 'NA' else '-'
+
+    def __repr__(self):
+        return f'<{self.__class__.__name__}: {self.concept_type} → "{self.generic_str}" {self.mapping}>'
+
+    def product(self, global_idx: Any) -> list:
+        generic_triples = [
+            (self.generic_idx, ':instance', '-'.join(self.generic_str.split())),
+            (global_idx, ':type', self.generic_idx)
+        ]
+        wikification = [(global_idx, ':wiki', f'"{decode_url(self.wiki)}"' if self.wiki != '-' else '-')]
+        return super().product(global_idx=global_idx) + generic_triples + wikification
+
+
+class AMRTerminologyConcept(AMRIndexFreeConcept):
+    def __init__(
+            self,
+            concept_type: str,
+            term_idx: Any,
+            term_str: str,
+            wiki: Optional[str] = None,
+            mapping: Optional[set[int]] = None
+    ):
+        super().__init__(concept_type=concept_type, mapping=mapping)
+        self.term_idx: str = f'n{term_idx}'
+        self.term_str: str = re.sub(r'\s+', ' ', term_str.strip())
+        self.wiki = wiki if wiki and wiki != 'NA' else '-'
+
+    def __repr__(self):
+        return f'<{self.__class__.__name__}: {self.concept_type} → "{self.term_str}" {self.mapping}>'
+
+    def product(self, global_idx: Any) -> list:
+        term_triples = [
+            (self.term_idx, ':instance', '-'.join(self.term_str.split())),
+            (global_idx, ':so-called', self.term_idx)
+        ]
+        wikification = [(global_idx, ':wiki', f'"{decode_url(self.wiki)}"' if self.wiki != '-' else '-')]
+        return super().product(global_idx=global_idx) + term_triples + wikification

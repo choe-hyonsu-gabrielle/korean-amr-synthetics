@@ -34,7 +34,7 @@ if __name__ == '__main__':
         print(amr.encode(), file=fp)
         print('\n\n', file=fp)
 
-        if i > 100:
+        if i > 200:
             break
 
     fp.close()

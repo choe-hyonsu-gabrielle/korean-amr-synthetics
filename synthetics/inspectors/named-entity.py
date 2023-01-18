@@ -19,10 +19,19 @@ if __name__ == '__main__':
     print(set(NAMED_ENTITIES).difference(set(ne_counts)))
 
     catalog = dict()
+    catalog_set = dict()
     for key in NAMED_ENTITIES:
         catalog[key] = dict(types=len(ne_counts.get(key, [])))
+        catalog_set[key] = list()
         for span, freq in ne_counts.get(key, []):
             catalog[key][span] = freq
+            catalog_set[key].append(span)
 
     with open('named-entity.json', encoding='utf-8', mode='w') as fp:
         json.dump(catalog, fp, ensure_ascii=False, indent=4)
+
+    with open('named-entity-set.tsv', encoding='utf-8', mode='w') as fp:
+        fp.write('label\ttypes\n')
+        for key, items in catalog_set.items():
+            fp.write(key + ':\t')
+            fp.write(', '.join(items) + '\n')
