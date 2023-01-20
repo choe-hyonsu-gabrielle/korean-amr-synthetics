@@ -158,15 +158,22 @@ NAMED_ENTITIES = {
     # ex. 카스트, 쓰레기종량제, 직업공무원제도, 연금제도, 고시제도
     'CV_LAW': ('ne.law|treaty', AMRNamedEntityConcept),
     # ex. 국제연합헌장, 민법, 형법, 함무라비법전, 관습법, 헌법
-
-    'CV_CURRENCY': 'currency*',   # ex. 달러, 원, 엔, 유로, 루피, 위안
-    'CV_TAX': 'tax*',   # ex. 법인세, 소득공제, 면허세, 관세, 부가가치세
-    'CV_FUNDS': 'funds*',   # ex. 거치연금, 문예진흥기금, 공적자금, 퇴직연금, 코리아 펀드
-    'CV_ART': None,   # ex. 소설, 시, 판타지소설, 판소리, 힙합, 케이팝, 공포영화, 미국드라마
-    'CV_SPORTS': 'sports*',   # ex. 축구, 야구, 수상스키, 스키, 스케이팅, 하이킹, 행글라이딩
-    'CV_SPORTS_POSITION': 'have-org-role-91',   # ex. 투수, 포수, 스트라이커, 골키퍼, 미드필더
-    'CV_SPORTS_INST': 'sports-instrument*',   # ex. 스케이트, 인라인스케이트, 야구공, 배트, 아이젠, 오리발
-    'CV_PRIZE': 'award',   # ex. 노벨경제학상, 대통령상, 대종상, 다승왕, 타격왕
+    'CV_CURRENCY': ('tm.currency*', AMRTerminologyConcept),
+    # ex. 달러, 원, 엔, 유로, 루피, 위안
+    'CV_TAX': ('ne.tax*', AMRNamedEntityConcept),
+    # ex. 법인세, 소득공제, 면허세, 관세, 부가가치세
+    'CV_FUNDS': ('ne.fund|pension*', AMRNamedEntityConcept),
+    # ex. 거치연금, 문예진흥기금, 공적자금, 퇴직연금, 코리아 펀드
+    'CV_ART': ('tm.genre-of-art*', AMRTerminologyConcept),
+    # ex. 소설, 시, 판타지소설, 판소리, 힙합, 케이팝, 공포영화, 미국드라마
+    'CV_SPORTS': ('tm.sports*', AMRTerminologyConcept),
+    # ex. 축구, 야구, 수상스키, 스키, 스케이팅, 하이킹, 행글라이딩
+    'CV_SPORTS_POSITION': ('tm.sports-position*', AMRTerminologyConcept),  # 'have-org-role-91'
+    # ex. 투수, 포수, 스트라이커, 골키퍼, 미드필더
+    'CV_SPORTS_INST': ('ge.sports-instrument*', AMRGenericNameConcept),
+    # ex. 스케이트, 인라인스케이트, 야구공, 배트, 아이젠, 오리발
+    'CV_PRIZE': ('award', AMRNamedEntityConcept),
+    # ex. 노벨경제학상, 대통령상, 대종상, 다승왕, 타격왕
     'CV_RELATION': 'have-rel-role-91',   # ex. 엄마, 아버지, 가족, 형제, 제자, 아들, 딸, 자식, 친척
     'CV_OCCUPATION': 'have-org-role-91',   # ex. 화가, 극작가, 건축가, 가정교사, 언어학자, 공인중개사
     'CV_POSITION': 'have-org-role-91',   # ex. 부장, 과장, 대리, 대위, 중위, 소위, 대통령, 국무총리, 장관

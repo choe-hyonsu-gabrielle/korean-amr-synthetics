@@ -102,9 +102,6 @@ class AMRTerminologyConcept(AMRIndexFreeConcept):
         return f'<{self.__class__.__name__}: {self.concept_type} → "{self.term_str}" {self.mapping}>'
 
     def product(self, global_idx: Any) -> list:
-        term_triples = [
-            (self.term_idx, ':instance', '-'.join(self.term_str.split())),
-            (global_idx, ':so-called', self.term_idx)
-        ]
+        term_triples = [(global_idx, ':instance', '-'.join(self.term_str.split()))]
         wikification = [(global_idx, ':wiki', f'"{decode_url(self.wiki)}"' if self.wiki != '-' else '-')]
-        return super().product(global_idx=global_idx) + term_triples + wikification
+        return term_triples + wikification

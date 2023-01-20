@@ -62,7 +62,7 @@ None
 # ::id NWRW1800000033.333.8.2
 # ::snt 이들이 답변서를 내지 않으면 윤리특위는 자격심사 청구서만으로 심사를 진행할 수 있다.
 # ::pos 이/NP+들/XSN+이/JKS 답변서/NNG+를/JKO 내/VV+지/EC 않/VX+으면/EC 윤리특위/NNP+는/JX 자격/NNG+심사/NNG 청구서/NNG+만/JX+으로/JKB 심사/NNG+를/JKO 진행/NNG+하/XSV+ㄹ/ETM 수/NNB 있/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:37
 ((9, 10, 11) / 진행할_수_있다.~w.9,10,11
              :srl.ARG0 (5 / ogg_others~w.5
                           :name (n1 / name
@@ -130,7 +130,7 @@ None
 # ::id NWRW1800000045.354.3.4
 # ::snt 피 흘리며 신음하는 전우들을 챙기느라 내 몸에 박힌 파편의 고통조차 느낄 수 없었다.
 # ::pos 피/NNG 흘리/VV+며/EC 신음/NNG+하/XSV+는/ETM 전우/NNG+들/XSN+을/JKO 챙기/VV+느라/EC 나/NP+의/JKG 몸/NNG+에/JKB 박히/VV+ㄴ/ETM 파편/NNG+의/JKG 고통/NNG+조차/JX 느끼/VV+ㄹ/ETM 수/NNB 없/VA+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 ((11, 12, 13) / 느낄_수_없었다.~w.11,12,13
               :dep.VP (5 / 챙기느라~w.5
                          :srl.ARG1 (4 / 전우들을~w.4
@@ -180,7 +180,7 @@ None
 # ::id NWRW1800000045.253.4.4
 # ::snt 실제로 역대 메이저리그 최고액 계약 사례 10명 중에서 투수는 두 명밖에 없다.
 # ::pos 실제로/MAG 역대/NNG 메이저리그/NNG 최고액/NNG 계약/NNG 사례/NNG 10/SN+명/NNB 중/NNB+에서/JKB 투수/NNG+는/JX 두/MMN 명/NNB+밖에/JX 없/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (12 / 없다.~w.12
     :dep.AP (1 / 실제로~w.1)
     :dep.NP_SBJ (9 / cv_sports_position~w.9
@@ -242,7 +242,7 @@ None
 # ::id NWRW1800000033.98.13.1
 # ::snt 특히 부부의 사찰 태교여행을 위해서 가장 중요한 조건은 임신부를 위한 편안한 숙소다.
 # ::pos 특히/MAG 부부/NNG+의/JKG 사찰/NNG 태교/NNG+여행/NNG+을/JKO 위하/VV+아서/EC 가장/MAG 중요/NNG+하/XSA+ㄴ/ETM 조건/NNG+은/JX 임신부/NNG+를/JKO 위하/VV+ㄴ/ETM 편안/NNG+하/XSA+ㄴ/ETM 숙소/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (12 / 숙소다.~w.12
     :dep.AP (1 / 특히~w.1)
     :dep.NP_SBJ (8 / 조건은~w.8
@@ -286,7 +286,7 @@ None
 # ::id NWRW1800000044.203.9.1
 # ::snt 아버지는 체육관 불이 꺼지기 전 딸의 소식을 들었다.
 # ::pos 아버지/NNG+는/JX 체육관/NNG 불/NNG+이/JKS 꺼지/VV+기/ETN 전/NNG 딸/NNG+의/JKG 소식/NNG+을/JKO 듣/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (8 / 들었다.~w.8
    :srl.ARG0 (1 / cv_relation~w.1
                 :name (n1 / name
@@ -327,7 +327,7 @@ None
 # ::id NWRW1800000030.333.6.9
 # ::snt 이런 결과를 가져온 데 대한 자책감을 느꼈다.
 # ::pos 이런/MMD 결과/NNG+를/JKO 가져오/VV+ㄴ/ETM 데/NNB 대하/VV+ㄴ/ETM 자책감/NNG+을/JKO 느끼/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (7 / 느꼈다.~w.7
    :srl.ARG1 (6 / 자책감을~w.6
                 :dep.VP_MOD (5 / 대한~w.5
@@ -362,7 +362,7 @@ None
 # ::id NWRW1800000026.182.11.2
 # ::snt 객관적인 자료가 있어야 모두가 평가를 인정하지 않겠는가.
 # ::pos 객관/NNG+적/XSN+이/VCP+ㄴ/ETM 자료/NNG+가/JKS 있/VA+어야/EC 모두/NNG+가/JKS 평가/NNG+를/JKO 인정/NNG+하/XSV+지/EC 않/VX+겠/EP+는가/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 ((6, 7) / 인정하지_않겠는가.~w.6,7
         :dep.VP (3 / 있어야~w.3
                    :srl.ARG1 (2 / 자료가~w.2
@@ -411,7 +411,7 @@ None
 # ::id NWRW1800000025.49.3.4
 # ::snt 언제 위기가 닥칠지 모르는 모래탑의 모습은 늘 위험에 직면한 현대인과 비슷하다.
 # ::pos 언제/MAG 위기/NNG+가/JKS 닥치/VV+ㄹ지/EF 모르/VV+는/ETM 모래/NNG+탑/NNG+의/JKG 모습/NNG+은/JX 늘/MAG 위험/NNG+에/JKB 직면/NNG+하/XSV+ㄴ/ETM 현대인/NNG+과/JKB 비슷하/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (11 / 비슷하다.~w.11
     :srl.ARG1 (6 / 모습은~w.6
                  :dep.VP_MOD ((3, 4) / 닥칠지_모르는~w.3,4
@@ -459,7 +459,7 @@ None
 # ::id NWRW1800000021.221.4.2
 # ::snt 일단 공연장의 크기가 달라지면 무대 세트와 조명이 국내 공연장에 맞게 바뀝니다.
 # ::pos 일단/MAG 공연장/NNG+의/JKG 크기/NNG+가/JKS 달라지/VV+면/EC 무대/NNG 세트/NNG+와/JC 조명/NNG+이/JKS 국내/NNG 공연장/NNG+에/JKB 맞/VV+게/EC 바뀌/VV+ㅂ니다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (11 / 바뀝니다.~w.11
     :srl.ARGM-CND (4 / 달라지면~w.4
                      :srl.ARGM-ADV 1
@@ -500,7 +500,7 @@ None
 # ::id NWRW1800000030.304.7.5
 # ::snt K영사는 덩씨로부터 상하이엑스포 때 전폭적인 지원을 받았다.
 # ::pos K/SL+영사/NNG+는/JX 덩/NNP+씨/NNB+로부터/JKB 상하이/NNP+엑스포/NNG 때/NNG 전폭/NNG+적/XSN+이/VCP+ㄴ/ETM 지원/NNG+을/JKO 받/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (7 / 받았다.~w.7
    :srl.ARG0 (1 / cv_position~w.1
                 :name (n1 / name
@@ -549,7 +549,7 @@ None
 # ::id NWRW1800000033.258.3.1
 # ::snt 프로야구선수협회가 제10구단 창단을 서두르라며 목소리를 높이기 시작했다.
 # ::pos 프로야구선수협회/NNP+가/JKS 제/XPN+10/SN+구단/NNG 창단/NNG+을/JKO 서두르/VV+라며/EC 목소리/NNG+를/JKO 높이/VV+기/ETN 시작/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 ((6, 7) / 높이기_시작했다.~w.6,7
         :srl.ARGM-CND (4 / 서두르라며~w.4
                          :dep.NP_SBJ 1
@@ -589,7 +589,7 @@ None
 # ::id NWRW1800000037.257.3.3
 # ::snt 이날 경기장을 찾은 관중은 3만6476명.
 # ::pos 이날/NNG 경기장/NNG+을/JKO 찾/VV+은/ETM 관중/NNG+은/JX 3/SN+만/NR+6476/SN+명/NNB+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (5 / qt_man_count~w.5
    :name (n2 / name
              :op1 "3만6476명")
@@ -624,7 +624,7 @@ None
 # ::id NWRW1800000054.307.2.6
 # ::snt 앞서 기자협회·SBS의 후보 토론회도 11%였다.
 # ::pos 앞서/MAG 기자협회/NNP+·/SP+SBS/SL+의/JKG 후보/NNG 토론회/NNG+도/JX 11/SN+%/SW+이/VCP+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (5 / qt_percentage~w.5
    :name (n4 / name
              :op1 "11%")
@@ -670,7 +670,7 @@ None
 # ::id NWRW1800000038.407.4.4
 # ::snt 이 논란은 1988년 헌재가 창립될 때부터 시작됐다.
 # ::pos 이/MMD 논란/NNG+은/JX 1988/SN+년/NNB 헌재/NNG+가/JKS 창립/NNG+되/XSV+ㄹ/ETM 때/NNG+부터/JX 시작/NNG+되/XSV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (7 / 시작됐다.~w.7
    :srl.ARG1 (2 / 논란은~w.2
                 :dep.DP (1 / 이~w.1))
@@ -715,7 +715,7 @@ None
 # ::id NWRW1800000026.120.58.7
 # ::snt 하지만 똑똑한 기업은 바로 이 시기에 이노베이션을 시작합니다.
 # ::pos 하지만/MAJ 똑똑하/VA+ㄴ/ETM 기업/NNG+은/JX 바로/MAG 이/MMD 시기/NNG+에/JKB 이노베이션/NNG+을/JKO 시작/NNG+하/XSV+ㅂ니다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (8 / 시작합니다.~w.8
    :dep.AP (1 / 하지만~w.1)
    :srl.ARG0 (3 / 기업은~w.3
@@ -756,7 +756,7 @@ None
 # ::id NWRW1800000041.94.9.3
 # ::snt 수도권 최대 규모인 3700개 기업과의 산학협력을 통해 산학 밀착형 교육을 실시하고 있다.
 # ::pos 수도/NNG+권/XSN 최대/NNG 규모/NNG+이/VCP+ㄴ/ETM 3700/SN+개/NNB 기업/NNG+과/JKB+의/JKG 산학/NNG+협력/NNG+을/JKO 통하/VV+아/EC 산학/NNG 밀착/NNG+형/XSN 교육/NNG+을/JKO 실시/NNG+하/XSV+고/EC 있/VX+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 ((11, 12) / 실시하고_있다.~w.11,12
           :srl.ARG1 (10 / 교육을~w.10
                         :dep.NP (9 / 밀착형~w.9
@@ -815,7 +815,7 @@ None
 # ::id NWRW1800000029.170.7.9
 # ::snt 다만 인물을 논할 때 저자가 좀 더 담담하게 썼더라면 하는 아쉬움.
 # ::pos 다만/MAG 인물/NNG+을/JKO 논하/VV+ㄹ/ETM 때/NNG 저자/NNG+가/JKS 좀/MAG 더/MAG 담담하/VA+게/EC 쓰/VV+었/EP+더라면/EC 하/VV+는/ETM 아쉬움/NNG+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (11 / 아쉬움.~w.11
     :dep.VP_MOD (10 / 하는~w.10
                     :srl.ARGM-ADV (7 / 더~w.7
@@ -858,7 +858,7 @@ None
 # ::id NWRW1800000048.23.5.2
 # ::snt 30대 그룹간 양극화 현상이 심화되고 있음을 보여준다.
 # ::pos 30/SN+대/NNG 그룹/NNG+간/NNB 양극/NNG+화/XSN 현상/NNG+이/JKS 심화/NNG+되/XSV+고/EC 있/VX+음/ETN+을/JKO 보이/VV+어/EC+주/VX+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (7 / 보여준다.~w.7
    :srl.ARG1 ((5, 6) / 심화되고_있음을~w.5,6
                      :srl.ARG1 (4 / 현상이~w.4
@@ -901,7 +901,7 @@ None
 # ::id NWRW1800000022.7.3.1
 # ::snt 지난해 초만 해도 그는 소속 팀 방출 명단에 올라 있었다.
 # ::pos 지난해/NNG 초/NNB+만/JX 하/VV+아도/EC 그/NP+는/JX 소속/NNG 팀/NNG 방출/NNG 명단/NNG+에/JKB 오르/VV+아/EC 있/VX+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 ((9, 10) / 올라_있었다.~w.9,10
          :srl.ARG1 (4 / 그는~w.4)
          :srl.ARG2 (8 / 명단에~w.8
@@ -939,7 +939,7 @@ None
 # ::id NWRW1800000022.109.6.1
 # ::snt ◆필리핀 수비크 조선소 운영으로 대량 수주 가능해져
 # ::pos ◆/SW+필리핀/NNP 수비크/NNP 조선소/NNG 운영/NNG+으로/JKB 대량/NNG 수주/NNG 가능/NNG+하/XSA+아/EC+지/VX+어/EF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (7 / 가능해져~w.7
    :dep.NP_AJT (4 / 운영으로~w.4
                   :dep.NP ((2, 3) / ogg_economy~w.2,3
@@ -980,7 +980,7 @@ None
 # ::id NWRW1800000030.65.6.3
 # ::snt 섬세하게 저울질한 균형감이 필요했다.
 # ::pos 섬세하/VA+게/EC 저울/NNG+질/XSN+하/XSV+ㄴ/ETM 균형감/NNG+이/JKS 필요/NNG+하/XSA+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (4 / 필요했다.~w.4
    :srl.ARG1 (3 / 균형감이~w.3
                 :srl.ARG1-of (2 / 저울질한~w.2
@@ -1024,7 +1024,7 @@ None
 # ::id NWRW1800000029.380.6.2
 # ::snt 여권 일각에서 대안으로 제시되는 김황식 국무총리의 지지율은 0.7%에 그쳤다.
 # ::pos 여권/NNG 일각/NNG+에서/JKB 대안/NNG+으로/JKB 제시/NNG+되/XSV+는/ETM 김황식/NNP 국무총리/NNG+의/JKG 지지/NNG+율/XSN+은/JX 0/SN+./SP+7/SN+%/SW+에/JKB 그치/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (9 / 그쳤다.~w.9
    :srl.ARG1 (7 / 지지율은~w.7
                 :dep.NP_MOD (6 / cv_position~w.6
@@ -1067,16 +1067,15 @@ None
 # ::id NWRW1800000037.302.8.7
 # ::snt 한마디로 늦게 낼수록 이득인 게 추징금이다.
 # ::pos 한마디/NNG+로/JKB 늦/VA+게/EC 내/VV+ㄹ수록/EC 이득/NNG+이/VCP+ㄴ/ETM 거/NNB+이/JKS 추징금/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (6 / cv_law~w.6
    :name (n1 / name
              :op1 "추징금")
    :wiki -
-   :dep.NP_SBJ (5 / 게~w.5
-                  :dep.VNP_MOD (4 / 이득인~w.4
-                                  :dep.NP_AJT (1 / 한마디로~w.1)
-                                  :dep.VP (3 / 낼수록~w.3
-                                             :dep.VP_AJT (2 / 늦게~w.2)))))
+   :dep.NP_SBJ ((4, 5) / 이득인_게~w.4,5
+                       :dep.NP_AJT (1 / 한마디로~w.1)
+                       :dep.VP (3 / 낼수록~w.3
+                                  :dep.VP_AJT (2 / 늦게~w.2))))
 
 
 
@@ -1156,7 +1155,7 @@ None
 # ::id NWRW1800000038.439.3.2
 # ::snt 삼성전자에서 반도체 사업을 이끌었던 경영자가 국내 최대 통신기업 KT를 이끌게 된 것이다.
 # ::pos 삼성전자/NNP+에서/JKB 반도체/NNG 사업/NNG+을/JKO 이끌/VV+었/EP+던/ETM 경영자/NNG+가/JKS 국내/NNG 최대/NNG 통신/NNG+기업/NNG KT/SL+를/JKO 이끌/VV+게/EC 되/VV+ㄴ/ETM 것/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 ((10, 11, 12) / 이끌게_된_것이다.~w.10,11,12
               :srl.ARG0 (5 / cv_position~w.5
                            :name (n3 / name
@@ -1208,7 +1207,7 @@ None
 # ::id NWRW1800000038.413.6.2
 # ::snt 소득 상위 30%는 현행 기초노령연금처럼 기초연금 지급 대상에서 제외된다.
 # ::pos 소득/NNG 상위/NNG 30/SN+%/SW+는/JX 현행/NNG 기초/NNG+노령/NNG+연금/NNG+처럼/JKB 기초/NNG+연금/NNG 지급/NNG 대상/NNG+에서/JKB 제외/NNG+되/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (9 / 제외된다.~w.9
    :dep.NP_AJT (5 / cv_funds~w.5
                   :name (n2 / name
@@ -1259,7 +1258,7 @@ None
 # ::id NWRW1800000038.353.5.1
 # ::snt 추경 규모가 당초 예상보다 늘어난 것은 세입에 구멍이 크게 뚫렸기 때문이다.
 # ::pos 추경/NNG 규모/NNG+가/JKS 당초/NNG 예상/NNG+보다/JKB 늘어나/VV+ㄴ/ETM 것/NNB+은/JX 세입/NNG+에/JKB 구멍/NNG+이/JKS 크/VA+게/EC 뚫리/VV+었/EP+기/ETN 때문/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 ((10, 11) / 뚫렸기_때문이다.~w.10,11
           :srl.ARGM-TMP (7 / 세입에~w.7)
           :srl.ARG1 (8 / 구멍이~w.8)
@@ -1307,7 +1306,7 @@ None
 # ::id NWRW1800000046.147.5.6
 # ::snt 여객기는 결국 활주로를 남쪽으로 벗어나 오던 방향과 역방향으로 멈춰 섰다.
 # ::pos 여객기/NNG+는/JX 결국/MAG 활주로/NNG+를/JKO 남쪽/NNG+으로/JKB 벗어나/VV+아/EC 오/VX+던/ETM 방향/NNG+과/JC 역방향/NNG+으로/JKB 멈추/VV+어/EC 서/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (10 / 섰다.~w.10
     :srl.ARG1 (9 / 멈춰~w.9
                  :srl.ARG0 1
@@ -1357,7 +1356,7 @@ None
 # ::id NWRW1800000048.257.14.2
 # ::snt 집에 있으면 막내딸의 빈자리가 너무 크게 느껴졌기 때문이라고 한다.
 # ::pos 집/NNG+에/JKB 있/VA+으면/EC 막내딸/NNG+의/JKG 빈자리/NNG+가/JKS 너무/MAG 크/VA+게/EC 느끼/VV+어/EC+지/VX+었/EP+기/ETN 때문/NNB+이/VCP+라고/EC 하/VV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (9 / 한다.~w.9
    :srl.ARG2 ((7, 8) / 느껴졌기_때문이라고~w.7,8
                      :srl.ARGM-CND (2 / 있으면~w.2
@@ -1406,7 +1405,7 @@ None
 # ::id NWRW1800000030.269.4.6
 # ::snt 그나마 보는 사람들의 속이라도 시원해졌다면 다행이겠지만 속 시원하지도 않다.
 # ::pos 그나마/MAG 보/VV+는/ETM 사람/NNG+들/XSN+의/JKG 속/NNG+이/VCP+라도/EC 시원하/VA+아/EC+지/VX+었/EP+다면/EC 다행/NNG+이/VCP+겠/EP+지만/EC 속/NNG 시원하/VA+지/EC+도/JX 않/VX+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (9 / 않다.~w.9
    :srl.ARGM-NEG-of (2 / 보는~w.2
                        :srl.ARG0 (3 / 사람들의~w.3))
@@ -1452,7 +1451,7 @@ None
 # ::id NWRW1800000033.399.5.1
 # ::snt 하지만 실태조사를 두고 해당 사업장에서는 벌써부터 찬반 논란이 분분하다.
 # ::pos 하지만/MAJ 실태/NNG+조사/NNG+를/JKO 두/VV+고/EC 해당/NNG 사업장/NNG+에서/JKB+는/JX 벌써/MAG+부터/JX 찬반/NNG 논란/NNG+이/JKS 분분하/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (9 / 분분하다.~w.9
    :srl.ARGM-DIS (1 / 하지만~w.1)
    :dep.NP_AJT (5 / 사업장에서는~w.5
@@ -1486,7 +1485,7 @@ None
 # ::id NWRW1800000021.319.1.1
 # ::snt 내년 G20 의제는 거시 공조 + 지속가능 성장
 # ::pos 내년/NNG G/SL+20/SN 의제/NNG+는/JX 거시/NNG 공조/NNG +/SW 지속/NNG+가능/NNG 성장/NNG
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (8 / 성장~w.8
    :dep.NP_SBJ (3 / 의제는~w.3
                   :dep.NP (1 / dt_year~w.1
@@ -1536,7 +1535,7 @@ None
 # ::id NWRW1800000032.237.6.2
 # ::snt 이 전 교수는 다음달 1일 에티오피아 국립 아다마대학교 총장에 취임한다.
 # ::pos 이/NNP 전/MMD 교수/NNG+는/JX 다음/NNG+달/NNG 1/SN+일/NNB 에티오피아/NNP 국립/NNG 아다마대학교/NNP 총장/NNG+에/JKB 취임/NNG+하/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (10 / 취임한다.~w.10
     :srl.ARG0 (3 / cv_occupation~w.3
                  :name (n2 / name
@@ -1598,7 +1597,7 @@ None
 # ::id NWRW1800000038.329.3.2
 # ::snt 이르면 내년부터 시행하도록 올해 상반기에 입법하겠다는 것이다.
 # ::pos 이르/VA+면/EC 내년/NNG+부터/JX 시행/NNG+하/XSV+도록/EC 올해/NNG 상반기/NNG+에/JKB 입법/NNG+하/XSV+겠/EP+다는/ETM 것/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 ((6, 7) / 입법하겠다는_것이다.~w.6,7
         :dep.VP (3 / 시행하도록~w.3
                    :dep.VP (1 / 이르면~w.1)
@@ -1681,7 +1680,7 @@ None
 # ::id NWRW1800000037.117.5.1
 # ::snt 이 서점에서 판매하는 자가출판서만 50종이 넘는다.
 # ::pos 이/MMD 서점/NNG+에서/JKB 판매/NNG+하/XSV+는/ETM 자가/NNG+출판서/NNG+만/JX 50/SN+종/NNG+이/JKS 넘/VV+는다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (6 / 넘는다.~w.6
    :srl.ARG0 (4 / 자가출판서만~w.4
                 :srl.ARG1-of (3 / 판매하는~w.3
@@ -1731,19 +1730,18 @@ None
 # ::id NWRW1800000021.9.18.7
 # ::snt 그녀는 자신의 염원이 에너지로 변해 모든 이에게 전달될 거라고 굳게 믿는다.
 # ::pos 그녀/NP+는/JX 자신/NNG+의/JKG 염원/NNG+이/JKS 에너지/NNG+로/JKB 변하/VV+아/EC 모든/MMN 이/NP+에게/JKB 전달/NNG+되/XSV+ㄹ/ETM 거/NNB+이/VCP+라고/EC 굳/VA+게/EC 믿/VV+는다/EF+./SF
-# ::update 2023-01-18T23:45:17
+# ::update 2023-01-20T18:18:38
 (11 / 믿는다.~w.11
     :srl.ARG0 (1 / 그녀는~w.1)
-    :srl.ARG1 (9 / 거라고~w.9
-                 :dep.VP_MOD (8 / 전달될~w.8
-                                :srl.ARG1 (3 / 염원이~w.3
-                                             :dep.NP_MOD (2 / 자신의~w.2)
-                                             :srl.ARG1-of (5 / 변해~w.5
-                                                             :srl.ARG3 (4 / 에너지로~w.4)
-                                                             :dep.VP-of 8))
-                                :srl.ARG2 (7 / 이에게~w.7
-                                             :dep.DP (6 / 모든~w.6))))
-    :srl.ARGM-MNR (10 / 굳게~w.10))
+    :srl.ARGM-MNR (10 / 굳게~w.10)
+    :srl.ARG1 ((8, 9) / 전달될_거라고~w.8,9
+                      :srl.ARG1 (3 / 염원이~w.3
+                                   :dep.NP_MOD (2 / 자신의~w.2)
+                                   :srl.ARG1-of (5 / 변해~w.5
+                                                   :srl.ARG3 (4 / 에너지로~w.4)))
+                      :dep.VP 5
+                      :srl.ARG2 (7 / 이에게~w.7
+                                   :dep.DP (6 / 모든~w.6))))
 
 
 
@@ -1766,7 +1764,7 @@ None
 # ::id NWRW1800000033.59.2.1
 # ::snt 美대학 연구팀들 뇌질환 징후 포착에 활용
 # ::pos 美/SH+대학/NNG 연구/NNG+팀/NNG+들/XSN 뇌/NNG+질환/NNG 징후/NNG 포착/NNG+에/JKB 활용/NNG
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (6 / 활용~w.6
    :dep.NP (2 / 연구팀들~w.2
               :dep.NP (1 / lcp_country~w.1
@@ -1801,7 +1799,7 @@ None
 # ::id NWRW1800000022.244.3.1
 # ::snt ◆노키아·퀄컴 등 글로벌 회사로부터 로열티
 # ::pos ◆/SW+노키아/NNP+·/SP+퀄컴/NNP 등/NNB 글로벌/NNG 회사/NNG+로부터/JKB 로열티/NNG
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (5 / 로열티~w.5
    :dep.NP_AJT (4 / 회사로부터~w.4
                   :dep.NP ((1, 2) / ogg_economy~w.1,2
@@ -1847,7 +1845,7 @@ None
 # ::id NWRW1800000026.204.82.2
 # ::snt 생활은 늘 어려웠고 의지할 곳이라곤 없는 힘든 삶이었어요.
 # ::pos 생활/NNG+은/JX 늘/MAG 어렵/VA+었/EP+고/EC 의지/NNG+하/XSV+ㄹ/ETM 곳/NNG+이/VCP+라고/EC+ㄴ/JX 없/VA+는/ETM 힘들/VA+ㄴ/ETM 삶/NNG+이/VCP+었/EP+어요/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (8 / 삶이었어요.~w.8
    :srl.ARG1-of (7 / 힘든~w.7
                    :dep.VP_MOD (6 / 없는~w.6
@@ -1884,7 +1882,7 @@ None
 # ::id NWRW1800000033.239.3.1
 # ::snt 마치 시계를 10년 전으로 되돌린 것 같았다.
 # ::pos 마치/MAG 시계/NNG+를/JKO 10/SN+년/NNB 전/NNG+으로/JKB 되돌리/VV+ㄴ/ETM 것/NNB 같/VA+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((5, 6, 7) / 되돌린_것_같았다.~w.5,6,7
            :dep.AP (1 / 마치~w.1)
            :srl.ARG1 (2 / 시계를~w.2)
@@ -1917,7 +1915,7 @@ None
 # ::id NWRW1800000040.57.10.5
 # ::snt 아직도 론스타의 망령은 사라지지 않았다.
 # ::pos 아직/MAG+도/JX 론스타/NNP+의/JKG 망령/NNG+은/JX 사라지/VV+지/EC 않/VX+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((4, 5) / 사라지지_않았다.~w.4,5
         :srl.ARGM-TMP (1 / 아직도~w.1)
         :srl.ARG1 (3 / 망령은~w.3
@@ -1958,7 +1956,7 @@ None
 # ::id NWRW1800000022.457.5.2
 # ::snt 문화부는 내년 말까지 이와 관련된 법적 규제 도입을 추진한다는 계획이다.
 # ::pos 문화부/NNG+는/JX 내년/NNG 말/NNB+까지/JX 이/NP+와/JKB 관련/NNG+되/XSV+ㄴ/ETM 법/NNG+적/XSN 규제/NNG 도입/NNG+을/JKO 추진/NNG+하/XSV+ㄴ다는/ETM 계획/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((9, 10) / 추진한다는_계획이다.~w.9,10
          :dep.NP_SBJ (1 / ogg_politics~w.1
                         :name (n1 / name
@@ -2006,15 +2004,14 @@ None
 # ::id NWRW1800000041.252.4.8
 # ::snt 살을 뺐다고 민첩해졌다거나 점프가 많이 나온다는 건 아니다.
 # ::pos 살/NNG+을/JKO 빼/VV+었/EP+다고/EC 민첩하/VA+아/EC+지/VX+었/EP+다/EF+거나/JX 점프/NNG+가/JKS 많이/MAG 나오/VV+ㄴ다는/ETM 거/NNB+ㄴ/JX 아니/VCN+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (8 / 아니다.~w.8
-   :srl.ARG1 (7 / 건~w.7
-                :dep.VP_MOD (6 / 나온다는~w.6
-                               :dep.VP (2 / 뺐다고~w.2
-                                          :srl.ARG1 (1 / 살을~w.1))
-                               :dep.VP_AJT (3 / 민첩해졌다거나~w.3)
-                               :srl.ARG0 (4 / 점프가~w.4)
-                               :srl.ARGM-EXT (5 / 많이~w.5))))
+   :srl.ARG1 ((6, 7) / 나온다는_건~w.6,7
+                     :dep.VP (2 / 뺐다고~w.2
+                                :srl.ARG1 (1 / 살을~w.1))
+                     :dep.VP_AJT (3 / 민첩해졌다거나~w.3)
+                     :srl.ARG0 (4 / 점프가~w.4)
+                     :srl.ARGM-EXT (5 / 많이~w.5)))
 
 
 
@@ -2034,7 +2031,7 @@ None
 # ::id NWRW1800000026.23.3.3
 # ::snt 청중은 50~60대 이상이 대부분이었다.
 # ::pos 청중/NNG+은/JX 50/SN+~/SO+60/SN+대/NNB 이상/NNG+이/JKS 대/XPN+부분/NNG+이/VCP+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (4 / 대부분이었다.~w.4
    :dep.NP_SBJ (1 / 청중은~w.1)
    :dep.NP_MOD ((2, 3) / qt_age~w.2,3
@@ -2073,7 +2070,7 @@ None
 # ::id NWRW1800000025.368.3.4
 # ::snt 이 때문에 영국 정부는 이곳의 보안에 신경을 크게 쓰고 있다.
 # ::pos 이/NP 때문/NNB+에/JKB 영국/NNP 정부/NNG+는/JX 이곳/NP+의/JKG 보안/NNG+에/JKB 신경/NNG+을/JKO 크/VA+게/EC 쓰/VV+고/EC 있/VX+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((9, 10) / 쓰고_있다.~w.9,10
          :srl.ARG0 (4 / ogg_politics~w.4
                       :name (n2 / name
@@ -2116,7 +2113,7 @@ None
 # ::id NWRW1800000030.187.15.1
 # ::snt 이 지역에 CCTV가 부족한 것은 주민 상당수가 전세 거주자이기 때문이다.
 # ::pos 이/MMD 지역/NNG+에/JKB CCTV/SL+가/JKS 부족/NNG+하/XSA+ㄴ/ETM 것/NNB+은/JX 주민/NNG 상당수/NNG+가/JKS 전세/NNG 거주자/NNG+이/VCP+기/ETN 때문/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((9, 10) / 거주자이기_때문이다.~w.9,10
          :dep.NP_SBJ (7 / 상당수가~w.7
                         :dep.NP (6 / 주민~w.6))
@@ -2164,7 +2161,7 @@ None
 # ::id NWRW1800000022.259.15.4
 # ::snt 일본에서는 인력파견업체들이 일용직 노동자가 일을 나간 날 도장을 찍어 준다.
 # ::pos 일본/NNP+에서/JKB+는/JX 인력/NNG+파견/NNG+업체/NNG+들/XSN+이/JKS 일용직/NNG 노동자/NNG+가/JKS 일/NNG+을/JKO 나가/VV+ㄴ/ETM 날/NNG 도장/NNG+을/JKO 찍/VV+어/EC 주/VX+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((9, 10) / 찍어_준다.~w.9,10
          :dep.NP_AJT (1 / lcp_country~w.1
                         :name (n1 / name
@@ -2205,7 +2202,7 @@ None
 # ::id NWRW1800000038.324.3.4
 # ::snt 그 근거로 제시된 것이 김의 유학 경험이었다.
 # ::pos 그/MMD 근거/NNG+로/JKB 제시/NNG+되/XSV+ㄴ/ETM 것/NNB+이/JKS 김/NNP+의/JKG 유학/NNG 경험/NNG+이/VCP+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (7 / 경험이었다.~w.7
    :dep.NP_MOD (5 / 김의~w.5)
    :dep.NP (6 / 유학~w.6)
@@ -2239,7 +2236,7 @@ None
 # ::id NWRW1800000033.197.3.3
 # ::snt 본인이 억울하다고 생각할 만한 사례일까.
 # ::pos 본인/NNG+이/JKS 억울/NNG+하/XSA+다고/EC 생각/NNG+하/XSV+ㄹ/ETM 만/NNB+하/XSA+ㄴ/ETM 사례/NNG+이/VCP+ㄹ까/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (5 / 사례일까.~w.5
    :dep.VP_MOD ((3, 4) / 생각할_만한~w.3,4
                        :srl.ARG1 (2 / 억울하다고~w.2
@@ -2280,7 +2277,7 @@ None
 # ::id NWRW1800000041.373.5.2
 # ::snt 지하 750m 암반에서 산 정상으로 뿜어져 나오는 천연 온천수로 유명하다.
 # ::pos 지하/NNG 750/SN+m/SW 암반/NNG+에서/JKB 산/NNG 정상/NNG+으로/JKB 뿜/VV+어/EC+지/VX+어/EC 나오/VV+는/ETM 천연/NNG 온천수/NNG+로/JKB 유명/NNG+하/XSA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (10 / 유명하다.~w.10
     :dep.NP_AJT (9 / 온천수로~w.9
                    :dep.VP_MOD (7 / 나오는~w.7
@@ -2324,7 +2321,7 @@ None
 # ::id NWRW1800000038.357.5.1
 # ::snt 법무부에 따르면 지난달 말 현재 국내 체류 중인 외국인 숫자는 147만873명이다.
 # ::pos 법무부/NNG+에/JKB 따르/VV+면/EC 지난달/NNG 말/NNB 현재/MAG 국내/NNG 체류/NNG 중/NNB+이/VCP+ㄴ/ETM 외국인/NNG 숫자/NNG+는/JX 147/SN+만/NR+873/SN+명/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (11 / qt_man_count~w.11
     :name (n3 / name
               :op1 "147만873명")
@@ -2377,7 +2374,7 @@ None
 # ::id NWRW1800000038.307.7.2
 # ::snt 이제 와선 양적 완화 자체가 수단이 아니라 신성불가침의 목적이 돼버렸다.
 # ::pos 이제/MAG 오/VV+아서/EC+ㄴ/JX 양/NNG+적/XSN 완화/NNG 자체/NNG+가/JKS 수단/NNG+이/JKC 아니/VCN+라/EC 신성불가침/NNG+의/JKG 목적/NNG+이/JKC 되/VV+어/EC+버리/VX+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (10 / 돼버렸다.~w.10
     :dep.VP (2 / 와선~w.2
                :srl.ARGM-TMP (1 / 이제~w.1))
@@ -2421,7 +2418,7 @@ None
 # ::id NWRW1800000030.253.3.1
 # ::snt 시민들은 일상으로 빠르게 복귀하고 있지만 불안은 여전하다.
 # ::pos 시민/NNG+들/XSN+은/JX 일상/NNG+으로/JKB 빠르/VA+게/EC 복귀/NNG+하/XSV+고/EC 있/VX+지만/EC 불안/NNG+은/JX 여전하/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (7 / 여전하다.~w.7
    :srl.ARG1 (6 / 불안은~w.6)
    :srl.ARG0 ((4, 5) / 복귀하고_있지만~w.4,5
@@ -2460,7 +2457,7 @@ None
 # ::id NWRW1800000026.376.15.4
 # ::snt 매년 이 정도의 성장이 일어나고 있다고 추정된다.
 # ::pos 매년/MAG 이/MMD 정도/NNG+의/JKG 성장/NNG+이/JKS 일어나/VV+고/EC 있/VX+다고/EC 추정/NNG+되/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (7 / 추정된다.~w.7
    :srl.ARGM-TMP (1 / 매년~w.1)
    :srl.ARG0 ((5, 6) / 일어나고_있다고~w.5,6
@@ -2497,7 +2494,7 @@ None
 # ::id NWRW1800000021.347.2.4
 # ::snt 이 위원장은 은평을에서 3선 의원을 지냈다.
 # ::pos 이/NNP 위원장/NNG+은/JX 은평을/NNP+에서/JKB 3/SN+선/NNB 의원/NNG+을/JKO 지내/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (6 / 지냈다.~w.6
    :srl.ARG0 (2 / cv_position~w.2
                 :name (n2 / name
@@ -2585,17 +2582,7 @@ None
 []
 <ZALayer → id: "NWRW1800000021.235.5.2" (Sentence), items: 0>
 []
-# ::id NWRW1800000021.235.5.2
-# ::snt 스포일러가 될 수 있는 영화의 하이라이트를 보여주지 않는 것은 기본.
-# ::pos 스포일러/NNG+가/JKC 되/VV+ㄹ/ETM 수/NNB 있/VA+는/ETM 영화/NNG+의/JKG 하이라이트/NNG+를/JKO 보이/VV+어/EC+주/VX+지/EC 않/VX+는/ETM 것/NNB+은/JX 기본/NNG+./SF
-# ::update 2023-01-18T23:45:18
-(10 / 기본.~w.10
-    :dep.NP_SBJ ((7, 8, 9) / 보여주지_않는_것은~w.7,8,9
-                           :srl.ARGM-AUX-of ((2, 3, 4) / 될_수_있는~w.2,3,4
-                                                       :srl.ARG2 (1 / 스포일러가~w.1)
-                                                       :srl.ARG1 6)
-                           :srl.ARG1 (6 / 하이라이트를~w.6
-                                        :dep.NP_MOD (5 / 영화의~w.5))))
+None
 
 
 
@@ -2634,7 +2621,7 @@ None
 # ::id NWRW1800000038.378.9.4
 # ::snt 이제 들뜬 마음을 가라앉히고 차분하게 회담을 준비할 때다.
 # ::pos 이제/MAG 들뜨/VV+ㄴ/ETM 마음/NNG+을/JKO 가라앉히/VV+고/EC 차분하/VA+게/EC 회담/NNG+을/JKO 준비/NNG+하/XSV+ㄹ/ETM 때/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((7, 8) / 준비할_때다.~w.7,8
         :dep.VP (4 / 가라앉히고~w.4
                    :srl.ARGM-TMP 1
@@ -2675,7 +2662,7 @@ None
 # ::id NWRW1800000022.20.2.3
 # ::snt 여야 모두 대안 마련보다는 또 다른 충돌을 준비한다는 지적도 있다.
 # ::pos 여야/NNG 모두/MAG 대안/NNG 마련/NNG+보다/JKB+는/JX 또/MAG 다른/MMD 충돌/NNG+을/JKO 준비/NNG+하/XSV+ㄴ다는/ETM 지적/NNG+도/JX 있/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (10 / 있다.~w.10
     :srl.ARG1 (9 / 지적도~w.9
                  :dep.VP_MOD (8 / 준비한다는~w.8
@@ -2725,7 +2712,7 @@ None
 # ::id NWRW1800000021.194.6.4
 # ::snt 장소별로 가장 어울리는 향기를 선택해 사용할 수 있다.
 # ::pos 장소/NNG+별/XSN+로/JKB 가장/MAG 어울리/VV+는/ETM 향기/NNG+를/JKO 선택/NNG+하/XSV+아/EC 사용/NNG+하/XSV+ㄹ/ETM 수/NNB 있/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((6, 7, 8) / 사용할_수_있다.~w.6,7,8
            :srl.ARGM-MNR (5 / 선택해~w.5
                             :srl.ARG1 4)
@@ -2767,7 +2754,7 @@ None
 # ::id NWRW1800000028.50.8.2
 # ::snt 북한의 핵 보유를 바라지 않으며 핵 보유를 인정하지도 않는다.
 # ::pos 북한/NNP+의/JKG 핵/NNG 보유/NNG+를/JKO 바라/VV+지/EC 않/VX+으며/EC 핵/NNG 보유/NNG+를/JKO 인정/NNG+하/XSV+지/EC+도/JX 않/VX+는다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (9 / 않는다.~w.9
    :srl.ARGM-AUX-of ((4, 5) / 바라지_않으며~w.4,5
                             :srl.ARG0 (3 / 보유를~w.3
@@ -2821,7 +2808,7 @@ None
 # ::id NWRW1800000024.66.3.1
 # ::snt 현재 태스크포스는 공석인 상무장관과 노동장관을 빼고 8명으로 구성됐다.
 # ::pos 현재/MAG 태스크포스/NNG+는/JX 공석/NNG+이/VCP+ㄴ/ETM 상무/NNG+장관/NNG+과/JC 노동/NNG+장관/NNG+을/JKO 빼/VV+고/EC 8/SN+명/NNB+으로/JKB 구성/NNG+되/XSV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (8 / 구성됐다.~w.8
    :dep.VP (6 / 빼고~w.6
               :dep.AP (1 / 현재~w.1)
@@ -2876,7 +2863,7 @@ None
 # ::id NWRW1800000029.256.6.7
 # ::snt 왼손잡이로 라이트 전문 공격수인 황연주만 온다면 공격의 세 축이 완성될 수 있었다.
 # ::pos 왼손잡이/NNG+로/JKB 라이트/NNG 전문/NNG 공격수/NNG+이/VCP+ㄴ/ETM 황연주/NNP+만/JX 오/VV+ㄴ다면/EC 공격/NNG+의/JKG 세/MMN 축/NNG+이/JKS 완성/NNG+되/XSV+ㄹ/ETM 수/NNB 있/VA+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((10, 11, 12) / 완성될_수_있었다.~w.10,11,12
               :dep.VP (6 / 온다면~w.6
                          :dep.NP_AJT (1 / 왼손잡이로~w.1)
@@ -2936,7 +2923,7 @@ None
 # ::id NWRW1800000033.198.2.2
 # ::snt A: 서버기록 남아 출석요구 가능 Q: 교복 입은 성인女 나와도 단속?
 # ::pos A/SL+:/SP 서버/NNG+기록/NNG 남/VV+아/EC 출석/NNG+요구/NNG 가능/NNG Q/SL+:/SP 교복/NNG 입/VV+은/ETM 성인/NNG+女/SH 나오/VV+아도/EC 단속/NNG+?/SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (11 / 단속?~w.11
     :dep.VP (10 / 나와도~w.10
                 :srl.ARG0 (9 / 성인女~w.9
@@ -3016,7 +3003,7 @@ None
 # ::id NWRW1800000038.244.5.1
 # ::snt 페더러는 세계적 권위를 자랑하는 4대 메이저 대회에서 통산 17번 1위를 했다.
 # ::pos 페더러/NNP+는/JX 세계/NNG+적/XSN 권위/NNG+를/JKO 자랑/NNG+하/XSV+는/ETM 4/SN+대/NNG 메이저/NNG 대회/NNG+에서/JKB 통산/NNG 17/SN+번/NNB 1/SN+위/NNB+를/JKO 하/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (11 / 했다.~w.11
     :srl.ARG0 (1 / ps_name~w.1
                  :name (n1 / name
@@ -3103,7 +3090,7 @@ None
 # ::id NWRW1800000033.305.5.2
 # ::snt 심지어 15∼19세의 22.7%도 폭탄주를 마셔본 적이 있다.
 # ::pos 심지어/MAG 15/SN+∼/SO+19/SN+세/NNB+의/JKG 22/SN+./SP+7/SN+%/SW+도/JX 폭탄주/NNG+를/JKO 마시/VV+어/EC+보/VX+ㄴ/ETM 적/NNB+이/JKS 있/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((5, 6, 7) / 마셔본_적이_있다.~w.5,6,7
            :dep.AP (1 / 심지어~w.1)
            :srl.ARG1 (3 / qt_percentage~w.3
@@ -3140,12 +3127,11 @@ None
 # ::id NWRW1800000045.311.5.1
 # ::snt 성별에 따른 고정관념은 길러지는 걸까.
 # ::pos 성별/NNG+에/JKB 따르/VV+ㄴ/ETM 고정/NNG+관념/NNG+은/JX 기르/VV+어/EC+지/VX+는/ETM 거/NNB+이/VCP+ㄹ까/EF+./SF
-# ::update 2023-01-18T23:45:18
-(5 / 걸까.~w.5
-   :dep.VP_MOD (4 / 길러지는~w.4
-                  :srl.ARG1 (3 / 고정관념은~w.3
-                               :dep.VP_MOD (2 / 따른~w.2
-                                              :dep.NP_AJT (1 / 성별에~w.1)))))
+# ::update 2023-01-20T18:18:38
+((4, 5) / 길러지는_걸까.~w.4,5
+        :srl.ARG1 (3 / 고정관념은~w.3
+                     :dep.VP_MOD (2 / 따른~w.2
+                                    :dep.NP_AJT (1 / 성별에~w.1))))
 
 
 
@@ -3191,7 +3177,7 @@ None
 # ::id NWRW1800000026.345.8.4
 # ::snt 한 좌를 오를 때 필요한 비용은 비행기 삯을 제외하고 약 5000달러 정도다.
 # ::pos 한/MMN 좌/NNB+를/JKO 오르/VV+ㄹ/ETM 때/NNG 필요/NNG+하/XSA+ㄴ/ETM 비용/NNG+은/JX 비행기/NNG 삯/NNG+을/JKO 제외/NNG+하/XSV+고/EC 약/MMA 5000/SN+달러/NNB 정도/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((10, 11, 12) / qt_price~w.10,11,12
               :name (n3 / name
                         :op1 "약"
@@ -3259,7 +3245,7 @@ None
 # ::id NWRW1800000033.272.3.2
 # ::snt 어린 초등학생을 때린 것에 책임을 지고 해당 교수는 교수직을 사임했다.
 # ::pos 어리/VA+ㄴ/ETM 초등학생/NNG+을/JKO 때리/VV+ㄴ/ETM 것/NNB+에/JKB 책임/NNG+을/JKO 지/VV+고/EC 해당/NNG 교수/NNG+는/JX 교수직/NNG+을/JKO 사임/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (10 / 사임했다.~w.10
     :dep.VP (6 / 지고~w.6
                :srl.ARG3 ((3, 4) / 때린_것에~w.3,4
@@ -3306,7 +3292,7 @@ None
 # ::id NWRW1800000049.369.7.3
 # ::snt 현재 저축은행에서 대출을 받으면 신용등급이 평균 1.7등급 내려간다.
 # ::pos 현재/MAG 저축/NNG+은행/NNG+에서/JKB 대출/NNG+을/JKO 받/VV+으면/EC 신용/NNG+등급/NNG+이/JKS 평균/NNG 1/SN+./SP+7/SN+등급/NNG 내려가/VV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (8 / 내려간다.~w.8
    :srl.ARGM-CND (4 / 받으면~w.4
                     :srl.ARGM-TMP (1 / 현재~w.1)
@@ -3345,7 +3331,7 @@ None
 # ::id NWRW1800000053.198.7.1
 # ::snt 가해 학생들은 그동안 수차례 재판부에 반성문을 제출했다.
 # ::pos 가해/NNG 학생/NNG+들/XSN+은/JX 그동안/NNG 수차례/NNG 재판부/NNG+에/JKB 반성문/NNG+을/JKO 제출/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (7 / 제출했다.~w.7
    :srl.ARG0 (2 / 학생들은~w.2
                 :dep.NP (1 / 가해~w.1))
@@ -3387,7 +3373,7 @@ None
 # ::id NWRW1800000028.420.4.2
 # ::snt 국방개혁선진화추진위원회에서 확정한 69개 국방개혁 과제를 추진하는 것도 그의 몫이다.
 # ::pos 국방/NNG+개혁/NNG+선진/NNG+화/XSN+추진/NNG+위원회/NNG+에서/JKB 확정/NNG+하/XSV+ㄴ/ETM 69/SN+개/NNB 국방/NNG+개혁/NNG 과제/NNG+를/JKO 추진/NNG+하/XSV+는/ETM 것/NNB+도/JX 그/NP+의/JKG 몫/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (9 / 몫이다.~w.9
    :dep.NP_MOD (8 / 그의~w.8)
    :dep.NP_SBJ ((6, 7) / 추진하는_것도~w.6,7
@@ -3441,7 +3427,7 @@ None
 # ::id NWRW1800000022.355.4.1
 # ::snt 아직 국내에서 생소한 이 카셰어링 제도가 15일부터 경기도 군포시에서 본격 시행된다.
 # ::pos 아직/MAG 국내/NNG+에서/JKB 생소하/VA+ㄴ/ETM 이/MMD 카셰어링/NNG 제도/NNG+가/JKS 15/SN+일/NNB+부터/JX 경기도/NNP 군포시/NNP+에서/JKB 본격/NNG 시행/NNG+되/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (11 / 시행된다.~w.11
     :srl.ARGM-TMP (1 / 아직~w.1)
     :srl.ARGM-TMP (7 / dt_others~w.7
@@ -3486,7 +3472,7 @@ None
 # ::id NWRW1800000032.368.3.1
 # ::snt 조건없이 대화하자면서 천안함 사과 계속 거부
 # ::pos 조건/NNG+없이/MAG 대화/NNG+하/XSV+자면서/EC 천안함/NNP 사과/NNG 계속/MAG 거부/NNG
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (6 / 거부~w.6
    :dep.VP (2 / 대화하자면서~w.2
               :dep.AP (1 / 조건없이~w.1))
@@ -3533,7 +3519,7 @@ None
 # ::id NWRW1800000026.168.2.2
 # ::snt 정서나 행동에 문제를 가진 아이가 급격히 늘어났다고 생각하지요.
 # ::pos 정서/NNG+나/JC 행동/NNG+에/JKB 문제/NNG+를/JKO 가지/VV+ㄴ/ETM 아이/NNG+가/JKS 급격히/MAG 늘어나/VV+았/EP+다고/EC 생각/NNG+하/XSV+지요/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (8 / 생각하지요.~w.8
    :srl.ARG0 (7 / 늘어났다고~w.7
                 :srl.ARG0 (5 / 아이가~w.5
@@ -3581,7 +3567,7 @@ None
 # ::id NWRW1800000021.381.7.1
 # ::snt 대림건설이 시공한 아파트 두 개 대단지가 다음 달 나란히 입주를 앞두고 있다.
 # ::pos 대림건설/NNP+이/JKS 시공/NNG+하/XSV+ㄴ/ETM 아파트/NNG 두/MMN 개/NNB 대/XPN+단지/NNG+가/JKS 다음/NNG 달/NNG 나란히/MAG 입주/NNG+를/JKO 앞두/VV+고/EC 있/VX+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((11, 12) / 앞두고_있다.~w.11,12
           :dep.NP_SBJ (6 / 대단지가~w.6
                          :dep.NP ((4, 5) / qt_count~w.4,5
@@ -3628,7 +3614,7 @@ None
 # ::id NWRW1800000049.115.5.3
 # ::snt 보통 한 차례 공연에서 5만∼10만 원을 받습니다.
 # ::pos 보통/MAG 한/MMN 차례/NNG 공연/NNG+에서/JKB 5/SN+만/NR+∼/SO+10/SN+만/NR 원/NNB+을/JKO 받/VV+습니다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (7 / 받습니다.~w.7
    :dep.AP (1 / 보통~w.1)
    :srl.ARG2 (4 / 공연에서~w.4
@@ -3671,7 +3657,7 @@ None
 # ::id NWRW1800000021.382.8.2
 # ::snt 볏짚에선 발효가 잘되게 하는 바실루스균이 산다.
 # ::pos 볏짚/NNG+에서/JKB+ㄴ/JX 발효/NNG+가/JKS 잘/MAG+되/XSV+게/EC 하/VX+는/ETM 바실루스/NNG+균/NNG+이/JKS 살/VV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (6 / 산다.~w.6
    :srl.ARG2 (1 / 볏짚에선~w.1)
    :srl.ARG0 (5 / mt_chemical~w.5
@@ -3720,7 +3706,7 @@ None
 # ::id NWRW1800000045.381.3.1
 # ::snt 8·25 남북 고위급 접촉 합의 이후 열린 첫 남북 접촉이 난항으로 이어졌다.
 # ::pos 8/SN+·/SP+25/SN 남북/NNP 고위급/NNG 접촉/NNG 합의/NNG 이후/NNG 열리/VV+ㄴ/ETM 첫/MMN 남북/NNP 접촉/NNG+이/JKS 난항/NNG+으로/JKB 이어지/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (12 / 이어졌다.~w.12
     :srl.ARG2 (10 / 접촉이~w.10
                   :srl.ARG1-of (7 / 열린~w.7
@@ -3769,7 +3755,7 @@ None
 # ::id NWRW1800000049.196.8.5
 # ::snt 사용법과 원리가 간단해 일반인도 활용하기 쉽다.
 # ::pos 사용법/NNG+과/JC 원리/NNG+가/JKS 간단하/VA+아/EC 일반인/NNG+도/JX 활용/NNG+하/XSV+기/ETN 쉽/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((5, 6) / 활용하기_쉽다.~w.5,6
         :srl.ARGM-CAU (3 / 간단해~w.3
                          :srl.ARG0 (2 / 원리가~w.2
@@ -3811,7 +3797,7 @@ None
 # ::id NWRW1800000046.231.6.3
 # ::snt 강정호는 12일부터 시작하는 세인트루이스 카디널스전과의 3연전에 선발 출장할 전망이다.
 # ::pos 강정호/NNP+는/JX 12/SN+일/NNB+부터/JX 시작/NNG+하/XSV+는/ETM 세인트루이스/NNP 카디널스전/NNG+과/JKB+의/JKG 3/SN+연전/NNG+에/JKB 선발/NNG 출장/NNG+하/XSV+ㄹ/ETM 전망/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((8, 9) / 출장할_전망이다.~w.8,9
         :srl.ARG0 (1 / ps_name~w.1
                      :name (n1 / name
@@ -3859,7 +3845,7 @@ None
 # ::id NWRW1800000054.2.4.1
 # ::snt ◇서민 위한 공공 분양 단지도 중도금 대출 못 받아
 # ::pos ◇/SW+서민/NNG 위하/VV+ㄴ/ETM 공공/NNG 분양/NNG 단지/NNG+도/JX 중도금/NNG 대출/NNG 못/MAG 받/VV+아/EF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (9 / 받아~w.9
    :srl.ARG0 (5 / 단지도~w.5
                 :dep.VP_MOD (2 / 위한~w.2
@@ -3921,7 +3907,7 @@ None
 # ::id NWRW1800000056.322.3.3
 # ::snt 먹을 것도 구하기 어려웠던 신씨는 도쿄에 사는 재일동포 지인의 집으로 피난을 갔다.
 # ::pos 먹/VV+을/ETM 것/NNB+도/JX 구하/VV+기/ETN 어렵/VA+었/EP+던/ETM 신/NNP+씨/NNB+는/JX 도쿄/NNP+에/JKB 살/VV+는/ETM 재일/NNG+동포/NNG 지인/NNG+의/JKG 집/NNG+으로/JKB 피난/NNG+을/JKO 가/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (12 / 갔다.~w.12
     :srl.ARG0 (5 / ps_name~w.5
                  :dep.VP_MOD ((3, 4) / 구하기_어려웠던~w.3,4
@@ -3987,7 +3973,7 @@ None
 # ::id NWRW1800000041.8.11.2
 # ::snt 오히려 정기적으로 실적을 체크하면서 끊임없이 나를 돌아보게 하는 크나큰 매력이 있죠.
 # ::pos 오히려/MAG 정기/NNG+적/XSN+으로/JKB 실적/NNG+을/JKO 체크/NNG+하/XSV+면서/EC 끊임없이/MAG 나/NP+를/JKO 돌아보/VV+게/EC 하/VX+는/ETM 크나크/VA+ㄴ/ETM 매력/NNG+이/JKS 있/VA+죠/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (11 / 있죠.~w.11
     :srl.ARG1 (10 / 매력이~w.10
                   :srl.ARGA-of (7 / 돌아보게~w.7
@@ -4066,7 +4052,7 @@ None
 # ::id NWRW1800000033.291.3.3
 # ::snt 민주세력은 당장 자신들의 정권 창출을 원했다.
 # ::pos 민주/NNG+세력/NNG+은/JX 당장/NNG 자신/NNG+들/XSN+의/JKG 정권/NNG 창출/NNG+을/JKO 원/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (6 / 원했다.~w.6
    :srl.ARG0 (1 / ogg_politics~w.1
                 :name (n1 / name
@@ -4106,7 +4092,7 @@ None
 # ::id NWRW1800000021.381.8.1
 # ::snt 경기 광명시 하안동 광명e편한세상센트레빌 2815채도 다음 달 입주한다.
 # ::pos 경기/NNP 광명시/NNP 하안동/NNP 광명/NNP+e편한세상센트레빌/NNG 2815/SN+채/NNB+도/JX 다음/NNG 달/NNG 입주/NNG+하/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (8 / 입주한다.~w.8
    :srl.ARG2 (5 / qt_count~w.5
                 :name (n5 / name
@@ -4174,7 +4160,7 @@ None
 # ::id NWRW1800000041.270.2.2
 # ::snt 북한이 1월 1일 발표하는 신년사설이 그해 남북관계의 이정표가 되는 경우가 많았다.
 # ::pos 북한/NNP+이/JKS 1/SN+월/NNB 1/SN+일/NNB 발표/NNG+하/XSV+는/ETM 신년/NNG+사설/NNG+이/JKS 그해/NNG 남북/NNP+관계/NNG+의/JKG 이정표/NNG+가/JKC 되/VV+는/ETM 경우/NNG+가/JKS 많/VA+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (11 / 많았다.~w.11
     :srl.ARG1 (10 / 경우가~w.10
                   :dep.VP_MOD (9 / 되는~w.9
@@ -4219,7 +4205,7 @@ None
 # ::id NWRW1800000029.262.4.3
 # ::snt 박지성의 대표팀 은퇴에는 이런 점도 작용했다.
 # ::pos 박지성/NNP+의/JKG 대표/NNG+팀/NNG 은퇴/NNG+에/JKB+는/JX 이런/MMD 점/NNG+도/JX 작용/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (6 / 작용했다.~w.6
    :srl.ARG2 (3 / 은퇴에는~w.3
                 :dep.NP_MOD (1 / ps_name~w.1
@@ -4267,7 +4253,7 @@ None
 # ::id NWRW1800000048.318.5.1
 # ::snt 2022년 카타르월드컵 개최 시기를 놓고 예고된 파열음이 터지고 있다.
 # ::pos 2022/SN+년/NNB 카타르/NNP+월드컵/NNG 개최/NNG 시기/NNG+를/JKO 놓/VV+고/EC 예고/NNG+되/XSV+ㄴ/ETM 파열음/NNG+이/JKS 터지/VV+고/EC 있/VX+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((8, 9) / 터지고_있다.~w.8,9
         :srl.ARG1 (7 / 파열음이~w.7
                      :srl.ARG1-of (6 / 예고된~w.6))
@@ -4309,7 +4295,7 @@ None
 # ::id NWRW1800000053.261.2.1
 # ::snt 매년 6월마다 전국 300여 개 공공기관들은 초긴장 모드가 된다.
 # ::pos 매년/MAG 6/SN+월/NNB+마다/JX 전국/NNG 300/SN+여/XSN 개/NNB 공공/NNG+기관/NNG+들/XSN+은/JX 초/XPN+긴장/NNG 모드/NNG+가/JKC 되/VV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (9 / 된다.~w.9
    :dep.AP (1 / 매년~w.1)
    :dep.NP_AJT (2 / dt_others~w.2
@@ -4351,7 +4337,7 @@ None
 # ::id NWRW1800000056.172.10.3
 # ::snt 대의원회는 각급 반장인 25명의 학생들로 구성된다.
 # ::pos 대/XPN+의원회/NNG+는/JX 각급/NNG 반장/NNG+이/VCP+ㄴ/ETM 25/SN+명/NNB+의/JKG 학생/NNG+들/XSN+로/JKB 구성/NNG+되/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (6 / 구성된다.~w.6
    :srl.ARG1 (1 / 대의원회는~w.1)
    :srl.ARG0 (5 / cv_occupation~w.5
@@ -4400,7 +4386,7 @@ None
 # ::id NWRW1800000041.363.5.1
 # ::snt 당초 이 대표의 임기는 내년 2월 동시 당직선거를 치를 때까지다.
 # ::pos 당초/NNG 이/NNP 대표/NNG+의/JKG 임기/NNG+는/JX 내년/NNG 2/SN+월/NNB 동시/NNG 당직/NNG+선거/NNG+를/JKO 치르/VV+ㄹ/ETM 때/NNG+까지/JX+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((9, 10) / 치를_때까지다.~w.9,10
          :dep.NP_SBJ (4 / 임기는~w.4
                         :dep.NP_AJT (1 / 당초~w.1)
@@ -4447,7 +4433,7 @@ None
 # ::id NWRW1800000032.252.3.1
 # ::snt 서울대가 다음달 관악캠퍼스에 치과병원과 치과대학원 건물을 착공한다.
 # ::pos 서울대/NNP+가/JKS 다음/NNG+달/NNG 관악/NNP+캠퍼스/NNG+에/JKB 치과/NNG+병원/NNG+과/JC 치과/NNG+대학원/NNG 건물/NNG+을/JKO 착공/NNG+하/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (7 / 착공한다.~w.7
    :srl.ARG0 (1 / ogg_education~w.1
                 :name (n1 / name
@@ -4490,7 +4476,7 @@ None
 # ::id NWRW1800000041.30.9.5
 # ::snt 이마트와 롯데마트는 저장 곶감을 지난해 추석 가격 수준으로 판매 중이다.
 # ::pos 이마트/NNP+와/JC 롯데마트/NNP+는/JX 저장/NNG 곶감/NNG+을/JKO 지난해/NNG 추석/NNG 가격/NNG 수준/NNG+으로/JKB 판매/NNG 중/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((9, 10) / 판매_중이다.~w.9,10
          :dep.NP_SBJ (2 / ogg_economy~w.2
                         :name (n2 / name
@@ -4551,7 +4537,7 @@ None
 # ::id NWRW1800000022.99.9.2
 # ::snt 주가가 상당히 내려가면서 앞으로는 상승할 가능성이 크다는 기대감 때문이다.
 # ::pos 주가/NNG+가/JKS 상당히/MAG 내려가/VV+면서/EC 앞/NNG+으로/JKB+는/JX 상승/NNG+하/XSV+ㄹ/ETM 가능/NNG+성/XSN+이/JKS 크/VA+다는/ETM 기대감/NNG 때문/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((8, 9) / 기대감_때문이다.~w.8,9
         :dep.VP_MOD (7 / 크다는~w.7
                        :srl.ARG1 (6 / 가능성이~w.6
@@ -4582,7 +4568,7 @@ None
 # ::id NWRW1800000021.208.1.1
 # ::snt 안경환 국가인권위원장 돌연 사퇴 왜?
 # ::pos 안경환/NNP 국가/NNG+인권/NNG+위원장/NNG 돌연/MAG 사퇴/NNG 왜/MAG+?/SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (5 / 왜?~w.5
    :dep.NP (4 / 사퇴~w.4
               :dep.NP (2 / cv_position~w.2
@@ -4624,7 +4610,7 @@ None
 # ::id NWRW1800000036.365.7.2
 # ::snt 이날 간담회엔 건설업체와 철도시설관련업체 등 20개사 관계자 26명이 참석했다.
 # ::pos 이날/NNG 간담회/NNG+에/JKB+ㄴ/JX 건설업체/NNG+와/JC 철도/NNG+시설/NNG+관련/NNG+업체/NNG 등/NNB 20/SN+개사/NNB 관계자/NNG 26/SN+명/NNB+이/JKS 참석/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (9 / 참석했다.~w.9
    :srl.ARG1 (2 / 간담회엔~w.2
                 :dep.NP (1 / dt_day~w.1
@@ -4675,7 +4661,7 @@ None
 # ::id NWRW1800000054.269.5.4
 # ::snt 반면 외국의 주요 골프장 중에는 OB가 거의 없는 곳도 많다.
 # ::pos 반면/NNG 외국/NNG+의/JKG 주요/NNG 골프장/NNG 중/NNB+에/JKB+는/JX OB/SL+가/JKS 거의/MAG 없/VA+는/ETM 곳/NNG+도/JX 많/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (10 / 많다.~w.10
     :dep.NP_AJT (1 / 반면~w.1)
     :srl.ARG1 (9 / 곳도~w.9
@@ -4716,7 +4702,7 @@ None
 # ::id NWRW1800000025.13.7.2
 # ::snt 2001년 대우차를 퇴직하고 장인가구에 입사했다.
 # ::pos 2001/SN+년/NNB 대우차/NNP+를/JKO 퇴직/NNG+하/XSV+고/EC 장인가구/NNP+에/JKB 입사/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (5 / 입사했다.~w.5
    :dep.VP (3 / 퇴직하고~w.3
               :dep.NP_AJT (1 / dt_year~w.1
@@ -4756,7 +4742,7 @@ None
 # ::id NWRW1800000025.97.19.1
 # ::snt 미국 웨슬리안대에서 수학과 물리학을 전공했다.
 # ::pos 미국/NNP 웨슬리안대/NNP+에서/JKB 수학/NNG+과/JC 물리학/NNG+을/JKO 전공/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (5 / 전공했다.~w.5
    :dep.NP_AJT (2 / ogg_education~w.2
                   :name (n2 / name
@@ -4800,7 +4786,7 @@ None
 # ::id NWRW1800000049.225.5.3
 # ::snt 이대호는 주자로서도 7회 동점 득점에 성공했다.
 # ::pos 이대호/NNP+는/JX 주자/NNG+로서/JKB+도/JX 7/SN+회/NNB 동점/NNG 득점/NNG+에/JKB 성공/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (6 / 성공했다.~w.6
    :srl.ARG0 (1 / ps_name~w.1
                 :name (n1 / name
@@ -4861,7 +4847,7 @@ None
 # ::id NWRW1800000022.5.21.4
 # ::snt 특히 교수의 경우 전체 근무시간의 10%를 직접 학생들을 만나는 시간으로 활용하도록 했다.
 # ::pos 특히/MAG 교수/NNG+의/JKG 경우/NNG 전체/NNG 근무/NNG+시간/NNG+의/JKG 10/SN+%/SW+를/JKO 직접/MAG 학생/NNG+들/XSN+을/JKO 만나/VV+는/ETM 시간/NNG+으로/JKB 활용/NNG+하/XSV+도록/EC 하/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (12 / 했다.~w.12
     :dep.VP (11 / 활용하도록~w.11
                 :srl.ARG0 ((2, 3) / cv_occupation~w.2,3
@@ -4919,7 +4905,7 @@ None
 # ::id NWRW1800000029.65.2.4
 # ::snt 문제는 그 긴 시간 기댈 언덕은 마땅치 않다는 점.
 # ::pos 문제/NNG+는/JX 그/MMD 길/VA+ㄴ/ETM 시간/NNG 기대/VV+ㄹ/ETM 언덕/NNG+은/JX 마땅하/VA+지/EC 않/VX+다는/ETM 점/NNG+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (9 / 점.~w.9
    :dep.NP_SBJ (1 / 문제는~w.1)
    :dep.VP_MOD ((7, 8) / 마땅치_않다는~w.7,8
@@ -4958,7 +4944,7 @@ None
 # ::id NWRW1800000041.60.10.1
 # ::snt 희생자 유가족의 직접적인 반응을 언론에서 찾아볼 수도 없다.
 # ::pos 희생자/NNG 유가족/NNG+의/JKG 직접/NNG+적/XSN+이/VCP+ㄴ/ETM 반응/NNG+을/JKO 언론/NNG+에서/JKB 찾/VV+아/EC+보/VV+ㄹ/ETM 수/NNB+도/JX 없/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((6, 7, 8) / 찾아볼_수도_없다.~w.6,7,8
            :srl.ARG1 (4 / 반응을~w.4
                         :dep.NP_MOD (2 / 유가족의~w.2
@@ -4989,7 +4975,7 @@ None
 # ::id NWRW1800000040.406.9.1
 # ::snt 이번 2차 공동위 회의의 핵심 현안은 공단 재가동 시점이었다.
 # ::pos 이번/NNG 2/SN+차/NNB 공동위/NNG 회의/NNG+의/JKG 핵심/NNG 현안/NNG+은/JX 공단/NNG 재/XPN+가동/NNG 시점/NNG+이/VCP+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (9 / 시점이었다.~w.9
    :dep.NP_SBJ (6 / 현안은~w.6
                   :dep.NP_MOD (4 / 회의의~w.4
@@ -5039,7 +5025,7 @@ None
 # ::id NWRW1800000026.10.35.1
 # ::snt 백악관 NSC 아시아 담당 선임보좌관을 역임하며 한·중·일 3국 문제를 담당했다.
 # ::pos 백악관/NNP NSC/SL 아시아/NNP 담당/NNG 선임/NNG+보좌관/NNG+을/JKO 역임/NNG+하/XSV+며/EC 한·중·일/NNP 3국/NNG 문제/NNG+를/JKO 담당/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (10 / 담당했다.~w.10
     :dep.VP (6 / 역임하며~w.6
                :srl.ARG1 (5 / cv_position~w.5
@@ -5101,7 +5087,7 @@ None
 # ::id NWRW1800000021.205.7.4
 # ::snt 수도권 일대 조선왕릉의 녹지를 모두 합친 면적은 1935만3067m²에 이른다.
 # ::pos 수도/NNG+권/XSN 일대/NNG 조선/NNP+왕릉/NNG+의/JKG 녹지/NNG+를/JKO 모두/MAG 합치/VV+ㄴ/ETM 면적/NNG+은/JX 1935/SN+만/NR+3067/SN+m²/SW+에/JKB 이르/VV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (9 / 이른다.~w.9
    :srl.ARG1 (7 / 면적은~w.7
                 :dep.VP_MOD (6 / 합친~w.6
@@ -5153,7 +5139,7 @@ None
 # ::id NWRW1800000036.38.11.5
 # ::snt 식사 뒤 마키아토 한잔을 마시면 두끼 식사를 하는 셈이다.
 # ::pos 식사/NNG 뒤/NNG 마키아토/NNG 한/MMN+잔/NNG+을/JKO 마시/VV+면/EC 두/MMN+끼/NNG 식사/NNG+를/JKO 하/VV+는/ETM 셈/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((8, 9) / 하는_셈이다.~w.8,9
         :srl.ARGM-CND (5 / 마시면~w.5
                          :srl.ARGM-TMP (2 / 뒤~w.2
@@ -5218,7 +5204,7 @@ None
 # ::id NWRW1800000049.184.3.5
 # ::snt 그러나 4년도 안 돼 같은 정부서울청사가 평범한 대학생에 의해 또 뚫린 것이다.
 # ::pos 그러나/MAJ 4/SN+년/NNB+도/JX 안/MAG 되/VV+어/EC 같/VA+은/ETM 정부서울청사/NNP+가/JKS 평범하/VA+ㄴ/ETM 대학/NNG+생/XSN+에/JKB 의하/VV+아/EC 또/MAG 뚫리/VV+ㄴ/ETM 것/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((11, 12) / 뚫린_것이다.~w.11,12
           :srl.ARGM-DIS (1 / 그러나~w.1)
           :dep.VP (4 / 돼~w.4
@@ -5271,7 +5257,7 @@ None
 # ::id NWRW1800000021.235.3.1
 # ::snt 최근 5년간 흥행했던 위의 영화 중에는 한 가지 공통점이 있다.
 # ::pos 최근/NNG 5/SN+년/NNB+간/XSN 흥행/NNG+하/XSV+았/EP+던/ETM 위/NNG+의/JKG 영화/NNG 중/NNB+에/JKB+는/JX 한/MMN 가지/NNB 공통점/NNG+이/JKS 있/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (10 / 있다.~w.10
     :srl.ARG1 (9 / 공통점이~w.9
                  :dep.NP ((7, 8) / qt_count~w.7,8
@@ -5314,7 +5300,7 @@ None
 # ::id NWRW1800000054.211.5.1
 # ::snt 유통업계는 아이돌 상품 구매층에 관심을 쏟고 있다.
 # ::pos 유통업/NNG+계/XSN+는/JX 아이돌/NNG 상품/NNG 구매/NNG+층/XSN+에/JKB 관심/NNG+을/JKO 쏟/VV+고/EC 있/VX+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((6, 7) / 쏟고_있다.~w.6,7
         :srl.ARG0 (1 / 유통업계는~w.1)
         :srl.ARG2 (4 / 구매층에~w.4
@@ -5344,7 +5330,7 @@ None
 # ::id NWRW1800000037.154.2.3
 # ::snt 부산영화제와 토론토영화제까지 포함해서다.
 # ::pos 부산/NNP+영화제/NNG+와/JC 토론토/NNP+영화제/NNG+까지/JX 포함/NNG+하/XSV+아서/EC+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (3 / 포함해서다.~w.3
    :srl.ARG0 (2 / ev_festival~w.2
                 :name (n2 / name
@@ -5395,7 +5381,7 @@ None
 # ::id NWRW1800000033.39.16.1
 # ::snt 김홍철 대표는 사업하는 데 가장 어려운 것이 고급인력 충원이라고 했다.
 # ::pos 김홍철/NNP 대표/NNG+는/JX 사업/NNG+하/XSV+는/ETM 데/NNB 가장/MAG 어렵/VA+ㄴ/ETM 것/NNB+이/JKS 고급/NNG+인력/NNG 충원/NNG+이/VCP+라고/EC 하/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (10 / 했다.~w.10
     :srl.ARG0 (2 / cv_position~w.2
                  :name (n2 / name
@@ -5446,7 +5432,7 @@ None
 # ::id NWRW1800000025.150.5.3
 # ::snt 막판 현장을 찾은 이 지역들은 대부분 경합 내지 열세 지역으로 분류된 곳.
 # ::pos 막판/NNG 현장/NNG+을/JKO 찾/VV+은/ETM 이/MMD 지역/NNG+들/XSN+은/JX 대/XPN+부분/NNG 경합/NNG 내지/MAG 열세/NNG 지역/NNG+으로/JKB 분류/NNG+되/XSV+ㄴ/ETM 곳/NNG+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (12 / 곳.~w.12
     :dep.NP_SBJ (5 / 지역들은~w.5
                    :dep.VP_MOD (3 / 찾은~w.3
@@ -5489,7 +5475,7 @@ None
 # ::id NWRW1800000052.150.14.3
 # ::snt 내년 1월4일에는 서울 롯데콘서트홀에서 피아노 리사이틀을 할 예정이다.
 # ::pos 내년/NNG 1/SN+월/NNB+4/SN+일/NNB+에/JKB+는/JX 서울/NNP 롯데콘서트홀/NNP+에서/JKB 피아노/NNG 리사이틀/NNG+을/JKO 하/VV+ㄹ/ETM 예정/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((7, 8) / 할_예정이다.~w.7,8
         :dep.NP_AJT (4 / af_building~w.4
                        :name (n3 / name
@@ -5559,7 +5545,7 @@ None
 # ::id NWRW1800000024.31.4.5
 # ::snt 철거민들은 오후 들어 건물 옥상에 양철판 등을 이용해 망루를 설치하고 경찰과 대치했다.
 # ::pos 철거민/NNG+들/XSN+은/JX 오후/NNG 들/VV+어/EC 건물/NNG 옥상/NNG+에/JKB 양철/NNG+판/NNG 등/NNB+을/JKO 이용/NNG+하/XSV+아/EC 망루/NNG+를/JKO 설치/NNG+하/XSV+고/EC 경찰/NNG+과/JKB 대치/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (12 / 대치했다.~w.12
     :dep.VP (10 / 설치하고~w.10
                 :srl.ARG0 (1 / 철거민들은~w.1
@@ -5617,7 +5603,7 @@ None
 # ::id NWRW1800000049.112.5.1
 # ::snt 1979년 성베네딕도 수도원에서 사제품을 받은 그는 화가 신부로 잘 알려져 있다.
 # ::pos 1979/SN+년/NNB 성베네딕도/NNP 수도원/NNG+에서/JKB 사제품/NNG+을/JKO 받/VV+은/ETM 그/NP+는/JX 화가/NNG 신부/NNG+로/JKB 잘/MAG 알려지/VV+어/EC 있/VX+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((10, 11) / 알려져_있다.~w.10,11
           :dep.NP_SBJ (6 / 그는~w.6
                          :srl.ARG0-of (5 / 받은~w.5
@@ -5669,7 +5655,7 @@ None
 # ::id NWRW1800000038.57.4.1
 # ::snt 해외 수사기관에 단체로 걸려 망신을 산 경우도 있었다.
 # ::pos 해외/NNG 수사/NNG+기관/NNG+에/JKB 단체/NNG+로/JKB 걸리/VV+어/EC 망신/NNG+을/JKO 사/VV+ㄴ/ETM 경우/NNG+도/JX 있/VA+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (8 / 있었다.~w.8
    :dep.VP (4 / 걸려~w.4
               :srl.ARG2 (2 / 수사기관에~w.2
@@ -5760,7 +5746,7 @@ None
 # ::id NWRW1800000054.383.3.3
 # ::snt 중국 측은 박근혜 정부 때도 이 같은 요구를 했던 것으로 알려졌다.
 # ::pos 중국/NNP 측/NNB+은/JX 박근혜/NNP 정부/NNG 때/NNG+도/JX 이/NP 같/VA+은/ETM 요구/NNG+를/JKO 하/VV+았/EP+던/ETM 것/NNB+으로/JKB 알려지/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (11 / 알려졌다.~w.11
     :dep.NP_SBJ (2 / 측은~w.2
                    :dep.NP (1 / ogg_politics~w.1
@@ -5811,7 +5797,7 @@ None
 # ::id NWRW1800000054.293.5.3
 # ::snt 강원도도 이런 문제를 어떻게 해결할지 고민하고 있다.
 # ::pos 강원도/NNP+도/JX 이런/MMD 문제/NNG+를/JKO 어떻/VA+게/EC 해결/NNG+하/XSV+ㄹ지/EC 고민/NNG+하/XSV+고/EC 있/VX+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 ((6, 7) / 고민하고_있다.~w.6,7
         :srl.ARGM-AUX-of (5 / 해결할지~w.5
                             :dep.NP_SBJ (1 / ogg_politics~w.1
@@ -5869,7 +5855,7 @@ None
 # ::id NWRW1800000046.87.9.3
 # ::snt 앞만 보고 달렸던 예순의 사업가는 소년 뒷모습에서 어린 시절 자신을 보았다.
 # ::pos 앞/NNG+만/JX 보/VV+고/EC 달리/VV+었/EP+던/ETM 예순/NR+의/JKG 사업가/NNG+는/JX 소년/NNG 뒷모습/NNG+에서/JKB 어리/VA+ㄴ/ETM 시절/NNG 자신/NNG+을/JKO 보/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (11 / 보았다.~w.11
     :srl.ARG0 (5 / cv_occupation~w.5
                  :srl.ARG0-of (3 / 달렸던~w.3
@@ -5923,7 +5909,7 @@ None
 # ::id NWRW1800000036.296.7.3
 # ::snt 에스케이와 롯데는 각각 넥센과 엘지를 꺾고 3연승을 달렸다.
 # ::pos 에스케이/NNP+와/JC 롯데/NNP+는/JX 각각/MAG 넥센/NNP+과/JKB 엘지/NNP+를/JKO 꺾/VV+고/EC 3/SN+연승/NNG+을/JKO 달리/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (8 / 달렸다.~w.8
    :dep.VP (6 / 꺾고~w.6
               :dep.AP (3 / 각각~w.3)
@@ -5981,7 +5967,7 @@ None
 # ::id NWRW1800000046.83.5.1
 # ::snt 경제부 아닌 문화부 기자에게 선입관을 주입하는 이력이었다.
 # ::pos 경제부/NNG 아니/VCN+ㄴ/ETM 문화부/NNG 기자/NNG+에게/JKB 선입관/NNG+을/JKO 주입/NNG+하/XSV+는/ETM 이력/NNG+이/VCP+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (7 / 이력이었다.~w.7
    :dep.VP_MOD (6 / 주입하는~w.6
                   :srl.ARG0 (4 / cv_occupation~w.4
@@ -6032,7 +6018,7 @@ None
 # ::id NWRW1800000048.189.6.2
 # ::snt 인문사회학적 통찰이나 경험 등에 바탕한 공부 세태에 대한 진단부터 날카롭다.
 # ::pos 인문/NNG+사회학/NNG+적/XSN 통찰/NNG+이나/JC 경험/NNG 등/NNB+에/JKB 바탕/NNG+하/XSV+ㄴ/ETM 공부/NNG 세태/NNG+에/JKB 대하/VV+ㄴ/ETM 진단/NNG+부터/JX 날카롭/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (10 / 날카롭다.~w.10
     :srl.ARG1 (9 / 진단부터~w.9
                  :dep.VP_MOD ((7, 8) / 세태에_대한~w.7,8
@@ -6074,7 +6060,7 @@ None
 # ::id NWRW1800000041.225.7.1
 # ::snt 곧장 남자 직원이 뛰쳐나와 A 군을 잡았다.
 # ::pos 곧장/MAG 남자/NNG 직원/NNG+이/JKS 뛰쳐나오/VV+아/EC A/SL 군/NNB+을/JKO 잡/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:38
 (7 / 잡았다.~w.7
    :srl.ARGM-CAU (4 / 뛰쳐나와~w.4
                     :srl.ARGM-TMP (1 / 곧장~w.1))
@@ -6162,7 +6148,7 @@ None
 # ::id NWRW1800000030.197.5.2
 # ::snt 이날 역시 막판 집중력 저하로 뼈아픈 역전패를 당했다.
 # ::pos 이날/NNG 역시/MAG 막판/NNG 집중력/NNG 저하/NNG+로/JKB 뼈아프/VA+ㄴ/ETM 역전패/NNG+를/JKO 당하/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (8 / 당했다.~w.8
    :srl.ARGM-TMP (1 / dt_day~w.1
                     :name (n1 / name
@@ -6255,7 +6241,7 @@ None
 # ::id NWRW1800000054.300.4.5
 # ::snt 영화관 개봉이 끝난 뒤 이 작품을 보려면 넷플릭스 회원으로 가입해야 한다.
 # ::pos 영화관/NNG 개봉/NNG+이/JKS 끝나/VV+ㄴ/ETM 뒤/NNG 이/MMD 작품/NNG+을/JKO 보/VV+려면/EC 넷플릭스/NNP 회원/NNG+으로/JKB 가입/NNG+하/XSV+아야/EC 하/VX+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 ((10, 11) / 가입해야_한다.~w.10,11
           :srl.ARG2 (9 / 회원으로~w.9
                        :dep.NP (8 / tmi_service~w.8
@@ -6313,7 +6299,7 @@ None
 # ::id NWRW1800000029.13.4.1
 # ::snt 김 부사장과 함께 개발을 맡고 있는 고 전무는 삼성이 일찍이 모셔온 인재다.
 # ::pos 김/NNP 부사장/NNG+과/JKB 함께/MAG 개발/NNG+을/JKO 맡/VV+고/EC 있/VX+는/ETM 고/NNP 전무/NNG+는/JX 삼성/NNP+이/JKS 일찍이/MAG 모시/VV+어/EC+오/VX+ㄴ/ETM 인재/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (12 / 인재다.~w.12
     :srl.ARG1-of (11 / 모셔온~w.11
                      :dep.NP_SBJ (8 / cv_position~w.8
@@ -6407,7 +6393,7 @@ None
 # ::id NWRW1800000041.294.5.1
 # ::snt ▷정권이 선거에서 공을 세운 사람을 챙긴다고 하더라도 줄 자리가 있고 안 줄 자리가 있다.
 # ::pos ▷/SW+정권/NNG+이/JKS 선거/NNG+에서/JKB 공/NNG+을/JKO 세우/VV+ㄴ/ETM 사람/NNG+을/JKO 챙기/VV+ㄴ다고/EC 하/VV+더라도/EC 주/VV+ㄹ/ETM 자리/NNG+가/JKS 있/VA+고/EC 안/MAG 주/VV+ㄹ/ETM 자리/NNG+가/JKS 있/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (14 / 있다.~w.14
     :dep.VP (10 / 있고~w.10
                 :srl.ARGM-AUX (9 / 자리가~w.9
@@ -6451,7 +6437,7 @@ None
 # ::id NWRW1800000028.117.7.2
 # ::snt 현재 물가상승률을 고려한 실질금리는 마이너스 수준이다.
 # ::pos 현재/MAG 물가/NNG+상승/NNG+률/XSN+을/JKO 고려/NNG+하/XSV+ㄴ/ETM 실질/NNG+금리/NNG+는/JX 마이너스/NNG 수준/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (6 / 수준이다.~w.6
    :dep.NP_SBJ (4 / 실질금리는~w.4
                   :dep.VP_MOD (3 / 고려한~w.3
@@ -6499,18 +6485,17 @@ None
 # ::id NWRW1800000053.173.5.2
 # ::snt 혹시 있을지 모르는 학교생활 적응 과정에서의 어려움을 파악해 도움을 주는 게 목적이다.
 # ::pos 혹시/MAG 있/VV+을지/EF 모르/VV+는/ETM 학교생활/NNG 적응/NNG 과정/NNG+에서/JKB+의/JKG 어려움/NNG+을/JKO 파악/NNG+하/XSV+아/EC 도움/NNG+을/JKO 주/VV+는/ETM 거/NNB+이/JKS 목적/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (12 / 목적이다.~w.12
-    :dep.NP_SBJ (11 / 게~w.11
-                    :dep.VP_MOD (10 / 주는~w.10
-                                    :srl.ARGM-CAU (8 / 파악해~w.8
-                                                     :srl.ARG1 (7 / 어려움을~w.7
-                                                                  :dep.VP_MOD ((2, 3) / 있을지_모르는~w.2,3
-                                                                                      :srl.ARGM-TMP (1 / 혹시~w.1))
-                                                                  :dep.NP_MOD (6 / 과정에서의~w.6
-                                                                                 :dep.NP (5 / 적응~w.5
-                                                                                            :dep.NP (4 / 학교생활~w.4)))))
-                                    :srl.ARG1 (9 / 도움을~w.9))))
+    :dep.NP_SBJ ((10, 11) / 주는_게~w.10,11
+                          :srl.ARGM-CAU (8 / 파악해~w.8
+                                           :srl.ARG1 (7 / 어려움을~w.7
+                                                        :dep.VP_MOD ((2, 3) / 있을지_모르는~w.2,3
+                                                                            :srl.ARGM-TMP (1 / 혹시~w.1))
+                                                        :dep.NP_MOD (6 / 과정에서의~w.6
+                                                                       :dep.NP (5 / 적응~w.5
+                                                                                  :dep.NP (4 / 학교생활~w.4)))))
+                          :srl.ARG1 (9 / 도움을~w.9)))
 
 
 
@@ -6546,7 +6531,7 @@ None
 # ::id NWRW1800000049.37.7.1
 # ::snt 실손보험은 가입자가 실제 부담한 의료비만을 보장하는 보험상품이다.
 # ::pos 실손/NNG+보험/NNG+은/JX 가입자/NNG+가/JKS 실제/MAG 부담/NNG+하/XSV+ㄴ/ETM 의료비/NNG+만/JX+을/JKO 보장/NNG+하/XSV+는/ETM 보험/NNG+상품/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (7 / 보험상품이다.~w.7
    :dep.NP_SBJ (1 / 실손보험은~w.1)
    :dep.VP_MOD (6 / 보장하는~w.6
@@ -6589,7 +6574,7 @@ None
 # ::id NWRW1800000054.173.5.3
 # ::snt 정부로선 건강보험법 규정에 따라 건보 적용 정지 조치를 내려야 하는 상황이다.
 # ::pos 정부/NNG+로서/JKB+ㄴ/JX 건강/NNG+보험법/NNG 규정/NNG+에/JKB 따르/VV+아/EC 건보/NNG 적용/NNG 정지/NNG 조치/NNG+를/JKO 내리/VV+어야/EC 하/VX+는/ETM 상황/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (11 / 상황이다.~w.11
     :dep.VP_MOD ((9, 10) / 내려야_하는~w.9,10
                          :srl.ARGM-CAU ((3, 4) / 규정에_따라~w.3,4
@@ -6653,7 +6638,7 @@ None
 # ::id NWRW1800000049.110.6.2
 # ::snt 청춘의 어설픔과 열정이 막막한 현실을 외면하고 바다를 꿈꾸는 심심한 스토리.
 # ::pos 청춘/NNG+의/JKG 어설프/VA+ㅁ/ETN+과/JC 열정/NNG+이/JKS 막막하/VA+ㄴ/ETM 현실/NNG+을/JKO 외면/NNG+하/XSV+고/EC 바다/NNG+를/JKO 꿈꾸/VV+는/ETM 심심하/VA+ㄴ/ETM 스토리/NNG+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (10 / 스토리.~w.10
     :dep.VP_MOD (8 / 꿈꾸는~w.8
                    :dep.VP (6 / 외면하고~w.6
@@ -6702,7 +6687,7 @@ None
 # ::id NWRW1800000033.66.4.1
 # ::snt 이런 미국식 중국음식이 최근 중국 본토로 몰려오고 있다고 뉴스위크가 최신호에서 보도했다.
 # ::pos 이런/MMD 미국식/NNG 중국/NNP+음식/NNG+이/JKS 최근/MAG 중국/NNP 본토/NNG+로/JKB 몰려오/VV+고/EC 있/VX+다고/EC 뉴스위크/NNP+가/JKS 최신/NNG+호/NNB+에서/JKB 보도/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (11 / 보도했다.~w.11
     :srl.ARG0 (9 / ogg_media~w.9
                  :name (n3 / name
@@ -6760,7 +6745,7 @@ None
 # ::id NWRW1800000032.90.4.4
 # ::snt 최근 리우데자네이루에서 700여명의 사망자를 낸 폭우도 농산품 가격을 더 밀어올렸다.
 # ::pos 최근/NNG 리우데자네이루/NNP+에서/JKB 700/SN+여/XSN+명/NNB+의/JKG 사망자/NNG+를/JKO 내/VV+ㄴ/ETM 폭우/NNG+도/JX 농산품/NNG 가격/NNG+을/JKO 더/MAG 밀/VV+어/EC+올리/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (10 / 밀어올렸다.~w.10
     :srl.ARG0 (6 / 폭우도~w.6
                  :srl.ARG0-of (5 / 낸~w.5
@@ -6810,7 +6795,7 @@ None
 # ::id NWRW1800000022.340.9.1
 # ::snt 나영이가 다니는 A초등학교 아이들 집은 두 부류로 갈린다.
 # ::pos 나영이/NNP+가/JKS 다니/VV+는/ETM A/SL+초등학교/NNG 아이/NNG+들/XSN 집/NNG+은/JX 두/MMN 부류/NNG+로/JKB 갈리/VV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (8 / 갈린다.~w.8
    :srl.ARG0 (5 / 집은~w.5
                 :dep.VP_MOD (2 / 다니는~w.2
@@ -6855,7 +6840,7 @@ None
 # ::id NWRW1800000033.51.11.3
 # ::snt 루프트한자는 현재 총 99대의 장거리노선 항공기에서 무선 인터넷을 지원한다.
 # ::pos 루프트한자/NNP+는/JX 현재/MAG 총/MMA 99/SN+대/NNB+의/JKG 장거리/NNG+노선/NNG 항공기/NNG+에서/JKB 무선/NNG 인터넷/NNG+을/JKO 지원/NNG+하/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (9 / 지원한다.~w.9
    :srl.ARG0 (1 / ogg_economy~w.1
                 :name (n1 / name
@@ -6907,7 +6892,7 @@ None
 # ::id NWRW1800000052.50.13.2
 # ::snt 과점주주가 추천하는 사외이사 5명은 다음달 30일 주주총회에서 선임된다.
 # ::pos 과점/NNG+주주/NNG+가/JKS 추천/NNG+하/XSV+는/ETM 사외/NNG+이사/NNG 5/SN+명/NNB+은/JX 다음/NNG+달/NNG 30/SN+일/NNB 주주/NNG+총회/NNG+에서/JKB 선임/NNG+되/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (8 / 선임된다.~w.8
    :srl.ARG1 (4 / qt_man_count~w.4
                 :srl.ARG1-of (2 / 추천하는~w.2
@@ -6955,7 +6940,7 @@ None
 # ::id NWRW1800000040.66.5.3
 # ::snt 이것들은 세개의 각각 다른 기기가 아닙니다.
 # ::pos 이것/NP+들/XSN+은/JX 세/MMN+개/NNB+의/JKG 각각/MAG 다른/MMD 기기/NNG+가/JKC 아니/VCN+ㅂ니다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (6 / 아닙니다.~w.6
    :srl.ARG1 (1 / 이것들은~w.1)
    :srl.ARG0 (5 / 기기가~w.5
@@ -6997,7 +6982,7 @@ None
 # ::id NWRW1800000048.355.2.10
 # ::snt 이를 위해 지금 우리는 무엇을 어떻게 해야 할까?
 # ::pos 이/NP+를/JKO 위하/VV+아/EC 지금/MAG 우리/NP+는/JX 무엇/NP+을/JKO 어떻/VA+게/EC 하/VV+아야/EC 하/VX+ㄹ까/EF+?/SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 ((7, 8) / 해야_할까?~w.7,8
         :srl.ARGM-TMP (3 / 지금~w.3)
         :srl.ARG0 (4 / 우리는~w.4)
@@ -7042,7 +7027,7 @@ None
 # ::id NWRW1800000040.67.10.3
 # ::snt 초기 부작용을 감수하더라도 사업을 더욱 개방해 경쟁이 일어나게 해야 한다.
 # ::pos 초기/NNG 부작용/NNG+을/JKO 감수/NNG+하/XSV+더라도/EC 사업/NNG+을/JKO 더욱/MAG 개방/NNG+하/XSV+아/EC 경쟁/NNG+이/JKS 일어나/VV+게/EC 하/VX+아야/EC 하/VX+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 ((9, 10) / 해야_한다.~w.9,10
          :srl.ARGM-AUX-of (6 / 개방해~w.6
                              :dep.VP (3 / 감수하더라도~w.3
@@ -7084,7 +7069,7 @@ None
 # ::id NWRW1800000038.70.5.1
 # ::snt 이에 대해 SNS와 영화 관련 온라인 게시판에 나타난 관객들의 반응은 부정적이다.
 # ::pos 이/NP+에/JKB 대하/VV+아/EC SNS/SL+와/JC 영화/NNG 관련/NNG 온라인/NNG 게시판/NNG+에/JKB 나타나/VV+ㄴ/ETM 관객/NNG+들/XSN+의/JKG 반응/NNG+은/JX 부정/NNG+적/XSN+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (11 / 부정적이다.~w.11
     :dep.NP_SBJ (10 / 반응은~w.10
                     :srl.ARG1-of (8 / 나타난~w.8
@@ -7123,7 +7108,7 @@ None
 # ::id NWRW1800000022.59.2.2
 # ::snt 우리도 미국처럼 스위스 은행으로부터 고객정보를 입수할 수 있을까?
 # ::pos 우리/NP+도/JX 미국/NNP+처럼/JKB 스위스/NNP 은행/NNG+으로부터/JKB 고객/NNG+정보/NNG+를/JKO 입수/NNG+하/XSV+ㄹ/ETM 수/NNB 있/VA+을까/EF+?/SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 ((6, 7, 8) / 입수할_수_있을까?~w.6,7,8
            :srl.ARG0 (1 / 우리도~w.1)
            :dep.NP_AJT (2 / lcp_country~w.2
@@ -7158,7 +7143,7 @@ None
 # ::id NWRW1800000025.337.4.1
 # ::snt 호시노 감독은 대표적인 지한파로 통한다.
 # ::pos 호시노/NNP 감독/NNG+은/JX 대표/NNG+적/XSN+이/VCP+ㄴ/ETM 지한파/NNG+로/JKB 통하/VV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (5 / 통한다.~w.5
    :dep.NP_SBJ (2 / cv_position~w.2
                   :name (n2 / name
@@ -7199,7 +7184,7 @@ None
 # ::id NWRW1800000032.427.6.1
 # ::snt 무엇보다 공천 문제를 두고선 계파간 갈등이 재연될 수 있다.
 # ::pos 무엇/NP+보다/JKB 공천/NNG 문제/NNG+를/JKO 두/VV+고서/EC+ㄴ/JX 계파/NNG+간/NNB 갈등/NNG+이/JKS 재연/NNG+되/XSV+ㄹ/ETM 수/NNB 있/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 ((7, 8, 9) / 재연될_수_있다.~w.7,8,9
            :dep.VP (4 / 두고선~w.4
                       :dep.NP_AJT (1 / 무엇보다~w.1)
@@ -7247,7 +7232,7 @@ None
 # ::id NWRW1800000041.299.3.5
 # ::snt 손 전 고문은 아침마다 백련사에서 다산초당까지 이어진 길을 산책한다.
 # ::pos 손/NNP 전/MMD 고문/NNG+은/JX 아침/NNG+마다/JX 백련사/NNP+에서/JKB 다산초당/NNP+까지/JX 이어지/VV+ㄴ/ETM 길/NNG+을/JKO 산책/NNG+하/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (9 / 산책한다.~w.9
    :srl.ARG0 (3 / cv_position~w.3
                 :name (n2 / name
@@ -7302,7 +7287,7 @@ None
 # ::id NWRW1800000049.136.4.1
 # ::snt ○ 궁궐 짓다가 말고 사찰 세운 까닭은?
 # ::pos ○/SW 궁궐/NNG 짓/VV+다가/EC 말/VV+고/EC 사찰/NNG 세우/VV+ㄴ/ETM 까닭/NNG+은/JX+?/SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (7 / 까닭은?~w.7
    :dep.X (1 / ○~w.1)
    :dep.VP_MOD (6 / 세운~w.6
@@ -7338,7 +7323,7 @@ None
 # ::id NWRW1800000036.125.7.3
 # ::snt 이날 공연 관객의 99%가 다양한 연령대의 여성이었다.
 # ::pos 이날/NNG 공연/NNG 관객/NNG+의/JKG 99/SN+%/SW+가/JKS 다양/NNG+하/XSA+ㄴ/ETM 연령대/NNG+의/JKG 여성/NNG+이/VCP+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (7 / 여성이었다.~w.7
    :dep.NP_MOD (6 / 연령대의~w.6
                   :srl.ARG1-of (5 / 다양한~w.5
@@ -7380,7 +7365,7 @@ None
 # ::id NWRW1800000052.363.6.10
 # ::snt 일본은 2003년 12월 미국 엠디 참여를 선언했다.
 # ::pos 일본/NNP+은/JX 2003/SN+년/NNB 12/SN+월/NNB 미국/NNP 엠디/NNG 참여/NNG+를/JKO 선언/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (7 / 선언했다.~w.7
    :srl.ARG0 (1 / lcp_country~w.1
                 :name (n1 / name
@@ -7438,7 +7423,7 @@ None
 # ::id NWRW1800000045.196.7.4
 # ::snt 서울대생이 아니어도 가입할 순 있지만 상대방이 원치 않으면 매칭 대상에서 배제된다.
 # ::pos 서울대/NNP+생/XSN+이/JKC 아니/VCN+어도/EC 가입/NNG+하/XSV+ㄹ/ETM 수/NNB+ㄴ/JX 있/VA+지만/EC 상대방/NNG+이/JKS 원/NNG+하/XSV+지/EC 않/VX+으면/EC 매칭/NNG 대상/NNG+에서/JKB 배제/NNG+되/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (11 / 배제된다.~w.11
     :srl.ARG2 (10 / 대상에서~w.10
                   :dep.NP (9 / 매칭~w.9))
@@ -7485,12 +7470,16 @@ None
 # ::id NWRW1800000028.50.7.1
 # ::snt -이번 사태가 북핵문제와 6자회담에 대한 미-중 협력에 어떤 영향을 줄 것으로 보나?
 # ::pos -/SO+이번/NNG 사태/NNG+가/JKS 북핵/NNG+문제/NNG+와/JC 6/SN+자/NNB+회담/NNG+에/JKB 대하/VV+ㄴ/ETM 미/NNP+-/SO+중/NNP 협력/NNG+에/JKB 어떤/MMD 영향/NNG+을/JKO 주/VV+ㄹ/ETM 것/NNB+으로/JKB 보/VV+나/EF+?/SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (12 / 보나?~w.12
     :srl.ARG1 ((10, 11) / 줄_것으로~w.10,11
                         :srl.ARG0 (2 / 사태가~w.2
                                      :dep.NP (1 / -이번~w.1))
                         :srl.ARG2 (7 / 협력에~w.7
+                                     :dep.NP (6 / ogg_politics~w.6
+                                                :name (n4 / name
+                                                          :op1 "중")
+                                                :wiki "https://ko.wikipedia.org/wiki/중화인민공화국_정부")
                                      :dep.VP_MOD ((4, 5) / ev_others~w.4,5
                                                          :name (n2 / name
                                                                    :op1 "6자회담")
@@ -7498,11 +7487,7 @@ None
                                                          :dep.NP_CNJ (3 / lcp_country~w.3
                                                                         :name (n1 / name
                                                                                   :op1 "북")
-                                                                        :wiki "https://ko.wikipedia.org/wiki/조선민주주의인민공화국"))
-                                     :dep.NP (6 / ogg_politics~w.6
-                                                :name (n4 / name
-                                                          :op1 "중")
-                                                :wiki "https://ko.wikipedia.org/wiki/중화인민공화국_정부"))
+                                                                        :wiki "https://ko.wikipedia.org/wiki/조선민주주의인민공화국")))
                         :srl.ARG1 (9 / 영향을~w.9
                                      :dep.DP (8 / 어떤~w.8))))
 
@@ -7538,7 +7523,7 @@ None
 # ::id NWRW1800000021.388.15.1
 # ::snt 기자가 두바이를 찾은 28일과 29일 시내는 예상외로 조용했다.
 # ::pos 기자/NNG+가/JKS 두바이/NNP+를/JKO 찾/VV+은/ETM 28/SN+일/NNB+과/JC 29/SN+일/NNB 시내/NNG+는/JX 예상외/NNG+로/JKB 조용하/VA+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (8 / 조용했다.~w.8
    :srl.ARGM-TMP (5 / dt_day~w.5
                     :name (n4 / name
@@ -7601,7 +7586,7 @@ None
 # ::id NWRW1800000041.20.7.3
 # ::snt 아워홈 선농 등은 기존 김치보다 나트륨 함량을 30∼50% 줄인 저염 김치를 내놨다.
 # ::pos 아워홈/NNP 선농/NNP 등/NNB+은/JX 기존/NNG 김치/NNG+보다/JKB 나트륨/NNG 함량/NNG+을/JKO 30/SN+∼/SO+50/SN+%/SW 줄이/VV+ㄴ/ETM 저염/NNG 김치/NNG+를/JKO 내놓/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (12 / 내놨다.~w.12
     :srl.ARG1 (11 / cv_food~w.11
                   :srl.ARG0-of (9 / 줄인~w.9
@@ -7653,7 +7638,7 @@ None
 # ::id NWRW1800000056.72.3.1
 # ::snt 중도 우파 피용이 스캔들로 무너지며 행운
 # ::pos 중도/NNG 우파/NNG 피용/NNP+이/JKS 스캔들/NNG+로/JKB 무너지/VV+며/EC 행운/NNG
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (6 / 행운~w.6
    :dep.VP (5 / 무너지며~w.5
               :srl.ARG1 (3 / ps_name~w.3
@@ -7710,7 +7695,7 @@ None
 # ::id NWRW1800000037.111.9.1
 # ::snt 원서 접수는 20∼24일 인터넷으로만 가능하다.
 # ::pos 원서/NNG 접수/NNG+는/JX 20/SN+∼/SO+24/SN+일/NNB 인터넷/NNG+으로/JKB+만/JX 가능/NNG+하/XSA+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (5 / 가능하다.~w.5
    :srl.ARG1 (2 / 접수는~w.2
                 :dep.NP (1 / 원서~w.1))
@@ -7746,7 +7731,7 @@ None
 # ::id NWRW1800000025.250.3.1
 # ::snt 인간 대신 올빼미를 주인공으로 내세운 판타지 소설이다.
 # ::pos 인간/NNG 대신/NNG 올빼미/NNG+를/JKO 주인공/NNG+으로/JKB 내세우/VV+ㄴ/ETM 판타지/NNG 소설/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (7 / 소설이다.~w.7
    :dep.VP_MOD (5 / 내세운~w.5
                   :dep.NP_AJT (2 / 대신~w.2
@@ -7827,7 +7812,7 @@ None
 # ::id NWRW1800000056.75.16.2
 # ::snt 이는 로즌스타인이 트럼프와 상의 없이 특별검사를 임명했음을 시사한다.
 # ::pos 이/NP+는/JX 로즌스타인/NNP+이/JKS 트럼프/NNP+와/JKB 상의/NNG 없이/MAG 특별/NNG+검사/NNG+를/JKO 임명/NNG+하/XSV+았/EP+음/ETN+을/JKO 시사/NNG+하/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (8 / 시사한다.~w.8
    :dep.VP_OBJ (7 / 임명했음을~w.7
                   :dep.NP_SBJ (1 / 이는~w.1)
@@ -7873,7 +7858,7 @@ None
 # ::id NWRW1800000045.265.10.4
 # ::snt 공부의 궁극적 목적이 바뀌면 아이의 미래도 달라질 것이다.
 # ::pos 공부/NNG+의/JKG 궁극/NNG+적/XSN 목적/NNG+이/JKS 바뀌/VV+면/EC 아이/NNG+의/JKG 미래/NNG+도/JX 달라지/VV+ㄹ/ETM 것/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 ((7, 8) / 달라질_것이다.~w.7,8
         :dep.VP (4 / 바뀌면~w.4
                    :srl.ARG1 (3 / 목적이~w.3
@@ -7907,7 +7892,7 @@ None
 # ::id NWRW1800000036.96.7.1
 # ::snt 원래부터 이 영상물의 제작자는 베일에 싸여 있었다.
 # ::pos 원래/NNG+부터/JX 이/MMD 영상물/NNG+의/JKG 제작자/NNG+는/JX 베일/NNG+에/JKB 싸이/VV+어/EC 있/VX+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 ((6, 7) / 싸여_있었다.~w.6,7
         :dep.NP_AJT (1 / 원래부터~w.1)
         :srl.ARG1 (4 / cv_occupation~w.4
@@ -7945,7 +7930,7 @@ None
 # ::id NWRW1800000056.288.11.3
 # ::snt 겨울올림픽이라는 특성 때문에 외국의 기술과 자문 등에 전적으로 의존하는 형태다.
 # ::pos 겨울/NNG+올림픽/NNG+이/VCP+라는/ETM 특성/NNG 때문/NNB+에/JKB 외국/NNG+의/JKG 기술/NNG+과/JC 자문/NNG 등/NNB+에/JKB 전적/NNG+으로/JKB 의존/NNG+하/XSV+는/ETM 형태/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (10 / 형태다.~w.10
     :dep.VP_MOD (9 / 의존하는~w.9
                    :srl.ARGM-CAU ((2, 3) / 특성_때문에~w.2,3
@@ -7981,7 +7966,7 @@ None
 # ::id NWRW1800000053.84.6.1
 # ::snt 서울사이버대는 실용음악과를 비롯해 신·편입생을 모집 중이다.
 # ::pos 서울사이버대/NNP+는/JX 실용/NNG+음악과/NNG+를/JKO 비롯하/VV+아/EC 신·편입/NNG+생/XSN+을/JKO 모집/NNG 중/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 ((5, 6) / 모집_중이다.~w.5,6
         :dep.VP (3 / 비롯해~w.3
                    :srl.ARG1 (1 / ogg_education~w.1
@@ -8027,7 +8012,7 @@ None
 # ::id NWRW1800000021.63.8.4
 # ::snt 단백질로 이뤄진 병원체는 높은 온도에서 파괴된다.
 # ::pos 단백질/NNG+로/JKB 이뤄지/VV+ㄴ/ETM 병원체/NNG+는/JX 높/VA+은/ETM 온도/NNG+에서/JKB 파괴/NNG+되/XSV+ㄴ다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (6 / 파괴된다.~w.6
    :srl.ARG1 (3 / tmm_disease~w.3
                 :srl.ARG1-of (2 / 이뤄진~w.2
@@ -8062,7 +8047,7 @@ None
 # ::id NWRW1800000025.199.24.1
 # ::snt ―2006년∼현재 TBWA코리아 대표이사 사장
 # ::pos ―/SS+2006/SN+년/NNB+∼/SO+현재/NNG TBWA코리아/NNP 대표/NNG+이사/NNG 사장/NNG
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (4 / cv_position~w.4
    :name (n4 / name
              :op1 "사장")
@@ -8112,7 +8097,7 @@ None
 # ::id NWRW1800000022.147.10.3
 # ::snt 그린 눈과 실제 눈이 사진을 반반씩 차지했다.
 # ::pos 그리/VV+ㄴ/ETM 눈/NNG+과/JC 실제/NNG 눈/NNG+이/JKS 사진/NNG+을/JKO 반반/NNG+씩/XSN 차지/NNG+하/XSV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (7 / 차지했다.~w.7
    :srl.ARG0 (4 / am_part~w.4
                 :name (n2 / name
@@ -8160,7 +8145,7 @@ None
 # ::id NWRW1800000030.407.6.4
 # ::snt 박씨는 승차권 수집과 가정의 행복을 맞바꿔 버렸다고 했다.
 # ::pos 박/NNP+씨/NNB+는/JX 승차/NNG+권/XSN 수집/NNG+과/JC 가정/NNG+의/JKG 행복/NNG+을/JKO 맞바꾸/VV+어/EC 버리/VX+었/EP+다고/EC 하/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:18
+# ::update 2023-01-20T18:18:39
 (8 / 했다.~w.8
    :srl.ARG1 ((6, 7) / 맞바꿔_버렸다고~w.6,7
                      :srl.ARG2 (3 / 수집과~w.3
@@ -8208,7 +8193,7 @@ None
 # ::id NWRW1800000028.91.7.3
 # ::snt 열세가 예상됐던 엘지와의 경기도 철저한 준비로 3전 전승을 거뒀다.
 # ::pos 열세/NNG+가/JKS 예상/NNG+되/XSV+었/EP+던/ETM 엘지/NNP+와/JKB+의/JKG 경기/NNG+도/JX 철저/NNG+하/XSA+ㄴ/ETM 준비/NNG+로/JKB 3/SN+전/NNB 전승/NNG+을/JKO 거두/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (9 / 거뒀다.~w.9
    :dep.NP (4 / 경기도~w.4
               :dep.NP_MOD (3 / ogg_sports~w.3
@@ -8248,7 +8233,7 @@ None
 # ::id NWRW1800000025.340.3.5
 # ::snt 바이러스의 외부 노출도 막을 수 있다.
 # ::pos 바이러스/NNG+의/JKG 외부/NNG 노출/NNG+도/JX 막/VV+을/ETM 수/NNB 있/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 ((4, 5, 6) / 막을_수_있다.~w.4,5,6
            :srl.ARG1 (3 / 노출도~w.3
                         :dep.NP_MOD (1 / tmm_disease~w.1
@@ -8291,11 +8276,16 @@ None
 # ::id NWRW1800000029.129.7.1
 # ::snt 리비아 사회를 이집트 튀니지와 결정적으로 다르게 만드는 것은 부족 간 역학관계다.
 # ::pos 리비아/NNP 사회/NNG+를/JKO 이집트/NNP 튀니지/NNP+와/JKB 결정/NNG+적/XSN+으로/JKB 다르/VA+게/EC 만들/VV+는/ETM 것/NNB+은/JX 부족/NNG 간/NNB 역학/NNG+관계/NNG+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (11 / 역학관계다.~w.11
     :dep.NP_MOD (10 / 간~w.10
                     :dep.NP (9 / 부족~w.9))
     :dep.NP_SBJ ((6, 7, 8) / 다르게_만드는_것은~w.6,7,8
+                           :srl.ARG1 (2 / 사회를~w.2
+                                        :dep.NP (1 / lcp_country~w.1
+                                                   :name (n1 / name
+                                                             :op1 "리비아")
+                                                   :wiki "https://ko.wikipedia.org/wiki/리비아"))
                            :srl.ARG2 (4 / lcp_country~w.4
                                         :name (n3 / name
                                                   :op1 "튀니지")
@@ -8304,12 +8294,7 @@ None
                                                    :name (n2 / name
                                                              :op1 "이집트")
                                                    :wiki "https://ko.wikipedia.org/wiki/이집트"))
-                           :dep.NP_AJT (5 / 결정적으로~w.5)
-                           :srl.ARG1 (2 / 사회를~w.2
-                                        :dep.NP (1 / lcp_country~w.1
-                                                   :name (n1 / name
-                                                             :op1 "리비아")
-                                                   :wiki "https://ko.wikipedia.org/wiki/리비아"))))
+                           :dep.NP_AJT (5 / 결정적으로~w.5)))
 
 
 
@@ -8335,7 +8320,7 @@ None
 # ::id NWRW1800000026.10.27.5
 # ::snt 아마 이는 62~63% 선으로 낮아질 것이다.
 # ::pos 아마/MAG 이/NP+는/JX 62/SN+~/SO+63/SN+%/SW 선/NNG+으로/JKB 낮/VA+아/EC+지/VX+ㄹ/ETM 것/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 ((5, 6) / 낮아질_것이다.~w.5,6
         :srl.ARGM-TMP (1 / 아마~w.1)
         :srl.ARG1 (2 / 이는~w.2)
@@ -8383,7 +8368,7 @@ None
 # ::id NWRW1800000030.56.7.5
 # ::snt 그에게 고향의 체험은 창작을 이어가는 데 중요한 영감의 원천이 되었다.
 # ::pos 그/NP+에게/JKB 고향/NNG+의/JKG 체험/NNG+은/JX 창작/NNG+을/JKO 잇/VV+어/EC+가/VX+는/ETM 데/NNB 중요/NNG+하/XSA+ㄴ/ETM 영감/NNG+의/JKG 원천/NNG+이/JKC 되/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (10 / 되었다.~w.10
     :dep.NP_AJT (1 / 그에게~w.1)
     :srl.ARG1 (3 / 체험은~w.3
@@ -8439,7 +8424,7 @@ None
 # ::id NWRW1800000041.294.5.2
 # ::snt 한적 총재 자리는 김 회장의 몸에 잘 맞지 않는 옷 같다.
 # ::pos 한적/NNP 총재/NNG 자리/NNG+는/JX 김/NNP 회장/NNG+의/JKG 몸/NNG+에/JKB 잘/MAG 맞/VV+지/EC 않/VX+는/ETM 옷/NNG 같/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (11 / 같다.~w.11
     :srl.ARG1 (3 / 자리는~w.3
                  :dep.NP (2 / cv_position~w.2
@@ -8500,7 +8485,7 @@ None
 # ::id NWRW1800000029.325.8.1
 # ::snt 기업 경영을 통일사업이나 자선사업 등으로 착각하면서 곁눈을 파는 것은 위험하다.
 # ::pos 기업/NNG 경영/NNG+을/JKO 통일/NNG+사업/NNG+이나/JC 자선/NNG+사업/NNG 등/NNB+으로/JKB 착각/NNG+하/XSV+면서/EC 곁눈/NNG+을/JKO 팔/VV+는/ETM 것/NNB+은/JX 위험/NNG+하/XSA+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (10 / 위험하다.~w.10
     :srl.ARG1 ((8, 9) / 파는_것은~w.8,9
                       :dep.VP (6 / 착각하면서~w.6
@@ -8536,7 +8521,7 @@ None
 # ::id NWRW1800000024.298.2.1
 # ::snt 8년 만에 다시 선 코트는 어땠을까.
 # ::pos 8/SN+년/NNB 만/NNB+에/JKB 다시/MAG 서/VV+ㄴ/ETM 코트/NNG+는/JX 어떻/VA+었/EP+을까/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (6 / 어땠을까.~w.6
    :srl.ARG1 (5 / tm_sports~w.5
                 :srl.ARG1-of (4 / 선~w.4
@@ -8580,7 +8565,7 @@ None
 # ::id NWRW1800000037.239.3.1
 # ::snt 제67회 황금사자기 전국고교야구대회 겸 주말리그 왕중왕전이 2주째 일정을 맞았다.
 # ::pos 제/XPN+67/SN+회/NNB 황금/NNG+사자기/NNG 전국/NNG+고교/NNG+야구/NNG+대회/NNG 겸/NNB 주말/NNG+리그/NNG 왕중왕전/NNG+이/JKS 2/SN+주/NNB+째/XSN 일정/NNG+을/JKO 맞/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (9 / 맞았다.~w.9
    :srl.ARG1 (6 / ev_sports~w.6
                 :name (n4 / name
@@ -8632,7 +8617,7 @@ None
 # ::id NWRW1800000021.125.9.3
 # ::snt 하지만 미래의 희망을 키우는 것도 중요하다.
 # ::pos 하지만/MAJ 미래/NNG+의/JKG 희망/NNG+을/JKO 키우/VV+는/ETM 것/NNB+도/JX 중요/NNG+하/XSA+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (6 / 중요하다.~w.6
    :srl.ARGM-DIS (1 / 하지만~w.1)
    :srl.ARG1 ((4, 5) / 키우는_것도~w.4,5
@@ -8668,7 +8653,7 @@ None
 # ::id NWRW1800000026.376.3.3
 # ::snt 이때 변호인단이 제출한 자료가 있다.
 # ::pos 이때/NNG 변호인단/NNG+이/JKS 제출/NNG+하/XSV+ㄴ/ETM 자료/NNG+가/JKS 있/VA+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (5 / 있다.~w.5
    :srl.ARGM-TMP (1 / 이때~w.1
                     :srl.ARGM-TMP-of (3 / 제출한~w.3
@@ -8706,7 +8691,7 @@ None
 # ::id NWRW1800000053.60.8.1
 # ::snt 한국은 고용절벽 위기를 맞아 일자리의 절대적인 양이 떨어지고 있다.
 # ::pos 한국/NNP+은/JX 고용/NNG+절벽/NNG 위기/NNG+를/JKO 맞/VV+아/EC 일자리/NNG+의/JKG 절대/NNG+적/XSN+이/VCP+ㄴ/ETM 양/NNG+이/JKS 떨어지/VV+고/EC 있/VX+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 ((8, 9) / 떨어지고_있다.~w.8,9
         :srl.ARGM-CAU (4 / 맞아~w.4
                          :srl.ARG1 (1 / lcp_country~w.1
@@ -8840,7 +8825,7 @@ None
 # ::id NWRW1800000029.145.5.4
 # ::snt 지난해 코카시아 지역 살인율은 전국 평균의 5배가 넘는 10만 명 중 189명꼴이다.
 # ::pos 지난해/NNG 코카시아/NNP 지역/NNG 살인/NNG+율/XSN+은/JX 전국/NNG 평균/NNG+의/JKG 5/SN+배/NNG+가/JKS 넘/VV+는/ETM 10/SN+만/NR 명/NNB 중/NNB 189/SN+명/NNB+꼴/XSN+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (12 / qt_man_count~w.12
     :name (n5 / name
               :op1 "189명꼴")
@@ -8903,7 +8888,7 @@ None
 # ::id NWRW1800000048.161.3.4
 # ::snt 메르스로 연이은 3차 감염자와 사망자가 발생하면서 불안감이 커진 탓입니다.
 # ::pos 메르스/NNG+로/JKB 연잇/VV+은/ETM 3/SN+차/NNB 감염자/NNG+와/JC 사망자/NNG+가/JKS 발생/NNG+하/XSV+면서/EC 불안감/NNG+이/JKS 커지/VV+ㄴ/ETM 탓/NNG+이/VCP+ㅂ니다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 ((8, 9) / 커진_탓입니다.~w.8,9
         :srl.ARGM-CAU (6 / 발생하면서~w.6
                          :srl.ARG1 (5 / 사망자가~w.5
@@ -8941,7 +8926,7 @@ None
 # ::id NWRW1800000026.77.9.1
 # ::snt 그러나 아르헨티나에도 고민은 있었다.
 # ::pos 그러나/MAJ 아르헨티나/NNP+에/JKB+도/JX 고민/NNG+은/JX 있/VA+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (4 / 있었다.~w.4
    :srl.ARGM-DIS (1 / 그러나~w.1)
    :srl.ARG2 (2 / lcp_country~w.2
@@ -8983,7 +8968,7 @@ None
 # ::id NWRW1800000048.74.8.1
 # ::snt 올해 담뱃값이 2000원 오른 영향으로 편의점 매출은 크게 늘었다.
 # ::pos 올해/NNG 담뱃값/NNG+이/JKS 2000/SN+원/NNB 오르/VV+ㄴ/ETM 영향/NNG+으로/JKB 편의점/NNG 매출/NNG+은/JX 크/VA+게/EC 늘/VV+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (9 / 늘었다.~w.9
    :srl.ARGM-CAU (5 / 영향으로~w.5)
    :srl.ARG1 (7 / 매출은~w.7
@@ -9035,7 +9020,7 @@ None
 # ::id NWRW1800000033.38.1.1
 # ::snt 가을 이사철 앞두고 세 번 우는 세입자
 # ::pos 가을/NNG 이사/NNG+철/NNG 앞두/VV+고/EC 세/MMN 번/NNB 울/VV+는/ETM 세입자/NNG
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (7 / 세입자~w.7
    :srl.ARG0-of (3 / 앞두고~w.3
                    :srl.ARG1 (2 / 이사철~w.2
@@ -9078,14 +9063,13 @@ None
 # ::id NWRW1800000048.355.2.6
 # ::snt 바람은 잠잠해졌지만 결코 사라진 게 아니다.
 # ::pos 바람/NNG+은/JX 잠잠하/VA+아/EC+지/VX+었/EP+지만/EC 결코/MAG 사라지/VV+ㄴ/ETM 거/NNB+이/JKC 아니/VCN+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (6 / 아니다.~w.6
-   :srl.ARG0 (5 / 게~w.5
-                :dep.VP_MOD (4 / 사라진~w.4
-                               :dep.NP_SBJ (1 / 바람은~w.1)
-                               :dep.VP (2 / 잠잠해졌지만~w.2
-                                          :srl.ARG1 1)
-                               :dep.AP (3 / 결코~w.3))))
+   :srl.ARG0 ((4, 5) / 사라진_게~w.4,5
+                     :dep.NP_SBJ (1 / 바람은~w.1)
+                     :dep.VP (2 / 잠잠해졌지만~w.2
+                                :srl.ARG1 1)
+                     :dep.AP (3 / 결코~w.3)))
 
 
 
@@ -9121,7 +9105,7 @@ None
 # ::id NWRW1800000038.395.2.1
 # ::snt 이번에 적발된 청천강호와 거의 똑같은 항로 이용
 # ::pos 이번/NNG+에/JKB 적발/NNG+되/XSV+ㄴ/ETM 청천강호/NNP+와/JKB 거의/MAG 똑같/VA+은/ETM 항로/NNG 이용/NNG
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (7 / 이용~w.7
    :dep.NP (6 / 항로~w.6)
    :srl.ARG1-of (5 / 똑같은~w.5
@@ -9155,7 +9139,7 @@ None
 # ::id NWRW1800000054.310.2.1
 # ::snt 대학교수의 정치 참여에 대한 비판은 오래됐다.
 # ::pos 대학교수/NNG+의/JKG 정치/NNG 참여/NNG+에/JKB 대하/VV+ㄴ/ETM 비판/NNG+은/JX 오래/MAG+되/XSA+었/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (6 / 오래됐다.~w.6
    :srl.ARG1 (5 / 비판은~w.5
                 :dep.VP_MOD ((3, 4) / 참여에_대한~w.3,4
@@ -9193,7 +9177,7 @@ None
 # ::id NWRW1800000037.200.11.2
 # ::snt 8차례 중 4차례는 평일 근무지를 이탈했던 것으로 드러났다.
 # ::pos 8/SN+차례/NNG 중/NNB 4/SN+차례/NNG+는/JX 평일/NNG 근무지/NNG+를/JKO 이탈/NNG+하/XSV+았/EP+던/ETM 것/NNB+으로/JKB 드러나/VV+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 (8 / 드러났다.~w.8
    :srl.ARG1 ((6, 7) / 이탈했던_것으로~w.6,7
                      :dep.NP_AJT (3 / qt_count~w.3
@@ -9235,7 +9219,7 @@ None
 # ::id NWRW1800000022.94.2.3
 # ::snt 다만 궁박한 삶이 발목을 잡을 뿐이다.
 # ::pos 다만/MAG 궁박하/VA+ㄴ/ETM 삶/NNG+이/JKS 발목/NNG+을/JKO 잡/VV+을/ETM 뿐/NNB+이/VCP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 ((5, 6) / 잡을_뿐이다.~w.5,6
         :dep.AP (1 / 다만~w.1)
         :srl.ARG0 (3 / 삶이~w.3
@@ -9312,7 +9296,7 @@ None
 # ::id NWRW1800000046.48.4.4
 # ::snt 직장 생활 하느라 뮤지션들과도 넓게 사귀지 못했다.
 # ::pos 직장/NNG 생활/NNG 하/VV+느라/EC 뮤지션/NNG+들/XSN+과/JKB+도/JX 넓/VA+게/EC 사귀/VV+지/EC 못하/VX+았/EP+다/EF+./SF
-# ::update 2023-01-18T23:45:19
+# ::update 2023-01-20T18:18:39
 ((6, 7) / 사귀지_못했다.~w.6,7
         :srl.ARG1 (4 / cv_occupation~w.4
                      :name (n1 / name
