@@ -20,7 +20,7 @@ class AbstractMeaningRepresentation:
             self.update_from_dep,
             self.update_from_mwe,
             self.update_from_ner,
-            self.update_from_srl
+            # self.update_from_srl
         ]
         for process in self.pipeline:
             process()

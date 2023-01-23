@@ -13,9 +13,15 @@ reference: 국립국어원 <2021년 개체명 분석 및 개체 연결 말뭉치
 # tm: general terms for (abstract) concept? terminologies?
     - conceptual referring
 """
-from synthetics.primitives.amr.concept import AMRNamedEntityConcept
-from synthetics.primitives.amr.concept import AMRGenericNameConcept
-from synthetics.primitives.amr.concept import AMRTerminologyConcept
+from synthetics.primitives.amr.concept import (
+    AMRNamedEntityConcept,
+    AMRGenericNameConcept,
+    AMRTerminologyConcept,
+    AMRHaveOrgRole91Concept,
+    AMRHaveRelRole91Concept,
+    AMREmailAddressEntityConcept,
+    AMRHyperlink91Concept
+)
 
 
 NAMED_ENTITIES = {
@@ -168,20 +174,28 @@ NAMED_ENTITIES = {
     # ex. 소설, 시, 판타지소설, 판소리, 힙합, 케이팝, 공포영화, 미국드라마
     'CV_SPORTS': ('tm.sports*', AMRTerminologyConcept),
     # ex. 축구, 야구, 수상스키, 스키, 스케이팅, 하이킹, 행글라이딩
-    'CV_SPORTS_POSITION': ('tm.sports-position*', AMRTerminologyConcept),  # 'have-org-role-91'
+    'CV_SPORTS_POSITION': ('have-org-role-91', AMRHaveOrgRole91Concept),
     # ex. 투수, 포수, 스트라이커, 골키퍼, 미드필더
     'CV_SPORTS_INST': ('ge.sports-instrument*', AMRGenericNameConcept),
     # ex. 스케이트, 인라인스케이트, 야구공, 배트, 아이젠, 오리발
-    'CV_PRIZE': ('award', AMRNamedEntityConcept),
+    'CV_PRIZE': ('ne.award', AMRNamedEntityConcept),
     # ex. 노벨경제학상, 대통령상, 대종상, 다승왕, 타격왕
-    'CV_RELATION': 'have-rel-role-91',   # ex. 엄마, 아버지, 가족, 형제, 제자, 아들, 딸, 자식, 친척
-    'CV_OCCUPATION': 'have-org-role-91',   # ex. 화가, 극작가, 건축가, 가정교사, 언어학자, 공인중개사
-    'CV_POSITION': 'have-org-role-91',   # ex. 부장, 과장, 대리, 대위, 중위, 소위, 대통령, 국무총리, 장관
-    'CV_FOOD': 'food-dish',   # ex. 소고기, 소금, 명란젓, 국수, 김치, 나물, 된장찌개, 1955버거, 맵슐랭치킨
-    'CV_DRINK': 'food-drink*',   # ex. 물, 우유, 주스, 홍차, 레모네이드, 칵테일, 위스키, 레드불
-    'CV_FOOD_STYLE': 'food-style*',   # ex. 한식, 양식, 중식, 보양식, 패스트푸드
-    'CV_CLOTHING': 'clothing*',   # ex. 모시, 메리야스, 와이셔츠, 레이온, 양모, 점퍼
-    'CV_BUILDING_TYPE': 'architectural-style*',   # ex. 기능주의건축, 노르만양식, 시토파건축, 도리스양식
+    'CV_RELATION': ('have-rel-role-91', AMRHaveRelRole91Concept),
+    # ex. 엄마, 아버지, 가족, 형제, 제자, 아들, 딸, 자식, 친척
+    'CV_OCCUPATION': ('have-org-role-91', AMRHaveOrgRole91Concept),
+    # ex. 화가, 극작가, 건축가, 가정교사, 언어학자, 공인중개사
+    'CV_POSITION': ('have-org-role-91', AMRHaveOrgRole91Concept),
+    # ex. 부장, 과장, 대리, 대위, 중위, 소위, 대통령, 국무총리, 장관
+    'CV_FOOD': ('ge.food-dish', AMRGenericNameConcept),
+    # ex. 소고기, 소금, 명란젓, 국수, 김치, 나물, 된장찌개, 1955버거, 맵슐랭치킨
+    'CV_DRINK': ('ge.food-drink*', AMRGenericNameConcept),
+    # ex. 물, 우유, 주스, 홍차, 레모네이드, 칵테일, 위스키, 레드불
+    'CV_FOOD_STYLE': ('ge.food-category*', AMRGenericNameConcept),
+    # ex. 한식, 양식, 중식, 보양식, 패스트푸드
+    'CV_CLOTHING': ('ge.clothing*', AMRGenericNameConcept),
+    # ex. 모시, 메리야스, 와이셔츠, 레이온, 양모, 점퍼
+    'CV_BUILDING_TYPE': ('tm.architecture*', AMRTerminologyConcept),
+    # ex. 기능주의건축, 노르만양식, 시토파건축, 도리스양식
 
     # DATE (DT) - 기간 및 계절, 시기/시대
     'DT_DURATION': 'temporal-quantity|date-interval',   # ex. ~부터 ~까지, ~ 간, 전반기/후반기, 성수기/비수기
@@ -222,53 +236,94 @@ NAMED_ENTITIES = {
     'QT_OTHERS': 'quantity*',   # ex. 45점, 100점, 지식머니 20, 북위 38도, 53' 51, 2960X1440
 
     # EVENT (EV) - 특정 사건/사고/행사 명칭
-    'EV_ACTIVITY': 'political-movement',   # ex. 공민권운동, 브나로드운동, 노예해방선언, 인권선언, 밀라노칙령
-    'EV_WAR_REVOLUTION': 'war',   # ex. 러일전쟁, 남북전쟁, 청교도혁명, 4.19혁명, 명량해전, 516 쿠데타
-    'EV_SPORTS': 'game',   # ex. 올림픽경기대회, 서울올림픽, 오버워치리그, 태권도 대회
-    'EV_FESTIVAL': 'festival',   # ex. 이천도자기축제, 칸 영화제, 방탄 콘서트, 책 읽는 춘천, 서울 패션 위크
-    'EV_OTHERS': 'event',   # ex. 세월호 참사, 다보스포럼, 키스해링전, 월드바리스타챔피언쉽
+    'EV_ACTIVITY': ('ne.event', AMRNamedEntityConcept),
+    # ex. 공민권운동, 브나로드운동, 노예해방선언, 인권선언, 밀라노칙령
+    'EV_WAR_REVOLUTION': ('ne.war', AMRNamedEntityConcept),
+    # ex. 러일전쟁, 남북전쟁, 청교도혁명, 4.19혁명, 명량해전, 516 쿠데타
+    'EV_SPORTS': ('ne.game', AMRNamedEntityConcept),
+    # ex. 올림픽경기대회, 서울올림픽, 오버워치리그, 태권도 대회
+    'EV_FESTIVAL': ('ne.festival', AMRNamedEntityConcept),
+    # ex. 이천도자기축제, 칸 영화제, 방탄 콘서트, 책 읽는 춘천, 서울 패션 위크
+    'EV_OTHERS': ('ne.event', AMRNamedEntityConcept),
+    # ex. 세월호 참사, 다보스포럼, 키스해링전, 월드바리스타챔피언쉽
 
     # ANIMAL (AM) - 사람을 제외한 짐승
-    'AM_INSECT': 'animal*',   # ex. 벼메뚜기, 가시거미, 지네, 불나방, 배추흰나비, 참매미
-    'AM_BIRD': 'animal*',   # ex. 왜가리, 뻐꾸기, 거위, 두루미, 황새
-    'AM_FISH': 'animal*',   # ex. 참가자미, 전기뱀장어, 연어, 갈치, 멸치, 미꾸라지, 숭어, 날치
-    'AM_MAMMALIA': 'animal*',   # ex. 해달, 토끼, 오소리, 돌고래, 박쥐, 고슴도치, 두더지
-    'AM_AMPHIBIA': 'animal*',   # ex. 개구리, 두꺼비, 산개구리, 산청개구리, 도롱뇽, 맹꽁이
-    'AM_REPTILIA': 'animal*',   # ex. 도마뱀, 거북, 자라, 구렁이, 백사, 공룡, 악어
-    'AM_TYPE': 'animal*',   # ex. 강장동물, 구두동물, 극피동물, 내항동물, 모악동물, 선형동물
-    'AM_PART': 'part-of',   # ex. 목, 살, 등, 배, 몸통, 손, 입, 갈기
-    'AM_OTHERS': 'pathogen*',   # ex. 가재(절지동물), 문어, 오징어(연체동물)
+    'AM_INSECT': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 벼메뚜기, 가시거미, 지네, 불나방, 배추흰나비, 참매미
+    'AM_BIRD': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 왜가리, 뻐꾸기, 거위, 두루미, 황새
+    'AM_FISH': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 참가자미, 전기뱀장어, 연어, 갈치, 멸치, 미꾸라지, 숭어, 날치
+    'AM_MAMMALIA': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 해달, 토끼, 오소리, 돌고래, 박쥐, 고슴도치, 두더지
+    'AM_AMPHIBIA': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 개구리, 두꺼비, 산개구리, 산청개구리, 도롱뇽, 맹꽁이
+    'AM_REPTILIA': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 도마뱀, 거북, 자라, 구렁이, 백사, 공룡, 악어
+    'AM_TYPE': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 강장동물, 구두동물, 극피동물, 내항동물, 모악동물, 선형동물
+    'AM_PART': ('tm.body-part*', AMRTerminologyConcept),
+    # ex. 목, 살, 등, 배, 몸통, 손, 입, 갈기
+    'AM_OTHERS': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 가재(절지동물), 문어, 오징어(연체동물)
 
     # PLANT (PT) - 꽃/나무, 육지식물, 해조류, 버섯류, 이끼류
-    'PT_FRUIT': 'plant*',   # ex. 사과, 배, 자두, 바나나, 복숭아, 오렌지, 포도, 호두, 쌀, 보리
-    'PT_FLOWER': 'plant*',   # ex. 저먼아이리스, 백합, 국화, 제비꽃, 히아신스, 초롱꽃, 할미꽃
-    'PT_TREE': 'plant*',   # ex. 후박나무, 벚나무, 분비나무, 너도밤나무
-    'PT_GRASS': 'plant*',   # ex. 향부자, 하늘타리뿌리, 인삼, 생강, 감자, 싱아, 갈대
-    'PT_TYPE': 'plant*',   # ex. 장미목, 이판화군, 외떡잎식물, 붓꽃과, 백합목, 낙엽교목
-    'PT_PART': 'part-of',   # ex. 뿌리, 가지, 가시, 꽃, 꽃잎, 꽃봉오리, 꽃수술, 꽃받침, 씨앗
-    'PT_OTHERS': 'plant*',   # ex. 우산이끼, 송이버섯, 김, 미역, 매생이, 선인장, 콩나물
+    'PT_FRUIT': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 사과, 배, 자두, 바나나, 복숭아, 오렌지, 포도, 호두, 쌀, 보리
+    'PT_FLOWER': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 저먼아이리스, 백합, 국화, 제비꽃, 히아신스, 초롱꽃, 할미꽃
+    'PT_TREE': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 후박나무, 벚나무, 분비나무, 너도밤나무
+    'PT_GRASS': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 향부자, 하늘타리뿌리, 인삼, 생강, 감자, 싱아, 갈대
+    'PT_TYPE': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 장미목, 이판화군, 외떡잎식물, 붓꽃과, 백합목, 낙엽교목
+    'PT_PART': ('tm.body-part*', AMRTerminologyConcept),
+    # ex. 뿌리, 가지, 가시, 꽃, 꽃잎, 꽃봉오리, 꽃수술, 꽃받침, 씨앗
+    'PT_OTHERS': ('ge.species|taxon', AMRGenericNameConcept),
+    # ex. 우산이끼, 송이버섯, 김, 미역, 매생이, 선인장, 콩나물
 
     # MATERIAL (MT) - 원소 및 금속, 암석/보석, 화학 물질
-    'MT_ELEMENT': 'material*',   # ex. 이테르븀, 프로메튬, 디스프로슘, 셀렌, 헬륨
-    'MT_METAL': 'material*',   # ex. 황산철, 알루미늄, 아연, 구리, 수은, 아말감
-    'MT_ROCK': 'material*',   # ex. 화강암, 흑운모화강암, 진사, 역암, 사암, 편암, 편마암
-    'MT_CHEMICAL': 'material*',   # ex. 암모니아, 과산화수소, 에탄올, 황화수소, 네온, 일산화탄소, 헤모글로빈, 비타민
+    'MT_ELEMENT': ('tm.physio-chemical*', AMRTerminologyConcept),
+    # ex. 이테르븀, 프로메튬, 디스프로슘, 셀렌, 헬륨
+    'MT_METAL': ('tm.physio-chemical*', AMRTerminologyConcept),
+    # ex. 황산철, 알루미늄, 아연, 구리, 수은, 아말감
+    'MT_ROCK': ('tm.physio-chemical*', AMRTerminologyConcept),
+    # ex. 화강암, 흑운모화강암, 진사, 역암, 사암, 편암, 편마암
+    'MT_CHEMICAL': ('tm.physio-chemical*', AMRTerminologyConcept),
+    # ex. 암모니아, 과산화수소, 에탄올, 황화수소, 네온, 일산화탄소, 헤모글로빈, 비타민
 
     # TERM (TM) - 위에서 정의된 세부 개체명 이외의 개체명
-    'TM_COLOR': 'color*',   # ex. 흰색, 흰빛, 흑색, 회색, 황, 홍색, 하늘색, 파란빛
-    'TM_DIRECTION': 'direction',   # ex. 최북단, 중앙부, 중앙, 중부, 서쪽, 서부, 상부, 북쪽
-    'TM_CLIMATE': 'climate*',   # ex. 아열대기후, 고산기후, 고지기후, 도시기후, 동안기후
-    'TM_SHAPE': 'shape*',   # ex. 삼각형, 사각형, 팔각형, 일자형, 원통형, 삼각뿔 모양, 가로무늬, 구름무늬
-    'TM_CELL_TISSUE_ORGAN': 'cell-tissue*',   # ex. 간상세포, 각막세포, 고막, 뉴런, 늑연골, 식도, 콩팥, 비장
-    'TMM_DISEASE': 'desease',   # ex. 기침, 폐결핵, 기관지확장증, 레트증후군, 피고름가래
-    'TMM_DRUG': 'drug*',   # ex. 헤파린, 근이완제, 모기향, 소화제, 아스피린, 구충제
-    'TMI_HW': 'product',   # ex. 하드디스크드라이브, 마이크로프로세서, 롬, 디스켓, 소자 소켓, 감각 센서
-    'TMI_SW': 'program',   # ex. 윈도우10, 리눅스, 반디집, 알송, 한컴오피스 한글, MS워드, 트로이목마, 자바
-    'TMI_SITE': 'url-entity',   # ex. https://opendict.korean.go.kr/, https://www.korean.go.kr/
-    'TMI_EMAIL': 'email-address-entity',   # ex. esuhyeon@glab.hallym.ac.kr
-    'TMI_MODEL': 'product',   # ex. LM1000-2CX
-    'TMI_SERVICE': 'service*',   # ex. 와이브로서비스, DMB서비스, 카카오톡, 인스타그램, 네이버, 다음, 구글
-    'TMI_PROJECT': 'project*',   # ex. BrainKorea21, 4대강사업, 그린 IT 사업, 무료치과진료사업
-    'TMIG_GENRE': 'genre*',   # ex. RPG, 실시간 전략 게임, 1인칭 슈팅 게임
-    'TM_SPORTS': 'sports-term*'    # ex. 밀어내기 득점, 솔로 홈런, 바스켓카운트, 리바운드, 발리슛
+    'TM_COLOR': ('ge.color*', AMRGenericNameConcept),
+    # ex. 흰색, 흰빛, 흑색, 회색, 황, 홍색, 하늘색, 파란빛
+    'TM_DIRECTION': ('ge.direction*', AMRGenericNameConcept),
+    # ex. 최북단, 중앙부, 중앙, 중부, 서쪽, 서부, 상부, 북쪽
+    'TM_CLIMATE': ('tm.climate*', AMRTerminologyConcept),
+    # ex. 아열대기후, 고산기후, 고지기후, 도시기후, 동안기후
+    'TM_SHAPE': ('ge.shape*', AMRGenericNameConcept),
+    # ex. 삼각형, 사각형, 팔각형, 일자형, 원통형, 삼각뿔 모양, 가로무늬, 구름무늬
+    'TM_CELL_TISSUE_ORGAN': ('ge.cell-tissue-organ*', AMRGenericNameConcept),
+    # ex. 간상세포, 각막세포, 고막, 뉴런, 늑연골, 식도, 콩팥, 비장
+    'TMM_DISEASE': ('ne.desease|medical-condition', AMRNamedEntityConcept),
+    # ex. 기침, 폐결핵, 기관지확장증, 레트증후군, 피고름가래
+    'TMM_DRUG': ('ne.drug*', AMRNamedEntityConcept),
+    # ex. 헤파린, 근이완제, 모기향, 소화제, 아스피린, 구충제
+    'TMI_HW': ('ge.hardware*', AMRGenericNameConcept),
+    # ex. 하드디스크드라이브, 마이크로프로세서, 롬, 디스켓, 소자 소켓, 감각 센서
+    'TMI_SW': ('ne.software*', AMRNamedEntityConcept),
+    # ex. 윈도우10, 리눅스, 반디집, 알송, 한컴오피스 한글, MS워드, 트로이목마, 자바
+    'TMI_SITE': ('hyperlink-91', AMRHyperlink91Concept),
+    # ex. https://opendict.korean.go.kr/, https://www.korean.go.kr/
+    'TMI_EMAIL': ('email-address-entity', AMREmailAddressEntityConcept),
+    # ex. esuhyeon@glab.hallym.ac.kr
+    'TMI_MODEL': ('ne.product', AMRNamedEntityConcept),
+    # ex. LM1000-2CX
+    'TMI_SERVICE': ('ne.service*', AMRNamedEntityConcept),
+    # ex. 와이브로서비스, DMB서비스, 카카오톡, 인스타그램, 네이버, 다음, 구글
+    'TMI_PROJECT': ('ne.program', AMRNamedEntityConcept),
+    # ex. BrainKorea21, 4대강사업, 그린 IT 사업, 무료치과진료사업
+    'TMIG_GENRE': ('ge.genre*', AMRGenericNameConcept),
+    # ex. RPG, 실시간 전략 게임, 1인칭 슈팅 게임
+    'TM_SPORTS': ('tm.sports-term*', AMRTerminologyConcept)
+    # ex. 밀어내기 득점, 솔로 홈런, 바스켓카운트, 리바운드, 발리슛
 }

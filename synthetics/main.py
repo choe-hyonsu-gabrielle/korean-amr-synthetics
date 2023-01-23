@@ -14,7 +14,8 @@ if __name__ == '__main__':
 
     fp = open('outputs.txt', encoding='utf-8', mode='w')
 
-    for i, snt in enumerate(corpus.filter_by(len_range=len_between, exclude=stopwords, random_state=940803)):
+    candidates = corpus.filter_by(len_range=len_between, exclude=stopwords, endswith='.!?', random_state=940803)
+    for i, snt in enumerate(candidates):
         print('\n\n')
         print(snt.annotations.dep)
         print(snt.annotations.srl)
