@@ -14,6 +14,7 @@ reference: 국립국어원 <2021년 개체명 분석 및 개체 연결 말뭉치
     - conceptual referring
 """
 from synthetics.primitives.amr.concept import (
+    AMRDummyNEConcept,
     AMRNamedEntityConcept,
     AMRGenericNameConcept,
     AMRTerminologyConcept,
@@ -122,7 +123,7 @@ NAMED_ENTITIES = {
     # ex. 맥도날드, 김밥천국, 롯데리아, 맘스터치, 스타벅스, 파리바게트
     'OGG_HOTEL': ('ne.hotel', AMRNamedEntityConcept),
     # ex. 신라호텔, 한화콘도, 대명리조트, 워커힐, 호텔신라, 백담사산장
-    'OG_OTHERS': ('ne.organization', AMRNamedEntityConcept),
+    'OGG_OTHERS': ('ne.organization', AMRNamedEntityConcept),
     # ex. 유색인종향상전국협회, 녹색연합, 참여연대, 블링크, 원잇(ONE IT), 아미
 
     # LOCATION (LC) - 지역/장소, 지형/지리
@@ -198,42 +199,74 @@ NAMED_ENTITIES = {
     # ex. 기능주의건축, 노르만양식, 시토파건축, 도리스양식
 
     # DATE (DT) - 기간 및 계절, 시기/시대
-    'DT_DURATION': 'temporal-quantity|date-interval',   # ex. ~부터 ~까지, ~ 간, 전반기/후반기, 성수기/비수기
-    'DT_DAY': 'date-entity',   # ex. 입춘, 곡우, 내일, 모레, 금일, 당일, 29일
-    'DT_WEEK': 'date-entity',   # ex. 지난주, 이번 주, 다음 주, 첫 주, 둘째 주
-    'DT_MONTH': 'date-entity',   # ex. 이달, 지난달, 4월, 10월
-    'DT_YEAR': 'date-entity',   # ex. 작년, 내년, 올해, 서기 2910년, 영락1년
-    'DT_SEASON': 'date-entity',   # ex. 봄, 여름, 가을, 겨울, 춘계, 하계, 추계, 동계
-    'DT_GEOAGE': 'geoage',   # ex. 원시시대, 구석기시대, 캄브리아기, 중생대, 원생대, 선사시대
-    'DT_DYNASTY': 'dynasty',   # ex. 청대, 조선시대, 조선 후기, 명대, 고려시대, 고려 말
-    'DT_OTHERS': 'date-entity',   # ex. ~년 후/전, ~부터/까지/정도, ~세기, ~때
+    'DT_DURATION': ('temporal-quantity|date-interval', AMRDummyNEConcept),
+    # ex. ~부터 ~까지, ~ 간, 전반기/후반기, 성수기/비수기
+    'DT_DAY': ('date-entity', AMRDummyNEConcept),
+    # ex. 입춘, 곡우, 내일, 모레, 금일, 당일, 29일
+    'DT_WEEK': ('date-entity', AMRDummyNEConcept),
+    # ex. 지난주, 이번 주, 다음 주, 첫 주, 둘째 주
+    'DT_MONTH': ('date-entity', AMRDummyNEConcept),
+    # ex. 이달, 지난달, 4월, 10월
+    'DT_YEAR': ('date-entity', AMRDummyNEConcept),
+    # ex. 작년, 내년, 올해, 서기 2910년, 영락1년
+    'DT_SEASON': ('date-entity', AMRDummyNEConcept),
+    # ex. 봄, 여름, 가을, 겨울, 춘계, 하계, 추계, 동계
+    'DT_GEOAGE': ('geoage', AMRDummyNEConcept),
+    # ex. 원시시대, 구석기시대, 캄브리아기, 중생대, 원생대, 선사시대
+    'DT_DYNASTY': ('dynasty', AMRDummyNEConcept),
+    # ex. 청대, 조선시대, 조선 후기, 명대, 고려시대, 고려 말
+    'DT_OTHERS': ('date-entity', AMRDummyNEConcept),
+    # ex. ~년 후/전, ~부터/까지/정도, ~세기, ~때
 
     # TIME (TI) - 시계상으로 나타나는 시/시각, 시간 범위
-    'TI_DURATION': 'temporal-quantity|date-interval',   # ex. 6시~9시, 낮, 밤, 점심, 저녁, 오전, 오후, 밤낮
-    'TI_HOUR': 'date-entity',   # ex. 12시, 저녁 8시
-    'TI_MINUTE': 'date-entity',   # ex. 13분, 30분, 29분
-    'TI_SECOND': 'date-entity',   # ex. 27초, 15초, 30초
-    'TI_OTHERS': 'date-entity',   # ex. 3시 이전, 8시 20분, 6시까지
+    'TI_DURATION': ('temporal-quantity|date-interval', AMRDummyNEConcept),
+    # ex. 6시~9시, 낮, 밤, 점심, 저녁, 오전, 오후, 밤낮
+    'TI_HOUR': ('date-entity', AMRDummyNEConcept),
+    # ex. 12시, 저녁 8시
+    'TI_MINUTE': ('date-entity', AMRDummyNEConcept),
+    # ex. 13분, 30분, 29분
+    'TI_SECOND': ('date-entity', AMRDummyNEConcept),
+    # ex. 27초, 15초, 30초
+    'TI_OTHERS': ('date-entity', AMRDummyNEConcept),
+    # ex. 3시 이전, 8시 20분, 6시까지
 
     # QUANTITY (QT) - 수량/분량, 순서/순차, 수사로 이루어진 표현
-    'QT_AGE': 'age-01, temporal-quantity',   # ex. 만 55세, 50~60대, 생후 10주, 3개월령
-    'QT_SIZE': 'area-quantity',   # ex. 1제곱미터(㎡), 1아르(a), 1헥타르(ha), 9, 606.33㎢
-    'QT_LENGTH': 'distance-quantity',   # ex. 0.76mm, 900m, 8km, 82피트
-    'QT_COUNT': 'quantity*',   # ex. 6개, 8백 70선, 하나, 둘
-    'QT_MAN_COUNT': 'quantity*',   # ex. 한 명, 두 사람, 3명, 열댓 명
-    'QT_WEIGHT': 'mass-quantity',   # ex. 30kg, 140q, 백 근, 9만 t, 85~100kg, 60q, 5만 톤, 170t
-    'QT_PERCENTAGE': 'percentage-entity',   # ex. 약 75%, 8~12ppm, 4배, 400~500ppm, 1/3, 절반 이상
-    'QT_SPEED': 'acceleration-quantity',   # ex. 1km/s, 30km/s
-    'QT_TEMPERATURE': 'temperature-quantity',   # ex. 22~25℃, 41~43.5˚
-    'QT_VOLUME': 'volume-quantity',   # ex. 두 말, 2홉, 20ℓ, 2되, 2만 2000㎦
-    'QT_ORDER': 'ordinal-entity',   # ex. 1위, 3수, 100주년, 제10회, 3학년, 제10회, 제2대
-    'QT_PRICE': 'monetary-quantity',   # ex. 72만 원, 60억 달러
-    'QT_PHONE': 'phone-number-entity',   # ex. 042-101-1010, 114, 112, 119, 1588-1588, 031, 02, 001, 00700
-    'QT_SPORTS': 'score-entity :op1 :op2',   # ex. 1승2패, 5타점, 3:2, 2연승, 6이닝, 1볼넷, 6오버파
-    'QT_CHANNEL': 'media-channel*',   # ex. 2채널, FM 98.1, 91.9, 95.9 MHz
-    'QT_ALBUM': 'ordinal-entity',   # ex. 1집, 1.5집, Ⅵ, part 1, vol. 2
-    'QT_ADDRESS': 'street-address-91',   # ex. 110-704, 200-776, 24457, 32호, 179번지, 668-4
-    'QT_OTHERS': 'quantity*',   # ex. 45점, 100점, 지식머니 20, 북위 38도, 53' 51, 2960X1440
+    'QT_AGE': ('age-01|temporal-quantity', AMRDummyNEConcept),
+    # ex. 만 55세, 50~60대, 생후 10주, 3개월령
+    'QT_SIZE': ('area-quantity', AMRDummyNEConcept),
+    # ex. 1제곱미터(㎡), 1아르(a), 1헥타르(ha), 9, 606.33㎢
+    'QT_LENGTH': ('distance-quantity', AMRDummyNEConcept),
+    # ex. 0.76mm, 900m, 8km, 82피트
+    'QT_COUNT': ('quantity*', AMRDummyNEConcept),
+    # ex. 6개, 8백 70선, 하나, 둘
+    'QT_MAN_COUNT': ('quantity*', AMRDummyNEConcept),
+    # ex. 한 명, 두 사람, 3명, 열댓 명
+    'QT_WEIGHT': ('mass-quantity', AMRDummyNEConcept),
+    # ex. 30kg, 140q, 백 근, 9만 t, 85~100kg, 60q, 5만 톤, 170t
+    'QT_PERCENTAGE': ('percentage-entity', AMRDummyNEConcept),
+    # ex. 약 75%, 8~12ppm, 4배, 400~500ppm, 1/3, 절반 이상
+    'QT_SPEED': ('acceleration-quantity', AMRDummyNEConcept),
+    # ex. 1km/s, 30km/s
+    'QT_TEMPERATURE': ('temperature-quantity', AMRDummyNEConcept),
+    # ex. 22~25℃, 41~43.5˚
+    'QT_VOLUME': ('volume-quantity', AMRDummyNEConcept),
+    # ex. 두 말, 2홉, 20ℓ, 2되, 2만 2000㎦
+    'QT_ORDER': ('ordinal-entity', AMRDummyNEConcept),
+    # ex. 1위, 3수, 100주년, 제10회, 3학년, 제10회, 제2대
+    'QT_PRICE': ('monetary-quantity', AMRDummyNEConcept),
+    # ex. 72만 원, 60억 달러
+    'QT_PHONE': ('phone-number-entity', AMRDummyNEConcept),
+    # ex. 042-101-1010, 114, 112, 119, 1588-1588, 031, 02, 001, 00700
+    'QT_SPORTS': ('score-entity', AMRDummyNEConcept),
+    # ex. 1승2패, 5타점, 3:2, 2연승, 6이닝, 1볼넷, 6오버파
+    'QT_CHANNEL': ('media-channel*', AMRDummyNEConcept),
+    # ex. 2채널, FM 98.1, 91.9, 95.9 MHz
+    'QT_ALBUM': ('ordinal-entity', AMRDummyNEConcept),
+    # ex. 1집, 1.5집, Ⅵ, part 1, vol. 2
+    'QT_ADDRESS': ('street-address-91', AMRDummyNEConcept),
+    # ex. 110-704, 200-776, 24457, 32호, 179번지, 668-4
+    'QT_OTHERS': ('quantity*', AMRDummyNEConcept),
+    # ex. 45점, 100점, 지식머니 20, 북위 38도, 53' 51, 2960X1440
 
     # EVENT (EV) - 특정 사건/사고/행사 명칭
     'EV_ACTIVITY': ('ne.event', AMRNamedEntityConcept),

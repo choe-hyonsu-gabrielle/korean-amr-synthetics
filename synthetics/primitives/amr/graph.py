@@ -1,7 +1,8 @@
 import re
 import penman
 from synthetics.primitives.corpus import *
-from synthetics.primitives.amr.concept import AMRIndexFreeConcept, AMRNamedEntityConcept
+from synthetics.primitives.amr.concept import *
+from synthetics.rules.named_entities import NAMED_ENTITIES
 from synthetics.rules.periphrastic_constructions import PeriphrasticConstructions
 from synthetics.utils import ngrams
 
@@ -20,7 +21,7 @@ class AbstractMeaningRepresentation:
             self.update_from_dep,
             self.update_from_mwe,
             self.update_from_ner,
-            # self.update_from_srl
+            self.update_from_srl
         ]
         for process in self.pipeline:
             process()
@@ -78,13 +79,15 @@ class AbstractMeaningRepresentation:
                 new_node_idx = self.graph.redirect_node(word_end)
             else:
                 raise ValueError
-            self.graph.instances[new_node_idx] = AMRNamedEntityConcept(
-                concept_type=ner.label.lower(),
-                name_idx=ner.id,
-                name_str=ner.form,
-                wiki=ner.url if wikification else None,
-                mapping=self.graph.instances[new_node_idx].mapping
-            )
+            concept_type, named_entity_concept = NAMED_ENTITIES[ner.label]
+            positional_args = [
+                concept_type,  # concept_type
+                ner.id,  # name_idx, generic_idx, term_idx, ...
+                ner.form,  # name_str, generic_str, term_str, ...
+                ner.url if wikification else None,  # wiki
+                self.graph.instances[new_node_idx].mapping  # mapping
+            ]
+            self.graph.instances[new_node_idx] = named_entity_concept(*positional_args)
 
 
 class AMRGraph:

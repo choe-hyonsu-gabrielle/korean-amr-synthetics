@@ -17,6 +17,7 @@ if __name__ == '__main__':
         ne_counts[ne_class] = Counter(ne_counts[ne_class]).most_common()
 
     print(set(NAMED_ENTITIES).difference(set(ne_counts)))
+    print(set(ne_counts))
 
     catalog = dict()
     catalog_set = dict()

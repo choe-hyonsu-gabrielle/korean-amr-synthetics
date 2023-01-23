@@ -86,6 +86,25 @@ class AMRNamedEntityConcept(AMRIndexFreeConcept):
         return super().product(global_idx=global_idx) + name_triples + name_attributes + wikification
 
 
+class AMRDummyNEConcept(AMRIndexFreeConcept):
+    def __init__(
+            self,
+            concept_type: str,
+            name_idx: Any,
+            name_str: str,
+            wiki: Optional[str] = None,
+            mapping: Optional[set[int]] = None
+    ):
+        self.name_str: str = re.sub(r'\s+', ' ', name_str.strip())
+        super().__init__(concept_type='-'.join(self.name_str.split()), mapping=mapping)
+
+    def __repr__(self):
+        return f'<{self.__class__.__name__}: {self.concept_type} → "{self.name_str}" {self.mapping}>'
+
+    def product(self, global_idx: Any) -> list:
+        return super().product(global_idx=global_idx)
+
+
 class AMRGenericNameConcept(AMRIndexFreeConcept):
     def __init__(
             self,

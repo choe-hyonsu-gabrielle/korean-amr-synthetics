@@ -1,7 +1,7 @@
 from pprint import pprint
 from synthetics.utils import load_corpus
 from synthetics.primitives.corpus import Corpus
-from synthetics.primitives.amr import AbstractMeaningRepresentation
+from synthetics.primitives.amr.graph import AbstractMeaningRepresentation
 
 
 if __name__ == '__main__':
