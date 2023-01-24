@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     fp = open('outputs.txt', encoding='utf-8', mode='w')
 
-    candidates = corpus.filter_by(len_range=len_between, exclude=stopwords, endswith='.!?', random_state=940803)
+    candidates = corpus.filter_by(len_range=len_between, exclude=stopwords, endswith='.!?', random_state=803)
     for i, snt in enumerate(candidates):
         print('\n\n')
         print(snt.annotations.dep)
@@ -35,7 +35,7 @@ if __name__ == '__main__':
         print(amr.encode(), file=fp)
         print('\n\n', file=fp)
 
-        if i > 200:
+        if i > 250:
             break
 
     fp.close()

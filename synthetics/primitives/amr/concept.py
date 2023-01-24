@@ -124,11 +124,11 @@ class AMRGenericNameConcept(AMRIndexFreeConcept):
 
     def product(self, global_idx: Any) -> list:
         generic_triples = [
-            (self.generic_idx, ':instance', '-'.join(self.generic_str.split())),
+            (global_idx, ':instance', '-'.join(self.generic_str.split())),
             (global_idx, ':subclass-of', self.generic_idx)
         ]
         wikification = [(global_idx, ':wiki', f'"{decode_url(self.wiki)}"' if self.wiki != '-' else '-')]
-        return super().product(global_idx=global_idx) + generic_triples + wikification
+        return super().product(global_idx=self.generic_idx) + generic_triples + wikification
 
 
 class AMRTerminologyConcept(AMRIndexFreeConcept):

@@ -36,7 +36,7 @@ class AbstractMeaningRepresentation:
     def update_from_dep(self):
         # instances
         for word in self.annotations.dep.tolist():
-            self.graph.add_instance(concept_type=word.word_form, node_idx=word.word_id, mapping={word.word_id})
+            self.graph.add_instance(node_idx=word.word_id, concept_type=word.word_form, mapping={word.word_id})
         # relations
         for word in self.annotations.dep.tolist():
             head_idx: int = word.head
@@ -117,7 +117,7 @@ class AMRGraph:
         except ValueError:
             return None
 
-    def add_instance(self, concept_type: str, node_idx: Any = None, mapping: Optional[set[int]] = None):
+    def add_instance(self, node_idx: Any, concept_type: str, mapping: Optional[set[int]] = None):
         mapping = set(sorted(mapping))
         self.instances[node_idx if node_idx else f'x{len(self.instances)}'] = AMRIndexFreeConcept(
             concept_type=concept_type,
@@ -227,7 +227,7 @@ class AMRGraph:
             raise ValueError
         new_node_idx = tuple(sorted(new_node_idx))
         new_concept = '_'.join([self.annotations.word(word_id) for word_id in new_node_idx])
-        self.add_instance(concept_type=new_concept, node_idx=new_node_idx, mapping=mapping)
+        self.add_instance(node_idx=new_node_idx, concept_type=new_concept, mapping=mapping)
 
         # migration of attributes to new concept node
         for relation, value in attributes:
