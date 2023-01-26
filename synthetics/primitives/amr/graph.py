@@ -49,13 +49,16 @@ class AbstractMeaningRepresentation:
 
     def update_from_mwe(self):
         numbered_words = self.annotations.pos.numbered_items()
-        for pattern in PeriphrasticConstructions(sort='simple-to-complex').get_patterns():
+        for pattern, guides in PeriphrasticConstructions(sort='simple-to-complex').get_patterns():
             queries = pattern.split()
             for numbered_ngram in ngrams(items=numbered_words, n=len(queries)):
                 window = [w for _, w in numbered_ngram]
                 if all([re.search(pattern=q, string=w) for q, w in zip(queries, window)]):
                     nodes = [idx for idx, _ in numbered_ngram]
-                    self.graph.amalgamate(nodes, redirect_true_node=True)
+                    new_node_idx = self.graph.amalgamate(nodes, redirect_true_node=True)
+                    if guides:
+                        for relation, value in guides:
+                            self.graph.instances[new_node_idx].add_attribute(relation, value)
 
     def update_from_srl(self):
         for srl in self.annotations.srl.tolist():
