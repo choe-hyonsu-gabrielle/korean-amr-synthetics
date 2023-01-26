@@ -1,4 +1,4 @@
-from typing import Literal, Any
+from typing import Optional, Literal, Any
 from collections import defaultdict
 from functools import cache
 
@@ -307,7 +307,7 @@ class PeriphrasticConstructions(object):
             cls.instance = super().__new__(cls)
         return cls.instance
 
-    def __init__(self, sort: Literal['simple-to-complex', 'complex-to-simple']):
+    def __init__(self, sort: Literal['simple-to-complex', 'complex-to-simple'] = 'simple-to-complex'):
         if PeriphrasticConstructions.intact:
             self.ruleset = PERIPHRASTIC_CONSTRUCTIONS
             self.sort = sort

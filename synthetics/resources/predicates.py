@@ -51,24 +51,41 @@ class ModuFrame(VerbFrame):
         super().__init__(filename, lemma, frame_id, edef, kdef)
 
 
-class Lexicon:
+class VerbFrameLexicon:
+    instance = None
+    intact = True
+
+    def __new__(cls, *args, **kwargs):
+        if not cls.instance:
+            cls.instance = super().__new__(cls)
+        return cls.instance
+
     def __init__(self, filepath: str = 'D:/Corpora & Language Resources/modu-corenlp/framefiles/*/*.xml'):
-        self.frame_files: list = glob.glob(filepath)
-        self.lemma_to_frames: dict[str, set] = dict()
-        self.form_to_frames: dict[str, set] = dict()
+        if VerbFrameLexicon.intact:
+            self.frame_files: list = glob.glob(filepath)
+            self.root_to_frames: dict[str, list] = dict()
+            self.lemma_to_frames: dict[str, list] = dict()
+            self.from_files()
+            VerbFrameLexicon.intact = False
 
-    def add_form(self, form: str, frame: VerbFrame):
-        if form not in self.form_to_frames:
-            self.form_to_frames[form] = set()
-        self.form_to_frames[form].add(frame)
+    def add_lemma(self, lemma_form: str, frame: VerbFrame):
+        if lemma_form not in self.lemma_to_frames:
+            self.lemma_to_frames[lemma_form] = list()
+        self.lemma_to_frames[lemma_form].append(frame)
 
-    def add_frame(self, lemma: str, frame: VerbFrame):
-        if lemma not in self.lemma_to_frames:
-            self.lemma_to_frames[lemma] = set()
-        self.lemma_to_frames[lemma].add(frame)
+    def add_frame(self, root_form: str, frame: VerbFrame):
+        if root_form not in self.root_to_frames:
+            self.root_to_frames[root_form] = list()
+        self.root_to_frames[root_form].append(frame)
 
-    def from_files(self, pickle: str = 'frameset.pkl'):
-        for filename in tqdm(self.frame_files):
+    def get_frames_by_lemma(self, lemma_form: str):
+        if lemma_form in self.lemma_to_frames:
+            return self.lemma_to_frames[lemma_form]
+        else:
+            return None
+
+    def from_files(self):
+        for filename in tqdm(self.frame_files, desc='- loading verb frame files'):
             _dir, source, xml_file = filename.split('\\')
 
             try:
@@ -97,8 +114,8 @@ class Lexicon:
                                     src = mapitem.get('src')
                                     trg = mapitem.get('trg')
                                     entry.add_mapping(rel=rel, src=src, trg=trg.upper())
-                                self.add_form(form=rel, frame=entry)
-                        self.add_frame(lemma=lemma, frame=entry)
+                                self.add_lemma(lemma_form=rel, frame=entry)
+                        self.add_frame(root_form=lemma, frame=entry)
                     elif source == 'etri':
                         entry = ETRIFrame(filename=filename, lemma=lemma, frame_id=frame_id, edef=edef)
                         for role in frameset.find('roleset'):
@@ -111,8 +128,8 @@ class Lexicon:
                                 src = mapitem.get('src')
                                 trg = mapitem.get('trg')
                                 entry.add_mapping(rel=rel, src=src, trg=trg.upper())
-                            self.add_form(form=rel, frame=entry)
-                        self.add_frame(lemma=lemma, frame=entry)
+                            self.add_lemma(lemma_form=rel, frame=entry)
+                        self.add_frame(root_form=lemma, frame=entry)
                     elif source == 'modu':
                         kdef = frameset.find('kdef').text.strip()
                         entry = ModuFrame(filename=filename, lemma=lemma, frame_id=frame_id, edef=edef, kdef=kdef)
@@ -126,15 +143,14 @@ class Lexicon:
                                 src = mapitem.get('src')
                                 trg = mapitem.get('trg')
                                 entry.add_mapping(rel=rel, src=src, trg=re.sub(r'\s+', '', trg))
-                            self.add_form(form=rel, frame=entry)
-                        self.add_frame(lemma=lemma, frame=entry)
+                            self.add_lemma(lemma_form=rel, frame=entry)
+                        self.add_frame(root_form=lemma, frame=entry)
                     else:
                         raise ValueError
 
 
 if __name__ == '__main__':
-    lexicon = Lexicon('D:/Corpora & Language Resources/modu-corenlp/framefiles/*/*.xml')
-    lexicon.from_files()
+    lexicon = VerbFrameLexicon()
 
-    for form, frames in lexicon.form_to_frames.items():
+    for form, frames in lexicon.lemma_to_frames.items():
         print(form, frames)

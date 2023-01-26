@@ -4,7 +4,11 @@ from synthetics.primitives.corpus import *
 from synthetics.primitives.amr.concept import *
 from synthetics.rules.named_entities import NAMED_ENTITIES
 from synthetics.rules.periphrastic_constructions import PeriphrasticConstructions
+from synthetics.resources.predicates import VerbFrameLexicon
 from synthetics.utils import ngrams
+
+VerbFrameLexicon()
+PeriphrasticConstructions(sort='simple-to-complex')
 
 
 class AbstractMeaningRepresentation:
@@ -49,7 +53,7 @@ class AbstractMeaningRepresentation:
 
     def update_from_mwe(self):
         numbered_words = self.annotations.pos.numbered_items()
-        for pattern, guides in PeriphrasticConstructions(sort='simple-to-complex').get_patterns():
+        for pattern, guides in PeriphrasticConstructions().get_patterns():
             queries = pattern.split()
             for numbered_ngram in ngrams(items=numbered_words, n=len(queries)):
                 window = [w for _, w in numbered_ngram]
@@ -63,13 +67,19 @@ class AbstractMeaningRepresentation:
     def update_from_srl(self):
         for srl in self.annotations.srl.tolist():
             _, pred_word_idx = self.sentence.span_ids_to_word_id(begin=srl.predicate.begin, end=srl.predicate.end)
-            head_idx = self.graph.redirect_node(pred_word_idx)
+            pred_word_idx = self.graph.redirect_node(pred_word_idx)
+            """
+            frames = VerbFrameLexicon().get_frames_by_lemma(srl.predicate.lemma)
+            print('gotcha:', frames)
+            if frames:
+                self.graph.instances[pred_word_idx].concept_type = frames[0].frame_id
+            """
             for arg in srl.argument:
                 tail_idx = self.graph.redirect_node(arg.word_id)
-                self.graph.add_relation(head_idx=head_idx, relation=f':srl.{arg.label}', tail_idx=tail_idx)
-                inverted = self.graph.get_relation(tail_idx, head_idx)
+                self.graph.add_relation(head_idx=pred_word_idx, relation=f':srl.{arg.label}', tail_idx=tail_idx)
+                inverted = self.graph.get_relation(tail_idx, pred_word_idx)
                 if inverted and inverted.startswith(':dep.'):
-                    self.graph.del_relation(head_idx=tail_idx, tail_idx=head_idx)
+                    self.graph.del_relation(head_idx=tail_idx, tail_idx=pred_word_idx)
 
     def update_from_ner(self, wikification: bool = True):
         ne_items = self.annotations.el.tolist() if wikification else self.annotations.ner.tolist()
