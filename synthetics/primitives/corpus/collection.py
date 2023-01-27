@@ -285,7 +285,7 @@ class Corpus:
     def from_files(self, files: dict):
         self.dirs.update(files)
         self.layers.update(files)
-        for layer, filepath in tqdm(self.dirs.items(), desc=f'{self} - loading {len(self.dirs)} files'):
+        for layer, filepath in tqdm(self.dirs.items(), desc=f'{self} - loading {len(self.dirs)} files from scratch.'):
             for _doc in load_json(filepath)['document']:
                 doc_id = _doc['id']
                 if doc_id not in self.documents:

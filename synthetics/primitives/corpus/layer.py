@@ -1,4 +1,5 @@
 import pprint
+from typing import Optional, Union
 from synthetics.utils import subgroups
 
 
@@ -60,11 +61,11 @@ class POSLayer(Layer):
         """
         return self.data
 
-    def numbered_items(self) -> list[tuple[int, str]]:
+    def numbered_items(self) ->list[tuple[int, str]]:
         """
         returns numbered tuples starts with 1
         ex) [(1, '가장/MAG'), (2, '크/VA+ㄴ/ETM'), (3, '충격/NNG+을/JKO'), (4, '받/VV+는/ETM'), ...]
-        :return: list of tuples (int, str)
+        :return: list of tuples (int, str) or individual item of (int, str)
         """
         return [(n+1, w) for n, w in enumerate(self.tostring().split())]
 
@@ -122,6 +123,9 @@ class WSDLayer(Layer):
 
     def tolist(self) -> list[WSDItem]:
         return self.data
+
+    def get_forms(self, index: int) -> list[str]:
+        return [w.word for w in self.tolist() if w.word_id == index]
 
 
 class DEPItem(Item):

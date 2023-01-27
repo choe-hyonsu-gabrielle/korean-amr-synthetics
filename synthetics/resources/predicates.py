@@ -84,6 +84,12 @@ class VerbFrameLexicon:
         else:
             return None
 
+    def get_frames_by_root(self, root_form: str):
+        if root_form in self.root_to_frames:
+            return self.root_to_frames[root_form]
+        else:
+            return None
+
     def from_files(self):
         for filename in tqdm(self.frame_files, desc='- loading verb frame files'):
             _dir, source, xml_file = filename.split('\\')

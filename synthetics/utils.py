@@ -39,6 +39,7 @@ def load_corpus(data_files: Union[str, list[str]], reload: bool = False, pickle_
     from synthetics.primitives.corpus import Corpus
     target_files = {layer.split('\\')[-2]: layer for layer in glob.glob(data_files)}
     if exists(pickle_file) and not reload:
+        print(f'- loading corpus from `{pickle_file}` file. it takes more or less than 1 minute average.')
         loaded = Corpus.from_pickle(filename=pickle_file)
     else:
         loaded = Corpus(files=target_files)

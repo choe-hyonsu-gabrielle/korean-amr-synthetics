@@ -278,7 +278,8 @@ PERIPHRASTIC_CONSTRUCTIONS = {
     "~ 중": (r"(NP|NR|NNB|NNG|MMD|MAG|SN|SW|ETN|XSN)$ ^중/NNB", None),
     "~ 직전": (r"(NP|NNG|ETN|XSN)$ ^직전/NNG", None),
     "~ 직후": (r"(NP|NNG|ETN|XSN)$ ^직후/NNG", None),
-    "~ 후": (r"(NP|NNG|NNB|MMD|ETN|XSN)$ ^후/NNG", None)
+    "~ 후": (r"(NP|NNG|NNB|MMD|ETN|XSN)$ ^후/NNG", None),
+    "~ 씨": (r"NNP$ ^씨/NNB", None)
 }
 
 

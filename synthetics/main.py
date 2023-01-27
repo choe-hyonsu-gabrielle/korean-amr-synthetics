@@ -20,6 +20,7 @@ if __name__ == '__main__':
         print(snt.annotations.dep)
         print(snt.annotations.srl)
         print(snt.annotations.el)
+        print(snt.annotations.wsd)
         amr = AbstractMeaningRepresentation(annotations=snt.annotations)
         amr.metadata['pos'] = snt.annotations.pos.tostring()
         pprint(amr.graph.instances)
