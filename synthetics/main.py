@@ -10,7 +10,7 @@ if __name__ == '__main__':
     search_space = 'D:/Corpora & Language Resources/modu-corenlp/layers-complete/*/*.json'
     corpus: Corpus = load_corpus(data_files=search_space)
 
-    len_between = (20, 50)
+    len_between = (20, 70)
     stopwords = '\"\',“”‘’…;[]()<>'
 
     fp = open('outputs.txt', encoding='utf-8', mode='w')
@@ -50,7 +50,7 @@ if __name__ == '__main__':
         if graph is None:
             failed += 1
 
-        if i > 1000:
+        if i > 1500:
             break
 
     fp.close()
