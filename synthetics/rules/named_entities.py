@@ -155,7 +155,7 @@ NAMED_ENTITIES = {
     # ex. 서울역, 신도림역, 인천국제공항, 서울남부터미널, 국립수목원, 금강휴게소
 
     # CIVILIZATION (CV) - 문명/문화
-    'CV_NAME': ('ne.nationality|ethnic-group', AMRNamedEntityConcept),
+    'CV_CULTURE': ('ne.civilization*', AMRNamedEntityConcept),
     # ex. 인더스문명, 황허문명, 거석문화, 도싯문화, 4차산업혁명, 르네상스
     'CV_TRIBE': ('ne.nationality|ethnic-group', AMRNamedEntityConcept),
     # ex. 이라크족, 유대인, 조선족, 마오리족, 아메리카인디언

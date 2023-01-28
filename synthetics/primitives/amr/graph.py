@@ -102,7 +102,6 @@ class AbstractMeaningRepresentation:
         predicates = [srl.predicate for srl in self.annotations.srl.tolist()]
         pred_indices = [self.sentence.span_ids_to_word_id(i.begin, i.end) for i in predicates]
         pred_indices = [self.graph.redirect_node(i[0]) for i in pred_indices]
-        print(pred_indices)
         for target_idx, node in self.graph.instances.items():
             if type(node) == AMRIndexFreeConcept:
                 first_idx = target_idx[0] if isinstance(target_idx, tuple) else target_idx
@@ -120,7 +119,6 @@ class AbstractMeaningRepresentation:
                             pred_pointer = pred_indices.index(target_idx)
                             lemma = self.annotations.srl.tolist()[pred_pointer].predicate.lemma
                             frames = VerbFrameLexicon().get_frames_by_lemma(lemma_form=lemma)
-                        print(target_idx, frames)
                         if frames:
                             self.graph.instances[target_idx].concept_type = frames[0].frame_id
                         else:
@@ -128,14 +126,12 @@ class AbstractMeaningRepresentation:
                             pred = self.annotations.srl.tolist()[pred_pointer].predicate
                             begin_idx = self.sentence.span_ids_to_word_id(pred.begin, pred.end)[0]
                             temp = self.annotations.pos.make_lemma_form(begin_idx)
-                            print(begin_idx, pred.form, temp + '-98')
                             self.graph.instances[target_idx].concept_type = temp + '-98'
                     else:
                         pred_pointer = pred_indices.index(target_idx)
                         pred = self.annotations.srl.tolist()[pred_pointer].predicate
                         begin_idx = self.sentence.span_ids_to_word_id(pred.begin, pred.end)[0]
                         temp = self.annotations.pos.make_lemma_form(begin_idx)
-                        print(begin_idx, pred.form, temp + '-99')
                         self.graph.instances[target_idx].concept_type = temp + '-99'
                 elif root_forms:
                     roots = [f for f, p in root_forms if p not in ('VCP', 'VX')]

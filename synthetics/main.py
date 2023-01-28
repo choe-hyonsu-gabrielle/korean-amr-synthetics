@@ -1,3 +1,4 @@
+from tqdm import tqdm
 from pprint import pprint
 from synthetics.utils import load_corpus
 from synthetics.primitives.corpus import Corpus
@@ -14,29 +15,44 @@ if __name__ == '__main__':
 
     fp = open('outputs.txt', encoding='utf-8', mode='w')
 
-    candidates = corpus.filter_by(len_range=len_between, exclude=stopwords, endswith='.!?', random_state=940803)
+    counts = 0
+    failed = 0
+    verbose = False
+
+    candidates = corpus.filter_by(len_range=len_between, exclude=stopwords, endswith='.!?', random_state=880830)
+    # candidates = corpus.iter_sentences()
     for i, snt in enumerate(candidates):
-        print('\n\n')
-        print(snt.annotations.dep)
-        print(snt.annotations.srl)
-        print(snt.annotations.el)
-        print(snt.annotations.wsd)
         amr = AbstractMeaningRepresentation(annotations=snt.annotations)
         amr.metadata['pos'] = snt.annotations.pos.tostring()
-        pprint(amr.graph.instances)
-        pprint(amr.graph.relations)
-        print(amr.encode())
-        print()
+        graph = amr.encode()
 
-        # print(snt.annotations.dep, file=fp)
-        # print(snt.annotations.srl, file=fp)
-        # print(snt.annotations.el, file=fp)
-        # print(snt.annotations.cr, file=fp)
-        # print(snt.annotations.za, file=fp)
-        print(amr.encode(surface_alignment=False), file=fp)
-        print('\n', file=fp)
+        if verbose:
+            print('\n\n')
+            print(snt.annotations.dep)
+            print(snt.annotations.srl)
+            print(snt.annotations.el)
+            print(snt.annotations.wsd)
+            pprint(amr.graph.instances)
+            pprint(amr.graph.relations)
+            print(graph)
 
-        if i > 500:
+        if graph:
+            if verbose:
+                print(snt.annotations.dep, file=fp)
+                print(snt.annotations.srl, file=fp)
+                print(snt.annotations.el, file=fp)
+                print(snt.annotations.wsd, file=fp)
+                print(snt.annotations.cr, file=fp)
+                print(snt.annotations.za, file=fp)
+            print(graph, file=fp, end='\n\n')
+
+        counts += 1
+        if graph is None:
+            failed += 1
+
+        if i > 1000:
             break
 
     fp.close()
+
+    print(counts, failed)
