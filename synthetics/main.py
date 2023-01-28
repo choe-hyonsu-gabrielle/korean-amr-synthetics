@@ -50,7 +50,7 @@ if __name__ == '__main__':
         if graph is None:
             failed += 1
 
-        if i > 1500:
+        if i > 1000:
             break
 
     fp.close()
