@@ -10,7 +10,7 @@ if __name__ == '__main__':
     search_space = 'D:/Corpora & Language Resources/modu-corenlp/layers-complete/*/*.json'
     corpus: Corpus = load_corpus(data_files=search_space)
 
-    len_between = (20, 70)
+    len_between = (20, 65)
     stopwords = '\"\',“”‘’…;[]()<>'
 
     fp = open('outputs.txt', encoding='utf-8', mode='w')
