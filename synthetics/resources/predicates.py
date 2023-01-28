@@ -3,6 +3,7 @@ import glob
 from typing import Optional
 from tqdm import tqdm
 from xml.etree.ElementTree import ElementTree, ParseError
+from synthetics.rules.verbalizations import VERBALIZATIONS
 
 
 class VerbFrame:
@@ -16,7 +17,7 @@ class VerbFrame:
         self.mappings: dict = dict()
 
     def __repr__(self):
-        return f'<{self.__class__.__name__} → id: {self.frame_id}, roleset: {list(self.roleset.keys())}>'
+        return f'<{self.__class__.__name__} → id: {self.frame_id}, edef: "{self.edef}", roleset: {tuple(self.roleset.keys())}>'
 
     def add_argrole(self, argnum: str, argrole: str):
         assert re.search(r'^[\dA]$', argnum), print(f'argnum="{argnum}"')
@@ -63,6 +64,7 @@ class VerbFrameLexicon:
     def __init__(self, filepath: str = 'D:/Corpora & Language Resources/modu-corenlp/framefiles/*/*.xml'):
         if VerbFrameLexicon.intact:
             self.frame_files: list = glob.glob(filepath)
+            self.entries: dict = dict()
             self.root_to_frames: dict[str, list] = dict()
             self.lemma_to_frames: dict[str, list] = dict()
             self.from_files()
@@ -81,12 +83,16 @@ class VerbFrameLexicon:
     def get_frames_by_lemma(self, lemma_form: str):
         if lemma_form in self.lemma_to_frames:
             return self.lemma_to_frames[lemma_form]
+        elif lemma_form in VERBALIZATIONS:
+            return self.get_frames_by_lemma(VERBALIZATIONS[lemma_form].split('-')[0])
         else:
             return None
 
     def get_frames_by_root(self, root_form: str):
         if root_form in self.root_to_frames:
             return self.root_to_frames[root_form]
+        elif root_form in VERBALIZATIONS:
+            return self.get_frames_by_root(VERBALIZATIONS[root_form].split('-')[0])
         else:
             return None
 
@@ -106,7 +112,7 @@ class VerbFrameLexicon:
                     frame_id = frameset.find('id').text.strip()
                     frame_id = frame_id.replace('.', '-')
                     frame_id = '-'.join(frame_id.split())
-                    edef = frameset.find('edef').text.strip() if frameset.find('edef') else None
+                    edef = frameset.find('edef').text
                     if source == 'kpb':
                         entry = PropBankFrame(filename=filename, lemma=lemma, frame_id=frame_id, edef=edef)
                         for role in frameset.find('roleset'):
@@ -122,6 +128,7 @@ class VerbFrameLexicon:
                                     entry.add_mapping(rel=rel, src=src, trg=trg.upper())
                                 self.add_lemma(lemma_form=rel, frame=entry)
                         self.add_frame(root_form=lemma, frame=entry)
+                        self.entries[entry.frame_id] = entry
                     elif source == 'etri':
                         entry = ETRIFrame(filename=filename, lemma=lemma, frame_id=frame_id, edef=edef)
                         for role in frameset.find('roleset'):
@@ -136,8 +143,9 @@ class VerbFrameLexicon:
                                 entry.add_mapping(rel=rel, src=src, trg=trg.upper())
                             self.add_lemma(lemma_form=rel, frame=entry)
                         self.add_frame(root_form=lemma, frame=entry)
+                        self.entries[entry.frame_id] = entry
                     elif source == 'modu':
-                        kdef = frameset.find('kdef').text.strip()
+                        kdef = frameset.find('kdef').text
                         entry = ModuFrame(filename=filename, lemma=lemma, frame_id=frame_id, edef=edef, kdef=kdef)
                         for role in frameset.find('roleset'):
                             kwargs = {k: v for k, v in role.items()}
@@ -151,6 +159,7 @@ class VerbFrameLexicon:
                                 entry.add_mapping(rel=rel, src=src, trg=re.sub(r'\s+', '', trg))
                             self.add_lemma(lemma_form=rel, frame=entry)
                         self.add_frame(root_form=lemma, frame=entry)
+                        self.entries[entry.frame_id] = entry
                     else:
                         raise ValueError
 
@@ -158,5 +167,9 @@ class VerbFrameLexicon:
 if __name__ == '__main__':
     lexicon = VerbFrameLexicon()
 
-    for form, frames in lexicon.lemma_to_frames.items():
-        print(form, frames)
+    with open('frame-list.txt', encoding='utf-8', mode='w') as fp:
+        for form, frames in lexicon.entries.items():
+            print(form, frames)
+            print(form + '\t' + str(frames), file=fp)
+        print(len(lexicon.entries))
+        print(len(lexicon.root_to_frames))

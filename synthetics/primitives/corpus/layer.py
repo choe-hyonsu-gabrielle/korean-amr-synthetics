@@ -1,5 +1,4 @@
 import pprint
-from typing import Optional, Union
 from synthetics.utils import subgroups
 
 
@@ -61,13 +60,22 @@ class POSLayer(Layer):
         """
         return self.data
 
-    def numbered_items(self) ->list[tuple[int, str]]:
+    def numbered_items(self) -> list[tuple[int, str]]:
         """
         returns numbered tuples starts with 1
         ex) [(1, '가장/MAG'), (2, '크/VA+ㄴ/ETM'), (3, '충격/NNG+을/JKO'), (4, '받/VV+는/ETM'), ...]
         :return: list of tuples (int, str) or individual item of (int, str)
         """
         return [(n+1, w) for n, w in enumerate(self.tostring().split())]
+
+    def make_lemma_form(self, index: int) -> str:
+        word_pos: list[POSItem] = subgroups(items=self.data, by='word_id', starts_from=1)[index-1]
+        word_pos: list[tuple[str, str]] = [(i.form, i.label) for i in word_pos]
+        contents = []
+        for form, label in word_pos:
+            if label in ('NNG', 'NA', 'NF', 'NP', 'SL', 'VV', 'VA', 'VCN', 'MAG', 'MMA', 'XSV', 'XSA', 'XSN', 'XR'):
+                contents.append(form)
+        return ''.join(contents)
 
 
 class NERItem(Item):
@@ -124,8 +132,8 @@ class WSDLayer(Layer):
     def tolist(self) -> list[WSDItem]:
         return self.data
 
-    def get_forms(self, index: int) -> list[str]:
-        return [w.word for w in self.tolist() if w.word_id == index]
+    def get_forms(self, index: int) -> list[tuple[str, str]]:
+        return [(w.word, w.pos) for w in self.tolist() if w.word_id == index]
 
 
 class DEPItem(Item):

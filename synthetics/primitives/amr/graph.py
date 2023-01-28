@@ -8,7 +8,7 @@ from synthetics.resources.predicates import VerbFrameLexicon
 from synthetics.utils import ngrams
 
 VerbFrameLexicon()
-PeriphrasticConstructions(sort='simple-to-complex')
+PeriphrasticConstructions()
 
 
 class AbstractMeaningRepresentation:
@@ -70,11 +70,12 @@ class AbstractMeaningRepresentation:
             _, target_word_idx = self.sentence.span_ids_to_word_id(begin=srl.predicate.begin, end=srl.predicate.end)
             pred_word_idx = self.graph.redirect_node(target_word_idx)
             for arg in srl.argument:
-                tail_idx = self.graph.redirect_node(arg.word_id)
-                self.graph.add_relation(head_idx=pred_word_idx, relation=f':srl.{arg.label}', tail_idx=tail_idx)
-                inverted = self.graph.get_relation(tail_idx, pred_word_idx)
-                if inverted and inverted.startswith(':dep.'):
-                    self.graph.del_relation(head_idx=tail_idx, tail_idx=pred_word_idx)
+                if arg.label not in ('ARGM-NEG',):
+                    tail_idx = self.graph.redirect_node(arg.word_id)
+                    self.graph.add_relation(head_idx=pred_word_idx, relation=f':srl.{arg.label}', tail_idx=tail_idx)
+                    inverted = self.graph.get_relation(tail_idx, pred_word_idx)
+                    if inverted and inverted.startswith(':dep.'):
+                        self.graph.del_relation(head_idx=tail_idx, tail_idx=pred_word_idx)
 
     def update_from_ner(self, wikification: bool = True):
         ne_items = self.annotations.el.tolist() if wikification else self.annotations.ner.tolist()
@@ -99,29 +100,46 @@ class AbstractMeaningRepresentation:
 
     def update_from_wsd(self):
         predicates = [srl.predicate for srl in self.annotations.srl.tolist()]
-        pred_indices = [self.graph.redirect_node(self.sentence.span_ids_to_word_id(i.begin, i.end)) for i in predicates]
+        pred_indices = [self.sentence.span_ids_to_word_id(i.begin, i.end) for i in predicates]
+        pred_indices = [self.graph.redirect_node(i[0]) for i in pred_indices]
         print(pred_indices)
         for target_idx, node in self.graph.instances.items():
-            if type(node) is AMRIndexFreeConcept:
+            if type(node) == AMRIndexFreeConcept:
                 first_idx = target_idx[0] if isinstance(target_idx, tuple) else target_idx
                 root_forms = self.annotations.wsd.get_forms(index=first_idx)
-                if root_forms:
-                    if target_idx in pred_indices:
+                if target_idx in pred_indices:
+                    if root_forms:
                         frames = None
-                        for end_idx in range(len(root_forms) + 1):
-                            query = ''.join(root_forms[:end_idx])
+                        for end in range(len(root_forms)+1):
+                            query = ''.join([i[0] for i in root_forms[:end]])
                             frames = VerbFrameLexicon().get_frames_by_root(query)
                             if frames:
                                 break
-                        pred_idx = predicates.index(target_idx)
-                        pred_idx = pred_idx[0] if isinstance(pred_idx, tuple) else pred_idx
-                        last_resort = VerbFrameLexicon().get_frames_by_lemma(predicates[pred_idx].lemma)
-                        if last_resort:
-                            frames = last_resort
+                        if not frames:
+                            # as a last attempt
+                            pred_pointer = pred_indices.index(target_idx)
+                            lemma = self.annotations.srl.tolist()[pred_pointer].predicate.lemma
+                            frames = VerbFrameLexicon().get_frames_by_lemma(lemma_form=lemma)
+                        print(target_idx, frames)
                         if frames:
                             self.graph.instances[target_idx].concept_type = frames[0].frame_id
+                        else:
+                            pred_pointer = pred_indices.index(target_idx)
+                            pred = self.annotations.srl.tolist()[pred_pointer].predicate
+                            begin_idx = self.sentence.span_ids_to_word_id(pred.begin, pred.end)[0]
+                            temp = self.annotations.pos.make_lemma_form(begin_idx)
+                            print(begin_idx, pred.form, temp + '-98')
+                            self.graph.instances[target_idx].concept_type = temp + '-98'
                     else:
-                        self.graph.instances[target_idx].concept_type = ''.join(root_forms)
+                        pred_pointer = pred_indices.index(target_idx)
+                        pred = self.annotations.srl.tolist()[pred_pointer].predicate
+                        begin_idx = self.sentence.span_ids_to_word_id(pred.begin, pred.end)[0]
+                        temp = self.annotations.pos.make_lemma_form(begin_idx)
+                        print(begin_idx, pred.form, temp + '-99')
+                        self.graph.instances[target_idx].concept_type = temp + '-99'
+                elif root_forms:
+                    roots = [f for f, p in root_forms if p not in ('VCP', 'VX')]
+                    self.graph.instances[target_idx].concept_type = ''.join(roots)
 
 
 class AMRGraph:
