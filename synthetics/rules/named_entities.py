@@ -211,9 +211,9 @@ NAMED_ENTITIES = {
     # ex. 작년, 내년, 올해, 서기 2910년, 영락1년
     'DT_SEASON': ('date-entity', AMRDummyNEConcept),
     # ex. 봄, 여름, 가을, 겨울, 춘계, 하계, 추계, 동계
-    'DT_GEOAGE': ('geoage', AMRDummyNEConcept),
+    'DT_GEOAGE': ('ne.geographical-period*', AMRNamedEntityConcept),
     # ex. 원시시대, 구석기시대, 캄브리아기, 중생대, 원생대, 선사시대
-    'DT_DYNASTY': ('dynasty', AMRDummyNEConcept),
+    'DT_DYNASTY': ('ne.era', AMRNamedEntityConcept),
     # ex. 청대, 조선시대, 조선 후기, 명대, 고려시대, 고려 말
     'DT_OTHERS': ('date-entity', AMRDummyNEConcept),
     # ex. ~년 후/전, ~부터/까지/정도, ~세기, ~때

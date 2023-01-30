@@ -45,8 +45,8 @@ class AMRNamedEntityConcept(AMRIndexFreeConcept):
     def __init__(
             self,
             concept_type: str,
-            name_idx: Any,
-            name_str: str,
+            entity_idx: Any,
+            entity_str: str,
             wiki: Optional[str] = None,
             mapping: Optional[set[int]] = None
     ):
@@ -55,8 +55,8 @@ class AMRNamedEntityConcept(AMRIndexFreeConcept):
         you can initialize new NE node with the args as can be seen below.
         node = AMRNamedEntityConcept(
             concept_type="country",
-            name_idx=2,
-            name_str="South Korea",
+            entity_idx=2,
+            entity_str="South Korea",
             wiki="https://en.wikipedia.org/wiki/South_Korea",
             mapping=(4,)
         )
@@ -65,23 +65,23 @@ class AMRNamedEntityConcept(AMRIndexFreeConcept):
               :name (n2 / name :op1 "South" :op2 "Korea")
               :wiki "https://en.wikipedia.org/wiki/South_Korea")
         :param concept_type: str for NE type of the node. (ex. "person", "country", "thing")
-        :param name_idx: Any. local idx for `name` node
-        :param name_str: str of real expression in the context. (not NE type)
+        :param entity_idx: Any. local idx for `name` node
+        :param entity_str: str of real expression in the context. (not NE type)
         :param wiki: URI of wikification
         :param mapping: Any. tuple of ints or tuples for generating alignment information.
         """
         super().__init__(concept_type=concept_type, mapping=mapping)
-        self.name_idx: str = f'n{name_idx}'
-        self.name_str: str = re.sub(r'\s+', ' ', name_str.strip())
+        self.entity_idx: str = f'n{entity_idx}'
+        self.entity_str: str = re.sub(r'\s+', ' ', entity_str.strip())
         self.wiki = wiki if wiki and wiki != 'NA' else '-'
 
     def __repr__(self):
-        return f'<{self.__class__.__name__}: {self.concept_type} → "{self.name_str}" {self.mapping}>'
+        return f'<{self.__class__.__name__}: {self.concept_type} → "{self.entity_str}" {self.mapping}>'
 
     def product(self, global_idx: Any) -> list:
-        name_triples = [(self.name_idx, ':instance', 'name'), (global_idx, ':name', self.name_idx)]
-        name_attributes = [(self.name_idx, f':op{x + 1}', f'"{n_str}"') for x, n_str in
-                           enumerate(self.name_str.split())]
+        name_triples = [(self.entity_idx, ':instance', 'name'), (global_idx, ':name', self.entity_idx)]
+        name_attributes = [(self.entity_idx, f':op{x + 1}', f'"{n_str}"') for x, n_str in
+                           enumerate(self.entity_str.split())]
         wikification = [(global_idx, ':wiki', f'"{decode_url(self.wiki)}"' if self.wiki != '-' else '-')]
         return super().product(global_idx=global_idx) + name_triples + name_attributes + wikification
 
@@ -90,12 +90,12 @@ class AMRDummyNEConcept(AMRIndexFreeConcept):
     def __init__(
             self,
             concept_type: str,
-            name_idx: Any,
-            name_str: str,
+            entity_idx: Any,
+            entity_str: str,
             wiki: Optional[str] = None,
             mapping: Optional[set[int]] = None
     ):
-        self.name_str: str = re.sub(r'\s+', ' ', name_str.strip())
+        self.name_str: str = re.sub(r'\s+', ' ', entity_str.strip())
         super().__init__(concept_type='-'.join(self.name_str.split()), mapping=mapping)
 
     def __repr__(self):

@@ -244,6 +244,7 @@ PERIPHRASTIC_CONSTRUCTIONS = {
     "-와/과 동시에": (r"[와과]/JKB$ ^동시/NNG\+에/JKB", None),
     "-와/과 함께": (r"[와과]/JKB$ ^함께/MAG(\+,/SP)?$", None),
     "-으면 하-": (r"으면/EC$ ^하/VX", None),
+    "-이 있-": (r"JKS$ ^있/VA", None),
     "-이 없-": (r"JKS$ ^없/VA", [(':polarity', '-')]),
     "-을 대상으로": (r"JKO$ ^대상/NNG\+으로/JKB", None),
     "-을 마지막으로": (r"JKO$ ^마지막/NNG\+으로/JKB", None),

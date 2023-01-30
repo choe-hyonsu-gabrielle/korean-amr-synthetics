@@ -1,4 +1,3 @@
-import re
 import penman
 from synthetics.primitives.corpus import *
 from synthetics.primitives.amr.concept import *
@@ -7,6 +6,7 @@ from synthetics.rules.periphrastic_constructions import PeriphrasticConstruction
 from synthetics.resources.predicates import VerbFrameLexicon
 from synthetics.utils import ngrams
 
+# initiating singletons
 VerbFrameLexicon()
 PeriphrasticConstructions()
 
@@ -70,7 +70,7 @@ class AbstractMeaningRepresentation:
             _, target_word_idx = self.sentence.span_ids_to_word_id(begin=srl.predicate.begin, end=srl.predicate.end)
             pred_word_idx = self.graph.redirect_node(target_word_idx)
             for arg in srl.argument:
-                if arg.label not in ('ARGM-NEG',):
+                if arg.label not in ('ARGM-NEG', 'ARGM-AUX'):
                     tail_idx = self.graph.redirect_node(arg.word_id)
                     self.graph.add_relation(head_idx=pred_word_idx, relation=f':srl.{arg.label}', tail_idx=tail_idx)
                     inverted = self.graph.get_relation(tail_idx, pred_word_idx)
@@ -91,8 +91,8 @@ class AbstractMeaningRepresentation:
             concept_type, named_entity_concept = NAMED_ENTITIES[ner.label]
             positional_args = [
                 concept_type,  # concept_type
-                ner.id,  # name_idx, generic_idx, term_idx, ...
-                ner.form,  # name_str, generic_str, term_str, ...
+                ner.id,  # entity_idx, generic_idx, term_idx, ...
+                ner.form,  # entity_str, generic_str, term_str, ...
                 ner.url if wikification else None,  # wiki
                 self.graph.instances[new_node_idx].mapping  # mapping
             ]

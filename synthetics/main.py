@@ -1,4 +1,3 @@
-from tqdm import tqdm
 from pprint import pprint
 from synthetics.utils import load_corpus
 from synthetics.primitives.corpus import Corpus
@@ -17,7 +16,7 @@ if __name__ == '__main__':
 
     counts = 0
     failed = 0
-    verbose = False
+    verbose = True
 
     candidates = corpus.filter_by(len_range=len_between, exclude=stopwords, endswith='.!?', random_state=880830)
     # candidates = corpus.iter_sentences()
@@ -28,22 +27,23 @@ if __name__ == '__main__':
 
         if verbose:
             print('\n\n')
-            print(snt.annotations.dep)
-            print(snt.annotations.srl)
-            print(snt.annotations.el)
-            print(snt.annotations.wsd)
-            pprint(amr.graph.instances)
-            pprint(amr.graph.relations)
+            # print(snt.annotations.wsd)
+            # print(snt.annotations.dep)
+            # print(snt.annotations.el)
+            # print(snt.annotations.srl)
+            # print(snt.annotations.cr)
+            # print(snt.annotations.za)
             print(graph)
 
         if graph:
             if verbose:
-                print(snt.annotations.dep, file=fp)
-                print(snt.annotations.srl, file=fp)
-                print(snt.annotations.el, file=fp)
-                print(snt.annotations.wsd, file=fp)
-                print(snt.annotations.cr, file=fp)
-                print(snt.annotations.za, file=fp)
+                pass
+                # print(snt.annotations.wsd, file=fp)
+                # print(snt.annotations.dep, file=fp)
+                # print(snt.annotations.el, file=fp)
+                # print(snt.annotations.srl, file=fp)
+                # print(snt.annotations.cr, file=fp)
+                # print(snt.annotations.za, file=fp)
             print(graph, file=fp, end='\n\n')
 
         counts += 1
