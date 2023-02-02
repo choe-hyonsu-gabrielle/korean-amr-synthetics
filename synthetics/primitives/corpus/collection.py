@@ -5,7 +5,7 @@ from typing import Any, Union, Optional
 from collections import defaultdict
 from tqdm import tqdm
 from synthetics.primitives.corpus.layer import *
-from synthetics.utils import load_json, save_pickle, load_pickle, timestamp
+from synthetics.utils.originals import load_json, save_pickle, load_pickle, timestamp
 
 
 SENTENCE_LEVEL_LAYERS = {'pos': 'morpheme', 'wsd': 'WSD', 'ner': 'NE', 'el': 'NE', 'dep': 'DP', 'srl': 'SRL'}

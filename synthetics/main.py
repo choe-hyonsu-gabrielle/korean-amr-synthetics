@@ -1,5 +1,5 @@
 from pprint import pprint
-from synthetics.utils import load_corpus
+from synthetics.utils.originals import load_corpus
 from synthetics.primitives.corpus import Corpus
 from synthetics.primitives.amr.graph import AbstractMeaningRepresentation
 
@@ -9,7 +9,7 @@ if __name__ == '__main__':
     search_space = 'D:/Corpora & Language Resources/modu-corenlp/layers-complete/*/*.json'
     corpus: Corpus = load_corpus(data_files=search_space)
 
-    len_between = (20, 65)
+    len_between = (20, 60)
     stopwords = '\"\',“”‘’…;[]()<>'
 
     fp = open('outputs.txt', encoding='utf-8', mode='w')

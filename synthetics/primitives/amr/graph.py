@@ -4,7 +4,7 @@ from synthetics.primitives.amr.concept import *
 from synthetics.rules.named_entities import NAMED_ENTITIES
 from synthetics.rules.periphrastic_constructions import PeriphrasticConstructions
 from synthetics.resources.predicates import VerbFrameLexicon
-from synthetics.utils import ngrams
+from synthetics.utils.originals import ngrams
 
 # initiating singletons
 VerbFrameLexicon()
